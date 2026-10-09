@@ -1,0 +1,2312 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Конструктор уроков (v1)</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --fg: #0b0b0b;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --err: #dc2626;
+      --ok: #16a34a;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      color: var(--fg);
+      background: var(--bg)
+    }
+
+    header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    header h1 {
+      font-size: 16px;
+      margin: 0 8px 0 0
+    }
+
+    header .sep {
+      flex: 1
+    }
+
+    header button,
+    header label {
+      margin-left: 6px
+    }
+
+    .wrap {
+      display: grid;
+      grid-template-columns: 300px 1fr 420px;
+      gap: 12px;
+      padding: 12px
+    }
+
+    .col {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      min-height: 60vh
+    }
+
+    .col h2 {
+      margin: 0;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      background: #fafafa
+    }
+
+    .panel {
+      padding: 10px
+    }
+
+    /* ЛЕВАЯ КОЛОНКА: список узлов */
+    .nodes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .node-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+
+    .node-item.selected {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, .15)
+    }
+
+    .node-item small {
+      color: var(--muted)
+    }
+
+    .node-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 4px
+    }
+
+    .node-actions button {
+      padding: 2px 6px
+    }
+
+    .add-block {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px
+    }
+
+    select,
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px
+    }
+
+    textarea {
+      min-height: 88px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+    }
+
+    .grid {
+      display: grid;
+      gap: 8px
+    }
+
+    .grid.two {
+      grid-template-columns: 1fr 1fr
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .label {
+      font-weight: 600
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fafafa
+    }
+
+    .kbd {
+      font: 12px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #f6f8fa
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 13px
+    }
+
+    .subtle {
+      background: #fafafa
+    }
+
+    .err {
+      color: var(--err)
+    }
+
+    .ok {
+      color: var(--ok)
+    }
+
+    .btn {
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer
+    }
+
+    .btn.primary {
+      border-color: var(--accent);
+      background: linear-gradient(#fff, #f7fbff)
+    }
+
+    .btn.danger {
+      border-color: #fecaca;
+      background: linear-gradient(#fff, #fff5f5)
+    }
+
+    .btn.small {
+      padding: 4px 6px
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .toolbar input[type="text"] {
+      width: auto
+    }
+
+    .help {
+      padding: 8px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #fffbeb
+    }
+
+    .status {
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fafafa
+    }
+
+    /* ПРАВАЯ КОЛОНКА: превью */
+    .monaco {
+      font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #0b1021;
+      color: #e5e7eb;
+      padding: 10px;
+      border-radius: 8px;
+      white-space: pre;
+      overflow: auto;
+      min-height: 260px
+    }
+
+    .monaco.editable {
+      outline: 0;
+      caret-color: #fff
+    }
+
+    .inline-actions {
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Конструктор уроков · v1</h1>
+    <span class="pill">Схема: <strong>v1</strong></span>
+    <div class="sep"></div>
+
+    <div class="inline-actions">
+      <label class="btn">Импорт JSON <input id="importFile" type="file" accept="application/json" hidden /></label>
+      <button id="btnNewLesson" class="btn">Новый урок</button>
+      <div class="status" id="status">Готово</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- ЛЕВАЯ: список узлов -->
+    <section class="col">
+      <h2>Контент урока</h2>
+      <div class="panel">
+        <div class="add-block">
+          <select id="newType">
+            <option value="markdown">Markdown</option>
+            <option value="Table">Table</option>
+            <option value="QuizSelect">QuizSelect</option>
+            <option value="QuizCheckbox">QuizCheckbox</option>
+            <option value="QuizSet">QuizSet</option>
+            <option value="FillInTheBlank">FillInTheBlank</option>
+            <option value="FillTable">FillTable</option>
+            <option value="DragAndDrop">DragAndDrop</option>
+            <option value="DragTable">DragTable</option>
+            <option value="SelectList">SelectList</option>
+            <option value="FillText">FillText</option>
+            <option value="SelectText">SelectText</option>
+            <option value="ClickWord">ClickWord</option>
+          </select>
+          <button id="btnAddNode" class="btn primary">Добавить</button>
+        </div>
+
+        <div class="nodes" id="nodes"></div>
+      </div>
+    </section>
+
+    <!-- ЦЕНТР: форма активного узла -->
+    <section class="col">
+      <h2>Редактор узла</h2>
+      <div class="panel" id="editor">
+        <div class="help">Выберите узел слева или добавьте новый. Поля зависят от типа.</div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ: превью и управление уроком -->
+    <section class="col">
+      <h2>Урок: экспорт / черновики</h2>
+      <div class="panel list">
+        <div class="card subtle">
+          <h3>Сведения</h3>
+          <div class="grid two">
+            <label>Номер урока (число)<input id="lessonNumber" type="number" min="1" value="1"></label>
+            <label>ID урока (lesson_id)<input id="lessonId" type="text" placeholder="lesson1"></label>
+            <label>Версия (lesson_version)<input id="lessonVersion" type="text" value="v.1.0"></label>
+            <label>Topic ID<input id="topicId" type="text" placeholder="topic_morphemika"></label>
+            <label>Имя файла (экспорт)<input id="exportName" type="text" placeholder="lesson1.json"></label>
+          </div>
+          <div class="toolbar" style="margin-top:8px">
+            <button id="btnValidate" class="btn">Проверить</button>
+            <button id="btnCopy" class="btn">Скопировать JSON</button>
+            <button id="btnDownload" class="btn primary">Скачать JSON</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Черновики (localStorage)</h3>
+          <div class="row">
+            <input id="draftName" type="text" placeholder="Название черновика">
+            <button id="btnSaveDraft" class="btn">Сохранить</button>
+          </div>
+          <div id="drafts" class="list" style="margin-top:8px"></div>
+        </div>
+
+        <div class="card">
+          <h3>JSON урока (редактируемый превью)</h3>
+          <div id="jsonView" class="monaco editable" contenteditable="true"></div>
+          <div class="row" style="margin-top:8px">
+            <button id="btnApplyJson" class="btn primary">Применить изменения</button>
+            <span class="muted">Подсказка: <span class="kbd">Ctrl</span> + <span class="kbd">A</span> → вставьте
+              JSON</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // ====== УТИЛИТЫ ======
+    const $ = (sel, root = document) => root.querySelector(sel)
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)]
+    const pretty = (obj) => JSON.stringify(obj, null, 2)
+
+    const TYPE_ABBR = {
+      markdown: 'md', Table: 'tbl',
+      QuizSelect: 'qsel', QuizCheckbox: 'qchk', QuizSet: 'qset',
+      FillInTheBlank: 'fibl', FillTable: 'filt',
+      DragAndDrop: 'drop', DragTable: 'dtab', SelectList: 'sell', FillText: 'ftxt',
+      SelectText: 'selt', ClickWord: 'clkw'
+    }
+    const ANSWER_TYPES = {
+      QuizSelect: 'select', QuizCheckbox: 'multi-select', QuizSet: 'select', SelectList: 'select', SelectText: 'select',
+      FillInTheBlank: 'input', FillTable: 'input', FillText: 'input',
+      DragAndDrop: 'match', DragTable: 'match', ClickWord: 'multi-select',
+      markdown: null, Table: null
+    }
+    function genSalt() { return Math.random().toString(36).slice(-4) }
+    function abbr(type) { return TYPE_ABBR[type] || (type || 'x').toLowerCase().slice(0, 4) }
+    function genId(lesson, nodeIndex, type) { return `l${lesson}-n${nodeIndex + 1}-${abbr(type)}-${genSalt()}` }
+
+    function deepClone(v) { return JSON.parse(JSON.stringify(v)) }
+
+    function download(name, data) {
+      const blob = new Blob([data], { type: 'application/json;charset=utf-8' })
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name || 'lesson.json'; a.click(); URL.revokeObjectURL(a.href)
+    }
+
+    async function copyToClipboard(text) {
+      try { await navigator.clipboard.writeText(text); setStatus('Скопировано в буфер', 'ok') } catch (e) { setStatus('Не удалось скопировать', 'err') }
+    }
+
+    function setStatus(text, tone) {
+      const el = $('#status'); el.textContent = text; el.className = 'status' + (tone ? ' ' + tone : '')
+      clearTimeout(setStatus._t); setStatus._t = setTimeout(() => { el.textContent = 'Готово'; el.className = 'status' }, 2000)
+    }
+
+    // ====== ШАБЛОНЫ УЗЛОВ ======
+    function tMarkdown(id) { return { type: 'markdown', id, content: 'Текст **Markdown**' } }
+
+    function tTable() {
+      return { type: 'Table', content: { headers: ['Колонка 1', 'Колонка 2'], rows: [['', ''], ['', '']], borders: true, striped: true } }
+    }
+
+    function tQuizSelect(id) {
+      return {
+        type: 'QuizSelect', id,
+        content: {
+          question: 'Вопрос с единичным выбором', options: [
+            { id: id + '-o1', content: 'Вариант 1', correct: false, 'feedback-selected': null, 'feedback-not-selected': null },
+            { id: id + '-o2', content: 'Вариант 2 (верный)', correct: true, 'feedback-selected': null, 'feedback-not-selected': null }
+          ],
+          button_text: 'Проверить', result_text: 'Пояснение к ответу.'
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'select', blocked: false
+      }
+    }
+
+    function tQuizCheckbox(id) {
+      return {
+        type: 'QuizCheckbox', id,
+        content: {
+          question: 'Вопрос с множественным выбором', options: [
+            { id: id + '-o1', content: 'Вариант 1 (верный)', correct: true, 'feedback-selected': null, 'feedback-not-selected': null },
+            { id: id + '-o2', content: 'Вариант 2', correct: false, 'feedback-selected': null, 'feedback-not-selected': null }
+          ],
+          button_text: 'Проверить', result_text: 'Пояснение к ответам.'
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'multi-select', blocked: false
+      }
+    }
+
+    function tQuizSet(baseId) {
+      const opt1 = baseId + '-opt1', opt2 = baseId + '-opt2'
+      return {
+        type: 'QuizSet', id: baseId,
+        content: {
+          question: 'Серия мини-заданий',
+          options: [{ id: opt1, content: 'Вариант A' }, { id: opt2, content: 'Вариант B' }],
+          tasks: [
+            { id: baseId + '-t1', content: 'Текст задания 1', correct_option: opt1, 'feedback-correct': 'Верно!', 'feedback-incorrect': 'Неверно!' },
+            { id: baseId + '-t2', content: 'Текст задания 2', correct_option: opt2, 'feedback-correct': 'Верно!', 'feedback-incorrect': 'Неверно!' }
+          ],
+          button_text: 'Проверить', button_next_text: 'Следующее задание', result_text: 'Общий фидбек.'
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'select', blocked: false
+      }
+    }
+
+    function tFillInTheBlank(baseId) {
+      return {
+        type: 'FillInTheBlank', id: baseId,
+        content: {
+          question: 'Заполните пропуски',
+          tasks: [{ id: baseId + '-t1', text: 'Я сижу за стол___', correctAnswers: ['ом'], answerType: 'single', minWidth: null, 'feedback-correct': null, 'feedback-incorrect': null }],
+          button_text: 'Проверить', result_text: 'Молодцы!'
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'input', blocked: false
+      }
+    }
+
+    function tFillTable(baseId) {
+      return {
+        type: 'FillTable', id: baseId,
+        content: {
+          question: 'Задача: заполните окончания',
+          table: {
+            headers: ['Словосочетание', 'Окончание', 'Результат'],
+            rows: [{ groupId: 'group1', task: '', id: baseId + '-r1', input: { correctAnswers: [''], placeholder: 'впишите ответ', 'feedback-correct': null, 'feedback-incorrect': null } }]
+          },
+          button_text: 'Проверить',
+          button_next_text: 'Далее',
+          button_finish_text: 'Завершить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'input', blocked: false
+      }
+    }
+
+    function tDragAndDrop(baseId) {
+      return {
+        type: 'DragAndDrop',
+        id: baseId,
+        content: {
+          question: 'Перетащите карточки в группы',
+          layout: 'columns', // default
+          groups: [
+            { id: baseId + '-g1', content: 'Группа 1' },
+            { id: baseId + '-g2', content: 'Группа 2' }
+          ],
+          tasks: [
+            { id: baseId + '-t1', content: 'Карточка 1', correct_group: baseId + '-g1' }
+          ],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'match', blocked: false
+      }
+    }
+
+    function tDragTable(baseId) {
+      return {
+        type: 'DragTable',
+        id: baseId,
+        content: {
+          question: 'Сопоставьте элементы по таблице',
+          row_header: 'строки',
+          rows: [{ id: baseId + '-row1', content: 'Строка 1' }],
+          columns: [{ id: baseId + '-col1', content: 'Колонка 1' }, { id: baseId + '-col2', content: 'Колонка 2' }],
+          groups: [], // генерируем кнопкой
+          tasks: [{ id: baseId + '-t1', content: 'Карточка 1', correct_group: '' }],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'match', blocked: false
+      }
+    }
+
+    function tSelectList(baseId) {
+      return {
+        type: 'SelectList',
+        id: baseId,
+        content: {
+          selected: false, // показывать галочки в списке
+          question: 'Выберите правильный вариант для каждого задания',
+          options: [
+            { id: baseId + '-opt1', content: 'Вариант A' },
+            { id: baseId + '-opt2', content: 'Вариант B' }
+          ],
+          tasks: [
+            { id: baseId + '-t1', content: 'Задание 1', correct_option: baseId + '-opt1', 'feedback-correct': null, 'feedback-incorrect': null }
+          ],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'select', blocked: false
+      }
+    }
+
+    function tFillText(baseId) {
+      return {
+        type: 'FillText',
+        id: baseId,
+        content: {
+          text: 'Текст с пропусками, вставьте потом {{task1}}, {{task2}} ...',
+          tasks: [
+            { id: baseId + '-t1', text: 'подсказка/шаблон для ответа', correctAnswer: '', minWidth: null, 'feedback-correct': null, 'feedback-incorrect': null }
+          ],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'input', blocked: false
+      }
+    }
+
+    function tSelectText(baseId) {
+      return {
+        type: 'SelectText',
+        id: baseId,
+        content: {
+          text: 'Текст с пропусками {{task1}}, {{task2}}...',
+          tasks: [
+            {
+              id: baseId + '-t1',
+              options: [
+                { id: baseId + '-t1-opt1', content: 'Вариант 1', correct_option: true },
+                { id: baseId + '-t1-opt2', content: 'Вариант 2', correct_option: false }
+              ],
+              'feedback-incorrect': null
+            }
+          ],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'select', blocked: false
+      }
+    }
+
+    function tClickWord(baseId) {
+      return {
+        type: 'ClickWord',
+        id: baseId,
+        content: {
+          question: 'Инструкция',
+          tasks: [
+            { id: baseId + '-t1', text: 'Слово', correct_indices: [0, 1], 'feedback-incorrect': null }
+          ],
+          button_text: 'Проверить',
+          result_text: ''
+        },
+        taskVersion: 'v.1.0', skill_id: '', answer_type: 'multi-select', blocked: false
+      }
+    }
+
+    const TEMPLATE_BY_TYPE = { markdown: tMarkdown, Table: tTable, QuizSelect: tQuizSelect, QuizCheckbox: tQuizCheckbox, QuizSet: tQuizSet, FillInTheBlank: tFillInTheBlank, FillTable: tFillTable, DragAndDrop: tDragAndDrop, DragTable: tDragTable, SelectList: tSelectList, FillText: tFillText, SelectText: tSelectText, ClickWord: tClickWord }
+
+    // ====== ВАЛИДАЦИЯ ======
+    function validateLesson(lesson) {
+      const issues = []
+      if (!lesson || typeof lesson !== 'object') { issues.push('Формат урока не распознан'); return issues }
+      if (lesson.schema && lesson.schema !== 'v1') issues.push(`Схема ${lesson.schema} не поддерживается (ожидается v1)`) // совместимость
+
+      if (!Array.isArray(lesson.content)) issues.push('lesson.content должен быть массивом')
+
+      if (!lesson.lesson_id) issues.push('lesson_id обязателен')
+      if (!lesson.topicId) issues.push('topicId обязателен')
+
+      // Сбор всех id для проверки уникальности
+      const allIds = new Set()
+      const addId = (id, ctx) => {
+        if (!id) return
+        if (allIds.has(id)) issues.push(`Дублирующийся id: ${id} (${ctx})`)
+        allIds.add(id)
+      }
+
+        ; (lesson.content || []).forEach((node, idx) => {
+          const ctx = `узел #${idx + 1} (${node.type || 'unknown'})`
+          if (!node || typeof node !== 'object') { issues.push(`${ctx}: неверный объект`); return }
+
+          // Metadata check for interactive nodes
+          if (node.type !== 'markdown') {
+            if (!node.skill_id) issues.push(`${ctx}: skill_id обязателен`)
+            if (!node.answer_type) issues.push(`${ctx}: answer_type обязателен`)
+          }
+
+          switch (node.type) {
+            case 'markdown': {
+              if (typeof node.content !== 'string') issues.push(`${ctx}: content должен быть строкой (Markdown)`)
+              break
+            }
+            case 'Table': {
+              const c = node.content || {}
+              if (!Array.isArray(c.headers)) issues.push(`${ctx}: headers должен быть массивом`)
+              if (!Array.isArray(c.rows)) issues.push(`${ctx}: rows должен быть массивом массивов`)
+              break
+            }
+            case 'QuizSelect': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (typeof c.question !== 'string') issues.push(`${ctx}: question обязателен`)
+              if (!Array.isArray(c.options) || c.options.length < 2) issues.push(`${ctx}: минимум 2 опции`)
+              let correctCount = 0
+                ; (c.options || []).forEach((o, i) => { addId(o.id, ctx + `/option#${i + 1}`); if (o.correct) correctCount++ })
+              if (correctCount !== 1) issues.push(`${ctx}: должно быть ровно 1 правильная опция`)
+              break
+            }
+            case 'QuizCheckbox': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (!Array.isArray(c.options) || c.options.length < 2) issues.push(`${ctx}: минимум 2 опции`)
+              const hasAny = (c.options || []).some(o => !!o.correct)
+              if (!hasAny) issues.push(`${ctx}: хотя бы 1 опция должна быть правильной`)
+                ; (c.options || []).forEach((o, i) => addId(o.id, ctx + `/option#${i + 1}`))
+              break
+            }
+            case 'QuizSet': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (!Array.isArray(c.options) || c.options.length < 2) issues.push(`${ctx}: минимум 2 options для серии`)
+              const optionIds = new Set((c.options || []).map(o => (addId(o.id, ctx + '/option'), o.id)))
+              if (!Array.isArray(c.tasks) || c.tasks.length === 0) issues.push(`${ctx}: нужен хотя бы 1 task`)
+                ; (c.tasks || []).forEach((t, i) => {
+                  addId(t.id, ctx + `/task#${i + 1}`)
+                  if (!optionIds.has(t.correct_option)) issues.push(`${ctx}/task#${i + 1}: correct_option должен ссылаться на options`)
+                })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+            case 'FillInTheBlank': {
+              const c = node.content || {}
+              if (!Array.isArray(c.tasks) || c.tasks.length === 0) issues.push(`${ctx}: нужен хотя бы 1 task`)
+                ; (c.tasks || []).forEach((t, i) => {
+                  if (!Array.isArray(t.correctAnswers)) issues.push(`${ctx}/task#${i + 1}: correctAnswers должен быть массивом строк`)
+                  if (t.answerType && !['single', 'single-box'].includes(t.answerType)) issues.push(`${ctx}/task#${i + 1}: answerType должен быть single|single-box`)
+                  if (typeof t.minWidth !== 'undefined' && t.minWidth !== null && typeof t.minWidth !== 'number') { issues.push(`${ctx}/task#${i + 1}: minWidth должен быть числом или null`); }
+                })
+              break
+            }
+            case 'FillTable': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              const t = c.table || {}
+              if (!Array.isArray(t.headers)) issues.push(`${ctx}: table.headers должен быть массивом из трёх заголовков`)
+              if (Array.isArray(t.headers) && t.headers.length !== 3) issues.push(`${ctx}: ожидается ровно 3 заголовка в table.headers`)
+              if (!Array.isArray(t.rows) || t.rows.length === 0) issues.push(`${ctx}: table.rows должен содержать хотя бы одну строку`)
+                ; (t.rows || []).forEach((r, rIdx) => {
+                  if (!r || typeof r !== 'object') { issues.push(`${ctx}/row#${rIdx + 1}: неверный объект строки`); return }
+                  if (!r.groupId) issues.push(`${ctx}/row#${rIdx + 1}: groupId обязателен`)
+                  if (!r.id) issues.push(`${ctx}/row#${rIdx + 1}: id обязателен`); else addId(r.id, ctx + `/row#${rIdx + 1}`)
+                  if (typeof r.task !== 'string') issues.push(`${ctx}/row#${rIdx + 1}: task должен быть строкой`)
+                  const inp = r.input || {}
+                  if (!Array.isArray(inp.correctAnswers)) issues.push(`${ctx}/row#${rIdx + 1}: input.correctAnswers должен быть массивом`)
+                  // placeholder — строка или null допускается, feedback-* допускают null — дополнительных проверок не требуем
+                })
+              // кнопки — опционально
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              if (c.button_next_text !== undefined && typeof c.button_next_text !== 'string') issues.push(`${ctx}: button_next_text должен быть строкой`)
+              if (c.button_finish_text !== undefined && typeof c.button_finish_text !== 'string') issues.push(`${ctx}: button_finish_text должен быть строкой`)
+              break
+            }
+            case 'DragAndDrop': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (!['columns', 'rows'].includes(c.layout || 'columns')) issues.push(`${ctx}: layout должен быть columns|rows`)
+              if (!Array.isArray(c.groups) || c.groups.length < 1) issues.push(`${ctx}: нужен хотя бы 1 group`)
+              if (!Array.isArray(c.tasks) || c.tasks.length < 1) issues.push(`${ctx}: нужен хотя бы 1 task`)
+              const gset = new Set()
+                ; (c.groups || []).forEach((g, gi) => { if (!g.id) issues.push(`${ctx}/group#${gi + 1}: id обязателен`); addId(g.id, ctx + `/group#${gi + 1}`); gset.add(g.id) })
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (!t.correct_group || !gset.has(t.correct_group)) issues.push(`${ctx}/task#${ti + 1}: correct_group должен ссылаться на существующую группу`)
+                })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+            case 'DragTable': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (!c.row_header) issues.push(`${ctx}: row_header обязателен`)
+              if (!Array.isArray(c.rows) || c.rows.length < 1) issues.push(`${ctx}: нужен хотя бы 1 row`)
+              if (!Array.isArray(c.columns) || c.columns.length < 1) issues.push(`${ctx}: нужна хотя бы 1 column`)
+
+              const rset = new Set(), cset = new Set()
+                ; (c.rows || []).forEach((r, ri) => { if (!r.id) issues.push(`${ctx}/row#${ri + 1}: id обязателен`); else addId(r.id, ctx + `/row#${ri + 1}`); rset.add(r.id) })
+                ; (c.columns || []).forEach((cl, ci) => { if (!cl.id) issues.push(`${ctx}/column#${ci + 1}: id обязателен`); else addId(cl.id, ctx + `/column#${ci + 1}`); cset.add(cl.id) })
+
+              const gset = new Set()
+                ; (c.groups || []).forEach((g, gi) => {
+                  if (!g.id) issues.push(`${ctx}/group#${gi + 1}: id обязателен`); else addId(g.id, ctx + `/group#${gi + 1}`)
+                  if (!rset.has(g.row_id)) issues.push(`${ctx}/group#${gi + 1}: row_id должен ссылаться на существующую строку`)
+                  if (!cset.has(g.column_id)) issues.push(`${ctx}/group#${gi + 1}: column_id должен ссылаться на существующую колонку`)
+                  gset.add(g.id)
+                })
+
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (!t.correct_group || !gset.has(t.correct_group)) issues.push(`${ctx}/task#${ti + 1}: correct_group должен ссылаться на существующую группу`)
+                })
+
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+            case 'SelectList': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (typeof c.selected === 'undefined') c.selected = false
+              if (!Array.isArray(c.options) || c.options.length < 2) issues.push(`${ctx}: минимум 2 options`)
+              if (!Array.isArray(c.tasks) || c.tasks.length < 1) issues.push(`${ctx}: нужен хотя бы 1 task`)
+              const oset = new Set()
+                ; (c.options || []).forEach((o, oi) => { if (!o.id) issues.push(`${ctx}/option#${oi + 1}: id обязателен`); else addId(o.id, ctx + `/option#${oi + 1}`); oset.add(o.id) })
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (!t.correct_option || !oset.has(t.correct_option)) issues.push(`${ctx}/task#${ti + 1}: correct_option должен ссылаться на options`)
+                })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+            case 'FillText': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (typeof c.text !== 'string') issues.push(`${ctx}: content.text обязателен`)
+              if (!Array.isArray(c.tasks) || c.tasks.length < 1) issues.push(`${ctx}: нужен хотя бы 1 task`)
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (typeof t.correctAnswer === 'undefined') issues.push(`${ctx}/task#${ti + 1}: correctAnswer обязателен`)
+                  if (typeof t.minWidth !== 'undefined' && t.minWidth !== null && typeof t.minWidth !== 'number') issues.push(`${ctx}/task#${ti + 1}: minWidth должен быть числом или null`)
+                })
+              const ids = new Set(c.tasks.map(t => t.id))
+              const placeholders = new Set([...c.text.matchAll(/\{\{(.+?)\}\}/g)].map(m => m[1]))
+              ids.forEach(id => { if (!placeholders.has(id)) issues.push(`${ctx}: в тексте нет плейсхолдера {{${id}}}`) })
+              placeholders.forEach(ph => { if (!ids.has(ph)) issues.push(`${ctx}: в тексте есть плейсхолдер {{${ph}}}, но нет задачи с таким id`) })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+
+            case 'SelectText': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (typeof c.text !== 'string') issues.push(`${ctx}: content.text обязателен`)
+              if (!Array.isArray(c.tasks) || c.tasks.length < 1) issues.push(`${ctx}: нужен хотя бы 1 task`)
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (!Array.isArray(t.options) || t.options.length < 2) issues.push(`${ctx}/task#${ti + 1}: минимум 2 options`)
+                  let correctCount = 0
+                  t.options.forEach((o, oi) => {
+                    if (!o.id) issues.push(`${ctx}/task#${ti + 1}/option#${oi + 1}: id обязателен`); else addId(o.id, ctx + `/task#${ti + 1}/option#${oi + 1}`)
+                    if (o.correct_option) correctCount++
+                  })
+                  if (correctCount !== 1) issues.push(`${ctx}/task#${ti + 1}: должна быть ровно 1 правильная опция (correct_option)`)
+                })
+              const ids = new Set(c.tasks.map(t => t.id))
+              const placeholders = new Set([...c.text.matchAll(/\{\{(.+?)\}\}/g)].map(m => m[1]))
+              ids.forEach(id => { if (!placeholders.has(id)) issues.push(`${ctx}: в тексте нет плейсхолдера {{${id}}}`) })
+              placeholders.forEach(ph => { if (!ids.has(ph)) issues.push(`${ctx}: в тексте есть плейсхолдер {{${ph}}}, но нет задачи с таким id`) })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+
+            case 'ClickWord': {
+              addId(node.id, ctx)
+              const c = node.content || {}
+              if (!Array.isArray(c.tasks) || c.tasks.length < 1) issues.push(`${ctx}: нужен хотя бы 1 task`)
+                ; (c.tasks || []).forEach((t, ti) => {
+                  if (!t.id) issues.push(`${ctx}/task#${ti + 1}: id обязателен`); else addId(t.id, ctx + `/task#${ti + 1}`)
+                  if (typeof t.text !== 'string') issues.push(`${ctx}/task#${ti + 1}: text должен быть строкой`)
+                  if (!Array.isArray(t.correct_indices)) issues.push(`${ctx}/task#${ti + 1}: correct_indices должен быть массивом чисел`)
+                })
+              if (c.button_text !== undefined && typeof c.button_text !== 'string') issues.push(`${ctx}: button_text должен быть строкой`)
+              break
+            }
+
+            default:
+              // неизвестные типы допустимы, как в вашем рендерере
+              break
+          }
+        })
+
+      return issues
+    }
+
+    // ====== СОСТОЯНИЕ УРОКА ======
+    const state = {
+      lessonNumber: 1,
+      lessonId: 'lesson1',
+      lessonVersion: 'v.1.0',
+      topicId: '',
+      selectedIndex: -1,
+      lesson: { schema: 'v1', content: [] }
+    }
+
+    function syncUI() {
+      // список узлов
+      const nodes = $('#nodes'); nodes.innerHTML = ''
+      state.lesson.content.forEach((node, i) => {
+        const div = document.createElement('div')
+        div.className = 'node-item' + (i === state.selectedIndex ? ' selected' : '')
+        const t = node.type || 'unknown'
+        const idShort = (node.id || '').toString().slice(0, 18)
+        div.innerHTML = `
+        <div>
+          <div><strong>#${i + 1}</strong> · ${t}</div>
+          <small class="muted">${idShort}</small>
+        </div>
+        <div class="node-actions">
+          <button class="btn small" data-act="up">↑</button>
+          <button class="btn small" data-act="down">↓</button>
+          <button class="btn small" data-act="dup">Дубль</button>
+          <button class="btn small danger" data-act="del">Удалить</button>
+        </div>`
+        div.addEventListener('click', (e) => {
+          const btn = e.target.closest('button')
+          if (btn) {
+            const act = btn.dataset.act
+            if (act === 'up' && i > 0) { [state.lesson.content[i - 1], state.lesson.content[i]] = [state.lesson.content[i], state.lesson.content[i - 1]]; state.selectedIndex = i - 1; persistAndRender(); return }
+            if (act === 'down' && i < state.lesson.content.length - 1) { [state.lesson.content[i + 1], state.lesson.content[i]] = [state.lesson.content[i], state.lesson.content[i + 1]]; state.selectedIndex = i + 1; persistAndRender(); return }
+            if (act === 'dup') {
+              const copy = deepClone(node); // новый id для корневых
+              if (copy.id) copy.id = copy.id + '-copy-' + genSalt()
+              // сгенерировать новые id для options/tasks
+              rekeyNode(copy, i)
+              state.lesson.content.splice(i + 1, 0, copy); state.selectedIndex = i + 1; persistAndRender(); return
+            }
+            if (act === 'del') { state.lesson.content.splice(i, 1); state.selectedIndex = Math.min(i, state.lesson.content.length - 1); persistAndRender(); return }
+            return
+          }
+          state.selectedIndex = i;
+          $$('.node-item', nodes).forEach((el, idx) => el.classList.toggle('selected', idx === i));
+          renderEditor();
+        })
+        nodes.appendChild(div)
+      })
+
+      // json preview
+      $('#jsonView').textContent = pretty(state.lesson)
+      softPersist() // сохраняем если поля обновились структурно
+      // side fields
+      $('#lessonNumber').value = state.lessonNumber
+      $('#lessonId').value = state.lesson.lesson_id || state.lessonId
+      $('#lessonVersion').value = state.lesson.lesson_version || state.lessonVersion
+      $('#topicId').value = state.lesson.topicId || state.topicId
+    }
+
+    function rekeyNode(node, nodeIndex) {
+      const base = genId(state.lessonNumber, nodeIndex, node.type)
+      if (node.type === 'QuizSelect' || node.type === 'QuizCheckbox') {
+        node.id = base
+        node.content.options.forEach((o, idx) => { o.id = `${base}-o${idx + 1}` })
+      } else if (node.type === 'QuizSet') {
+        node.id = base
+        node.content.options.forEach((o, idx) => { o.id = `${base}-opt${idx + 1}` })
+        const optIds = node.content.options.map(o => o.id)
+        node.content.tasks.forEach((t, idx) => { t.id = `${base}-t${idx + 1}`; if (!optIds.includes(t.correct_option)) t.correct_option = optIds[0] })
+      } else if (node.type === 'FillInTheBlank') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+        if (node.content && Array.isArray(node.content.tasks)) { node.content.tasks.forEach((t, idx) => { t.id = `${base}-t${idx + 1}` }) }
+      } else if (node.type === 'FillTable') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+        const rows = node.content?.table?.rows || []
+        rows.forEach((r, idx) => { r.id = `${base}-r${idx + 1}`; r.groupId = r.groupId || 'group1' })
+      }
+      else if (node.type === 'DragAndDrop') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+        const oldIds = (node.content?.groups || []).map(g => g.id)
+          ; (node.content?.groups || []).forEach((g, idx) => g.id = `${base}-g${idx + 1}`)
+        const map = new Map(oldIds.map((old, idx) => [old, `${base}-g${idx + 1}`]))
+          ; (node.content?.tasks || []).forEach((t, idx) => { t.id = `${base}-t${idx + 1}`; if (t.correct_group && map.has(t.correct_group)) t.correct_group = map.get(t.correct_group) })
+
+      } else if (node.type === 'DragTable') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+          ; (node.content?.rows || []).forEach((r, idx) => r.id = `${base}-row${idx + 1}`)
+          ; (node.content?.columns || []).forEach((c, idx) => c.id = `${base}-col${idx + 1}`)
+        // группы перегенерим из текущих rows×columns
+        const rows = node.content?.rows || [], cols = node.content?.columns || []
+        const newGroups = []; let k = 1
+        rows.forEach(r => cols.forEach(col => newGroups.push({ id: `${base}-g${k++}`, row_id: r.id, column_id: col.id })))
+        node.content.groups = newGroups
+          ; (node.content?.tasks || []).forEach((t, idx) => { t.id = `${base}-t${idx + 1}`; t.correct_group = (newGroups[0]?.id) || '' })
+
+      } else if (node.type === 'SelectList') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+          ; (node.content?.options || []).forEach((o, idx) => o.id = `${base}-opt${idx + 1}`)
+        const first = (node.content?.options?.[0]?.id) || ''
+          ; (node.content?.tasks || []).forEach((t, idx) => { t.id = `${base}-t${idx + 1}`; if (!node.content.options.find(o => o.id === t.correct_option)) t.correct_option = first })
+
+      } else if (node.type === 'FillText') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+          ; (node.content?.tasks || []).forEach((t, idx) => t.id = `${base}-t${idx + 1}`)
+      } else if (node.type === 'SelectText') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+          ; (node.content?.tasks || []).forEach((t, tIdx) => {
+            t.id = `${base}-t${tIdx + 1}`
+              ; (t.options || []).forEach((o, oIdx) => {
+                o.id = `${base}-t${tIdx + 1}-opt${oIdx + 1}`
+              })
+          })
+      } else if (node.type === 'ClickWord') {
+        const base = genId(state.lessonNumber, nodeIndex, node.type)
+        node.id = base
+          ; (node.content?.tasks || []).forEach((t, idx) => t.id = `${base}-t${idx + 1}`)
+      }
+
+      // FillInTheBlank — id тасков оставим как есть, они локальные
+    }
+
+    function persist() {
+      if (state.lesson && Array.isArray(state.lesson.content)) {
+        state.lesson.content = state.lesson.content.map(n => {
+          if (n.type === 'markdown' || n.type === 'Table') return n
+          const sorted = {}
+          const orderedKeys = ['type', 'id', 'content', 'taskVersion', 'skill_id', 'answer_type', 'blocked']
+
+          // Миграция старых данных
+          if (n.type === 'QuizSelect' || n.type === 'QuizCheckbox') {
+            n.content = n.content || {}
+            if (n.button_text !== undefined) { n.content.button_text = n.button_text; delete n.button_text }
+            if (n.result_text !== undefined) { n.content.result_text = n.result_text; delete n.result_text }
+          }
+
+          orderedKeys.forEach(k => { if (n[k] !== undefined) sorted[k] = n[k] })
+          Object.keys(n).forEach(k => { if (!orderedKeys.includes(k)) sorted[k] = n[k] })
+          return sorted
+        })
+      }
+      localStorage.setItem('lesson_v1_current', JSON.stringify({ lesson: state.lesson, lessonNumber: state.lessonNumber }))
+    }
+
+    function persistAndRender() { persist(); syncUI(); renderEditor(); setStatus('Сохранено', 'ok') }
+
+    function restore() {
+      const raw = localStorage.getItem('lesson_v1_current')
+      if (raw) {
+        try {
+          const data = JSON.parse(raw); state.lesson = data.lesson || state.lesson;
+          state.lessonNumber = data.lessonNumber || 1;
+          state.lessonId = state.lesson.lesson_id || 'lesson1'
+          state.lessonVersion = state.lesson.lesson_version || 'v.1.0'
+          state.topicId = state.lesson.topicId || ''
+        }
+        catch (e) { }
+      }
+    }
+
+    // ====== РЕДАКТОР ФОРМЫ ======
+    function renderEditor() {
+      const root = $('#editor'); root.innerHTML = ''
+      const i = state.selectedIndex
+      if (i < 0 || !state.lesson.content[i]) { root.innerHTML = '<div class="help">Выберите узел слева или добавьте новый.</div>'; return }
+      const node = state.lesson.content[i]
+
+      // Общие поля
+      const common = document.createElement('div'); common.className = 'list'
+      const header = document.createElement('div'); header.className = 'row'; header.innerHTML = `
+      <div class="label">Узел #${i + 1}</div>
+      <span class="pill">Тип: <strong>${node.type}</strong></span>`
+      common.appendChild(header)
+      root.appendChild(common)
+
+      // Если узел интерактивный — добавляем метаданные
+      if (node.type !== 'markdown' && node.type !== 'Table') {
+        const metaCard = document.createElement('div'); metaCard.className = 'card subtle'; metaCard.innerHTML = '<h3>Метаданные</h3>'
+        // skill_id
+        const skill = document.createElement('input'); skill.type = 'text'; skill.value = node.skill_id || ''; skill.placeholder = 'root_extraction...'; skill.addEventListener('input', () => { node.skill_id = skill.value; softPersist() })
+        // answer_type (select)
+        const at = document.createElement('select')
+          ;['input', 'select', 'multi-select', 'match'].forEach(v => {
+            const op = document.createElement('option'); op.value = v; op.textContent = v; at.appendChild(op)
+          })
+        at.value = node.answer_type || ANSWER_TYPES[node.type] || 'input'
+        // sync back if missing
+        if (!node.answer_type) { node.answer_type = at.value }
+        at.addEventListener('change', () => { node.answer_type = at.value; softPersist() })
+
+        // blocked
+        const blk = checkbox('Blocked', !!node.blocked, (v) => { node.blocked = v; persistAndRender() })
+
+        // taskVersion
+        const tv = document.createElement('input'); tv.type = 'text'; tv.value = node.taskVersion || 'v.1.0'; tv.addEventListener('input', () => { node.taskVersion = tv.value; softPersist() })
+
+        const g1 = document.createElement('div'); g1.className = 'grid two'
+        g1.append(labeled('Skill ID', skill), labeled('Answer Type', at))
+        const g2 = document.createElement('div'); g2.className = 'grid two'
+        g2.append(labeled('Task Version', tv), blk.wrapper)
+
+        metaCard.append(g1, g2)
+        common.appendChild(metaCard)
+      }
+
+      if (node.type === 'markdown') {
+        const ta = document.createElement('textarea'); ta.value = node.content || ''
+        ta.addEventListener('input', () => { node.content = ta.value; softPersist() })
+        
+        const mdHelp = document.createElement('div');
+        mdHelp.style.cssText = 'display: none; font-size: 12px; color: #666; line-height: 1.4; margin-top: 4px; margin-bottom: 12px; padding-left: 12px; border-left: 2px solid #ddd;';
+        mdHelp.innerHTML = `Вы можете использовать стандартный Markdown: <code>**жирный**</code>, <code>*курсив*</code>.<br>Для вставки изображений используйте HTML-тег:<br><code>&lt;img src="/lessons/image.svg" class="lesson-image"&gt;</code><br>Обязательно используйте глобальный класс <code>lesson-image</code> для правильного отображения картинки в плеере.`;
+
+        const mdLabel = document.createElement('div');
+        mdLabel.className = 'label';
+        mdLabel.innerHTML = 'Текст Markdown <span style="cursor: pointer; opacity: 0.8;" title="Показать подсказку по картинкам и верстке">ℹ️</span>';
+        mdLabel.querySelector('span').addEventListener('click', (e) => {
+           e.stopPropagation();
+           mdHelp.style.display = mdHelp.style.display === 'none' ? 'block' : 'none';
+        });
+
+        const mdWrapper = document.createElement('div');
+        mdWrapper.append(mdLabel, ta, mdHelp);
+        
+        common.appendChild(mdWrapper)
+      }
+
+      if (node.type === 'Table') {
+        const c = node.content
+        // headers
+        const headersEl = document.createElement('div'); headersEl.className = 'card'; headersEl.innerHTML = '<h3>Заголовки</h3>'
+        const headersList = document.createElement('div'); headersList.className = 'list'
+        function redrawHeaders() {
+          headersList.innerHTML = ''
+          c.headers.forEach((h, idx) => {
+            const row = document.createElement('div'); row.className = 'row'
+            const inp = document.createElement('input'); inp.type = 'text'; inp.value = h
+            inp.addEventListener('input', () => { c.headers[idx] = inp.value; softPersist() })
+            const up = smallBtn('↑', () => { if (idx > 0) { [c.headers[idx - 1], c.headers[idx]] = [c.headers[idx], c.headers[idx - 1]]; persistAndRender() } })
+            const down = smallBtn('↓', () => { if (idx < c.headers.length - 1) { [c.headers[idx + 1], c.headers[idx]] = [c.headers[idx], c.headers[idx + 1]]; persistAndRender() } })
+            const del = smallBtn('✕', () => { c.headers.splice(idx, 1); c.rows.forEach(r => r.splice(idx, 1)); persistAndRender() })
+            row.append(inp, up, down, del); headersList.appendChild(row)
+          })
+        }
+        const addHeader = smallBtn('+ Колонка', () => { c.headers.push('Новая колонка'); c.rows.forEach(r => r.push('')); persistAndRender() })
+        headersEl.append(headersList, addHeader); common.appendChild(headersEl); redrawHeaders()
+
+        // rows
+        const rowsEl = document.createElement('div'); rowsEl.className = 'card'; rowsEl.innerHTML = '<h3>Строки</h3>'
+        const rowsList = document.createElement('div'); rowsList.className = 'list'
+        function redrawRows() {
+          rowsList.innerHTML = ''
+          c.rows.forEach((r, ridx) => {
+            const row = document.createElement('div'); row.className = 'list card'
+            r.forEach((cell, cidx) => {
+              const inp = document.createElement('input'); inp.type = 'text'; inp.value = cell
+              inp.addEventListener('input', () => { c.rows[ridx][cidx] = inp.value; softPersist() })
+              row.appendChild(labeled(`Ячейка ${ridx + 1}:${cidx + 1}`, inp))
+            })
+            const controls = document.createElement('div'); controls.className = 'row'
+            controls.append(
+              smallBtn('+ Ячейка справа', () => { c.rows[ridx].push(''); c.headers.push(''); persistAndRender() }),
+              smallBtn('↑', () => { if (ridx > 0) { [c.rows[ridx - 1], c.rows[ridx]] = [c.rows[ridx], c.rows[ridx - 1]]; persistAndRender() } }),
+              smallBtn('↓', () => { if (ridx < c.rows.length - 1) { [c.rows[ridx + 1], c.rows[ridx]] = [c.rows[ridx], c.rows[ridx + 1]]; persistAndRender() } }),
+              smallBtn('✕ Удалить строку', () => { c.rows.splice(ridx, 1); persistAndRender() })
+            )
+            rowsList.appendChild(row)
+          })
+        }
+        const addRow = smallBtn('+ Строка', () => { c.rows.push(new Array(c.headers.length).fill('')); persistAndRender() })
+        // toggles
+        const toggles = document.createElement('div'); toggles.className = 'row';
+        const chkBorders = checkbox('Показывать границы', c.borders, (v) => { c.borders = v; persistAndRender() })
+        const chkStriped = checkbox('Полосатая таблица', c.striped, (v) => { c.striped = v; persistAndRender() })
+
+        rowsEl.append(rowsList, addRow, toggles, chkBorders.wrapper, chkStriped.wrapper); common.appendChild(rowsEl); redrawRows()
+      }
+
+      if (node.type === 'QuizSelect' || node.type === 'QuizCheckbox') {
+        const c = node.content
+        const idInp = document.createElement('input'); idInp.type = 'text'; idInp.value = node.id || ''; idInp.addEventListener('input', () => { node.id = idInp.value; softPersist() })
+        common.appendChild(labeled('ID узла', idInp))
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Вопрос', q))
+
+        const optsCard = document.createElement('div'); optsCard.className = 'card'; optsCard.innerHTML = '<h3>Опции</h3>'
+        const optsList = document.createElement('div'); optsList.className = 'list'
+        function redrawOpts() {
+          optsList.innerHTML = ''
+          c.options.forEach((o, idx) => {
+            const box = document.createElement('div'); box.className = 'card subtle'
+            const rid = document.createElement('input'); rid.type = 'text'; rid.value = o.id || ''; rid.addEventListener('input', () => { o.id = rid.value; softPersist() })
+            const rc = checkbox('Верный ответ', !!o.correct, (v) => { o.correct = v; persistAndRender() })
+            const rcontent = document.createElement('input'); rcontent.type = 'text'; rcontent.value = o.content || ''; rcontent.addEventListener('input', () => { o.content = rcontent.value; softPersist() })
+            const rfs = document.createElement('input'); rfs.type = 'text'; rfs.value = o['feedback-selected'] || ''; rfs.addEventListener('input', () => { o['feedback-selected'] = rfs.value || null; softPersist() })
+            const rfn = document.createElement('input'); rfn.type = 'text'; rfn.value = o['feedback-not-selected'] || ''; rfn.addEventListener('input', () => { o['feedback-not-selected'] = rfn.value || null; softPersist() })
+            const rowTop = document.createElement('div'); rowTop.className = 'grid two'
+            rowTop.append(labeled('ID опции', rid), rc.wrapper)
+            const rowMid = document.createElement('div'); rowMid.className = 'grid two'
+            rowMid.append(labeled('Текст опции', rcontent), labeled('Фидбек (выбрана)', rfs))
+            const rowBot = document.createElement('div'); rowBot.className = 'grid two'
+            rowBot.append(labeled('Фидбек (не выбрана)', rfn), rowButtons(['↑', '↓', '✕'], [
+              () => { if (idx > 0) { [c.options[idx - 1], c.options[idx]] = [c.options[idx], c.options[idx - 1]]; persistAndRender() } },
+              () => { if (idx < c.options.length - 1) { [c.options[idx + 1], c.options[idx]] = [c.options[idx], c.options[idx + 1]]; persistAndRender() } },
+              () => { c.options.splice(idx, 1); persistAndRender() }
+            ]))
+            box.append(rowTop, rowMid, rowBot)
+            optsList.appendChild(box)
+          })
+        }
+        const addOpt = smallBtn('+ Добавить опцию', () => { const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base; c.options.push({ id: base + '-o' + (c.options.length + 1), content: '', correct: false, 'feedback-selected': null, 'feedback-not-selected': null }); persistAndRender() })
+        optsCard.append(optsList, addOpt); common.appendChild(optsCard); redrawOpts()
+
+        // нижние поля
+        const btnText = document.createElement('input'); btnText.type = 'text'; btnText.value = c.button_text || node.button_text || 'Проверить'; btnText.addEventListener('input', () => { c.button_text = btnText.value; softPersist() })
+        const resText = document.createElement('textarea'); resText.value = c.result_text || node.result_text || ''; resText.addEventListener('input', () => { c.result_text = resText.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки', btnText))
+        common.appendChild(labeled('Общий комментарий к ответу', resText))
+      }
+
+      if (node.type === 'QuizSet') {
+        const c = node.content
+        const nid = document.createElement('input'); nid.type = 'text'; nid.value = node.id || ''; nid.addEventListener('input', () => { node.id = nid.value; softPersist() })
+        common.appendChild(labeled('ID узла', nid))
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Общий вопрос', q))
+
+        // options
+        const optsCard = document.createElement('div'); optsCard.className = 'card'; optsCard.innerHTML = '<h3>Общие варианты (options)</h3>'
+        const optsList = document.createElement('div'); optsList.className = 'list'
+        function redrawOptions() {
+          optsList.innerHTML = ''
+          c.options.forEach((o, idx) => {
+            const box = document.createElement('div'); box.className = 'card subtle'
+            const oid = document.createElement('input'); oid.type = 'text'; oid.value = o.id || ''; oid.addEventListener('input', () => { o.id = oid.value; softPersist() })
+            const ot = document.createElement('input'); ot.type = 'text'; ot.value = o.content || ''; ot.addEventListener('input', () => { o.content = ot.value; softPersist() })
+            const controls = rowButtons(['↑', '↓', '✕'], [
+              () => { if (idx > 0) { [c.options[idx - 1], c.options[idx]] = [c.options[idx], c.options[idx - 1]]; persistAndRender() } },
+              () => { if (idx < c.options.length - 1) { [c.options[idx + 1], c.options[idx]] = [c.options[idx], c.options[idx + 1]]; persistAndRender() } },
+              () => { c.options.splice(idx, 1); persistAndRender() }
+            ])
+            const grid = document.createElement('div'); grid.className = 'grid two'
+            grid.append(labeled('ID варианта', oid), labeled('Текст варианта', ot))
+            box.append(grid, controls)
+            optsList.appendChild(box)
+          })
+        }
+        const addOpt = smallBtn('+ Добавить вариант', () => { const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base; c.options.push({ id: base + '-opt' + (c.options.length + 1), content: '' }); persistAndRender() })
+        optsCard.append(optsList, addOpt); common.appendChild(optsCard); redrawOptions()
+
+        // tasks
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Задания (tasks)</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+          c.tasks.forEach((t, idx) => {
+            const box = document.createElement('div'); box.className = 'card subtle'
+            const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+            const txt = document.createElement('input'); txt.type = 'text'; txt.value = t.content || ''; txt.addEventListener('input', () => { t.content = txt.value; softPersist() })
+            const sel = document.createElement('select')
+              // показываем текст опции, а в value — её id
+              ; (c.options || []).forEach(o => {
+                const op = document.createElement('option')
+                op.value = o.id
+                op.textContent = (o.content && o.content.trim()) ? o.content : o.id
+                op.title = o.id   // по ховеру видно id
+                sel.appendChild(op)
+              })
+            sel.value = t.correct_option || ((c.options && c.options[0]) ? c.options[0].id : '')
+            sel.addEventListener('change', () => { t.correct_option = sel.value; softPersist() })
+
+            const fok = document.createElement('input'); fok.type = 'text'; fok.value = t['feedback-correct'] || ''; fok.addEventListener('input', () => { t['feedback-correct'] = fok.value; softPersist() })
+            const finc = document.createElement('input'); finc.type = 'text'; finc.value = t['feedback-incorrect'] || ''; finc.addEventListener('input', () => { t['feedback-incorrect'] = finc.value; softPersist() })
+            const controls = rowButtons(['↑', '↓', '✕'], [
+              () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+              () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+              () => { c.tasks.splice(idx, 1); persistAndRender() }
+            ])
+            box.append(
+              labeled('ID задания', tid),
+              labeled('Текст задания', txt),
+              labeled('Правильный option (id)', sel),
+              labeled('Фидбек: верно', fok),
+              labeled('Фидбек: неверно', finc),
+              controls
+            )
+            tasksList.appendChild(box)
+          })
+        }
+        const addTask = smallBtn('+ Добавить задание', () => { const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base; c.tasks.push({ id: base + '-t' + (c.tasks.length + 1), content: '', correct_option: (c.options[0] && c.options[0].id) || '', 'feedback-correct': '', 'feedback-incorrect': '' }); persistAndRender() })
+        tasksCard.append(tasksList, addTask); common.appendChild(tasksCard); redrawTasks()
+
+        // нижние кнопки текста
+        const br = document.createElement('input'); br.type = 'text'; br.value = c.button_text || 'Проверить'; br.addEventListener('input', () => { c.button_text = br.value; softPersist() })
+        const bn = document.createElement('input'); bn.type = 'text'; bn.value = c.button_next_text || 'Следующее задание'; bn.addEventListener('input', () => { c.button_next_text = bn.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки «Проверить»', br))
+        common.appendChild(labeled('Текст кнопки «Следующее задание»', bn))
+        common.appendChild(labeled('Общий фидбек', rt))
+      }
+
+      if (node.type === 'FillInTheBlank') {
+        const c = node.content
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Инструкция/вопрос', q))
+
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Задания</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+
+        function redraw() {
+          tasksList.innerHTML = ''
+          c.tasks.forEach((t, idx) => {
+            const box = document.createElement('div')
+            box.className = 'card subtle'
+
+            // --- ID задания
+            const tid = document.createElement('input')
+            tid.type = 'text'
+            tid.value = t.id || ''
+            tid.addEventListener('input', () => {
+              t.id = tid.value
+              softPersist()
+            })
+
+            // --- Текст задания
+            const txt = document.createElement('input')
+            txt.type = 'text'
+            txt.value = t.text || ''
+            txt.addEventListener('input', () => {
+              t.text = txt.value
+              softPersist()
+            })
+
+            // --- Правильные ответы (через запятую)
+            const ans = document.createElement('input')
+            ans.type = 'text'
+            ans.placeholder = 'Слово 1, [син1 | син2], Слово 3'
+            ans.value = (t.correctAnswers || []).map(x => Array.isArray(x) ? `[${x.join(' | ')}]` : x).join(', ')
+            ans.addEventListener('input', () => {
+              t.correctAnswers = ans.value.split(',').map(s => s.trim()).filter(s => s !== '').map(s => {
+                 if (s.startsWith('[') && s.endsWith(']')) {
+                    return s.slice(1, -1).split('|').map(x => x.trim()).filter(x => x !== '')
+                 }
+                 return s
+              })
+              softPersist()
+            })
+
+            const ansHelp = document.createElement('div');
+            ansHelp.style.cssText = 'display: none; font-size: 12px; color: #666; line-height: 1.4; margin-top: 4px; margin-bottom: 12px; padding-left: 12px; border-left: 2px solid #ddd;';
+            ansHelp.innerHTML = `Теперь вы можете задавать синонимы прямо в строке через запятую, обернув нужную группу в квадратные скобки со знаком разделителя <code>|</code>.<br>Например, введя строку: <strong style="color:#444">Слово 1, [сь | ся], Слово 3</strong><br>На выходе в JSON получится идеальный массив нужной нам структуры: <code>["Слово 1", ["сь", "ся"], "Слово 3"]</code>. Если скобок нет, парсер будет воспринимать это как обычное слово.`;
+
+            const ansLabel = document.createElement('div');
+            ansLabel.className = 'label';
+            ansLabel.innerHTML = 'Правильные ответы (через запятую) <span style="cursor: pointer; opacity: 0.8;" title="Показать подсказку по синонимам">ℹ️</span>';
+            ansLabel.querySelector('span').addEventListener('click', (e) => {
+               e.stopPropagation();
+               ansHelp.style.display = ansHelp.style.display === 'none' ? 'block' : 'none';
+            });
+            const ansWrapper = document.createElement('div');
+            ansWrapper.append(ansLabel, ans, ansHelp);
+
+            // --- Тип ответа
+            const sel = document.createElement('select')
+              ;['single', 'single-box'].forEach(v => {
+                const op = document.createElement('option')
+                op.value = v
+                op.textContent = v
+                sel.appendChild(op)
+              })
+            sel.value = t.answerType || 'single'
+            sel.addEventListener('change', () => {
+              t.answerType = sel.value
+              softPersist()
+            })
+
+            // --- minWidth (число или null)
+            if (typeof t.minWidth === 'undefined') t.minWidth = null
+            const mw = document.createElement('input')
+            mw.type = 'number'
+            mw.placeholder = 'null'
+            mw.value = (t.minWidth ?? '')
+            mw.addEventListener('input', () => {
+              const v = mw.value.trim()
+              t.minWidth = (v === '' ? null : Number(v))
+              softPersist()
+            })
+
+            // --- Фидбек: верно / неверно (строки или null)
+            const fok = document.createElement('input')
+            fok.type = 'text'
+            fok.value = t['feedback-correct'] || ''
+            fok.addEventListener('input', () => {
+              t['feedback-correct'] = fok.value || null
+              softPersist()
+            })
+
+            const finc = document.createElement('input')
+            finc.type = 'text'
+            finc.value = t['feedback-incorrect'] || ''
+            finc.addEventListener('input', () => {
+              t['feedback-incorrect'] = finc.value || null
+              softPersist()
+            })
+
+            // --- Кнопки управления строкой
+            const controls = rowButtons(['↑', '↓', '✕'], [
+              () => {
+                if (idx > 0) {
+                  [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]
+                  softPersist() // структурная операция — полный ререндер
+                }
+              },
+              () => {
+                if (idx < c.tasks.length - 1) {
+                  [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]
+                  softPersist()
+                }
+              },
+              () => {
+                c.tasks.splice(idx, 1)
+                persistAndRender()
+              }
+            ])
+
+            box.append(
+              labeled('ID задания', tid),
+              labeled('Текст с пропуском(ами)', txt),
+              ansWrapper,
+              labeled('Тип ответа', sel),
+              labeled('Минимальная ширина (minWidth)', mw),
+              labeled('Фидбек: верно', fok),
+              labeled('Фидбек: неверно', finc),
+              controls
+            )
+
+            tasksList.appendChild(box)
+          })
+        }
+
+        const add = smallBtn('+ Добавить задание', () => { const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base; c.tasks.push({ id: base + '-t' + (c.tasks.length + 1), text: '', correctAnswers: [], answerType: 'single', minWidth: null, 'feedback-correct': null, 'feedback-incorrect': null }); persistAndRender() })
+        tasksCard.append(tasksList, add); common.appendChild(tasksCard); redraw()
+
+        const bt = document.createElement('input'); bt.type = 'text'; bt.value = c.button_text || 'Проверить ответы'; bt.addEventListener('input', () => { c.button_text = bt.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки', bt))
+        common.appendChild(labeled('Общий фидбек', rt))
+      }
+
+      if (node.type === 'FillTable') {
+        const c = node.content
+        const tbl = c.table || (c.table = { headers: ['Словосочетание', 'Окончание', 'Результат'], rows: [] })
+
+        // Редактируемые заголовки (ровно 3, без добавления/удаления)
+        if (!Array.isArray(tbl.headers)) tbl.headers = []
+        while (tbl.headers.length < 3) tbl.headers.push('')
+        if (tbl.headers.length > 3) tbl.headers = tbl.headers.slice(0, 3)
+
+        const headersCard = document.createElement('div'); headersCard.className = 'card'
+        headersCard.innerHTML = '<h3>Заголовки (только текст)</h3>'
+        const headersList = document.createElement('div'); headersList.className = 'grid'
+          ;['Колонка 1', 'Колонка 2', 'Колонка 3'].forEach((label, i) => {
+            const inp = document.createElement('input')
+            inp.type = 'text'
+            inp.value = tbl.headers[i] ?? ''
+            inp.placeholder = label
+            inp.addEventListener('input', () => {
+              tbl.headers[i] = inp.value
+              softPersist()
+            })
+            const wrap = document.createElement('div')
+            wrap.appendChild(inp)
+            headersList.appendChild(wrap)
+          })
+        headersCard.appendChild(headersList)
+        common.appendChild(headersCard)
+
+
+        // Вопрос и кнопки
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Инструкция/вопрос', q))
+
+        const bt = document.createElement('input'); bt.type = 'text'; bt.value = c.button_text || 'Проверить'; bt.addEventListener('input', () => { c.button_text = bt.value; softPersist() })
+        const bn = document.createElement('input'); bn.type = 'text'; bn.value = c.button_next_text || 'Далее'; bn.addEventListener('input', () => { c.button_next_text = bn.value; softPersist() })
+        const bf = document.createElement('input'); bf.type = 'text'; bf.value = c.button_finish_text || 'Завершить'; bf.addEventListener('input', () => { c.button_finish_text = bf.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки «Проверить»', bt))
+        common.appendChild(labeled('Текст кнопки «Далее»', bn))
+        common.appendChild(labeled('Текст кнопки «Завершить»', bf))
+        common.appendChild(labeled('Общий фидбек (опционально)', rt))
+
+        // Строки
+        const rowsCard = document.createElement('div'); rowsCard.className = 'card'; rowsCard.innerHTML = '<h3>Строки таблицы</h3>'
+        const rowsList = document.createElement('div'); rowsList.className = 'list'
+
+        function redrawRows() {
+          rowsList.innerHTML = ''
+          tbl.rows.forEach((row, idx) => {
+            const box = document.createElement('div'); box.className = 'card subtle'
+
+            const gid = document.createElement('input'); gid.type = 'text'; gid.value = row.groupId || 'group1'
+            gid.addEventListener('input', () => { row.groupId = gid.value || 'group1'; softPersist() })
+
+            const rid = document.createElement('input'); rid.type = 'text'; rid.value = row.id || ''
+            rid.addEventListener('input', () => { row.id = rid.value; softPersist() })
+
+            const task = document.createElement('input'); task.type = 'text'; task.value = row.task || ''
+            task.addEventListener('input', () => { row.task = task.value; softPersist() })
+
+            // input.*
+            row.input = row.input || { correctAnswers: [''], placeholder: 'впишите ответ', 'feedback-correct': null, 'feedback-incorrect': null }
+            const ans = document.createElement('input'); ans.type = 'text'; ans.placeholder = 'Ответы через запятую'; ans.value = (row.input.correctAnswers || []).join(', ')
+            ans.addEventListener('input', () => { row.input.correctAnswers = ans.value.split(',').map(s => s.trim()); softPersist() })
+
+            const ph = document.createElement('input'); ph.type = 'text'; ph.value = (row.input.placeholder ?? 'впишите ответ'); ph.addEventListener('input', () => { row.input.placeholder = ph.value; softPersist() })
+            const fc = document.createElement('input'); fc.type = 'text'; fc.value = row.input['feedback-correct'] || ''; fc.addEventListener('input', () => { row.input['feedback-correct'] = fc.value || null; softPersist() })
+            const fi = document.createElement('input'); fi.type = 'text'; fi.value = row.input['feedback-incorrect'] || ''; fi.addEventListener('input', () => { row.input['feedback-incorrect'] = fi.value || null; softPersist() })
+
+            const controls = rowButtons(['↑', '↓', '✕'], [
+              () => { if (idx > 0) { [tbl.rows[idx - 1], tbl.rows[idx]] = [tbl.rows[idx], tbl.rows[idx - 1]]; persistAndRender() } },
+              () => { if (idx < tbl.rows.length - 1) { [tbl.rows[idx + 1], tbl.rows[idx]] = [tbl.rows[idx], tbl.rows[idx + 1]]; persistAndRender() } },
+              () => { tbl.rows.splice(idx, 1); persistAndRender() }
+            ])
+
+            box.append(
+              labeled('Группа (groupId)', gid),
+              labeled('ID строки', rid),
+              labeled('Текст задания', task),
+              labeled('Правильные ответы (через запятую)', ans),
+              labeled('Placeholder', ph),
+              labeled('Фидбек: верно', fc),
+              labeled('Фидбек: неверно', fi),
+              controls
+            )
+            rowsList.appendChild(box)
+          })
+        }
+
+        const addRow = smallBtn('+ Добавить строку', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const next = (tbl.rows.length + 1)
+          tbl.rows.push({
+            groupId: 'group1',
+            task: '',
+            id: base + '-r' + next,
+            input: { correctAnswers: [''], placeholder: 'впишите ответ', 'feedback-correct': null, 'feedback-incorrect': null }
+          })
+          persistAndRender()
+        })
+
+        rowsCard.append(rowsList, addRow)
+        common.appendChild(rowsCard)
+        redrawRows()
+      }
+
+      if (node.type === 'DragAndDrop') {
+        const c = node.content || (node.content = {})
+        c.layout = c.layout ?? 'columns'
+        c.groups = Array.isArray(c.groups) ? c.groups : []
+        c.tasks = Array.isArray(c.tasks) ? c.tasks : []
+        c.button_text = c.button_text ?? 'Проверить'
+        c.result_text = c.result_text ?? ''
+
+        // вопрос + layout
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Вопрос', q))
+
+        const layout = document.createElement('select')
+          ;['columns', 'rows', 'matrix'].forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; layout.appendChild(o) })
+        layout.value = (['columns', 'rows', 'matrix'].includes(c.layout) ? c.layout : 'columns')
+        layout.addEventListener('change', () => { c.layout = layout.value; persistAndRender() })
+        common.appendChild(labeled('Layout', layout))
+
+        if (c.layout === 'matrix') {
+          const mcols = document.createElement('input'); mcols.type = 'number'; mcols.min = 1; mcols.placeholder = 'Авто'; mcols.value = c.matrix_cols || ''; mcols.addEventListener('input', () => { c.matrix_cols = mcols.value ? Number(mcols.value) : undefined; softPersist() })
+          common.appendChild(labeled('Количество колонок в матрице (matrix_cols)', mcols))
+        }
+
+        const toggles = document.createElement('div'); toggles.className = 'grid two'
+        const fbChk = checkbox('Показывать фидбек (ошибки)', !!c.show_feedback, (v) => { c.show_feedback = v; persistAndRender() })
+        const famChk = checkbox('Семейный режим (группы без имен)', !!c.family, (v) => { c.family = v; persistAndRender() })
+        toggles.append(fbChk.wrapper, famChk.wrapper)
+        common.appendChild(toggles)
+
+        // groups
+        // --- ГРУППЫ ---
+        const groupsCard = document.createElement('div'); groupsCard.className = 'card'
+        const groupsTitle = document.createElement('h3')
+        groupsCard.appendChild(groupsTitle)
+        const groupsList = document.createElement('div'); groupsList.className = 'list'
+        groupsCard.appendChild(groupsList)
+
+        function redrawGroups() {
+          groupsList.innerHTML = ''
+          groupsTitle.textContent = `Группы (${(c.groups || []).length})`
+            ; (c.groups || []).forEach((g, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const gid = document.createElement('input'); gid.type = 'text'; gid.value = g.id || ''
+              gid.addEventListener('input', () => { g.id = gid.value; softPersist() })
+              const gt = document.createElement('input'); gt.type = 'text'; gt.value = g.content || ''
+              gt.addEventListener('input', () => { g.content = gt.value; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.groups[idx - 1], c.groups[idx]] = [c.groups[idx], c.groups[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.groups.length - 1) { [c.groups[idx + 1], c.groups[idx]] = [c.groups[idx], c.groups[idx + 1]]; persistAndRender() } },
+                () => {
+                  const used = (c.tasks || []).some(t => t.correct_group === g.id)
+                  if (used && !confirm('Эта группа используется задачами. Удалить?')) return
+                  c.groups.splice(idx, 1)
+                    ; (c.tasks || []).forEach(t => { if (t.correct_group === g.id) t.correct_group = '' })
+                  persistAndRender()
+                }
+              ])
+              const grid = document.createElement('div'); grid.className = 'grid two'
+              grid.append(labeled('ID группы', gid), labeled('Текст группы', gt))
+              box.append(grid, controls)
+              groupsList.appendChild(box)
+            })
+        }
+
+        const addGroup = smallBtn('+ Группа', () => {
+          c.groups = c.groups || []
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = c.groups.length + 1
+          c.groups.push({ id: `${base}-g${n}`, content: `Группа ${n}` })
+          persistAndRender()
+        })
+        groupsCard.appendChild(addGroup)
+        common.appendChild(groupsCard)
+        redrawGroups()
+
+        // --- ТАСКИ ---
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'
+        tasksCard.innerHTML = '<h3>Карточки (tasks)</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        tasksCard.appendChild(tasksList)
+
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+            ; (c.tasks || []).forEach((t, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''
+              tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+              const tt = document.createElement('input'); tt.type = 'text'; tt.value = t.content || ''
+              tt.addEventListener('input', () => { t.content = tt.value; softPersist() })
+
+              const sel = document.createElement('select')
+                // показываем название группы (content), в value — её id
+                ; (c.groups || []).forEach(g => {
+                  const o = document.createElement('option')
+                  o.value = g.id
+                  o.textContent = (g.content && g.content.trim()) ? g.content : g.id
+                  o.title = g.id
+                  sel.appendChild(o)
+                })
+              sel.value = t.correct_group || ((c.groups && c.groups[0]) ? c.groups[0].id : '')
+              sel.addEventListener('change', () => { t.correct_group = sel.value; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+                () => { c.tasks.splice(idx, 1); persistAndRender() }
+              ])
+
+              const grid = document.createElement('div'); grid.className = 'grid three'
+              grid.append(labeled('ID', tid), labeled('Текст карточки', tt), labeled('Правильная группа (id)', sel))
+              box.append(grid)
+
+              if (c.show_feedback) {
+                const fc = document.createElement('input'); fc.type = 'text'; fc.value = t['feedback-correct'] || ''; fc.addEventListener('input', () => { t['feedback-correct'] = fc.value || null; softPersist() })
+                const fi = document.createElement('input'); fi.type = 'text'; fi.value = t['feedback-incorrect'] || ''; fi.addEventListener('input', () => { t['feedback-incorrect'] = fi.value || null; softPersist() })
+                const fbGrid = document.createElement('div'); fbGrid.className = 'grid two'
+                fbGrid.append(labeled('Фидбек: верно', fc), labeled('Фидбек: неверно', fi))
+                box.append(fbGrid)
+              }
+
+              box.append(controls)
+              tasksList.appendChild(box)
+            })
+        }
+
+        const addTask = smallBtn('+ Карточка', () => {
+          c.tasks = c.tasks || []
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = c.tasks.length + 1
+          const firstGroup = (c.groups && c.groups[0]) ? c.groups[0].id : ''
+          c.tasks.push({ id: `${base}-t${n}`, content: '', correct_group: firstGroup })
+          persistAndRender()
+        })
+        tasksCard.appendChild(addTask)
+        common.appendChild(tasksCard)
+        redrawTasks()
+
+        // кнопки/результат
+
+        const br = document.createElement('input'); br.type = 'text'; br.value = c.button_text || 'Проверить'; br.addEventListener('input', () => { c.button_text = br.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки «Проверить»', br))
+        common.appendChild(labeled('Общий фидбек', rt))
+
+      }
+
+      if (node.type === 'DragTable') {
+        const c = node.content || (node.content = {})
+        c.row_header = c.row_header ?? 'строки'
+        c.rows = Array.isArray(c.rows) ? c.rows : []
+        c.columns = Array.isArray(c.columns) ? c.columns : []
+        c.groups = Array.isArray(c.groups) ? c.groups : []
+        c.tasks = Array.isArray(c.tasks) ? c.tasks : []
+        c.button_text = c.button_text ?? 'Проверить'
+        c.result_text = c.result_text ?? ''
+
+        // question + row_header
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Вопрос', q))
+
+        // row_header
+        const rh = document.createElement('input'); rh.type = 'text'; rh.value = c.row_header || 'строки'
+        rh.addEventListener('input', () => { c.row_header = rh.value; softPersist() })
+        common.appendChild(labeled('Заголовок строк (row_header)', rh))
+
+        // --- СТРОКИ ---
+        const rowsCard = document.createElement('div'); rowsCard.className = 'card'; rowsCard.innerHTML = '<h3>Строки</h3>'
+        const rowsList = document.createElement('div'); rowsList.className = 'list'
+        rowsCard.appendChild(rowsList)
+
+        function redrawRows() {
+          rowsList.innerHTML = ''
+            ; (c.rows || []).forEach((r, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const rid = document.createElement('input'); rid.type = 'text'; rid.value = r.id || ''
+              rid.addEventListener('input', () => { r.id = rid.value; softPersist() })
+              const rt = document.createElement('input'); rt.type = 'text'; rt.value = r.content || ''
+              rt.addEventListener('input', () => { r.content = rt.value; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.rows[idx - 1], c.rows[idx]] = [c.rows[idx], c.rows[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.rows.length - 1) { [c.rows[idx + 1], c.rows[idx]] = [c.rows[idx], c.rows[idx + 1]]; persistAndRender() } },
+                () => { c.rows.splice(idx, 1); persistAndRender() }
+              ])
+              const grid = document.createElement('div'); grid.className = 'grid two'
+              grid.append(labeled('ID строки', rid), labeled('Текст', rt))
+              box.append(grid, controls)
+              rowsList.appendChild(box)
+            })
+        }
+        const addRow = smallBtn('+ Строка', () => {
+          c.rows = c.rows || []
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = c.rows.length + 1
+          c.rows.push({ id: `${base}-row${n}`, content: '' })
+          persistAndRender()
+        })
+        rowsCard.appendChild(addRow)
+        common.appendChild(rowsCard)
+        redrawRows()
+
+        // --- КОЛОНКИ ---
+        const colsCard = document.createElement('div'); colsCard.className = 'card'; colsCard.innerHTML = '<h3>Колонки</h3>'
+        const colsList = document.createElement('div'); colsList.className = 'list'
+        colsCard.appendChild(colsList)
+
+        function redrawCols() {
+          colsList.innerHTML = ''
+            ; (c.columns || []).forEach((col, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const cid = document.createElement('input'); cid.type = 'text'; cid.value = col.id || ''
+              cid.addEventListener('input', () => { col.id = cid.value; softPersist() })
+              const ct = document.createElement('input'); ct.type = 'text'; ct.value = col.content || ''
+              ct.addEventListener('input', () => { col.content = ct.value; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.columns[idx - 1], c.columns[idx]] = [c.columns[idx], c.columns[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.columns.length - 1) { [c.columns[idx + 1], c.columns[idx]] = [c.columns[idx], c.columns[idx + 1]]; persistAndRender() } },
+                () => { c.columns.splice(idx, 1); persistAndRender() }
+              ])
+              const grid = document.createElement('div'); grid.className = 'grid two'
+              grid.append(labeled('ID колонки', cid), labeled('Текст', ct))
+              box.append(grid, controls)
+              colsList.appendChild(box)
+            })
+        }
+        const addCol = smallBtn('+ Колонка', () => {
+          c.columns = c.columns || []
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = c.columns.length + 1
+          c.columns.push({ id: `${base}-col${n}`, content: '' })
+          persistAndRender()
+        })
+        colsCard.appendChild(addCol)
+        common.appendChild(colsCard)
+        redrawCols()
+
+        // --- ГРУППЫ (row × col) + кнопка "перегенерировать" ---
+        const groupsCard = document.createElement('div'); groupsCard.className = 'card'; groupsCard.innerHTML = '<h3>Группы (row × col)</h3>'
+        const groupsList = document.createElement('div'); groupsList.className = 'list'
+        groupsCard.appendChild(groupsList)
+
+        function redrawGroups() {
+          groupsList.innerHTML = ''
+            ; (c.groups || []).forEach((g, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const gid = document.createElement('input'); gid.type = 'text'; gid.value = g.id || ''
+              gid.addEventListener('input', () => { g.id = gid.value; softPersist() })
+              const rid = document.createElement('input'); rid.type = 'text'; rid.value = g.row_id || ''
+              rid.addEventListener('input', () => { g.row_id = rid.value; softPersist() })
+              const cid = document.createElement('input'); cid.type = 'text'; cid.value = g.column_id || ''
+              cid.addEventListener('input', () => { g.column_id = cid.value; softPersist() })
+              const del = smallBtn('✕', () => { c.groups.splice(idx, 1); persistAndRender() })
+
+              const grid = document.createElement('div'); grid.className = 'grid three'
+              grid.append(labeled('ID группы', gid), labeled('row_id', rid), labeled('column_id', cid))
+              box.append(grid, del)
+              groupsList.appendChild(box)
+            })
+        }
+        const regen = smallBtn('Перегенерировать группы', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const rows = c.rows || [], cols = c.columns || []
+          const newGroups = []; let k = 1
+          rows.forEach(r => cols.forEach(col => {
+            newGroups.push({ id: `${base}-g${k++}`, row_id: r.id, column_id: col.id })
+          }))
+          c.groups = newGroups
+          persistAndRender()
+        })
+        groupsCard.appendChild(regen)
+        common.appendChild(groupsCard)
+        redrawGroups()
+
+        // --- ТАСКИ ---
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Карточки (tasks)</h3>'
+        const tList = document.createElement('div'); tList.className = 'list'
+        tasksCard.appendChild(tList)
+
+        function redrawTasks() {
+          tList.innerHTML = ''
+          function labelForGroup(g) {
+            const r = (c.rows || []).find(x => x.id === g.row_id)
+            const col = (c.columns || []).find(x => x.id === g.column_id)
+            const rName = (r && r.content && r.content.trim()) ? r.content : g.row_id
+            const cName = (col && col.content && col.content.trim()) ? col.content : g.column_id
+            return `${rName} × ${cName}`
+          }
+          ; (c.tasks || []).forEach((t, idx) => {
+            const box = document.createElement('div'); box.className = 'card subtle'
+            const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''
+            tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+            const tt = document.createElement('input'); tt.type = 'text'; tt.value = t.content || ''
+            tt.addEventListener('input', () => { t.content = tt.value; softPersist() })
+
+            const sel = document.createElement('select')
+              // показываем «строка × колонка», в value — id группы
+              ; (c.groups || []).forEach(g => {
+                const o = document.createElement('option')
+                o.value = g.id
+                o.textContent = labelForGroup(g)
+                o.title = g.id
+                sel.appendChild(o)
+              })
+            sel.value = t.correct_group || ((c.groups && c.groups[0]) ? c.groups[0].id : '')
+
+            sel.addEventListener('change', () => { t.correct_group = sel.value; softPersist() })
+
+            const controls = rowButtons(['↑', '↓', '✕'], [
+              () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+              () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+              () => { c.tasks.splice(idx, 1); persistAndRender() }
+            ])
+
+            const grid = document.createElement('div'); grid.className = 'grid three'
+            grid.append(labeled('ID', tid), labeled('Текст карточки', tt), labeled('Правильная группа (id)', sel))
+            box.append(grid, controls)
+            tList.appendChild(box)
+          })
+        }
+        const addTask = smallBtn('+ Карточка', () => {
+          c.tasks = c.tasks || []
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = c.tasks.length + 1
+          const firstGroup = (c.groups && c.groups[0]) ? c.groups[0].id : ''
+          c.tasks.push({ id: `${base}-t${n}`, content: '', correct_group: firstGroup })
+          persistAndRender()
+        })
+        tasksCard.appendChild(addTask)
+        common.appendChild(tasksCard)
+        redrawTasks()
+
+
+        // кнопки/результат
+        const br = document.createElement('input'); br.type = 'text'; br.value = c.button_text || 'Проверить'; br.addEventListener('input', () => { c.button_text = br.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки «Проверить»', br))
+        common.appendChild(labeled('Общий фидбек', rt))
+      }
+
+      if (node.type === 'SelectList') {
+        const c = node.content
+        const selected = checkbox('Показывать галочки (selected)', !!c.selected, (v) => { c.selected = v; softPersist() })
+        common.appendChild(selected.wrapper)
+
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Вопрос', q))
+
+        // options
+        const optsCard = document.createElement('div'); optsCard.className = 'card'; optsCard.innerHTML = '<h3>Варианты (options)</h3>'
+        const optsList = document.createElement('div'); optsList.className = 'list'
+        function redrawOptions() {
+          optsList.innerHTML = ''
+            ; (c.options || []).forEach((o, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const oid = document.createElement('input'); oid.type = 'text'; oid.value = o.id || ''; oid.addEventListener('input', () => { o.id = oid.value; softPersist() })
+              const ot = document.createElement('input'); ot.type = 'text'; ot.value = o.content || ''; ot.addEventListener('input', () => { o.content = ot.value; softPersist() })
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.options[idx - 1], c.options[idx]] = [c.options[idx], c.options[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.options.length - 1) { [c.options[idx + 1], c.options[idx]] = [c.options[idx], c.options[idx + 1]]; persistAndRender() } },
+                () => { c.options.splice(idx, 1); persistAndRender() }
+              ])
+              const grid = document.createElement('div'); grid.className = 'grid two'
+              grid.append(labeled('ID варианта', oid), labeled('Текст варианта', ot))
+              box.append(grid, controls)
+              optsList.appendChild(box)
+            })
+        }
+        const addOpt = smallBtn('+ Вариант', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = (c.options || []).length + 1; c.options = c.options || []
+          c.options.push({ id: base + '-opt' + n, content: '' }); persistAndRender()
+        })
+        optsCard.append(optsList, addOpt); common.appendChild(optsCard); redrawOptions()
+
+        // tasks
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Задания</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+            ; (c.tasks || []).forEach((t, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+              const txt = document.createElement('input'); txt.type = 'text'; txt.value = t.content || ''; txt.addEventListener('input', () => { t.content = txt.value; softPersist() })
+
+              const sel = document.createElement('select')
+                // показываем текст опции, в value остаётся id
+                ; (c.options || []).forEach(o => {
+                  const op = document.createElement('option')
+                  op.value = o.id
+                  op.textContent = (o.content && o.content.trim()) ? o.content : o.id
+                  op.title = o.id
+                  sel.appendChild(op)
+                })
+              sel.value = t.correct_option || ((c.options && c.options[0]) ? c.options[0].id : '')
+              sel.addEventListener('change', () => { t.correct_option = sel.value; softPersist() })
+
+
+              const fok = document.createElement('input'); fok.type = 'text'; fok.value = t['feedback-correct'] || ''; fok.addEventListener('input', () => { t['feedback-correct'] = fok.value || null; softPersist() })
+              const finc = document.createElement('input'); finc.type = 'text'; finc.value = t['feedback-incorrect'] || ''; finc.addEventListener('input', () => { t['feedback-incorrect'] = finc.value || null; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+                () => { c.tasks.splice(idx, 1); persistAndRender() }
+              ])
+
+              box.append(
+                labeled('ID задания', tid),
+                labeled('Текст задания', txt),
+                labeled('Правильный option (id)', sel),
+                labeled('Фидбек: верно', fok),
+                labeled('Фидбек: неверно', finc),
+                controls
+              )
+              tasksList.appendChild(box)
+            })
+        }
+        const addTask = smallBtn('+ Задание', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = (c.tasks || []).length + 1; c.tasks = c.tasks || []
+          const firstOpt = (c.options && c.options[0]) ? c.options[0].id : ''
+          c.tasks.push({ id: base + '-t' + n, content: '', correct_option: firstOpt, 'feedback-correct': null, 'feedback-incorrect': null })
+          persistAndRender()
+        })
+        tasksCard.append(tasksList, addTask); common.appendChild(tasksCard); redrawTasks()
+
+        const br = document.createElement('input'); br.type = 'text'; br.value = c.button_text || 'Проверить'; br.addEventListener('input', () => { c.button_text = br.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки «Проверить»', br))
+        common.appendChild(labeled('Общий фидбек', rt))
+      }
+
+      if (node.type === 'FillText') {
+        const c = node.content
+        const text = document.createElement('textarea'); text.value = c.text || ''; text.addEventListener('input', () => { c.text = text.value; softPersist() })
+        common.appendChild(labeled('Текст с плейсхолдерами {{taskX}}', text))
+
+        // tasks
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Задания</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+            ; (c.tasks || []).forEach((t, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+              const tt = document.createElement('input'); tt.type = 'text'; tt.value = t.text || ''; tt.addEventListener('input', () => { t.text = tt.value; softPersist() })
+              const ca = document.createElement('input'); ca.type = 'text'; ca.value = t.correctAnswer || ''; ca.addEventListener('input', () => { t.correctAnswer = ca.value; softPersist() })
+
+              if (typeof t.minWidth === 'undefined') t.minWidth = null
+              const mw = document.createElement('input'); mw.type = 'number'; mw.placeholder = 'null'; mw.value = (t.minWidth ?? ''); mw.addEventListener('input', () => { const v = mw.value.trim(); t.minWidth = (v === '' ? null : Number(v)); softPersist() })
+
+              const fok = document.createElement('input'); fok.type = 'text'; fok.value = t['feedback-correct'] || ''; fok.addEventListener('input', () => { t['feedback-correct'] = fok.value || null; softPersist() })
+              const finc = document.createElement('input'); finc.type = 'text'; finc.value = t['feedback-incorrect'] || ''; finc.addEventListener('input', () => { t['feedback-incorrect'] = finc.value || null; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+                () => { c.tasks.splice(idx, 1); persistAndRender() }
+              ])
+
+              box.append(
+                labeled('ID задания (используйте в тексте как {{id}})', tid),
+                labeled('Текст внутри поля ввода (placeholder)', tt),
+                labeled('Правильный ответ (строка)', ca),
+                labeled('Минимальная ширина (minWidth)', mw),
+                labeled('Фидбек: верно', fok),
+                labeled('Фидбек: неверно', finc),
+                controls
+              )
+              tasksList.appendChild(box)
+            })
+        }
+        const addTask = smallBtn('+ Задание', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = (c.tasks || []).length + 1; c.tasks = c.tasks || []
+          c.tasks.push({ id: base + '-t' + n, text: '', correctAnswer: '', minWidth: null, 'feedback-correct': null, 'feedback-incorrect': null })
+          persistAndRender()
+        })
+        tasksCard.append(tasksList, addTask); common.appendChild(tasksCard); redrawTasks()
+
+        const bt = document.createElement('input'); bt.type = 'text'; bt.value = c.button_text || 'Проверить'; bt.addEventListener('input', () => { c.button_text = bt.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки', bt))
+        common.appendChild(labeled('Общий фидбек (опционально)', rt))
+      }
+
+      if (node.type === 'SelectText') {
+        const c = node.content
+        const text = document.createElement('textarea'); text.value = c.text || ''; text.addEventListener('input', () => { c.text = text.value; softPersist() })
+        common.appendChild(labeled('Текст с плейсхолдерами {{taskX}}', text))
+
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Задания (выпадающие списки)</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+            ; (c.tasks || []).forEach((t, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+              const finc = document.createElement('input'); finc.type = 'text'; finc.value = t['feedback-incorrect'] || ''; finc.addEventListener('input', () => { t['feedback-incorrect'] = finc.value || null; softPersist() })
+              
+              const optsCard = document.createElement('div'); optsCard.className = 'card'; optsCard.innerHTML = '<h4>Опции</h4>'
+              const optsList = document.createElement('div'); optsList.className = 'list'
+              function redrawOptions() {
+                 optsList.innerHTML = '';
+                 (t.options || []).forEach((o, oidx) => {
+                    const obox = document.createElement('div'); obox.className = 'row'
+                    const oid = document.createElement('input'); oid.type = 'text'; oid.value = o.id || ''; oid.addEventListener('input', () => { o.id = oid.value; softPersist() })
+                    const oc = document.createElement('input'); oc.type = 'text'; oc.value = o.content || ''; oc.addEventListener('input', () => { o.content = oc.value; softPersist() })
+                    const ocorrect = document.createElement('input'); ocorrect.type = 'radio'; ocorrect.name = 'correct_' + t.id; ocorrect.checked = !!o.correct_option
+                    ocorrect.addEventListener('change', () => {
+                       t.options.forEach(opt => opt.correct_option = false)
+                       o.correct_option = true
+                       softPersist()
+                    })
+                    const odel = smallBtn('✕', () => { t.options.splice(oidx, 1); persistAndRender() })
+                    obox.append(ocorrect, oid, oc, odel)
+                    optsList.appendChild(obox)
+                 })
+              }
+              const addOpt = smallBtn('+ Опция', () => {
+                 t.options = t.options || []
+                 const base = t.id || genId(state.lessonNumber, idx, 'SelectText')
+                 t.options.push({ id: base + '-opt' + (t.options.length+1), content: '', correct_option: t.options.length === 0 })
+                 persistAndRender()
+              })
+              optsCard.append(optsList, addOpt); redrawOptions()
+
+              const controls = rowButtons(['↑', '↓', '✕ Удал. задание'], [
+                () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+                () => { c.tasks.splice(idx, 1); persistAndRender() }
+              ])
+
+              box.append(
+                labeled('ID задания ({{id}})', tid),
+                optsCard,
+                labeled('Фидбек: неверно', finc),
+                controls
+              )
+              tasksList.appendChild(box)
+            })
+        }
+        const addTask = smallBtn('+ Задание', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = (c.tasks || []).length + 1; c.tasks = c.tasks || []
+          c.tasks.push({ id: base + '-t' + n, options: [{id: base + '-t' + n + '-opt1', content: 'Опция', correct_option: true}], 'feedback-incorrect': null })
+          persistAndRender()
+        })
+        tasksCard.append(tasksList, addTask); common.appendChild(tasksCard); redrawTasks()
+
+        const bt = document.createElement('input'); bt.type = 'text'; bt.value = c.button_text || 'Проверить'; bt.addEventListener('input', () => { c.button_text = bt.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки', bt))
+        common.appendChild(labeled('Общий фидбек (опционально)', rt))
+      }
+
+      if (node.type === 'ClickWord') {
+        const c = node.content
+        const q = document.createElement('textarea'); q.value = c.question || ''; q.addEventListener('input', () => { c.question = q.value; softPersist() })
+        common.appendChild(labeled('Инструкция', q))
+
+        const tasksCard = document.createElement('div'); tasksCard.className = 'card'; tasksCard.innerHTML = '<h3>Слова / Выражения</h3>'
+        const tasksList = document.createElement('div'); tasksList.className = 'list'
+        function redrawTasks() {
+          tasksList.innerHTML = ''
+            ; (c.tasks || []).forEach((t, idx) => {
+              const box = document.createElement('div'); box.className = 'card subtle'
+              const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
+              const txt = document.createElement('input'); txt.type = 'text'; txt.value = t.text || ''; txt.addEventListener('input', () => { t.text = txt.value; softPersist() })
+              
+              const ci = document.createElement('input'); ci.type = 'text'; ci.placeholder = 'Например: 0,1,2'; ci.value = (t.correct_indices || []).join(','); ci.addEventListener('input', () => {
+                 t.correct_indices = ci.value.split(',').map(s => Number(s.trim())).filter(n => !isNaN(n))
+                 softPersist()
+              })
+
+              const finc = document.createElement('input'); finc.type = 'text'; finc.value = t['feedback-incorrect'] || ''; finc.addEventListener('input', () => { t['feedback-incorrect'] = finc.value || null; softPersist() })
+
+              const controls = rowButtons(['↑', '↓', '✕'], [
+                () => { if (idx > 0) { [c.tasks[idx - 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx - 1]]; persistAndRender() } },
+                () => { if (idx < c.tasks.length - 1) { [c.tasks[idx + 1], c.tasks[idx]] = [c.tasks[idx], c.tasks[idx + 1]]; persistAndRender() } },
+                () => { c.tasks.splice(idx, 1); persistAndRender() }
+              ])
+
+              box.append(
+                labeled('ID', tid),
+                labeled('Слово (simvols нумеруются с 0, пробелы игнорируются при клике, но входят в индекс!)', txt),
+                labeled('Верные индексы (через запятую)', ci),
+                labeled('Фидбек (если есть ошибки)', finc),
+                controls
+              )
+              tasksList.appendChild(box)
+            })
+        }
+        const addTask = smallBtn('+ Слово', () => {
+          const base = node.id || genId(state.lessonNumber, i, node.type); if (!node.id) node.id = base
+          const n = (c.tasks || []).length + 1; c.tasks = c.tasks || []
+          c.tasks.push({ id: base + '-t' + n, text: '', correct_indices: [], 'feedback-incorrect': null })
+          persistAndRender()
+        })
+        tasksCard.append(tasksList, addTask); common.appendChild(tasksCard); redrawTasks()
+
+        const bt = document.createElement('input'); bt.type = 'text'; bt.value = c.button_text || 'Проверить'; bt.addEventListener('input', () => { c.button_text = bt.value; softPersist() })
+        const rt = document.createElement('textarea'); rt.value = c.result_text || ''; rt.addEventListener('input', () => { c.result_text = rt.value; softPersist() })
+        common.appendChild(labeled('Текст кнопки', bt))
+        common.appendChild(labeled('Общий фидбек (опционально)', rt))
+      }
+    }
+
+    // ====== МЕЛКИЕ UI ХЕЛПЕРЫ ======
+    function smallBtn(text, onClick) { const b = document.createElement('button'); b.className = 'btn small'; b.textContent = text; b.addEventListener('click', (e) => { e.stopPropagation(); onClick && onClick() }); return b }
+    function labeled(label, element) { const w = document.createElement('div'); const l = document.createElement('div'); l.className = 'label'; l.textContent = label; w.append(l, element); return w }
+    function rowButtons(labels, fns) { const x = document.createElement('div'); x.className = 'row'; labels.forEach((t, i) => x.appendChild(smallBtn(t, fns[i]))); return x }
+    function checkbox(label, checked, onChange) { const w = document.createElement('label'); w.className = 'row'; const i = document.createElement('input'); i.type = 'checkbox'; i.checked = !!checked; i.addEventListener('change', () => onChange(!!i.checked)); const span = document.createElement('span'); span.textContent = label; w.append(i, span); return { input: i, wrapper: w } }
+
+    // ====== ЧЕРНОВИКИ (localStorage) ======
+    function listDraftKeys() { return Object.keys(localStorage).filter(k => k.startsWith('lesson_v1_draft:')) }
+    function refreshDrafts() {
+      const box = $('#drafts'); box.innerHTML = ''
+      const keys = listDraftKeys().sort()
+      if (!keys.length) { box.innerHTML = '<div class="muted">Пока нет черновиков</div>'; return }
+      keys.forEach(k => {
+        const name = k.split(':')[1]
+        const row = document.createElement('div'); row.className = 'row'
+        row.appendChild(document.createTextNode(name))
+        row.appendChild(smallBtn('Загрузить', () => {
+          try { const data = JSON.parse(localStorage.getItem(k)); if (data?.lesson) { state.lesson = data.lesson; state.lessonNumber = data.lessonNumber || 1; state.selectedIndex = -1; softPersist() } }
+          catch (e) { setStatus('Не удалось загрузить черновик', 'err') }
+        }))
+        row.appendChild(smallBtn('Переименовать', () => {
+          const nn = prompt('Новое имя черновика', name); if (!nn) return; if (localStorage.getItem('lesson_v1_draft:' + nn)) { alert('Черновик с таким именем уже есть'); return }
+          const val = localStorage.getItem(k); localStorage.setItem('lesson_v1_draft:' + nn, val); localStorage.removeItem(k); refreshDrafts(); setStatus('Переименовано', 'ok')
+        }))
+        row.appendChild(smallBtn('Удалить', () => { if (confirm('Удалить черновик «' + name + '»?')) { localStorage.removeItem(k); refreshDrafts(); setStatus('Удалено', 'ok') } }))
+        box.appendChild(row)
+      })
+    }
+
+    // ====== ИМПОРТ / ЭКСПОРТ ======
+    function currentLessonJson() { return pretty(state.lesson) }
+    function applyJsonFromView() {
+      try {
+        const obj = JSON.parse($('#jsonView').textContent); if (!obj || typeof obj !== 'object') throw new Error('Неверный JSON')
+        state.lesson = obj;
+        state.lessonId = obj.lesson_id || 'lesson1';
+        state.lessonVersion = obj.lesson_version || 'v.1.0';
+        state.topicId = obj.topicId || '';
+        state.selectedIndex = -1; setStatus('JSON применён', 'ok'); persistAndRender()
+      }
+      catch (e) { setStatus('Ошибка JSON: ' + e.message, 'err') }
+    }
+
+    function exportDownload() {
+      const name = ($('#exportName').value || 'lesson.json').trim()
+      download(name, currentLessonJson())
+    }
+
+    function exportCopy() { copyToClipboard(currentLessonJson()) }
+
+    // ====== ДОБАВЛЕНИЕ УЗЛОВ ======
+    function addNode(type) {
+      const idx = state.lesson.content.length
+      const idBase = genId(state.lessonNumber, idx, type)
+      let node
+      switch (type) {
+        case 'markdown': node = TEMPLATE_BY_TYPE.markdown(idBase); break
+        case 'Table': node = TEMPLATE_BY_TYPE.Table(idBase); break
+        case 'QuizSelect': node = TEMPLATE_BY_TYPE.QuizSelect(idBase); break
+        case 'QuizCheckbox': node = TEMPLATE_BY_TYPE.QuizCheckbox(idBase); break
+        case 'QuizSet': node = TEMPLATE_BY_TYPE.QuizSet(idBase); break
+        case 'FillInTheBlank': node = TEMPLATE_BY_TYPE.FillInTheBlank(idBase); break
+        case 'FillTable': node = TEMPLATE_BY_TYPE.FillTable(idBase); break
+        case 'DragAndDrop': node = TEMPLATE_BY_TYPE.DragAndDrop(idBase); break
+        case 'DragTable': node = TEMPLATE_BY_TYPE.DragTable(idBase); break
+        case 'SelectList': node = TEMPLATE_BY_TYPE.SelectList(idBase); break
+        case 'FillText': node = TEMPLATE_BY_TYPE.FillText(idBase); break
+        case 'SelectText': node = TEMPLATE_BY_TYPE.SelectText(idBase); break
+        case 'ClickWord': node = TEMPLATE_BY_TYPE.ClickWord(idBase); break
+        default: node = { type, content: {} }
+      }
+      state.lesson.content.push(node)
+      state.selectedIndex = state.lesson.content.length - 1
+      persistAndRender()
+    }
+
+    // ====== ИНИЦ ======
+    try {
+      restore();
+      syncUI();
+    } catch (e) {
+      alert('Ошибка инициализации: ' + e.message + '\n' + e.stack);
+      console.error(e);
+    }
+
+    // обработчики шапки/правой панели
+    $('#btnAddNode').addEventListener('click', () => addNode($('#newType').value))
+    $('#lessonNumber').addEventListener('input', () => { state.lessonNumber = parseInt($('#lessonNumber').value || '1', 10); softPersist() })
+    $('#lessonId').addEventListener('input', (e) => { state.lessonId = e.target.value; state.lesson.lesson_id = state.lessonId; softPersist() })
+    $('#lessonVersion').addEventListener('input', (e) => { state.lessonVersion = e.target.value; state.lesson.lesson_version = state.lessonVersion; softPersist() })
+    $('#topicId').addEventListener('input', (e) => { state.topicId = e.target.value; state.lesson.topicId = state.topicId; softPersist() })
+    $('#btnValidate').addEventListener('click', () => {
+      const issues = validateLesson(state.lesson)
+      if (issues.length) { alert('Найдены проблемы:\n\n- ' + issues.join('\n- ')) } else { alert('Проблем не обнаружено ✓') }
+    })
+    $('#btnCopy').addEventListener('click', exportCopy)
+    $('#btnDownload').addEventListener('click', exportDownload)
+    $('#btnApplyJson').addEventListener('click', applyJsonFromView)
+    $('#btnNewLesson').addEventListener('click', () => { if (confirm('Очистить и начать новый урок?')) { state.lesson = { schema: 'v1', content: [] }; state.selectedIndex = -1; persistAndRender() } })
+
+    $('#importFile').addEventListener('change', async (e) => {
+      const f = e.target.files[0]; if (!f) return; const text = await f.text();
+      try {
+        const obj = JSON.parse(text)
+        // Совместимость: если нет schema — пометим как v1, но предупредим
+        let warn = ''
+        if (!obj.schema) { obj.schema = 'v1'; warn = '(в исходном файле не было schema — установлена v1)' }
+        const issues = validateLesson(obj)
+        if (issues.length) { if (!confirm('Импорт с предупреждениями:\n\n' + issues.join('\n') + '\n\nПродолжить импорт?')) return }
+        state.lesson = obj; state.selectedIndex = -1; softPersist(); setStatus('Импортировано ' + warn, 'ok')
+      } catch (err) { setStatus('Не удалось импортировать: ' + err.message, 'err') }
+      e.target.value = ''
+    })
+
+    // Черновики
+    $('#btnSaveDraft').addEventListener('click', () => {
+      const name = ($('#draftName').value || '').trim(); if (!name) return alert('Укажите имя черновика')
+      localStorage.setItem('lesson_v1_draft:' + name, JSON.stringify({ lesson: state.lesson, lessonNumber: state.lessonNumber }))
+      refreshDrafts(); setStatus('Черновик сохранён', 'ok')
+    })
+    refreshDrafts()
+
+    // Обновление JSON-превью по вводу (с задержкой)
+    var previewTimer
+    function updateJsonPreview() { clearTimeout(previewTimer); previewTimer = setTimeout(() => { $('#jsonView').textContent = pretty(state.lesson) }, 300) }
+
+    function softPersist() {
+      persist();
+      updateJsonPreview();
+      setStatus('Сохранено', 'ok');
+    }
+    const origPersistAndRender = persistAndRender
+    persistAndRender = function () { persist(); syncUI(); renderEditor(); updateJsonPreview() }
+
+    // Поддержка уникальности id (проверяем перед экспортом и при ручном изменении id)
+    function checkUniqueIds() {
+      const all = new Set(); const dups = []
+        ; (state.lesson.content || []).forEach((n, i) => {
+          const push = (id) => { if (!id) return; if (all.has(id)) dups.push(id); else all.add(id) }
+          if (n.id) push(n.id)
+          if (n.content?.options) n.content.options.forEach(o => push(o.id))
+          if (n.type === 'QuizSet') {
+            (n.content.tasks || []).forEach(t => push(t.id))
+          }
+          if (n.type === 'FillInTheBlank') {
+            (n.content.tasks || []).forEach(t => push(t.id))
+          }
+          if (n.type === 'FillTable') {
+            (n.content?.table?.rows || []).forEach(r => push(r.id))
+          }
+          if (n.type === 'DragAndDrop') {
+            (n.content?.groups || []).forEach(g => push(g.id));
+            (n.content?.tasks || []).forEach(t => push(t.id));
+          }
+          if (n.type === 'DragTable') {
+            (n.content?.rows || []).forEach(r => push(r.id));
+            (n.content?.columns || []).forEach(c => push(c.id));
+            (n.content?.groups || []).forEach(g => push(g.id));
+            (n.content?.tasks || []).forEach(t => push(t.id));
+          }
+          if (n.type === 'SelectList') {
+            (n.content?.options || []).forEach(o => push(o.id));
+            (n.content?.tasks || []).forEach(t => push(t.id));
+          }
+          if (n.type === 'FillText') {
+            (n.content?.tasks || []).forEach(t => push(t.id))
+          }
+          if (n.type === 'SelectText') {
+            (n.content?.tasks || []).forEach(t => {
+              push(t.id)
+                ; (t.options || []).forEach(o => push(o.id))
+            })
+          }
+          if (n.type === 'ClickWord') {
+            (n.content?.tasks || []).forEach(t => push(t.id))
+          }
+        })
+      return dups
+    }
+
+    // Перед скачиванием — авто-валидация и уникальность
+    const _exportDownload = exportDownload
+    exportDownload = function () {
+      const issues = validateLesson(state.lesson)
+      const dups = checkUniqueIds()
+      if (dups.length) issues.push('Найдены повторяющиеся id: ' + [...new Set(dups)].join(', '))
+      if (issues.length) { if (!confirm('Обнаружены проблемы:\n\n- ' + issues.join('\n- ') + '\n\nСкачать всё равно?')) return }
+      _exportDownload()
+    }
+
+    // Применение JSON вручную — тоже провалидируем слегка
+    const _applyJsonFromView = applyJsonFromView
+    applyJsonFromView = function () {
+      try {
+        const obj = JSON.parse($('#jsonView').textContent)
+        const issues = validateLesson(obj)
+        if (issues.length && !confirm('Обнаружены проблемы:\n\n- ' + issues.join('\n- ') + '\n\nПрименить всё равно?')) return
+        _applyJsonFromView()
+      } catch (e) { setStatus('Ошибка JSON: ' + e.message, 'err') }
+    }
+
+  </script>
+</body>
+
+</html>

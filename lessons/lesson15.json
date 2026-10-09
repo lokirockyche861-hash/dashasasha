@@ -1,0 +1,1113 @@
+{
+  "version": "1.0",
+  "description": "Тестовый урок для DragAndDrop",
+  "lesson_id": "lesson15",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default",
+  "content": [
+    {
+      "type": "DragAndDrop",
+      "id": "l3-n25-drop-ne6q",
+      "taskVersion": "v.1.0",
+      "answer_type": "match",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "В слове выделено окончание, формообразующий суффикс, постфикс или словообразовательная морфема? Перетащите слова в группы.\n\nВспомните: окончание обязательно согласует слово с другими словами, поэтому мы меняем падеж или число, чтобы его обнаружить. \nФормообразующие суффиксы и постфиксы мы рассмотрели в этом уроке.",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l3-n25-drop-ne6q-g1",
+            "content": "окончание"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g2",
+            "content": "формообразующий суффикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g3",
+            "content": "формообразующий постфикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g4",
+            "content": "словообразовательная морфема"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l3-n25-drop-ne6q-t1",
+            "content": "брожУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t2",
+            "content": "заглянуЛа",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t3",
+            "content": "летеВШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t4",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t5",
+            "content": "голубоватАЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t6",
+            "content": "двумстАМ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t7",
+            "content": "спряталиСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t8",
+            "content": "вершИНа",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t9",
+            "content": "восемьЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t10",
+            "content": "внизУ",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t11",
+            "content": "приближаяСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t12",
+            "content": "дирижёрА",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t13",
+            "content": "режЕТ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t14",
+            "content": "скорЕЕ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t15",
+            "content": "забываТЬ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t16",
+            "content": "переулкАХ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t17",
+            "content": "выключившийСЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t18",
+            "content": "неторопливО",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t19",
+            "content": "поторопИсь",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t20",
+            "content": "шепчА",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t21",
+            "content": "смотриТЕ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t22",
+            "content": "узорчатОМУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t23",
+            "content": "узорЧАТому",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t24",
+            "content": "строЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t25",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t26",
+            "content": "энциклопедиЕЙ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Посмотри, где были допущены ошибки. \n\nФормообразующие морфемы выражают грамматические признаки - обязательные для выражения.\n\nСловообразовательные морфемы образуют новые слова. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l9-n11-drop-c5ir",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Разделите звуки на гласные и согласные. Проверяйте себя:\n1. Если при произнесении вибрация в горле не появляется - звук согласный. \n2. Если вибрация появляется, но во рту есть препятствия, создающие шум, - звук согласный. \n3. Если есть вибрация и никаких препятствий во рту - звук гласный. ",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l9-n11-drop-c5ir-g1",
+            "content": "Гласные"
+          },
+          {
+            "id": "l9-n11-drop-c5ir-g2",
+            "content": "Согласные"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l9-n11-drop-c5ir-t1",
+            "content": "[а]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t2",
+            "content": "[б]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t3",
+            "content": "[в]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t4",
+            "content": "[г]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t5",
+            "content": "[д]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t6",
+            "content": "[э]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t7",
+            "content": "[о]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t8",
+            "content": "[ж]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t9",
+            "content": "[з]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t10",
+            "content": "[и]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t11",
+            "content": "[л]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t12",
+            "content": "[м]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t13",
+            "content": "[н]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t14",
+            "content": "[р]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t15",
+            "content": "[у]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t16",
+            "content": "[х]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t17",
+            "content": "[ц]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t18",
+            "content": "[ч’]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t19",
+            "content": "[щ’]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t20",
+            "content": "[ы]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично. Посмотрите, не ошиблись ли вы. Если есть ошибки, протестируйте звук ещё раз - экспериментируйте: попробуйте подержать его подольше, произнести громче или, наоборот, тише; также можно попробовать убрать или добавить препятствия во рту. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l4-n7-drop-egrm",
+      "content": {
+        "question": "Вам нужно объединить слова, в которых один корень - основная смысловая часть, одинаковая по значению и звучанию. То есть вам нужно собрать группы **однокоренных слов**. ",
+        "layout": "columns",
+        "family": true,
+        "groups": [
+          {
+            "id": "l4-n7-drop-egrm-g1",
+            "content": ""
+          },
+          {
+            "id": "l4-n7-drop-egrm-g2",
+            "content": ""
+          },
+          {
+            "id": "l4-n7-drop-egrm-g3",
+            "content": ""
+          },
+          {
+            "id": "l4-n7-drop-egrm-g4",
+            "content": ""
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l4-n7-drop-egrm-t1",
+            "content": "водный",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t2",
+            "content": "вратарь",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t3",
+            "content": "воронёнок",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t4",
+            "content": "подводящий",
+            "correct_group": "l4-n7-drop-egrm-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t5",
+            "content": "вороний",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t6",
+            "content": "подворотня",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t7",
+            "content": "привратник",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t8",
+            "content": "приводить",
+            "correct_group": "l4-n7-drop-egrm-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t9",
+            "content": "водяной",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t10",
+            "content": "наводниться",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t11",
+            "content": "по-вороньи",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t12",
+            "content": "подводный",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t13",
+            "content": "вода",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t14",
+            "content": "водить",
+            "correct_group": "l4-n7-drop-egrm-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t15",
+            "content": "ворона",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t16",
+            "content": "ворота",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Проверьте себя, посмотрите, не ошиблись ли вы. \n\nВы могли заметить, что корень может немного изменяться (ворот – врат). Разного рода чередования гласных и согласных нередко встречаются в русском языке и имеют закономерности.",
+        "button_text": "Проверить",
+        "show_feedback": false
+      },
+      "answer_type": "match",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l3-n25-drop-ne6q",
+      "content": {
+        "question": "В слове выделено окончание, формообразующий суффикс, постфикс или словообразовательная морфема? Перетащите слова в группы.\n\nВспомните: окончание обязательно согласует слово с другими словами, поэтому мы меняем падеж или число, чтобы его обнаружить. \nФормообразующие суффиксы и постфиксы мы рассмотрели в этом уроке.",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l3-n25-drop-ne6q-g1",
+            "content": "окончание"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g2",
+            "content": "формообразующий суффикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g3",
+            "content": "формообразующий постфикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g4",
+            "content": "словообразовательная морфема"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l3-n25-drop-ne6q-t1",
+            "content": "брожУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t2",
+            "content": "заглянуЛа",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t3",
+            "content": "летеВШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t4",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t5",
+            "content": "голубоватАЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t6",
+            "content": "двумстАМ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t7",
+            "content": "спряталиСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t8",
+            "content": "вершИНа",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t9",
+            "content": "восемьЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t10",
+            "content": "внизУ",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t11",
+            "content": "приближаяСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t12",
+            "content": "дирижёрА",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t13",
+            "content": "режЕТ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t14",
+            "content": "скорЕЕ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t15",
+            "content": "забываТЬ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t16",
+            "content": "переулкАХ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t17",
+            "content": "выключившийСЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t18",
+            "content": "неторопливО",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t19",
+            "content": "поторопИсь",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t20",
+            "content": "шепчА",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t21",
+            "content": "смотриТЕ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t22",
+            "content": "узорчатОМУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t23",
+            "content": "узорЧАТому",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t24",
+            "content": "строЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t25",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t26",
+            "content": "энциклопедиЕЙ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Посмотри, где были допущены ошибки. \n\nФормообразующие морфемы выражают грамматические признаки - обязательные для выражения.\n\nСловообразовательные морфемы образуют новые слова. ",
+        "button_text": "Проверить",
+        "show_feedback": false
+      },
+      "answer_type": "match",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l14-n3-drop-sxmn",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Соедините слово с его транскрипцией",
+        "layout": "matrix",
+        "matrix_cols": 3,
+        "groups": [
+          {
+            "id": "l14-n3-drop-sxmn-g1",
+            "content": "коса"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g2",
+            "content": "коза"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g3",
+            "content": "съезд"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g4",
+            "content": "съесть"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g5",
+            "content": "сесть"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g6",
+            "content": "лучок"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g7",
+            "content": "лючок"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g8",
+            "content": "доро́га"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g9",
+            "content": "до́рог"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g10",
+            "content": "поезд"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g11",
+            "content": "поесть"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l14-n3-drop-sxmn-t1",
+            "content": "[по́jэст]",
+            "correct_group": "l14-n3-drop-sxmn-g10",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t2",
+            "content": "[до́рак]",
+            "correct_group": "l14-n3-drop-sxmn-g9",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t3",
+            "content": "[луч’о́к]",
+            "correct_group": "l14-n3-drop-sxmn-g6",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t4",
+            "content": "[cjэ́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t5",
+            "content": "[cjэ́ст]",
+            "correct_group": "l14-n3-drop-sxmn-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t6",
+            "content": "[c’э́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g5",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t7",
+            "content": "[каза́]",
+            "correct_group": "l14-n3-drop-sxmn-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t8",
+            "content": "[л’уч’о́к]",
+            "correct_group": "l14-n3-drop-sxmn-g7",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t9",
+            "content": "[паjэ́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g11",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t10",
+            "content": "[даро́га]",
+            "correct_group": "l14-n3-drop-sxmn-g8",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t11",
+            "content": "[каcа́]",
+            "correct_group": "l14-n3-drop-sxmn-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Посмотрите, есть ли у вас ошибки. Произнесите ещё раз слова в слух и сравните с выбранными транскрипциями. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l10-n8-drop-x5yf",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Перетащите карточки в группы",
+        "layout": "matrix",
+        "show_feedback": true,
+        "groups": [
+          {
+            "id": "l10-n8-drop-x5yf-g1",
+            "content": "[г]"
+          },
+          {
+            "id": "l10-n8-drop-x5yf-g2",
+            "content": "[ж]"
+          },
+          {
+            "id": "l10-n8-drop-x5yf-g3",
+            "content": "[з]"
+          },
+          {
+            "id": "l10-n8-drop-x5yf-g4",
+            "content": "[д]"
+          },
+          {
+            "id": "l10-n8-drop-x5yf-g5",
+            "content": "[б]"
+          },
+          {
+            "id": "l10-n8-drop-x5yf-g6",
+            "content": "[в]"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l10-n8-drop-x5yf-t1",
+            "content": "[т]",
+            "correct_group": "l10-n8-drop-x5yf-g4",
+            "feedback-correct": "Верно! Звуку [т] можно легко добавить тон, и получится звонкий [д].",
+            "feedback-incorrect": "Попробуйте произнести **[т]** громко, с добавлением голоса (тона). Какая согласная получается? Правильно, **[д]**."
+          },
+          {
+            "id": "l10-n8-drop-x5yf-t2",
+            "content": "[п]",
+            "correct_group": "l10-n8-drop-x5yf-g5",
+            "feedback-correct": "Верно! Губно-губной глухой звук [п] в звонкой версии — это [б].",
+            "feedback-incorrect": "Если мы добавим голос к смыканию губ на звуке **[п]**, то услышим звонкий **[б]**."
+          },
+          {
+            "id": "l10-n8-drop-x5yf-t3",
+            "content": "[с]",
+            "correct_group": "l10-n8-drop-x5yf-g3",
+            "feedback-correct": "Верно! Глухой свистящий [с] имеет звонкую пару [з].",
+            "feedback-incorrect": "Звук **[с]** свистящий и глухой. А какой свистящий звук создается *с участием голоса*? Это **[з]**."
+          },
+          {
+            "id": "l10-n8-drop-x5yf-t4",
+            "content": "[к]",
+            "correct_group": "l10-n8-drop-x5yf-g1",
+            "feedback-correct": "Точно! Если к [к] добавить голос, он превратится в звонкий [г].",
+            "feedback-incorrect": "Подсказка: попробуйте сказать «кора» и «гора». Глухой **[к]** звонко отражается в **[г]**."
+          },
+          {
+            "id": "l10-n8-drop-x5yf-t5",
+            "content": "[ш]",
+            "correct_group": "l10-n8-drop-x5yf-g2",
+            "feedback-correct": "Верно! Звук [ш] — это глухой шипящий, его звонкая пара — [ж].",
+            "feedback-incorrect": "Шипящие звуки тоже имеют пары по звонкости-глухости. Звонкий аналог звука **[ш]** — это **[ж]**."
+          },
+          {
+            "id": "l10-n8-drop-x5yf-t6",
+            "content": "[ф]",
+            "correct_group": "l10-n8-drop-x5yf-g6",
+            "feedback-correct": "В точку! Если начать «гудеть» голосом при произнесении [ф], вы услышите [в].",
+            "feedback-incorrect": "Прижмите нижнюю губу к верхним зубам и выдохните с голосом — вместо **[ф]** вы услышите звонкий **[в]**."
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Если вы допустили ошибки, попробуйте выполнить задание ещё раз. Произносите звонкий согласный - убирайте тон (голос) и слушайте, какой глухой согласный получился. "
+      }
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l10-n15-drop-uf94",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Рассортируй согласные на шумные звонкие, шумные глухие и сонорные.\nШумные глухие = только тон\nШумные звонкие = шум+тон примерно в равном соотношении. Если убрать тон, услышим парный глухой согласный\nСонорные = много тона+немного шума. Почти не слышны и неразличимы, если произнести шёпотом. ",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l10-n15-drop-uf94-g1",
+            "content": "Шумные глухие"
+          },
+          {
+            "id": "l10-n15-drop-uf94-g2",
+            "content": "Шумные звонкие"
+          },
+          {
+            "id": "l10-n15-drop-uf94-g3",
+            "content": "Сонорные"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l10-n15-drop-uf94-t1",
+            "content": "[р]",
+            "correct_group": "l10-n15-drop-uf94-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t2",
+            "content": "[в]",
+            "correct_group": "l10-n15-drop-uf94-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t3",
+            "content": "[к]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t4",
+            "content": "[л]",
+            "correct_group": "l10-n15-drop-uf94-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t5",
+            "content": "[т]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t6",
+            "content": "[й’]",
+            "correct_group": "l10-n15-drop-uf94-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t7",
+            "content": "[х]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t8",
+            "content": "[ж]",
+            "correct_group": "l10-n15-drop-uf94-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t9",
+            "content": "[с]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t10",
+            "content": "[ч’]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t11",
+            "content": " [м]",
+            "correct_group": "l10-n15-drop-uf94-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t12",
+            "content": "[д]",
+            "correct_group": "l10-n15-drop-uf94-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t13",
+            "content": "[н]",
+            "correct_group": "l10-n15-drop-uf94-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l10-n15-drop-uf94-t14",
+            "content": "[ш]",
+            "correct_group": "l10-n15-drop-uf94-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Если вы допустили ошибки, попробуйте ещё раз протестировать звуки, произнося их вслух и подбирая, если возможно, пару по звонкости-глухости.",
+        "show_feedback": false
+      }
+    }
+  ]
+}

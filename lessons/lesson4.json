@@ -1,0 +1,442 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# **Урок 4. Корень. Однокоренные слова.** \n\nЕсли отбросить все формообразующие морфемы (окончания, формообразующие суффиксы и постфиксы), то мы получим **основу слова**. В основу слова обязательно входит **корень**, также могут входить **словообразовательные** **суффиксы** и **приставки.**\n\n**Корень — это главная часть слова, в которой заключено его основное значение. Общие корни объединяют слова в одну семью — родственные (однокоренные) слова.**",
+      "id": "auto-mark-0d6c"
+    },
+    {
+      "type": "ClickWord",
+      "id": "l4-n2-clkw-abcd",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false,
+      "content": {
+        "question": "Найди в словах общую часть (корень)",
+        "tasks": [
+          {
+            "id": "t1",
+            "text": "зима",
+            "correct_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedback-incorrect": "Корень в этом слове — зим"
+          },
+          {
+            "id": "t2",
+            "text": "зимушка",
+            "correct_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "t3",
+            "text": "предзимний",
+            "correct_indices": [
+              4,
+              5,
+              6
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "t4",
+            "text": "зимник",
+            "correct_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "t5",
+            "text": "зазимовать",
+            "correct_indices": [
+              2,
+              3,
+              4
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Корень -зим- найден во всех словах."
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Вы нашли корень этих слов. Все эти слова имеют отношение к зиме. Если мы уберём корень, то мы получим о словах некоторую информацию, но не сможем узнать их значение. \n\nНапример, *за___овать – это начало какого-то действия (за-) и процесс (-ова-), но какого действия – мы не узнаем без корня.* Сравните: зазимовать, загоревать, запротестовать и т.п.",
+      "id": "auto-mark-ee1c"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n4-qsel-ljqo",
+      "content": {
+        "question": "В каком из слов корень совпадает с основой слова? \n**Основа слова** – это часть слова без формообразующих суффиксов и постфиксов и без окончания, только словообразовательные морфемы. ",
+        "options": [
+          {
+            "id": "l4-n4-qsel-ljqo-o1",
+            "content": "зима",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n4-qsel-ljqo-o2",
+            "content": "зимушка",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n4-qsel-ljqo-o3",
+            "content": "зимник",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n4-qsel-ljqo-o4",
+            "content": "предзимний",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n4-qsel-ljqo-o5",
+            "content": "зимовать",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Корень -зим- мы нашли в предыдущем задании. Следовательно, нам нужно слово с корнем -зим- + окончание/формообразующий суффикс или постфикс. В слове зима мы видим окончание -а. Значит, основа состоит только из корня -зим-."
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n5-qsel-rh9m",
+      "content": {
+        "question": "Как вы думаете, может ли другая морфема (не корень) совпадать с основой? ",
+        "options": [
+          {
+            "id": "l4-n5-qsel-rh9m-o1",
+            "content": "Да",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n5-qsel-rh9m-o2",
+            "content": "Нет",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Нет, с основой может совпадать только корень. Он является главной смысловой частью слова. Приставки и суффиксы могут входить в основу, но только вместе с корнем. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n6-qsel-the6",
+      "content": {
+        "question": "Может ли существовать слово без корня? ",
+        "options": [
+          {
+            "id": "l4-n6-qsel-the6-o1",
+            "content": "Да",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n6-qsel-the6-o2",
+            "content": "Нет",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Слово без корня не может существовать, так как корень несёт в себе основное лексическое значение. Слово без корня станет бессмысленным, мы сможем только установить некоторые рамки значений (как в слове зазимовать из которого мы изъяли корень: за_овать - это действие, это его начало и процесс, но, какое это действие, мы не знаем. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l4-n7-drop-egrm",
+      "content": {
+        "question": "Вам нужно объединить слова, в которых один корень - основная смысловая часть, одинаковая по значению и звучанию. То есть вам нужно собрать группы **однокоренных слов**. ",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l4-n7-drop-egrm-g1",
+            "content": "вода"
+          },
+          {
+            "id": "l4-n7-drop-egrm-g2",
+            "content": "водить"
+          },
+          {
+            "id": "l4-n7-drop-egrm-g3",
+            "content": "ворона"
+          },
+          {
+            "id": "l4-n7-drop-egrm-g4",
+            "content": "ворота"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l4-n7-drop-egrm-t1",
+            "content": "водный",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t2",
+            "content": "вратарь",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t3",
+            "content": "воронёнок",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t4",
+            "content": "подводящий",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t5",
+            "content": "вороний",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t6",
+            "content": "подворотня",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t7",
+            "content": "привратник",
+            "correct_group": "l4-n7-drop-egrm-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t8",
+            "content": "приводить",
+            "correct_group": "l4-n7-drop-egrm-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t9",
+            "content": "водяной",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t10",
+            "content": "наводниться",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t11",
+            "content": "по-вороньи",
+            "correct_group": "l4-n7-drop-egrm-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l4-n7-drop-egrm-t12",
+            "content": "подводный",
+            "correct_group": "l4-n7-drop-egrm-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Проверьте себя, посмотрите, не ошиблись ли вы. \n\nВы могли заметить, что корень может немного изменяться (ворот – врат). Разного рода чередования гласных и согласных нередко встречаются в русском языке и имеют закономерности.",
+        "button_text": "Проверить",
+        "show_feedback": false
+      },
+      "answer_type": "match",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l4-n8-fibl-vjck",
+      "content": {
+        "question": "Давайте посмотрим на закономерности чередования согласных. Подберите пропущенные согласные в корнях слов, опираясь на языковую интуицию.",
+        "tasks": [
+          {
+            "id": "l4-n8-fibl-vjck-t1",
+            "text": "снег – сне___ок",
+            "correctAnswers": [
+              "ж"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, молодец! Мы видим чередование г-ж",
+            "feedback-incorrect": "Мы видим чередование г-ж в корне: снег - снежок"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t2",
+            "text": "друг – дру___ба",
+            "correctAnswers": [
+              "ж"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Отлично! То же самое чередование г-ж в корне",
+            "feedback-incorrect": "Мы видим чередование г-ж в корне: друг - дружба"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t3",
+            "text": "рука – ру___ка (двери)",
+            "correctAnswers": [
+              "ч"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, молодец. Здесь -рук- превращается в -руч-",
+            "feedback-incorrect": " Здесь -рук- превращается в -руч-: рука - ручка (двери)"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t4",
+            "text": "орех – оре___ек",
+            "correctAnswers": [
+              "ш"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, верно! Здесь чередование х-ш: орех - орешек",
+            "feedback-incorrect": "Здесь чередование х-ш: орех - орешек"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t6",
+            "text": "цветы – цве___ти",
+            "correctAnswers": [
+              "с"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Цветы - цвести. Видите чередование согласных т-с? "
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t7",
+            "text": "молодой – моло___авый",
+            "correctAnswers": [
+              "ж"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, верно. Молодой - моложавый. Чередование д-ж",
+            "feedback-incorrect": "Молодой - моложавый. Чередование д-ж"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t8",
+            "text": "мороз – моро___еное",
+            "correctAnswers": [
+              "ж"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Совершенно верно! З-ж: мороз - мороженое",
+            "feedback-incorrect": "З-ж: мороз - мороженое"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t9",
+            "text": "начёс – че___ет",
+            "correctAnswers": [
+              "ш"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, верно. Здесь С чередуется с Ш. Начёс - чешет. А ещё гласный [о] чередуется с [э]",
+            "feedback-incorrect": "С чередуется с Ш. Начёс - чешет. А ещё гласный [о] чередуется с [э]"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t10",
+            "text": "холст – хол___овый",
+            "correctAnswers": [
+              "щ"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Молодец! Холст - холщовый",
+            "feedback-incorrect": "Холст - холщовый: СТ чередуется с Щ"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t11",
+            "text": "возить – во___у",
+            "correctAnswers": [
+              "ж"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, отлично! Здесь чередование воЗить - воЖу",
+            "feedback-incorrect": "Здесь чередование воЗить - воЖу"
+          },
+          {
+            "id": "l4-n8-fibl-vjck-t12",
+            "text": "расти – выра___ивать ",
+            "correctAnswers": [
+              "щ"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "result_text": "Молодцы! Как правило, согласные подбираются носителем языка интуитивно, мы ясно слышим их и верно используем на письме. \nДаже если вы допустили несколько ошибок, всё равно в основном вы отвечали верно. \n\nЧередование гласных мы рассмотрим в разделе «Орфография». ",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    }
+  ],
+  "lesson_id": "lesson4",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

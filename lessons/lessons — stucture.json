@@ -1,0 +1,1053 @@
+{
+  "lesson_id": "lesson1234",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_morphemika",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# **Урок 1. Лексическое и грамматическое значение слов.**"
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l1-n4-qchk-o2pn",
+      "taskVersion": "v.1.0",
+      "answer_type": "multi-select",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Посмотрите на первый столбец. Выберите из перечисленной ниже информации ту, которую мы получаем из части -ЫЙ",
+        "options": [
+          {
+            "id": "l1-n4-qchk-o2pn-o1",
+            "content": "Прошедшее время",
+            "correct": false,
+            "feedback-selected": "Время в предложении могло бы быть выражено дополнительным словом-глаголом: был жёлтый, будет жёлтый. Мы не видим время по окончанию. ",
+            "feedback-not-selected": "Верно! Время в предложении могло бы быть выражено дополнительным словом-глаголом: был жёлтый, будет жёлтый, но мы видим время по окончанию"
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o2",
+            "content": "Мужской род",
+            "correct": true,
+            "feedback-selected": "Верно! Жёлтый обязательно мужского рода, в отличие от слов жёлтая, жёлтое. ",
+            "feedback-not-selected": "Жёлтый обязательно мужского рода, в отличие от слов жёлтая, жёлтое. "
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o3",
+            "content": "Множественное число",
+            "correct": false,
+            "feedback-selected": "Мы говорим жёлтый, когда имеем в виду один предмет. Сравни: жёлтый лист - жёлтые листья",
+            "feedback-not-selected": "Верно! Мы говорим жёлтый, когда имеем в виду один лист. Сравни: жёлтый лист - жёлтые листья"
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o4",
+            "content": "Единственное число",
+            "correct": true,
+            "feedback-selected": "Верно! Мы говорим жёлтый, когда имеем в виду один предмет",
+            "feedback-not-selected": "Мы говорим жёлтый, когда имеем в виду один предмет. Сравни: жёлтый лист - жёлтые листья"
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o5",
+            "content": "Дательный падеж",
+            "correct": false,
+            "feedback-selected": "В дательном падеже будет другая форма: дать (какому?) жёлтому. На конце мы видим -ому",
+            "feedback-not-selected": "Верно! В дательном падеже будет другая форма: дать (какому?) жёлтому. На конце мы видим -ому"
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o6",
+            "content": "Именительный падеж",
+            "correct": true,
+            "feedback-selected": "Верно! Перед нами именительный падеж: есть (какой?) жёлтый",
+            "feedback-not-selected": "Перед нами действительно именительный падеж: есть (какой?) жёлтый"
+          },
+          {
+            "id": "l1-n4-qchk-o2pn-o7",
+            "content": "Второе лицо (ты, вы)",
+            "correct": false,
+            "feedback-selected": "Признаки не могут выражать лицо: ты жёлтый, он жёлтый, я жёлтый - на конце -ый",
+            "feedback-not-selected": "Верно! Признаки не могут выражать лицо: ты жёлтый, он жёлтый, я жёлтый - на конце -ый"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Нестрашно, если вы ошиблись при выборе признаков или выбрали не все. Важно, чтобы вы увидели: из одинаковой части слов, даже очень далёких по значению, мы можем получить общую информацию. Жёлтый и старый - слова мужского рода, единственного числа в именительном падеже"
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l1-n5-qsel-jurp",
+      "taskVersion": "v.1.0",
+      "answer_type": "select",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Посмотрите на второй столбец и выберите, какое значение слова изменилось, когда мы заменили -ЫЙ на -ЫЕ",
+        "options": [
+          {
+            "id": "l1-n5-qsel-jurp-o1",
+            "content": "Падеж",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l1-n5-qsel-jurp-o2",
+            "content": "Число",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l1-n5-qsel-jurp-o3",
+            "content": "Лицо",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l1-n5-qsel-jurp-o4",
+            "content": "Время",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Изменилось только число. Время и лицо не могут быть выражены признаком, а падеж не изменился: есть (что?) лист (какой?) жёлтый - есть (что?) листья (какие?) жёлтые. "
+      }
+    },
+    {
+      "type": "QuizSet",
+      "id": "l1-n12-qset-7npo",
+      "taskVersion": "v.1.0",
+      "answer_type": "select",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Давайте проверим, насколько это понятно. Определите, какое значение выражает выделенная морфема (часть слова) – необязательное лексическое или обязательное грамматическое. Слова будут даны в паре, будет обозначено значение, которое изменилось.",
+        "options": [
+          {
+            "id": "l1-n12-qset-7npo-opt1",
+            "content": "лексическое"
+          },
+          {
+            "id": "l1-n12-qset-7npo-opt2",
+            "content": "грамматическое"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l1-n12-qset-7npo-t1",
+            "content": "стол – столЫ (единственное число – множественное число)",
+            "correct_option": "l1-n12-qset-7npo-opt2",
+            "feedback-correct": "Верно! Значение числа обязательно для выражения - значение грамматическое. ",
+            "feedback-incorrect": "Значение числа обязательно для выражения - значение грамматическое. Выделенная морфема обязательно покажет нам один предмет или больше одного "
+          },
+          {
+            "id": "l1-n12-qset-7npo-t2",
+            "content": "красный – краснАЯ (признак в мужском роде – признак в женском роде)",
+            "correct_option": "l1-n12-qset-7npo-opt2",
+            "feedback-correct": "Верно! Род для признака обязателен для выражения. По выделенной морфеме мы обязательно определим, какой род у признака в единственном числе",
+            "feedback-incorrect": "Род для признака обязателен для выражения. По выделенной морфеме мы обязательно определим, какой род у признака в единственном числе"
+          },
+          {
+            "id": "l1-n12-qset-7npo-t3",
+            "content": "писать – ПРИписать (действие – добавочное действие)",
+            "correct_option": "l1-n12-qset-7npo-opt1",
+            "feedback-correct": "Верно! Добавочность действия необязательна для выражения, когда мы говорим о действии, но может быть показана при помощи морфемы ПРИ-",
+            "feedback-incorrect": "Добавочность действия необязательна для выражения, когда мы говорим о действии, но может быть показана при помощи морфемы ПРИ-. Слово писать не сообщает нам, что действие не добавочное - вполне возможно, что мы пишем дополнительно. По слову это определить нельзя"
+          },
+          {
+            "id": "l1-n12-qset-7npo-t4",
+            "content": "книга – книжКа (предмет – маленький или незначительный предмет) ",
+            "correct_option": "l1-n12-qset-7npo-opt1",
+            "feedback-correct": "Верно! Значение размера или незначительности совсем необязательно выражать. Слово книга не указывает на отсутствие маленького размера или незначительности ",
+            "feedback-incorrect": "Значение размера или незначительности совсем необязательно выражать. Слово книга не указывает на отсутствие маленького размера или незначительности. Книга может быть маленькой, а в слове это никак не выражено."
+          },
+          {
+            "id": "l1-n12-qset-7npo-t5",
+            "content": "солнце – солнечНый (предмет – признак)",
+            "correct_option": "l1-n12-qset-7npo-opt1",
+            "feedback-correct": "Верно! Если изменилась часть речи, то значение точно лексическое. Мы образовали новое слово с другим набором обязательных признаков. Они будут выражены в окончании -ЫЙ. Однако выделенная морфема -Н- не выражает эти признаки. ",
+            "feedback-incorrect": "Если изменилась часть речи, то значение точно лексическое. Мы образовали от предмета (существительное) новое слово-признак (прилагательное) с другим набором обязательных признаков. Они будут выражены в окончании -ЫЙ. Однако выделенная морфема -Н- не выражает эти признаки. "
+          },
+          {
+            "id": "l1-n12-qset-7npo-t6",
+            "content": "иду - идЁШЬ (лицо: я,мы – ты,вы – он/а/о,они)",
+            "correct_option": "l1-n12-qset-7npo-opt2",
+            "feedback-correct": "Верно! Когда мы говорим о действии в настоящем времени, глагол не может не выразить никакое лицо. ",
+            "feedback-incorrect": "Когда мы говорим о действии в настоящем времени, глагол не может не выразить никакое лицо. А вот кто идёт - я или ты - мы определим по окончанию -ёшь"
+          },
+          {
+            "id": "l1-n12-qset-7npo-t7",
+            "content": "весёлый – НЕвесёлый (признак – отрицание признака) ",
+            "correct_option": "l1-n12-qset-7npo-opt1",
+            "feedback-correct": "Верно! Здесь легко ошибиться и решить, что наличие-отрицание признака обязательны для выражения. Но отрицание создаёт слово с противоположным значением, это изменит определение. Значит, значение лексическое. ",
+            "feedback-incorrect": "Здесь легко ошибиться и решить, что наличие-отрицание признака обязательны для выражения. Но отрицание создаёт слово с противоположным значением, это изменит определение. Значит, значение лексическое. "
+          },
+          {
+            "id": "l1-n12-qset-7npo-t8",
+            "content": "живущий – живШий (признак в настоящем времени – признак в прошедшем времени)",
+            "correct_option": "l1-n12-qset-7npo-opt2",
+            "feedback-correct": "Верно! Действительно, такие слова обязательно выражают время - настоящее или будущее, они не могут быть никакого времени. ",
+            "feedback-incorrect": "Такие слова обязательно выражают время - настоящее или будущее, они не могут быть никакого времени. В прошедшем времени будет морфема -ш-, а в настоящем - -ущ-"
+          },
+          {
+            "id": "l1-n12-qset-7npo-t9",
+            "content": "хитрый – хитрЮЩий (признак – чересчур выраженный признак)",
+            "correct_option": "l1-n12-qset-7npo-opt1",
+            "feedback-correct": "Верно! Значение лексическое, ведь слово хитрый не отрицает чрезмерной выраженности, мы не можем сказать, что оно вообще выражает такое значение.",
+            "feedback-incorrect": "Значение лексическое, ведь слово хитрый не отрицает чрезмерной выраженности, мы не можем сказать, что оно вообще выражает такое значение."
+          },
+          {
+            "id": "l1-n12-qset-7npo-t10",
+            "content": "светлый – светлЕЕ (признак в положительной степени сравнения – признак в сравнительной степени)",
+            "correct_option": "l1-n12-qset-7npo-opt2",
+            "feedback-correct": "Верно! Это грамматическое значение. Если у признака есть степени сравнения, то он обязательно будет оказываться в одном из трёх состояний: положительная степень, сравнительная степень, превосходная степень. ",
+            "feedback-incorrect": "Если у признака есть степени сравнения, то он обязательно будет оказываться в одном из трёх состояний: положительная степень, сравнительная степень, превосходная степень. "
+          }
+        ],
+        "button_result_text": "Проверить",
+        "button_next_text": "Следующее задание",
+        "result_text": "Нестрашно, если вы ошиблись. Важно прочитать объяснение и увидеть, что есть обязательные значения (грамматические), а есть необязательные (лексические). За них отвечают разные части слова - разные морфемы. "
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Поставьте слово *стол* в правильную форму – так, чтобы слова были согласованы. Оставьте слово *стол* в единственном числе. \n\nЕсли ничего вписывать не нужно, оставьте поле пустым.",
+        "tasks": [
+          {
+            "id": "l2-n10-fibl-bwu2-t1",
+            "text": "Я сижу за стол___",
+            "correctAnswers": [
+              "ом"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Неверно! Я сижу (где? за чем?) за столОМ"
+          },
+          {
+            "id": "l2-n10-fibl-bwu2-t2",
+            "text": "Я выбираю стол___",
+            "correctAnswers": [
+              ""
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Неверно! Я выбираю (что?) стол "
+          },
+          {
+            "id": "l2-n10-fibl-bwu2-t3",
+            "text": "Мне не хватает стол___",
+            "correctAnswers": [
+              "а"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Неверно! Мне не хватает (чего?) столА."
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "То, что мы сейчас вписали, и есть окончание."
+      }
+    },
+    {
+      "type": "FillTable",
+      "id": "l2-n12-filt-zzip",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Найдите окончания в выделенных словах-существительных. Для этого поставьте их:\n- в **родительный** (кого?чего?) \n- и **творительный** (кем?чем?) падежи. \n\nИзменяющаяся часть - окончание. \n\nЕсли окончание нулевое, напишите 0.",
+        "table": {
+          "headers": [
+            "Задание",
+            "Окончание",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "**Деревья** шумят.",
+              "id": "l2-n12-filt-zzip-r1",
+              "input": {
+                "correctAnswers": [
+                  "я"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -я",
+                "feedback-incorrect": "Изменяем слово деревья. Нет (чего?) деревьЕВ, творю (чем?) деревьЯМИ. Изменяется часть -Я. Это и есть окончание. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Жду **сестру**.",
+              "id": "l2-n12-filt-zzip-r2",
+              "input": {
+                "correctAnswers": [
+                  "у"
+                ],
+                "placeholder": null,
+                "feedback-correct": "Верно! Окончание -у",
+                "feedback-incorrect": "Изменяю слово сестру. Нет (кого?) сестры, говорю с (кем?) сестрой. Изменяется часть -У. Это и есть окончание. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Любуюсь **рекой**",
+              "id": "l2-n12-filt-zzip-r3",
+              "input": {
+                "correctAnswers": [
+                  "ой"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -ой",
+                "feedback-incorrect": "Изменяем слово рекой. Нет (чего) рекИ, творю (чем?) рекОЙ. Один падеж совпал, но по родительному мы видим, что изменилась часть -ОЙ. Это и есть окончание. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Мы верим **друзьям**",
+              "id": "l2-n12-filt-zzip-r4",
+              "input": {
+                "correctAnswers": [
+                  "ям"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -ям",
+                "feedback-incorrect": "Изменяем слово друзьям. Нет (кого?) друзЕЙ, говорю с (кем?) друзьЯМИ. Изменяется часть -ЯМ. Это и есть окончание. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Мы говорим о **проекте**",
+              "id": "l2-n12-filt-zzip-r5",
+              "input": {
+                "correctAnswers": [
+                  "е"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -е. ",
+                "feedback-incorrect": "Изменяю слово проекте. Нет (чего?) проектА, творю (чем?) проектОМ. Окончание -Е"
+              }
+            },
+            {
+              "groupId": "group2",
+              "task": "Мы заходим в **дом**",
+              "id": "l2-n12-filt-zzip-r6",
+              "input": {
+                "correctAnswers": [
+                  "0"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание нулевое. Оно не проявляется в винительном падеже, но мы видим его в других падежах",
+                "feedback-incorrect": "Изменяем слово дом. Нет (чего?) домА, творю (чем?) домОМ. Вижу, что изменяется часть, которая в исходном слове отсутствует. Следовательно, окончание нулевое. "
+              }
+            },
+            {
+              "groupId": "group2",
+              "task": "Мы спорим о **правилах**",
+              "id": "l2-n12-filt-zzip-r7",
+              "input": {
+                "correctAnswers": [
+                  "ах"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -ах",
+                "feedback-incorrect": "Изменяем слово правилах. Нет (чего?) правил, творю (чем?) правилами. Изменяется часть -АХ. Это и есть окончание."
+              }
+            },
+            {
+              "groupId": "group2",
+              "task": "Нет **компании**",
+              "id": "l2-n12-filt-zzip-r8",
+              "input": {
+                "correctAnswers": [
+                  "и"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -и",
+                "feedback-incorrect": "Изменяем слово компании. Нет (чего?) компаниИ, говорю с (кем?) компаниЕЙ. Изменяется только часть -И. Это и есть окончание."
+              }
+            },
+            {
+              "groupId": "group2",
+              "task": "Нет **яблок**",
+              "id": "l2-n12-filt-zzip-r9",
+              "input": {
+                "correctAnswers": [
+                  "0"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание нулевое. ",
+                "feedback-incorrect": "Изменяем слово яблок. Оно уже стоит в родительном падеже, поставим его в творительный: (чем?) яблокАМИ. Мы видим, что проявилось окончание. В исходном слове ничего не было - окончание нулевое."
+              }
+            },
+            {
+              "groupId": "group2",
+              "task": "Он гордится **учителем**",
+              "id": "l2-n12-filt-zzip-r10",
+              "input": {
+                "correctAnswers": [
+                  "ем"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -ем",
+                "feedback-incorrect": "Изменяем слово учителем. Нет (кого?) учителЯ, говорю с (кем?) учителЕМ. Одна форма совпадает, но по родительному падежу мы видим, что изменяется часть -ЕМ."
+              }
+            },
+            {
+              "groupId": "group3",
+              "task": "Позвали **гостей**",
+              "id": "l2-n12-filt-zzip-r11",
+              "input": {
+                "correctAnswers": [
+                  "ей"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -ей",
+                "feedback-incorrect": "Изменяем слово гостей. Нет (кого?) гостЕЙ, говорю с (кем?) гостЯМИ. Вижу, что изменяется часть -ЕЙ"
+              }
+            },
+            {
+              "groupId": "group3",
+              "task": "**Традиции** меняются",
+              "id": "l2-n12-filt-zzip-r12",
+              "input": {
+                "correctAnswers": [
+                  "и"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -и",
+                "feedback-incorrect": "Изменяю слово традиции. Нет (чего?) традиций, творю (чем?) традициЯМИ. Вижу, что изменяется часть -И"
+              }
+            },
+            {
+              "groupId": "group3",
+              "task": "Эта **история** важна",
+              "id": "l2-n12-filt-zzip-r13",
+              "input": {
+                "correctAnswers": [
+                  "я"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание -я",
+                "feedback-incorrect": "Изменяем слово история. Нет (чего?) историИ, творю (чем?) историЕЙ. Изменяется часть -Я."
+              }
+            },
+            {
+              "groupId": "group3",
+              "task": "Я погладил **лошадь**",
+              "id": "l2-n12-filt-zzip-r14",
+              "input": {
+                "correctAnswers": [
+                  "0"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание нулевое",
+                "feedback-incorrect": "Изменяем слово лошадь. Нет (кого?) лошадИ, говорю с (кем?) лошадьЮ. В этих падежах проявилось окончание, которого не было. Значит, окончание нулевое."
+              }
+            },
+            {
+              "groupId": "group3",
+              "task": "Я попросил **карандаш**",
+              "id": "l2-n12-filt-zzip-r15",
+              "input": {
+                "correctAnswers": [
+                  "0"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Окончание нулевое",
+                "feedback-incorrect": "Изменяем слово карандаш. Нет (чего?) карандашА, творю (чем?) карандашОМ. Окончание проявилось там, где его не было в исходном слово. Окончание нулевое. "
+              }
+            }
+          ]
+        },
+        "button_text": "Проверить",
+        "button_next_text": "Далее",
+        "button_finish_text": "Завершить",
+        "result_text": "Отлично! Вы научились находить окончания в существительных."
+      }
+    },
+    {
+      "type": "SelectList",
+      "id": "l3-n21-sell-ua2s",
+      "taskVersion": "v.1.0",
+      "answer_type": "match",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "selected": false,
+        "question": "Давайте обнаружим значения постфиксов -СЯ и -СЬ",
+        "options": [
+          {
+            "id": "l3-n21-sell-ua2s-opt1",
+            "content": "Кто-то или что-то направляет действие на себя"
+          },
+          {
+            "id": "l3-n21-sell-ua2s-opt2",
+            "content": "Значение состояния или свойства"
+          },
+          {
+            "id": "l3-n21-sell-ua2s-opt3",
+            "content": "Действие направляют друг на друга"
+          },
+          {
+            "id": "l3-n21-sell-ua2s-opt4",
+            "content": "Безличное значение – что-то происходит само по себе"
+          },
+          {
+            "id": "l3-n21-sell-ua2s-opt5",
+            "content": "Пассивное значение (страдательный залог) – объект испытывает действие на себе"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l3-n21-sell-ua2s-t1",
+            "content": "Мне не спится. ",
+            "correct_option": "l3-n21-sell-ua2s-opt4",
+            "feedback-correct": "Молодец! Да, у этого действия нет автора, оно происходит само по себе.",
+            "feedback-incorrect": "У этого действия нет автора, оно происходит само по себе. Такие глаголы называют безличными. "
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t2",
+            "content": "Девочка причёсывается.",
+            "correct_option": "l3-n21-sell-ua2s-opt1",
+            "feedback-correct": "Да, верно! Девочка причёсывает сама себя. ",
+            "feedback-incorrect": "Девочка причёсывает сама себя, то есть направляет действие на себя. "
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t3",
+            "content": "Я покрываюсь мурашками. ",
+            "correct_option": "l3-n21-sell-ua2s-opt5",
+            "feedback-correct": "Верно! Можно перефразировать: мурашки покрывают меня, то есть я испытываю на себе действие мурашек. ",
+            "feedback-incorrect": "Можно перефразировать: мурашки покрывают меня, то есть я испытываю на себе действие мурашек. "
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t4",
+            "content": "Журналы хорошо продаются. ",
+            "correct_option": "l3-n21-sell-ua2s-opt5",
+            "feedback-correct": "Да, верно! Это снова пассивное значение. Мы можем сказать, что кто-то хорошо продаёт журналы, то есть они испытывают на себе действие продаж. ",
+            "feedback-incorrect": "Это снова пассивное значение. Мы можем сказать, что кто-то хорошо продаёт журналы, то есть они испытывают на себе действие - их продают. "
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t5",
+            "content": "Собака кусается.",
+            "correct_option": "l3-n21-sell-ua2s-opt2",
+            "feedback-correct": "Верно! Это свойство собаки. ",
+            "feedback-incorrect": "Это свойство собаки: она кусается, то есть она вообще кусачая."
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t6",
+            "content": "Я улыбаюсь. ",
+            "correct_option": "l3-n21-sell-ua2s-opt2",
+            "feedback-correct": "Верно! Это состояние улыбки. ",
+            "feedback-incorrect": "Это состояние улыбки. "
+          },
+          {
+            "id": "l3-n21-sell-ua2s-t7",
+            "content": "Друзья обнимаются при встрече. ",
+            "correct_option": "l3-n21-sell-ua2s-opt3",
+            "feedback-correct": "Да, хорошо! Действие направлено в обе стороны. ",
+            "feedback-incorrect": "Действие направлено в обе стороны: каждый из друзей обнимает другого. Они направляют действие друг на друга. "
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Теперь вы знаете основные значения постфиксов -ся и -сь. Запомните эти постфиксы: они формообразующие. "
+      }
+    },
+    {
+      "type": "FillText",
+      "id": "l3-n22-ftxt-0n2y",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "text": "**А теперь впиши подходящие суффиксы в причастия в небольшом тексте.**\n\nЛетом семиклассники отправились в поход к озеру. Они шли в хорошем темпе, ведь их рюкзаки, собра{{l3-n22-ftxt-0n2y-t1}}ые с умом, не были слишком тяжёлыми. Дойдя до развилки, они достали карту, купл{{l3-n22-ftxt-0n2y-t2}}ую вчера в магазине, чтобы найти тропу, вед{{l3-n22-ftxt-0n2y-t3}}ую к реке. Спустившись к ручью, ребята двинулись вдоль него: так было легче не сбиться с пути. Наконец они дошли до горбатого мостика, перекину{{l3-n22-ftxt-0n2y-t4}}ого через ручей. Это означало, что скоро они доберутся до конечной точки маршрута.\n\nОтряд, шага{{l3-n22-ftxt-0n2y-t5}}ий в одном темпе, вышел к поляне засветло. Там их уже ждал другой класс, ушед{{l3-n22-ftxt-0n2y-t6}}ий ещё вчера по этой же тропе. Они решили устроить один общий лагерь. Костёр, разожж{{l3-n22-ftxt-0n2y-t7}}ый опытным Владом, быстро разгорелся. Ужин, приготовл{{l3-n22-ftxt-0n2y-t8}}ый  на углях, всем понравился.  Слышен был звук ручья, журч{{l3-n22-ftxt-0n2y-t9}}его у тропы. Когда небо потемнело, вспыхнули вид{{l3-n22-ftxt-0n2y-t10}}ые невооружённым глазом созвездия, и все затихли в восхищении.",
+        "tasks": [
+          {
+            "id": "l3-n22-ftxt-0n2y-t1",
+            "text": "Их собрали, значит они какие? ",
+            "correctAnswer": "нн",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t2",
+            "text": "Её купили, значит она какая? ",
+            "correctAnswer": "енн",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t3",
+            "text": "Она ведёт, значит она какая?",
+            "correctAnswer": "ущ",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t4",
+            "text": "Его перекинули, значит он какой? ",
+            "correctAnswer": "т",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t5",
+            "text": "Отряд шагал, значит он какой? ",
+            "correctAnswer": "вш",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t6",
+            "text": "Он ушёл, следовательно он какой?",
+            "correctAnswer": "ш",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t7",
+            "text": "Его разожгли, значит он какой?",
+            "correctAnswer": "ённ",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t8",
+            "text": "Его приготовили, значит он какой? ",
+            "correctAnswer": "енн",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t9",
+            "text": "Он журчит, значит он какой? ",
+            "correctAnswer": "ащ",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n22-ftxt-0n2y-t10",
+            "text": "Их видят, значит они какие? ",
+            "correctAnswer": "им",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Посмотрите, какие суффиксы у причастий. Не расстраивайтесь, если вы допустили орфографические ошибки - над ними можно поработать в разделе \"Орфография\""
+      }
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l3-n25-drop-ne6q",
+      "taskVersion": "v.1.0",
+      "answer_type": "match",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "В слове выделено окончание, формообразующий суффикс, постфикс или словообразовательная морфема? Перетащите слова в группы.\n\nВспомните: окончание обязательно согласует слово с другими словами, поэтому мы меняем падеж или число, чтобы его обнаружить. \nФормообразующие суффиксы и постфиксы мы рассмотрели в этом уроке.",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l3-n25-drop-ne6q-g1",
+            "content": "окончание"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g2",
+            "content": "формообразующий суффикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g3",
+            "content": "формообразующий постфикс"
+          },
+          {
+            "id": "l3-n25-drop-ne6q-g4",
+            "content": "словообразовательная морфема"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l3-n25-drop-ne6q-t1",
+            "content": "брожУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t2",
+            "content": "заглянуЛа",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t3",
+            "content": "летеВШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t4",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t5",
+            "content": "голубоватАЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t6",
+            "content": "двумстАМ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t7",
+            "content": "спряталиСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t8",
+            "content": "вершИНа",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t9",
+            "content": "восемьЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t10",
+            "content": "внизУ",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t11",
+            "content": "приближаяСЬ",
+            "correct_group": "l3-n25-drop-ne6q-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t12",
+            "content": "дирижёрА",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t13",
+            "content": "режЕТ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t14",
+            "content": "скорЕЕ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t15",
+            "content": "забываТЬ",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t16",
+            "content": "переулкАХ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t17",
+            "content": "выключившийСЯ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t18",
+            "content": "неторопливО",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t19",
+            "content": "поторопИсь",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t20",
+            "content": "шепчА",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t21",
+            "content": "смотриТЕ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t22",
+            "content": "узорчатОМУ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t23",
+            "content": "узорЧАТому",
+            "correct_group": "l3-n25-drop-ne6q-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t24",
+            "content": "строЮ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t25",
+            "content": "нежнЕЙШий",
+            "correct_group": "l3-n25-drop-ne6q-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l3-n25-drop-ne6q-t26",
+            "content": "энциклопедиЕЙ",
+            "correct_group": "l3-n25-drop-ne6q-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Посмотри, где были допущены ошибки. \n\nФормообразующие морфемы выражают грамматические признаки - обязательные для выражения.\n\nСловообразовательные морфемы образуют новые слова. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "DragTable",
+      "id": "lex-transfer-1",
+      "taskVersion": "v.1.0",
+      "answer_type": "match",
+      "skill_id": "pristavka",
+      "blocked": false,
+      "content": {
+        "question": "Иногда слова появляются в языке, когда мы переносим значение с одного слова на другое. Сопоставьте со словами их первоначальное значение и появившееся в результате переноса.",
+        "row_header": "слово",
+        "rows": [
+          {
+            "id": "row_mouse",
+            "content": "мышь"
+          },
+          {
+            "id": "row_window",
+            "content": "окно"
+          },
+          {
+            "id": "row_basket",
+            "content": "корзина"
+          },
+          {
+            "id": "row_virus",
+            "content": "вирус"
+          },
+          {
+            "id": "row_hat",
+            "content": "шапка"
+          },
+          {
+            "id": "row_tooth",
+            "content": "зуб"
+          }
+        ],
+        "columns": [
+          {
+            "id": "col_original",
+            "content": "Первоначальное значение"
+          },
+          {
+            "id": "col_transferred",
+            "content": "Значение, появившееся в результате переноса"
+          }
+        ],
+        "groups": [
+          {
+            "id": "g_mouse_original",
+            "row_id": "row_mouse",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_mouse_transfer",
+            "row_id": "row_mouse",
+            "column_id": "col_transferred"
+          },
+          {
+            "id": "g_window_original",
+            "row_id": "row_window",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_window_transfer",
+            "row_id": "row_window",
+            "column_id": "col_transferred"
+          },
+          {
+            "id": "g_basket_original",
+            "row_id": "row_basket",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_basket_transfer",
+            "row_id": "row_basket",
+            "column_id": "col_transferred"
+          },
+          {
+            "id": "g_virus_original",
+            "row_id": "row_virus",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_virus_transfer",
+            "row_id": "row_virus",
+            "column_id": "col_transferred"
+          },
+          {
+            "id": "g_hat_original",
+            "row_id": "row_hat",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_hat_transfer",
+            "row_id": "row_hat",
+            "column_id": "col_transferred"
+          },
+          {
+            "id": "g_tooth_original",
+            "row_id": "row_tooth",
+            "column_id": "col_original"
+          },
+          {
+            "id": "g_tooth_transfer",
+            "row_id": "row_tooth",
+            "column_id": "col_transferred"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "t_mouse1",
+            "content": "животное-грызун",
+            "correct_group": "g_mouse_original"
+          },
+          {
+            "id": "t_mouse2",
+            "content": "компьютерное устройство",
+            "correct_group": "g_mouse_transfer"
+          },
+          {
+            "id": "t_window1",
+            "content": "проём в стене",
+            "correct_group": "g_window_original"
+          },
+          {
+            "id": "t_window2",
+            "content": "прямоугольная область экрана",
+            "correct_group": "g_window_transfer"
+          },
+          {
+            "id": "t_basket1",
+            "content": "плетёная ёмкость",
+            "correct_group": "g_basket_original"
+          },
+          {
+            "id": "t_basket2",
+            "content": "место удаления файлов",
+            "correct_group": "g_basket_transfer"
+          },
+          {
+            "id": "t_virus1",
+            "content": "болезнетворный микроорганизм",
+            "correct_group": "g_virus_original"
+          },
+          {
+            "id": "t_virus2",
+            "content": "вредоносная программа",
+            "correct_group": "g_virus_transfer"
+          },
+          {
+            "id": "t_hat1",
+            "content": "головной убор",
+            "correct_group": "g_hat_original"
+          },
+          {
+            "id": "t_hat2",
+            "content": "верхняя часть страницы/сайта",
+            "correct_group": "g_hat_transfer"
+          },
+          {
+            "id": "t_tooth1",
+            "content": "твёрдое образование во рту для пережёвывания пищи",
+            "correct_group": "g_tooth_original"
+          },
+          {
+            "id": "t_tooth2",
+            "content": "отдельный выступ на кромке инструмента",
+            "correct_group": "g_tooth_transfer"
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Если что-то не получилось, посмотрите, какие значения вы сопоставили со словами, и попробуйте ещё раз."
+      }
+    }
+  ]
+}

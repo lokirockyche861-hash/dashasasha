@@ -1,0 +1,136 @@
+[
+    {
+        "graphId": "graph_pol_v1",
+        "title": "Правописание пол- и полу-",
+        "layout": "spine",
+        "start_node": "q1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "nodes": [
+            {
+                "id": "q1",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Это приставка **ПОЛУ-**?",
+                "skill_id": "pristavka",
+                "options": [
+                    {
+                        "id": "q1_op_yes",
+                        "label": "Да",
+                        "next": "r_slitno_polu"
+                    },
+                    {
+                        "id": "q1_op_no",
+                        "label": "Нет",
+                        "next": "q2"
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "После **пол-** идёт **Л**?",
+                "skill_id": null,
+                "options": [
+                    {
+                        "id": "q2_op_yes",
+                        "label": "Да",
+                        "next": "r_defis"
+                    },
+                    {
+                        "id": "q2_op_no",
+                        "label": "Нет",
+                        "next": "q3"
+                    }
+                ]
+            },
+            {
+                "id": "q3",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "После **пол-** идёт **гласная**?",
+                "skill_id": null,
+                "options": [
+                    {
+                        "id": "q3_op_yes",
+                        "label": "Да",
+                        "next": "r_defis"
+                    },
+                    {
+                        "id": "q3_op_no",
+                        "label": "Нет",
+                        "next": "q4"
+                    }
+                ]
+            },
+            {
+                "id": "q4",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Слово после **пол-** начинается с **Заглавной**?",
+                "skill_id": null,
+                "options": [
+                    {
+                        "id": "q4_op_yes",
+                        "label": "Да",
+                        "next": "r_defis"
+                    },
+                    {
+                        "id": "q4_op_no",
+                        "label": "Нет",
+                        "next": "q5"
+                    }
+                ]
+            },
+            {
+                "id": "q5",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Это **Слитно**?",
+                "skill_id": null,
+                "options": [
+                    {
+                        "id": "q5_op_yes",
+                        "label": "Да",
+                        "next": "r_slitno"
+                    },
+                    {
+                        "id": "q5_op_no",
+                        "label": "Нет",
+                        "next": "r_razdelno"
+                    }
+                ]
+            },
+            {
+                "id": "r_slitno_polu",
+                "type": "result",
+                "label": "слитно (полу-)",
+                "text": "**ПОЛУ-** всегда пишется слитно."
+            },
+            {
+                "id": "r_razdelno",
+                "type": "result",
+                "label": "раздельно",
+                "text": "Пишем **раздельно** (особый случай по условию)."
+            },
+            {
+                "id": "r_defis",
+                "type": "result",
+                "label": "дефис",
+                "text": "Пишем через **дефис**, если после пол- идёт **Л**, **гласная** или **Заглавная**."
+            },
+            {
+                "id": "r_slitno",
+                "type": "result",
+                "label": "слитно",
+                "text": "В остальных случаях пишем **слитно**."
+            }
+        ]
+    }
+]

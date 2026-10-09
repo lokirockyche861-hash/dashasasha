@@ -1,0 +1,379 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# **Русский алфавит**\n\nВ русском алфавите 33 буквы. Они расположены в определённом порядке, который нужно запомнить. Это помогает нам создавать списки, ориентироваться в картотеках, словарях. ",
+      "id": "auto-mark-5218"
+    },
+    {
+      "type": "markdown",
+      "content": "<img src=\"/lessons/Алфавит_вектор.svg\" class=\"lesson-image\" alt=\"Алфавит\">",
+      "id": "auto-mark-7135"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l8-n3-dtab-c428",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Расположите слова в алфавитном порядке. Будьте внимательны: если слова начинаются на одну и ту же букву, вам следует сопоставить вторую.",
+        "layout": "matrix",
+        "show_feedback": false,
+        "matrix_cols": 6,
+        "groups": [
+          {
+            "id": "l8-n3-dtab-c428-g1",
+            "content": "1"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g2",
+            "content": "2"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g3",
+            "content": "3"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g4",
+            "content": "4"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g5",
+            "content": "5"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g6",
+            "content": "6"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g7",
+            "content": "7"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g8",
+            "content": "8"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g9",
+            "content": "9"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g10",
+            "content": "10"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g11",
+            "content": "11"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g12",
+            "content": "12"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g13",
+            "content": "13"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g14",
+            "content": "14"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g15",
+            "content": "15"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g16",
+            "content": "16"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g17",
+            "content": "17"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g18",
+            "content": "18"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g19",
+            "content": "19"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g20",
+            "content": "20"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g21",
+            "content": "21"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g22",
+            "content": "22"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g23",
+            "content": "23"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g24",
+            "content": "24"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g25",
+            "content": "25"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g26",
+            "content": "26"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g27",
+            "content": "27"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g28",
+            "content": "28"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g29",
+            "content": "29"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g30",
+            "content": "30"
+          },
+          {
+            "id": "l8-n3-dtab-c428-g31",
+            "content": "31"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l8-n3-dtab-c428-t1",
+            "content": "зимовье",
+            "correct_group": "l8-n3-dtab-c428-g9",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t2",
+            "content": "йод",
+            "correct_group": "l8-n3-dtab-c428-g11",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t3",
+            "content": "лекарство",
+            "correct_group": "l8-n3-dtab-c428-g14",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t4",
+            "content": "хохот",
+            "correct_group": "l8-n3-dtab-c428-g24",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t5",
+            "content": "ящерица",
+            "correct_group": "l8-n3-dtab-c428-g31",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t6",
+            "content": "мода",
+            "correct_group": "l8-n3-dtab-c428-g15",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t7",
+            "content": "эмоция",
+            "correct_group": "l8-n3-dtab-c428-g29",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t8",
+            "content": "коготь",
+            "correct_group": "l8-n3-dtab-c428-g13",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t9",
+            "content": "поклонник",
+            "correct_group": "l8-n3-dtab-c428-g18",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t10",
+            "content": "намёк",
+            "correct_group": "l8-n3-dtab-c428-g16",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t11",
+            "content": "событие",
+            "correct_group": "l8-n3-dtab-c428-g20",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t12",
+            "content": "труба",
+            "correct_group": "l8-n3-dtab-c428-g21",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t13",
+            "content": "аквариум",
+            "correct_group": "l8-n3-dtab-c428-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t14",
+            "content": "жаба",
+            "correct_group": "l8-n3-dtab-c428-g8",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t15",
+            "content": "фиалка",
+            "correct_group": "l8-n3-dtab-c428-g23",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t16",
+            "content": "укроп",
+            "correct_group": "l8-n3-dtab-c428-g22",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t17",
+            "content": "радость",
+            "correct_group": "l8-n3-dtab-c428-g19",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t18",
+            "content": "опора",
+            "correct_group": "l8-n3-dtab-c428-g17",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t19",
+            "content": "цапля",
+            "correct_group": "l8-n3-dtab-c428-g25",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t20",
+            "content": "брошь",
+            "correct_group": "l8-n3-dtab-c428-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t21",
+            "content": "горох",
+            "correct_group": "l8-n3-dtab-c428-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t22",
+            "content": "ведьма",
+            "correct_group": "l8-n3-dtab-c428-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t23",
+            "content": "юг",
+            "correct_group": "l8-n3-dtab-c428-g30",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t24",
+            "content": "щебет",
+            "correct_group": "l8-n3-dtab-c428-g28",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t25",
+            "content": "чайка",
+            "correct_group": "l8-n3-dtab-c428-g26",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t26",
+            "content": "шорох",
+            "correct_group": "l8-n3-dtab-c428-g27",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t27",
+            "content": "ёмкость",
+            "correct_group": "l8-n3-dtab-c428-g7",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t28",
+            "content": "искра",
+            "correct_group": "l8-n3-dtab-c428-g10",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t29",
+            "content": "добавление",
+            "correct_group": "l8-n3-dtab-c428-g5",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t30",
+            "content": "единица",
+            "correct_group": "l8-n3-dtab-c428-g6",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l8-n3-dtab-c428-t31",
+            "content": "карамель",
+            "correct_group": "l8-n3-dtab-c428-g12",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Отлично! Проверьте себя. Если вы допустили ошибки, попробуйте ещё раз - это поможет вам запомнить алфавит и позволит быстрее ориентироваться в словарях и списках. "
+      }
+    }
+  ],
+  "lesson_id": "lesson8",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

@@ -1,0 +1,718 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "#  *Звуки речи. Гласные и согласные звуки и буквы*",
+      "id": "auto-mark-ecfc"
+    },
+    {
+      "type": "markdown",
+      "content": "Чтобы мы могли различать слова, они должны звучать по-разному. Именно звуками, которые использует человек в речи, занимается **фонетика**.",
+      "id": "auto-mark-ffff"
+    },
+    {
+      "type": "markdown",
+      "content": "**Фонетика** – наука, изучающая звуки речи. \n> \n> Когда мы хотим обозначить именно **звук речи**, а не букву, мы пишем его в квадратных скобках, вот так: [в], [ш], [о]. ",
+      "id": "auto-mark-3092"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l9-n4-qsel-i9kd",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": "Давайте разберёмся, какими бывают звуки речи и чем они отличаются. \nПоложите руку на горло. Произнесите звук [а]. Затем произнесите звук [ш]. Какой из звуков вызвал вибрацию в горле?",
+        "options": [
+          {
+            "id": "l9-n4-qsel-i9kd-o1",
+            "content": "[а]",
+            "correct": true,
+            "feedback-selected": "Совершенно верно! Звук [а] вызывает вибрацию, даже если мы произносим его очень тихо",
+            "feedback-not-selected": "Звук [а] вызывает вибрацию, даже если мы произносим его очень тихо. Попробуйте ещё раз: положите руку на горло, но не давите. Произнесите протяжное [а]"
+          },
+          {
+            "id": "l9-n4-qsel-i9kd-o2",
+            "content": "[ш]",
+            "correct": false,
+            "feedback-selected": "Совершенно верно! Звук [ш] не требует голоса. Для него вы просто выдуваете воздух",
+            "feedback-not-selected": "Звук [ш] не требует голоса. Для него вы просто выдуваете воздух. Попробуйте ещё раз, не добавляйте голос - дрожания в горле не будет"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "При произнесении звука [а] вы почувствовали колебание голосовых связок - особых мышц, преграждающих путь воздуху в нашем горле. Такое колебание вызывает звук – **тон**. ",
+      "id": "auto-mark-5861"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l9-n6-qsel-dzsv",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": "Используется ли тон при произнесении звука [ш]?",
+        "options": [
+          {
+            "id": "l9-n6-qsel-dzsv-o1",
+            "content": "да",
+            "correct": false,
+            "feedback-selected": "Для произнесения [ш] тон не требуется. Вы не чувствуете вибрацию - нет колебания голосовых связок. Именно это колебание создаёт тон. ",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n6-qsel-dzsv-o2",
+            "content": "нет",
+            "correct": true,
+            "feedback-selected": "Верно! Для произнесения [ш] тон не требуется",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Действительно, при произнесении некоторых звуков мы не используем тон голоса. Такие звуки появляются из-за препятствий, которые мы выставляем им во рту при помощи губ, зубов, языка. Они производятся при помощи **шума**.",
+      "id": "auto-mark-7e52"
+    },
+    {
+      "type": "QuizSet",
+      "id": "l9-n9-qset-scoe",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": "Положите руку на горло. Произнесите звуки [з], [р]. ",
+        "options": [
+          {
+            "id": "l9-n9-qset-scoe-opt1",
+            "content": "Да"
+          },
+          {
+            "id": "l9-n9-qset-scoe-opt2",
+            "content": "Нет"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l9-n9-qset-scoe-t1",
+            "content": "Используется ли при произнесении этих звуков тон – есть ли колебание голосовых связок?",
+            "correct_option": "l9-n9-qset-scoe-opt1",
+            "feedback-correct": "Верно! Колебание не такое сильное, как при произнесении гласных звуков, но оно есть. ",
+            "feedback-incorrect": "Колебание не такое сильное, как при произнесении гласных звуков, но оно есть. Попробуйте сказать звук погромче. "
+          },
+          {
+            "id": "l9-n9-qset-scoe-t2",
+            "content": "Используется ли при произнесении этих звуков шум - есть ли при их произнесении препятствие во рту?",
+            "correct_option": "l9-n9-qset-scoe-opt1",
+            "feedback-correct": "Верно! Чтобы произнести [з], мы выставляем препятствие из сжатых зубов и языка, чтобы произнести [р], обязательно приблизить язык к нёбу. ",
+            "feedback-incorrect": "Чтобы произнести [з], мы выставляем препятствие из сжатых зубов и языка, чтобы произнести [р], обязательно приблизить язык к нёбу. Это и есть препятствия во рту! "
+          }
+        ],
+        "button_text": "Проверить",
+        "button_next_text": "Следующее задание",
+        "result_text": "При произнесении этих звуков используется и тон, и шум."
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Таким образом, мы видим, что для извлечения звуков может использоваться только тон, или только шум, или шум и тон вместе.   ",
+      "id": "auto-mark-7a76"
+    },
+    {
+      "type": "markdown",
+      "content": "  Все звуки можно разделить на **гласные** и **согласные**. \n>  Для произнесения гласных звуков нам не нужен шум – используется только тон голоса. Мы не выставляем никаких препятствий во рту, воздух просто проходит через голосовые связки и не встречает препятствий. \n>  Для произнесения согласных звуков мы используем препятствия в виде зубов, языка, губ. Таким образом, для произнесения согласных звуков мы используем либо тон и шум вместе, либо только шум.\n",
+      "id": "auto-mark-f031"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l9-n11-drop-c5ir",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Разделите звуки на гласные и согласные. Проверяйте себя:\n1. Если при произнесении вибрация в горле не появляется - звук согласный. \n2. Если вибрация появляется, но во рту есть препятствия, создающие шум, - звук согласный. \n3. Если есть вибрация и никаких препятствий во рту - звук гласный. ",
+        "layout": "columns",
+        "groups": [
+          {
+            "id": "l9-n11-drop-c5ir-g1",
+            "content": "Гласные"
+          },
+          {
+            "id": "l9-n11-drop-c5ir-g2",
+            "content": "Согласные"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l9-n11-drop-c5ir-t1",
+            "content": "[а]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t2",
+            "content": "[б]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t3",
+            "content": "[в]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t4",
+            "content": "[г]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t5",
+            "content": "[д]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t6",
+            "content": "[э]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t7",
+            "content": "[о]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t8",
+            "content": "[ж]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t9",
+            "content": "[з]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t10",
+            "content": "[и]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t11",
+            "content": "[л]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t12",
+            "content": "[м]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t13",
+            "content": "[н]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t14",
+            "content": "[р]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t15",
+            "content": "[у]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t16",
+            "content": "[х]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t17",
+            "content": "[ц]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t18",
+            "content": "[ч’]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t19",
+            "content": "[щ’]",
+            "correct_group": "l9-n11-drop-c5ir-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l9-n11-drop-c5ir-t20",
+            "content": "[ы]",
+            "correct_group": "l9-n11-drop-c5ir-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично. Посмотрите, не ошиблись ли вы. Если есть ошибки, протестируйте звук ещё раз - экспериментируйте: попробуйте подержать его подольше, произнести громче или, наоборот, тише; также можно попробовать убрать или добавить препятствия во рту. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l9-n12-fibl-f79f",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "Сколько у вас получилось гласных звуков? ",
+        "tasks": [
+          {
+            "id": "l9-n12-fibl-f79f-t1",
+            "text": "___",
+            "correctAnswers": [
+              "6"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Молодцы!",
+            "feedback-incorrect": "Вернитесь к предыдущему заданию и попробуйте его выполнить ещё раз"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Мы нашли все 6 гласных звуков, которые используются в русском языке: [а], [э], [о], [и], [у], [ы]. Произнесите их, и вы заметите, что, хотя мы не выставляем во рту препятствия для их произнесения, мы всё же изменяем объём ротовой полости и её форму, используя для этого, прежде всего, язык и губы. \nВсе остальные звуки в русском языке согласные. ",
+      "id": "auto-mark-4536"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l9-n14-fibl-tarc",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Буквы – это специальные символы, которые передают речь на письме.",
+        "tasks": [
+          {
+            "id": "l9-n14-fibl-tarc-t1",
+            "text": "Буквы, передающие гласные звуки, по аналогии называют гласными буквами.  Буквы, передающие согласные звуки, называют ___ (впишите) ",
+            "correctAnswers": [
+              [
+                "согласными",
+                "согласные",
+                "согласные буквы",
+                "согласными буквами"
+              ]
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, это согласные буквы",
+            "feedback-incorrect": "Это согласные буквы"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l9-n15-qchk-lnp7",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false,
+      "content": {
+        "question": "Выберите в списке буквы, которые передают на письме гласные звуки. ",
+        "options": [
+          {
+            "id": "l9-n15-qchk-lnp7-o1",
+            "content": "а",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [а]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o2",
+            "content": "р",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o3",
+            "content": "у",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [у]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o4",
+            "content": "в",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o5",
+            "content": "ф",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o6",
+            "content": "к",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o7",
+            "content": "е",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [э]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o8",
+            "content": "я",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [а]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o9",
+            "content": "ж",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o10",
+            "content": "э",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [э]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o11",
+            "content": "л",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o12",
+            "content": "и",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [и]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o13",
+            "content": "ь",
+            "correct": false,
+            "feedback-selected": "Ь не передаёт звук на письме",
+            "feedback-not-selected": "Ь не передаёт звук на письме"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o14",
+            "content": "ъ",
+            "correct": false,
+            "feedback-selected": "Ъ не передаёт звук на письме",
+            "feedback-not-selected": "Ъ не передаёт звук на письме"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o15",
+            "content": "ё",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [о]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o16",
+            "content": "н",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o17",
+            "content": "ю",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [у]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o18",
+            "content": "г",
+            "correct": false,
+            "feedback-selected": "Это согласная буква. Произнеси характерный для неё звук и проверь наличие препятствий во рту, создающих шум.",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o19",
+            "content": "й",
+            "correct": false,
+            "feedback-selected": "Звук [й'] очень похож на гласный, в нём почти нет шума, но всё-таки он требует препятствия во рту. Сравните звуки [и] и [й']",
+            "feedback-not-selected": "Верно, это согласная буква"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o20",
+            "content": "о",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [о]"
+          },
+          {
+            "id": "l9-n15-qchk-lnp7-o21",
+            "content": "ы",
+            "correct": true,
+            "feedback-selected": "Верно, это гласная буква",
+            "feedback-not-selected": "Это гласная буква. Она передаёт гласный звук [ы]"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l9-n16-fibl-oa93",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Сколько получилось гласных букв?",
+        "tasks": [
+          {
+            "id": "l9-n16-fibl-oa93-t1",
+            "text": "___",
+            "correctAnswers": [
+              "10"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно, 10!",
+            "feedback-incorrect": "Вернитесь к предыдущему заданию и ещё раз посчитайте гласные буквы"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l9-n17-qsel-4qla",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "В русском языке больше гласных букв или гласных звуков? ",
+        "options": [
+          {
+            "id": "l9-n17-qsel-4qla-o1",
+            "content": "букв",
+            "correct": true,
+            "feedback-selected": "верно! букв 10, а звуков 6",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n17-qsel-4qla-o2",
+            "content": "звуков",
+            "correct": false,
+            "feedback-selected": "букв 10, а звуков 6",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l9-n18-qchk-lspq",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false,
+      "content": {
+        "question": "Найдите в списке буквы, которые не соответствуют звукам русского языка",
+        "options": [
+          {
+            "id": "l9-n18-qchk-lspq-o1",
+            "content": "р",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o2",
+            "content": "в",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o3",
+            "content": "ф",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o4",
+            "content": "к",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o5",
+            "content": "ж",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o6",
+            "content": "л",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o7",
+            "content": "ь",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o8",
+            "content": "ъ",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o9",
+            "content": "н",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o10",
+            "content": "г",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l9-n18-qchk-lspq-o11",
+            "content": "й",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Действительно, Ь и Ъ знак не отображают на письме никакие звуки. Об их роли мы поговорим позже. "
+      }
+    },
+    {
+      "type": "FillText",
+      "id": "l9-n19-ftxt-jb7q",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "text": "Подытожим наше исследование. \n\nИтак, мы узнали, что в русском языке {{l9-n19-ftxt-jb7q-t1}} **гласных звуков** и {{l9-n19-ftxt-jb7q-t2}} **гласных букв**. Не передают звуки буквы Ь и {{l9-n19-ftxt-jb7q-t3}}.",
+        "tasks": [
+          {
+            "id": "l9-n19-ftxt-jb7q-t1",
+            "text": "подсказка/шаблон для ответа",
+            "correctAnswer": "6",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "6"
+          },
+          {
+            "id": "l9-n19-ftxt-jb7q-t2",
+            "text": "",
+            "correctAnswer": "10",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "10"
+          },
+          {
+            "id": "l9-n19-ftxt-jb7q-t3",
+            "text": "",
+            "correctAnswer": "ъ",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "ъ"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    }
+  ],
+  "lesson_id": "lesson9",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

@@ -1,0 +1,580 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# **Урок 4. Согласные звуки. Мягкие и твёрдые согласные звуки**",
+      "id": "auto-mark-1955"
+    },
+    {
+      "type": "markdown",
+      "content": "Сравним первые звуки в парах слов. Для этого выпишем отдельно первые слоги. Произнесите их и сравните согласные звуки. \nВ каком случае язык и губы выполняют больше работы: язык сильнее изгибается, поднимается спереди, а губы растягиваются?",
+      "id": "auto-mark-6fc1"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l10-n3-qsel-uano",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": " луна – лютик",
+        "options": [
+          {
+            "id": "l10-n3-qsel-uano-o1",
+            "content": "лу",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l10-n3-qsel-uano-o2",
+            "content": "лю",
+            "correct": true,
+            "feedback-selected": "Верно! Когда мы произносим слог лю-, нам нужно смягчить согласный [л]. Для этого мы сгибаем кончик языка и немного растягиваем губы. ",
+            "feedback-not-selected": "Когда мы произносим слог лю-, нам нужно смягчить согласный [л]. Для этого мы сгибаем кончик языка и немного растягиваем губы. Попробуйте ещё раз произнести поочерёдно лу-лю "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l10-n4-qsel-0aci",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": "рама – рябь",
+        "options": [
+          {
+            "id": "l10-n4-qsel-0aci-o1",
+            "content": "ра",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l10-n4-qsel-0aci-o2",
+            "content": "ря",
+            "correct": true,
+            "feedback-selected": "Верно! Когда мы произносим слог ря-, нам нужно смягчить согласный [р]. Для этого мы сгибаем кончик языка и немного растягиваем губы. ",
+            "feedback-not-selected": "Когда мы произносим слог ря-, нам нужно смягчить согласный [р]. Для этого мы сгибаем кончик языка и немного растягиваем губы. Попробуйте несколько раз поочерёдно произнести ра-ря и сравнить, как вы произносите согласные звуки"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l10-n5-qsel-5qvl",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true,
+      "content": {
+        "question": "вина – вышка",
+        "options": [
+          {
+            "id": "l10-n5-qsel-5qvl-o1",
+            "content": "ви",
+            "correct": true,
+            "feedback-selected": "Верно! Когда мы произносим слог ви-, нам нужно смягчить согласный [в]. Для этого мы сгибаем кончик языка и немного растягиваем губы. ",
+            "feedback-not-selected": "Когда мы произносим слог ви-, нам нужно смягчить согласный [в]. Для этого мы сгибаем кончик языка и немного растягиваем губы. Попробуйте несколько раз поочерёдно произнести ви-вы и сравнить, как вы произносите согласные звуки"
+          },
+          {
+            "id": "l10-n5-qsel-5qvl-o2",
+            "content": "вы",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "> При помощи такой дополнительной работы мы делаем согласные звуки мягкими. Таким образом, согласные звуки делятся не только на звонкие и глухие, но и на **твёрдые и мягкие**.\n>В квадратных скобках такой звук будет обозначаться знаком апостроф: лу [лу] – лю [л’у]. ",
+      "id": "auto-mark-864f"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l11-n7-qsel-gvmn",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "Изменяется ли в слогах лу-лю, ра-ря ГЛАСНЫЙ звук? А гласная буква? ",
+        "options": [
+          {
+            "id": "l11-n7-qsel-gvmn-o1",
+            "content": "изменяется и звук, и буква",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n7-qsel-gvmn-o2",
+            "content": "изменяется только звук",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n7-qsel-gvmn-o3",
+            "content": "изменяется только буква",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Мы видим, что *гласные буквы* разные, но изменяется только *согласный* звук – в одном случае он мягкий, в другом – твёрдый. *Гласные звуки* в этом случае одинаковые.\n"
+      }
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l11-n8-qchk-9rxx",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false,
+      "content": {
+        "question": "Давайте посмотрим, какие гласные буквы вызывают смягчение согласного звука. Посмотрим на примере сонорных [м]-[м’]. Выберите, в каком случае этот звук будет мягким. ",
+        "options": [
+          {
+            "id": "l11-n8-qchk-9rxx-o1",
+            "content": "марка",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o2",
+            "content": "мёд",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o3",
+            "content": "метро",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o4",
+            "content": "мир",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o5",
+            "content": "муж",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o6",
+            "content": "мошка",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o7",
+            "content": "мысли",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o8",
+            "content": "мэр",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o9",
+            "content": "мюсли",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n8-qchk-9rxx-o10",
+            "content": "мяч",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l11-n9-fibl-dtah",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Проверьте себя и выпишите гласные буквы, которые смягчают звук идущей перед ними согласной. ",
+        "tasks": [
+          {
+            "id": "l11-n9-fibl-dtah-t1",
+            "text": "Это гласные: ___, ___, ___, ___, ___",
+            "correctAnswers": [
+              "ё",
+              "е",
+              "и",
+              "ю",
+              "я"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Да, это гласные *е, ё, ю, я, и*. Перед ними почти все согласные будут смягчаться. "
+      }
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l11-n12-qchk-1r5f",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": true,
+      "content": {
+        "question": "А теперь посмотрим на конец слов и звуки [л]-[л']. Выберите слова, в которых звук на конце слов мягкий. ",
+        "options": [
+          {
+            "id": "l11-n12-qchk-1r5f-o1",
+            "content": "стол",
+            "correct": false,
+            "feedback-selected": "Попробуйте произнести слово с мягким [л'] на конце. Вы услышите, что слово произносится не так. ",
+            "feedback-not-selected": "Верно! [л] твёрдый"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o2",
+            "content": "цель",
+            "correct": true,
+            "feedback-selected": "Верно! [л'] мягкий",
+            "feedback-not-selected": "Попробуйте произнести слово с твёрдым [л] на конце. Вы услышите, что слово произносится не так. С твёрдым звуком на конце мы получаем другое слово - цел"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o3",
+            "content": "роль ",
+            "correct": false,
+            "feedback-selected": "Верно! [л'] мягкий",
+            "feedback-not-selected": "Попробуйте произнести слово с твёрдым [л] на конце. Вы услышите, что слово произносится не так. С твёрдым звуком на конце мы получаем другое слово - рол (вал, цилиндр)"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o4",
+            "content": "мел",
+            "correct": false,
+            "feedback-selected": "Попробуйте произнести слово с мягким [л'] на конце. Вы услышите, что слово произносится не так. С мягким звуком на конце мы получаем другое слово - мель",
+            "feedback-not-selected": "Верно! [л] твёрдый"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o5",
+            "content": "гол",
+            "correct": false,
+            "feedback-selected": "Попробуйте произнести слово с мягким [л'] на конце. Вы услышите, что слово произносится не так. С мягким звуком на конце мы получаем другое слово - голь",
+            "feedback-not-selected": "Верно! [л] твёрдый"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o6",
+            "content": "боль",
+            "correct": true,
+            "feedback-selected": "Верно! [л'] мягкий",
+            "feedback-not-selected": "Попробуйте произнести слово с твёрдым [л] на конце. Вы услышите, что слово произносится не так"
+          },
+          {
+            "id": "l11-n12-qchk-1r5f-o7",
+            "content": "бал",
+            "correct": false,
+            "feedback-selected": "Попробуйте произнести слово с мягким [л'] на конце. Вы услышите, что слово произносится не так",
+            "feedback-not-selected": "Верно! [л] твёрдый"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l11-n12-fibl-xwe9",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Какая буква указывает на смягчение согласного звука на конце?",
+        "tasks": [
+          {
+            "id": "l11-n12-fibl-xwe9-t1",
+            "text": "___",
+            "correctAnswers": [
+              "ь"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Ь не имеет собственного звука, но смягчает согласный перед ним"
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Теперь проверим, смягчают ли гласные **Е, Ё, Ю, Я, И** и **Ь** все согласные звуки. ",
+      "id": "auto-mark-460b"
+    },
+    {
+      "type": "QuizCheckbox",
+      "id": "l11-n13-qchk-2jsn",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": true,
+      "content": {
+        "question": "Проверьте, как влияют гласные и Ь на выделенные согласные. Отметьте случаи, когда звук выделенной согласной буквы НЕ СМЯГЧАЕТСЯ под воздействием  **Е, Ё, Ю, Я, И** и **Ь**. Мы выписали слова со всеми согласными в алфавитном порядке",
+        "options": [
+          {
+            "id": "l11-n13-qchk-2jsn-o1",
+            "content": "База – Берёза – рыБья",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o2",
+            "content": "Ворот – Вяз – Вьётся",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o3",
+            "content": "Гуща – Гиря – сочетание Гь в русском языке встречается только в заимствованных именах собственных, но мы можем просто поэкспериментировать и составить его",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o4",
+            "content": "Дым – Дерево – Дьявол",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o5",
+            "content": "Жук – Жижа – руЖьё",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o16",
+            "content": "Зыбь – Зима – полоЗья",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o17",
+            "content": "Йогурт – Йети – сочетание йь в русском языке не встречается",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o18",
+            "content": "Карта – Кит – сочетание Кь в русском языке встречается только в заимствованных именах собственных, но мы можем просто поэкспериментировать и составить его",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o6",
+            "content": "Лук – Липа – моЛь",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o7",
+            "content": "Маска – Мир – скаМья",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o8",
+            "content": "Нос – Небо – леНь",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o9",
+            "content": "Пар – Пёс – выПь",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o10",
+            "content": "Ручка – Рябь – двеРь",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o11",
+            "content": "Сыпь – Сила – рыСь",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o12",
+            "content": "Топь – Тело – Тьма",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o13",
+            "content": "Форма – Фильм – СоФья",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o14",
+            "content": "Холод – Хитрость – Хьюстон (сочетание хь в русском языке почти не встречается)",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o15",
+            "content": "Цапля – Цирк – сочетание ць в русском языке не встречается",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o19",
+            "content": "Чашка – Честь – реЧь",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o20",
+            "content": "Шаль – Шип – мыШь",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l11-n13-qchk-2jsn-o21",
+            "content": "Щавель – Щепка – моЩь",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Пояснение к ответам."
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "> Итак, согласные звуки, не имеющие пары по мягкости-твёрдости, это звуки: **[ж], [й'], [ц], [ч'], [ш], [щ']**\n\n> Звуки [ш], [ж], [ц] в русском языке всегда **твёрдые**. \n> Звуки [щ’], [ч’], [й’] в русском языке всегда **мягкие**.",
+      "id": "auto-mark-6fbf"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l11-n15-fibl-z3he",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Используя предыдущее упражнение, давайте посчитаем, сколько в русском языке согласных звуков. Если согласный умеет смягчаться, это два разных звука. Если согласный всегда твёрдый или всегда мягкий – один звук. ",
+        "tasks": [
+          {
+            "id": "l11-n15-fibl-z3he-t1",
+            "text": "Всего согласных звуков: ___",
+            "correctAnswers": [
+              "36"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Гениально!",
+            "feedback-incorrect": "Попробуйте пересчитать. Если ответ был выделен как непарный по мягкости-твёрдости - это один звук, если парный - это два звука (например, [л] и [л']"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "FillText",
+      "id": "l11-n16-ftxt-t5cr",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "text": "Итак, в русском языке {{l11-n16-ftxt-t5cr-t1}} гласных звуков и {{l11-n16-ftxt-t5cr-t2}} согласных звуков, всего – 42 звука. При этом букв в алфавите 33: 10 гласных, 21 согласная, Ь и Ъ",
+        "tasks": [
+          {
+            "id": "l11-n16-ftxt-t5cr-t1",
+            "text": "подсказка/шаблон для ответа",
+            "correctAnswer": "6",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "6"
+          },
+          {
+            "id": "l11-n16-ftxt-t5cr-t2",
+            "text": "",
+            "correctAnswer": "36",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "36"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    }
+  ],
+  "lesson_id": "lesson11",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

@@ -1,0 +1,1589 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "### **Урок 5. Словообразовательные приставки и суффиксы. Как их найти и выделить?** ",
+      "id": "auto-mark-5fe3"
+    },
+    {
+      "type": "markdown",
+      "content": "Мы уже знаем, что в слове есть *формообразующие морфемы*, есть *корень* – морфема, содержащая основную информацию, основное лексическое значение слова. Однако есть ещё «кирпичики», которые, прикрепляясь к корню слова, создают новые слова:\n\n- **приставки –** они стоят **перед корнем**, \n- **словообразовательные суффиксы** – они стоят **после корня перед окончанием**, \n- **словообразовательные** **постфиксы**, расположенные **после окончания.** ",
+      "id": "auto-mark-e7ec"
+    },
+    {
+      "type": "markdown",
+      "content": "В этом уроке мы будем учиться находить все суффиксы и приставки, при помощи которых образовано слово. Мы сделаем несколько исследовательских заданий, чтобы получить алгоритм их поиска.",
+      "id": "auto-mark-c05e"
+    },
+    {
+      "type": "markdown",
+      "content": "**Производные и непроизводные слова** \n\nРассмотрим слово *столик*. Дадим ему определение через более короткое однокоренное слово. ",
+      "id": "auto-mark-2f74"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n43-fibl-f1bs",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "Заполните пропуски",
+        "tasks": [
+          {
+            "id": "l3-n43-fibl-f1bs-t1",
+            "text": "Столик – это маленький ___",
+            "correctAnswers": [
+              "стол"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, совершенно верно! Это более короткое однокоренное слово. ",
+            "feedback-incorrect": "Столик – это маленький стол. Стол – более короткое однокоренное слово. "
+          }
+        ],
+        "result_text": "",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Теперь у нас есть однокоренные слова *столик* и *стол*. Мы видим, что они отличаются морфемой -ИК-. \nОтветьте на несколько исследовательских вопросов",
+      "id": "auto-mark-54c8"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n7-qsel-qc88",
+      "content": {
+        "question": "Морфема -ик- выражает значение размера. Обязательно ли это значение для выражения? ",
+        "options": [
+          {
+            "id": "l4-n7-qsel-qc88-o1",
+            "content": "Да",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n7-qsel-qc88-o2",
+            "content": "Нет",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Значение размера в русском языке необязательно для выражения. Например, из слова *стол* мы никак не можем получить информацию о размере. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n8-qsel-yaw8",
+      "content": {
+        "question": "Морфема -ик- словообразовательная или формообразующая? \n",
+        "options": [
+          {
+            "id": "l4-n8-qsel-yaw8-o1",
+            "content": "Словообразовательная",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n8-qsel-yaw8-o2",
+            "content": "Формообразующая",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Формообразующие морфемы выражают грамматическое значение - обязательное для выражения. Морфема -ИК- сообщает нам о размере, что необязательно. Следовательно, морфема -ИК- *словообразовательная*. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n9-qsel-ib75",
+      "content": {
+        "question": "Это суффикс или приставка? ",
+        "options": [
+          {
+            "id": "l4-n9-qsel-ib75-o1",
+            "content": "Суффикс",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n9-qsel-ib75-o2",
+            "content": "Приставка",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Приставка стоит перед корнем, а суффикс - после корня перед окончанием. -ИК- - это суффикс, он стоит после корня -СТОЛ- "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Отлично! Мы видим, что слово стол**ик** образовано от слова **стол** при помощи суффикса **-ик-**. Чтобы его увидеть, мы дали определение слову столик, используя более простое однокоренное слово. ",
+      "id": "auto-mark-1057"
+    },
+    {
+      "type": "SelectList",
+      "id": "l4-n11-sell-1806",
+      "content": {
+        "selected": false,
+        "question": "Как вы думаете, какое из слов **производное**, то есть произведённое однокоренным? Какое слово непроизводное, то есть простое, ничем не произведённое, исходное? ",
+        "options": [
+          {
+            "id": "l4-n11-sell-1806-opt1",
+            "content": "производное"
+          },
+          {
+            "id": "l4-n11-sell-1806-opt2",
+            "content": "непроизводное"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l4-n11-sell-1806-t1",
+            "content": "стол",
+            "correct_option": "l4-n11-sell-1806-opt2",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Слово непроизводное - оно не произведено никаким другим."
+          },
+          {
+            "id": "l4-n11-sell-1806-t2",
+            "content": "столик",
+            "correct_option": "l4-n11-sell-1806-opt1",
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Слово производное - оно произведено словом стол"
+          }
+        ],
+        "button_result_text": "Проверить",
+        "result_text": "Слово *стол* исходное, первое - то, от которого образуются более сложные слова с этим корнем. \n\nСлово *столик* - производное. Его, как и другие слова с этим корнем, произвело слово *стол*. "
+      },
+      "answer_type": "select",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Таким образом, слово, которое произведено более простым однокоренным, называется **производным**. Самое простое слово, от которого можно только производить слова, называется **непроизводным** ",
+      "id": "auto-mark-7a42"
+    },
+    {
+      "type": "markdown",
+      "content": "###### **Мотивирование слова.**",
+      "id": "auto-mark-41af"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n5-fibl-24ye",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "Давайте потренируемся определять, как образовано слово. Для этого мы будем давать ему определение, используя более простые однокоренные слова. Ваша задача – заполнить пропуски в определениях и выписать суффиксы и приставки, при помощи которых слово образовано. Если приставки или суффикса нет, просто ничего не вписывайте в поле. ",
+        "tasks": [
+          {
+            "id": "l3-n5-fibl-24ye-t1",
+            "text": "Котёнок – это детёныш ___",
+            "correctAnswers": [
+              "кота"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, совершенно верно! Это более короткое однокоренное слово. ",
+            "feedback-incorrect": "Котёнок - это детёныш кота. Нам нужно более простое однокоренное слово"
+          },
+          {
+            "id": "l3-n5-fibl-24ye-t2",
+            "text": "Приставка: ___",
+            "correctAnswers": [],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, приставки здесь нет",
+            "feedback-incorrect": "Приставки нет, слово начинается с корня -кот-"
+          },
+          {
+            "id": "l3-n5-fibl-24ye-t3",
+            "text": "Суффикс: ___",
+            "correctAnswers": [
+              "ёнок"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Суффикс -ёнок-: слово кот отличается от слова котёнок именно этим суффиксом. "
+          }
+        ],
+        "result_text": "Итак, мы дали определение слову *котёнок* через слово *кот*, увидели, что оно отличается от более короткого только морфемой *-ёнок-*. Посмотрели, что эта морфема стоит после корня, перед окончанием – следовательно, это суффикс. Приставки нет.",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n14-fibl-3ifk",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "",
+        "tasks": [
+          {
+            "id": "l3-n14-fibl-3ifk-t1",
+            "text": "Прибежать – закончить ___",
+            "correctAnswers": [
+              "бежать"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, совершенно верно! Это более короткое однокоренное слово. ",
+            "feedback-incorrect": "Прибежать - закончить бежать. "
+          },
+          {
+            "id": "l3-n14-fibl-3ifk-t2",
+            "text": "Приставка: ___",
+            "correctAnswers": [
+              "при"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Приставка стоит перед корнем. Сравните между собой слова прибежать и бежать"
+          },
+          {
+            "id": "l3-n14-fibl-3ifk-t3",
+            "text": "Суффикс: ___",
+            "correctAnswers": [
+              ""
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Здесь нет словообразовательного суффикса."
+          }
+        ],
+        "result_text": "Прибежать - закончить бежать. Слова прибежать и бежать отличаются только морфемой при-, которая стоит в самом начале слова - перед корнем. Следовательно, это приставка.  ",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n15-fibl-qgum",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "",
+        "tasks": [
+          {
+            "id": "l3-n15-fibl-qgum-t1",
+            "text": "Подснежник – это цветок, который появляется из-под ___",
+            "correctAnswers": [
+              "снега"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Прекрасно! ",
+            "feedback-incorrect": "Подснежник - это цветок, который появляется из-под снега"
+          },
+          {
+            "id": "l3-n15-fibl-qgum-t2",
+            "text": "Приставка: ___",
+            "correctAnswers": [
+              "под"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Приставка стоит перед корнем. Сравните слова подснежник и снег."
+          },
+          {
+            "id": "l3-n15-fibl-qgum-t3",
+            "text": "Суффикс: ___",
+            "correctAnswers": [
+              "ник"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Суффикс стоит после корня. Сравните слова подснежник и снег "
+          }
+        ],
+        "result_text": "Слово *подснежник* отличается от производящего слова *снег* двумя морфемами: под- и -ник-. Под- стоит перед корнем - это приставка. -Ник- стоит после корня - это суффикс.  ",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n16-fibl-a5fr",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "",
+        "tasks": [
+          {
+            "id": "l3-n16-fibl-a5fr-t1",
+            "text": "Перелетать – ___, чтобы пересечь что-то.",
+            "correctAnswers": [
+              "летать"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Отлично!",
+            "feedback-incorrect": "Перелетать - летать, чтобы пересечь что-то"
+          },
+          {
+            "id": "l3-n16-fibl-a5fr-t2",
+            "text": "Приставка: ___",
+            "correctAnswers": [
+              "пере"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Приставка стоит перед корнем"
+          },
+          {
+            "id": "l3-n16-fibl-a5fr-t3",
+            "text": "Суффикс: ___",
+            "correctAnswers": [
+              ""
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Здесь нет словообразовательного суффикса"
+          }
+        ],
+        "result_text": "Слово *перелетать* отличается от производящего *летать* только приставкой пере-.",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l3-n17-fibl-0kn3",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "",
+        "tasks": [
+          {
+            "id": "l3-n17-fibl-0kn3-t1",
+            "text": "Синеватый – немного ___",
+            "correctAnswers": [
+              "синий"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Синеватый - немного синий"
+          },
+          {
+            "id": "l3-n17-fibl-0kn3-t2",
+            "text": "Приставка: ___",
+            "correctAnswers": [
+              ""
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Приставки здесь нет. Посмотрите: слова синеватый и синий начинаются одинаково "
+          },
+          {
+            "id": "l3-n17-fibl-0kn3-t3",
+            "text": "Суффикс: ___",
+            "correctAnswers": [
+              "еват"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Отлично!",
+            "feedback-incorrect": "Суффикс стоит после корня. Не забывайте, что окончание ый/ий - это формообразующая морфема. "
+          }
+        ],
+        "result_text": "Слово *синеватый* отличается от производящего слова *синий* только суффиксом -еват-. -ЫЙ/-ИЙ - это окончание (формообразующая морфема). ",
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Отлично, теперь вы понимаете, что значит **мотивировать слово** – определить его через более простое однокоренное и понять, каким способом оно образовано.  ",
+      "id": "auto-mark-fa18"
+    },
+    {
+      "type": "markdown",
+      "content": "###### **Словообразовательные цепочки**",
+      "id": "auto-mark-83a6"
+    },
+    {
+      "type": "markdown",
+      "content": "Но что если слово, которое мы использовали для определения, тоже производное? Так может быть. Чтобы найти все словообразовательные морфемы и увидеть корень, нам нужно восстановить **словообразовательную цепочку**. \n",
+      "id": "auto-mark-5f09"
+    },
+    {
+      "type": "markdown",
+      "content": "Чтобы восстановить словообразовательную цепочку, нам нужно **мотивировать слова**, пока мы не доберёмся до непроизводного слова. В непроизводном слове мы легко увидим корень. Давайте попробуем это сделать. ",
+      "id": "auto-mark-8abf"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l4-n23-fibl-ieob",
+      "content": {
+        "question": "Восстановите предыдущее (производящее) слово cловообразовательной цепочки, дав определение. Вы уже делали это в предыдущем задании. ",
+        "tasks": [
+          {
+            "id": "l4-n23-fibl-ieob-t1",
+            "text": "Пересортировка – процесс, во время которого нужно ___.",
+            "correctAnswers": [
+              "пересортировать"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "верно! ",
+            "feedback-incorrect": "пересортировать"
+          }
+        ],
+        "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l4-n24-fibl-uo4p",
+      "content": {
+        "question": "Восстановите предыдущее (производящее) слово словообразовательной цепочки, дав определение.",
+        "tasks": [
+          {
+            "id": "l4-n24-fibl-uo4p-t1",
+            "text": "Пересортировать – ___ заново.",
+            "correctAnswers": [
+              "сортировать"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "сортировать"
+          }
+        ],
+        "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l4-n25-fibl-4jpx",
+      "content": {
+        "question": "Восстановите предыдущее (производящее) слово словообразовательной цепочки, дав определение.",
+        "tasks": [
+          {
+            "id": "l4-n25-fibl-4jpx-t1",
+            "text": "Сортировать – разделять по ___.",
+            "correctAnswers": [
+              [
+                "сорту",
+                "сортам"
+              ]
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "сорту/сортам - нам важно слово сорт"
+          }
+        ],
+        "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Итак, вы собрали словообразовательную цепочку: \n\n*пересортировка ← пересортировать ← сортировать ← сорт*",
+      "id": "auto-mark-2867"
+    },
+    {
+      "type": "FillText",
+      "id": "l4-n41-ftxt-l01u",
+      "content": {
+        "text": "**Выпишите из слов словообразовательной цепочки основы**\n\nпересортировка ← пересортировать ← сортировать ← сорт\n{{l4-n41-ftxt-l01u-t1}} ← {{l4-n41-ftxt-l01u-t2}} ← {{l4-n41-ftxt-l01u-t3}} ← {{l4-n41-ftxt-l01u-t4}}",
+        "tasks": [
+          {
+            "id": "l4-n41-ftxt-l01u-t1",
+            "text": "исключаем формообразующие морфемы",
+            "correctAnswer": "пересортировк",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "пересортировк"
+          },
+          {
+            "id": "l4-n41-ftxt-l01u-t2",
+            "text": "",
+            "correctAnswer": "пересортирова",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "пересортирова"
+          },
+          {
+            "id": "l4-n41-ftxt-l01u-t3",
+            "text": "",
+            "correctAnswer": "сортирова",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "сортирова"
+          },
+          {
+            "id": "l4-n41-ftxt-l01u-t4",
+            "text": "",
+            "correctAnswer": "сорт",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "сорт"
+          }
+        ],
+        "result_text": "Получилась такая цепочка основ: пересортировк ← пересортирова ← сортирова ← сорт",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillText",
+      "id": "l4-n27-ftxt-vhsj",
+      "content": {
+        "text": "**Выпишите из основ морфемы, которые прибавились по сравнению с предыдущей основой цепочки**\n\nпересортировк ← пересортирова ← сортирова ← сорт\n{{l4-n27-ftxt-vhsj-t1}} ← {{l4-n27-ftxt-vhsj-t2}} ← {{l4-n27-ftxt-vhsj-t3}} ← ",
+        "tasks": [
+          {
+            "id": "l4-n27-ftxt-vhsj-t1",
+            "text": "посмотрите на предыдущее слово и найдите отличие",
+            "correctAnswer": "к",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "к"
+          },
+          {
+            "id": "l4-n27-ftxt-vhsj-t2",
+            "text": "",
+            "correctAnswer": "пере",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "пере"
+          },
+          {
+            "id": "l4-n27-ftxt-vhsj-t3",
+            "text": "",
+            "correctAnswer": "ирова",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "ирова"
+          }
+        ],
+        "result_text": "Итак, мы получили такие морфемы: -к-, пере-, -иров-",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n30-filt-544s",
+      "content": {
+        "question": "Выпишите из слова ПЕРЕСОРТИРОВКА все словообразовательные морфемы, которые вы нашли в цепочке",
+        "table": {
+          "headers": [
+            "Морфема",
+            "Ваш ответ",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "Приставка",
+              "id": "l4-n30-filt-544s-r2",
+              "input": {
+                "correctAnswers": [
+                  "пере"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Приставка стоит перед корнем ",
+                "feedback-incorrect": "Приставка стоит перед корнем "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Корень",
+              "id": "l4-n30-filt-544s-r1",
+              "input": {
+                "correctAnswers": [
+                  "сорт"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! Основа непроизводного слова в цепочке совпала с корнем. ",
+                "feedback-incorrect": "Основа непроизводного слова в цепочке совпала с корнем. Корень несёт в себе основное лексическое значение. Все слова, произведённые словом СОРТ будут с ним связаны по смыслу."
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 1 (сразу после корня)",
+              "id": "l4-n30-filt-544s-r3",
+              "input": {
+                "correctAnswers": [
+                  "иров"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! ",
+                "feedback-incorrect": "Сразу после корня стоит суффикс -иров-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 2 ",
+              "id": "l4-n30-filt-544s-r4",
+              "input": {
+                "correctAnswers": [
+                  "к"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! ",
+                "feedback-incorrect": "После суффикса -иров- мы обнаружили ещё один - суффикс -к-"
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Поздравляем! Вы нашли все морфемы в слове пересортировка! Словообразовательная цепочка показывает нам, что приставка в слове одна (пере-), а вот суффиксов два (-иров- + -к-).",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l4-n31-qsel-90qh",
+      "content": {
+        "question": "Какой морфемой является -а в слове *пересортировкА*?",
+        "options": [
+          {
+            "id": "l4-n31-qsel-90qh-o1",
+            "content": "Суффикс",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l4-n31-qsel-90qh-o2",
+            "content": "Окончание",
+            "correct": true,
+            "feedback-selected": "Конечно, -а - это окончание. Изменим число и падеж: пересортировкИ, пересортировкОЙ. Окончание согласует это слово с другими словами в словосочетании и предложении. ",
+            "feedback-not-selected": "Конечно, -а - это окончание. Изменим число и падеж: пересортировкИ, пересортировкОЙ. Окончание согласует это слово с другими словами в словосочетании и предложении. "
+          },
+          {
+            "id": "l4-n31-qsel-90qh-o3",
+            "content": "Постфикс",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "###### **Тренируемся находить суффиксы и приставки, при помощи которых образованы слова**",
+      "id": "auto-mark-e69a"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l4-n34-fibl-y4by",
+      "content": {
+        "question": "Разберём слово БЕЗЛИСТВЕННЫЙ\n\n",
+        "tasks": [
+          {
+            "id": "l4-n34-fibl-y4by-t1",
+            "text": "Безлиственный – растение без ___.",
+            "correctAnswers": [
+              "листвы"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Да, молодец! Нашли предыдущее слово словообразовательной цепочки! ",
+            "feedback-incorrect": "Безлиственный – растение без листвы. Важно найти именно предыдущее слово словообразовательной цепочки. "
+          }
+        ],
+        "result_text": "",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l5-n32-fibl-nitq",
+      "content": {
+        "question": "\n\n",
+        "tasks": [
+          {
+            "id": "l5-n32-fibl-nitq-t2",
+            "text": "Листва – совокупность ___. ",
+            "correctAnswers": [
+              "листьев"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "Отлично! Нашли последнее, непроизводное слово словообразовательной цепочки",
+            "feedback-incorrect": "Листва - совокупность листьев. Нам нужно слово лист."
+          }
+        ],
+        "result_text": "Отлично! Найдена словообразовательная цепочка: безлиственный - листва - лист",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n34-filt-492k",
+      "content": {
+        "question": "Выпишите из каждого слова словообразовательной цепочки основу",
+        "table": {
+          "headers": [
+            "Слово",
+            "Основа слова",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "безлиственный",
+              "id": "l4-n34-filt-492k-r1",
+              "input": {
+                "correctAnswers": [
+                  "безлиственн"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Да! Всё слово без окончания",
+                "feedback-incorrect": "Нам нужно отсечь все формообразующие морфемы. Здесь это окончание -ый"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "листва",
+              "id": "l4-n34-filt-492k-r2",
+              "input": {
+                "correctAnswers": [
+                  "листв"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Да! Всё слово без окончания",
+                "feedback-incorrect": "Нам нужно отсечь все формообразующие морфемы. Здесь это окончание -а"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "лист",
+              "id": "l4-n34-filt-492k-r3",
+              "input": {
+                "correctAnswers": [
+                  "лист"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Да! Всё слово без окончания",
+                "feedback-incorrect": "Нам нужно отсечь все формообразующие морфемы. Здесь окончание нулевое"
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n35-filt-b5xk",
+      "content": {
+        "question": "Выпишите словообразовательные морфемы, которые прибавились по сравнению с предыдущей основой словообразовательной цепочки. Если ничего не прибавилось, оставьте поле пустым",
+        "table": {
+          "headers": [
+            "Основа",
+            "Морфема, которая прибавилась по сравнению с предыдущей основой",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "безлиственн-",
+              "id": "l4-n35-filt-b5xk-r1",
+              "input": {
+                "correctAnswers": [
+                  "без",
+                  "енн"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Прибавилось две морфемы: без- и -енн-",
+                "feedback-incorrect": "Прибавилось две морфемы: без- и -енн-. Сравните: листв - БЕЗлиствЕНН"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "листв-",
+              "id": "l4-n35-filt-b5xk-r2",
+              "input": {
+                "correctAnswers": [
+                  "в"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Молодец! ",
+                "feedback-incorrect": "Прибавилась морфема -в-. Сравните: лист - листв"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "лист-",
+              "id": "l4-n35-filt-b5xk-r3",
+              "input": {
+                "correctAnswers": [
+                  ""
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! Слово непроизводное, исходное",
+                "feedback-incorrect": "Слово непроизводное, исходное"
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Прекрасно! Мы уже нашли все словообразовательные морфемы. Осталось определиться с их названиями. ",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n36-filt-hz9l",
+      "content": {
+        "question": "Закончите разбор слова БЕЗЛИСТВЕННЫЙ. Выпишите все найденные морфемы и основу слова. ",
+        "table": {
+          "headers": [
+            "Морфема",
+            "Ваш ответ",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "Приставка",
+              "id": "l4-n36-filt-hz9l-r1",
+              "input": {
+                "correctAnswers": [
+                  "без"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично!",
+                "feedback-incorrect": "Приставка стоит в слове самой первой - перед корнем"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Корень",
+              "id": "l4-n36-filt-hz9l-r2",
+              "input": {
+                "correctAnswers": [
+                  "лист"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Супер! ",
+                "feedback-incorrect": "Последним в цепочке стоит слово лист - это непроизводное слово. Его основа совпадает с корнем. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 1",
+              "id": "l4-n36-filt-hz9l-r3",
+              "input": {
+                "correctAnswers": [
+                  "в"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Молодец!",
+                "feedback-incorrect": "Сразу после корня стоит суффикс -в-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 2",
+              "id": "l4-n36-filt-hz9l-r4",
+              "input": {
+                "correctAnswers": [
+                  "енн"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе! ",
+                "feedback-incorrect": "Второй суффикс в слове – -енн-"
+              }
+            },
+            {
+              "groupId": "Окончание",
+              "task": "",
+              "id": "l4-n36-filt-hz9l-r5",
+              "input": {
+                "correctAnswers": [
+                  "ый"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Неподражаемо!",
+                "feedback-incorrect": "Окончание стоит в конце слова, согласует его с другими словами: лиственный, лиственного – изменяется форма. "
+              }
+            },
+            {
+              "groupId": "Основа",
+              "task": "",
+              "id": "l4-n36-filt-hz9l-r6",
+              "input": {
+                "correctAnswers": [
+                  "безлиственн"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Гениально!",
+                "feedback-incorrect": "Основа слова – всё слово без формообразующих морфем (здесь – окончания). "
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Прекрасно! Мы закончили разбор слова БЕЗЛИСТВЕННЫЙ",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillText",
+      "id": "l4-n37-ftxt-hn6r",
+      "content": {
+        "text": "Разберём слово УСТАРЕЛОСТЬ. \n\nСначала восстановим словообразовательную цепочку. Сначала просмотрите всю цепочку, постарайтесь не пропустить ни одно звено.  \n\nУстарелость – свойство (какого?) {{l4-n37-ftxt-hn6r-t1}} – это тот, который (что сделал?) {{l4-n37-ftxt-hn6r-t2}}– то есть закончил (что делать?) {{l4-n37-ftxt-hn6r-t3}} – то есть становиться (каким?) {{l4-n37-ftxt-hn6r-t4}}",
+        "tasks": [
+          {
+            "id": "l4-n37-ftxt-hn6r-t1",
+            "text": "подсказка/шаблон для ответа",
+            "correctAnswer": "устарелого",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "устарелого"
+          },
+          {
+            "id": "l4-n37-ftxt-hn6r-t2",
+            "text": "",
+            "correctAnswer": "устарел",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "устарел"
+          },
+          {
+            "id": "l4-n37-ftxt-hn6r-t3",
+            "text": "",
+            "correctAnswer": "стареть",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "стареть"
+          },
+          {
+            "id": "l4-n37-ftxt-hn6r-t4",
+            "text": "",
+            "correctAnswer": "старым",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "старым"
+          }
+        ],
+        "result_text": "Прекрасно! Мы восстановили словообразовательную цепочку: устарелость - устарелый - устареть - стареть - старый",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n38-filt-jgs9",
+      "content": {
+        "question": "Выписываем основы слов словообразовательной цепочки",
+        "table": {
+          "headers": [
+            "Слово",
+            "Основа ",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "устарелость ",
+              "id": "l4-n38-filt-jgs9-r1",
+              "input": {
+                "correctAnswers": [
+                  "устарелость"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! ",
+                "feedback-incorrect": "Окончание нулевое, поэтому основа - всё слово без нулевого окончания"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "устарелый",
+              "id": "l4-n38-filt-jgs9-r5",
+              "input": {
+                "correctAnswers": [
+                  "устарел"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Прекрасно!",
+                "feedback-incorrect": "Окончание -ый - формообразующая морфема. Не входит в основу"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "устареть",
+              "id": "l4-n38-filt-jgs9-r2",
+              "input": {
+                "correctAnswers": [
+                  "устаре"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! ",
+                "feedback-incorrect": "Не забывайте, что -ть - формообразующий суффикс. Он не входит в основу"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "стареть",
+              "id": "l4-n38-filt-jgs9-r3",
+              "input": {
+                "correctAnswers": [
+                  "старе"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Не забывайте, что -ть - формообразующий суффикс. Он не входит в основу"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Старый",
+              "id": "l4-n38-filt-jgs9-r4",
+              "input": {
+                "correctAnswers": [
+                  "стар"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Блестяще!",
+                "feedback-incorrect": "Окончание не входит в основу. Это формообразующая морфема."
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Мы получили такую цепочку основ: устарелость - устарел - старе - устаре - старе - стар",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n38-filt-lf5m",
+      "content": {
+        "question": "Мы разобрали словообразовательную цепочку! Осталось закончить разбор",
+        "table": {
+          "headers": [
+            "Основа ",
+            "Новая словообразовательная морфема",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "устарелость-",
+              "id": "l4-n38-filt-lf5m-r1",
+              "input": {
+                "correctAnswers": [
+                  "ость"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! ",
+                "feedback-incorrect": "Сравните: устарел - устарелОСТЬ"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "устарел-",
+              "id": "l4-n38-filt-lf5m-r2",
+              "input": {
+                "correctAnswers": [
+                  "л"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Сравните: устаре - устареЛ"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "устаре-",
+              "id": "l4-n38-filt-lf5m-r3",
+              "input": {
+                "correctAnswers": [
+                  "у"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! ",
+                "feedback-incorrect": "Сравните: старе - Устаре"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "старе-",
+              "id": "l4-n38-filt-lf5m-r4",
+              "input": {
+                "correctAnswers": [
+                  "е"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Впечатляюще!",
+                "feedback-incorrect": "Сравните: стар - старЕ"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "стар-",
+              "id": "l4-n38-filt-lf5m-r5",
+              "input": {
+                "correctAnswers": [
+                  ""
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Блестяще!",
+                "feedback-incorrect": "Это основа непроизводного слова. Пока ничего не прибавилось"
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Итак, мы сравнили между собой основы и нашли словообразовательные морфемы",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n40-filt-3nv5",
+      "content": {
+        "question": "Заканчиваем разбор слова УСТАРЕЛОСТЬ",
+        "table": {
+          "headers": [
+            "Морфема",
+            "Ваш ответ",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "Приставка",
+              "id": "l4-n40-filt-3nv5-r1",
+              "input": {
+                "correctAnswers": [
+                  "у"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! ",
+                "feedback-incorrect": "Приставка стоит перед корнем"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Корень",
+              "id": "l4-n40-filt-3nv5-r2",
+              "input": {
+                "correctAnswers": [
+                  "стар"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Верно! ",
+                "feedback-incorrect": "Посмотрите на последнее слово словообразовательной цепочки (непроизводное). В нём корень совпадает с основой"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 1",
+              "id": "l4-n40-filt-3nv5-r3",
+              "input": {
+                "correctAnswers": [
+                  "е"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично!",
+                "feedback-incorrect": "Сразу после корня стоит суффикс -е-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 2",
+              "id": "l4-n40-filt-3nv5-r4",
+              "input": {
+                "correctAnswers": [
+                  "л"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Второй суффикс - -л-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс 3",
+              "id": "l4-n40-filt-3nv5-r5",
+              "input": {
+                "correctAnswers": [
+                  "ость"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Гениально!",
+                "feedback-incorrect": "Последний суффикс в слове - -ость-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Окончание (проверьте его наличие!)",
+              "id": "l4-n40-filt-3nv5-r6",
+              "input": {
+                "correctAnswers": [
+                  "0",
+                  "нулевое"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Невероятно!",
+                "feedback-incorrect": "Здесь есть окончание. В именительном падеже оно нулевое - будьте внимательны!"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Основа - всё слово без формообразующих морфем",
+              "id": "l4-n40-filt-3nv5-r7",
+              "input": {
+                "correctAnswers": [
+                  "устарелость"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Прекрасно!",
+                "feedback-incorrect": "Окончание нулевое, поэтому все морфемы войдут в основу. "
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Поздравляю! Вы разобрали слово УСТАРЕЛОСТЬ!",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillText",
+      "id": "l4-n41-ftxt-kj5i",
+      "content": {
+        "text": "Разберём слово ПРЕДОХРАНИТЕЛЬ\n\nВосстанавливаем словообразовательную цепочку:\n\nПредохранитель – это устройство, чтобы (что сделать?){{l4-n41-ftxt-kj5i-t1}} - то есть (что сделать?){{l4-n41-ftxt-kj5i-t2}} заранее - (что делать?){{l4-n41-ftxt-kj5i-t3}} в целостности, до результата ",
+        "tasks": [
+          {
+            "id": "l4-n41-ftxt-kj5i-t1",
+            "text": "",
+            "correctAnswer": "предохранить",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "предохранить"
+          },
+          {
+            "id": "l4-n41-ftxt-kj5i-t2",
+            "text": "",
+            "correctAnswer": "охранить",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "охранить"
+          },
+          {
+            "id": "l4-n41-ftxt-kj5i-t3",
+            "text": "",
+            "correctAnswer": "хранить",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "хранить"
+          }
+        ],
+        "result_text": "Отлично! Мы получили цепочку: предохранитель - предохранить - охранить - хранить",
+        "button_text": "Проверить"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n43-filt-8pdh",
+      "content": {
+        "question": "Выпишите СЛОВООБРАЗОВАТЕЛЬНЫЕ морфемы из слов словообразовательной цепочки",
+        "table": {
+          "headers": [
+            "Слово",
+            "Новая словообразовательная морфема",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "хранить",
+              "id": "l4-n43-filt-8pdh-r1",
+              "input": {
+                "correctAnswers": [
+                  ""
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Конечно, здесь пока ничего не добавляется",
+                "feedback-incorrect": "Здесь пока ничего не добавляется"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "охранить",
+              "id": "l4-n43-filt-8pdh-r2",
+              "input": {
+                "correctAnswers": [
+                  "о"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Молодец!",
+                "feedback-incorrect": "Здесь добавилась приставка о-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "предохранить",
+              "id": "l4-n43-filt-8pdh-r3",
+              "input": {
+                "correctAnswers": [
+                  "пред"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично! ",
+                "feedback-incorrect": "Здесь добавилась приставка пред-"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "предохранитель",
+              "id": "l4-n43-filt-8pdh-r4",
+              "input": {
+                "correctAnswers": [
+                  "тель"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Здесь добавился суффикс -тель-"
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "blocked": true,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "FillTable",
+      "id": "l4-n40-filt-oqta",
+      "content": {
+        "question": "Заканчиваем разбор слова ПРЕДОХРАНИТЕЛЬ. Обратите внимание, что в этом слове есть глагольный суффикс -и-. Мы поговорим о нём подробнее в следующем уроке. Отделите его от корня",
+        "table": {
+          "headers": [
+            "",
+            "",
+            "Результат"
+          ],
+          "rows": [
+            {
+              "groupId": "group1",
+              "task": "Приставка 1",
+              "id": "l4-n40-filt-oqta-r1",
+              "input": {
+                "correctAnswers": [
+                  "пред"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Отлично!",
+                "feedback-incorrect": "Вернитесь к предыдущему заданию, посмотрите, какую мы выписали приставку"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Приставка 2",
+              "id": "l4-n40-filt-oqta-r2",
+              "input": {
+                "correctAnswers": [
+                  "о"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Прекрасно!",
+                "feedback-incorrect": "Вернитесь к предыдущему заданию, посмотрите, какую мы выписали приставку"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Корень",
+              "id": "l4-n40-filt-oqta-r3",
+              "input": {
+                "correctAnswers": [
+                  "хран"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Отсекаем все суффиксы и приставки. То, что осталось, и есть корень"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Глагольный суффикс (посмотрите инструкцию)",
+              "id": "l4-n40-filt-oqta-r4",
+              "input": {
+                "correctAnswers": [
+                  "и"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Невероятно!",
+                "feedback-incorrect": "Мы отметили этот суффикс в задании. Посмотрите инструкцию!"
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Суффикс",
+              "id": "l4-n40-filt-oqta-r5",
+              "input": {
+                "correctAnswers": [
+                  "тель"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Гениально!",
+                "feedback-incorrect": "Какой суффикс нам понадобился, чтобы из действия сделать предмет? "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Окончание",
+              "id": "l4-n40-filt-oqta-r6",
+              "input": {
+                "correctAnswers": [
+                  "0",
+                  "нулевое"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Потрясающе!",
+                "feedback-incorrect": "Не забывайте, что окончание может быть нулевым. "
+              }
+            },
+            {
+              "groupId": "group1",
+              "task": "Основа",
+              "id": "l4-n40-filt-oqta-r7",
+              "input": {
+                "correctAnswers": [
+                  "предохранитель"
+                ],
+                "placeholder": "впишите ответ",
+                "feedback-correct": "Вы лучше всех!",
+                "feedback-incorrect": "Здесь основа совпадает со словом, так как окончание нулевое."
+              }
+            }
+          ]
+        },
+        "button_finish_text": "Завершить",
+        "result_text": "Поздравляем! Вы разобрали слово ПРЕДОХРАНИТЕЛЬ!",
+        "button_text": "Проверить",
+        "button_next_text": "Далее"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    }
+  ],
+  "lesson_id": "lesson5",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

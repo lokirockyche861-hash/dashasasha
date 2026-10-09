@@ -1,0 +1,1089 @@
+{
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# **Урок 7. Способы словообразования**",
+      "id": "auto-mark-4146"
+    },
+    {
+      "type": "markdown",
+      "content": "В уроках 5-6 мы рассмотрели, как строятся словообразовательные цепочки и как они помогают нам увидеть словообразовательные приставки, суффиксы, постфиксы, корень слова и основу. \n\nВ этом уроке мы изучим основные способы словообразования. Нам поможет мотивирование слова, которое вы уже умеете делать. Если вы были внимательны, проходя уроки 5-6, вам будет очень легко запомнить большую часть способов. ",
+      "id": "auto-mark-42d4"
+    },
+    {
+      "type": "SelectList",
+      "id": "l7-n28-sell-btym",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "selected": false,
+        "question": "Перед вами слова, которым уже даны определения при помощи более простых. Посмотрите, какие словообразовательные морфемы прибавились и выберите способы словообразования. ",
+        "options": [
+          {
+            "id": "l7-n28-sell-btym-opt1",
+            "content": "приставочный"
+          },
+          {
+            "id": "l7-n28-sell-btym-opt2",
+            "content": "суффиксальный"
+          },
+          {
+            "id": "l7-n28-sell-btym-opt3",
+            "content": "постфиксальный"
+          },
+          {
+            "id": "l7-n28-sell-btym-opt4",
+            "content": "приставочно-суффиксальный"
+          },
+          {
+            "id": "l7-n28-sell-btym-opt5",
+            "content": "приставочно-постфиксальный"
+          },
+          {
+            "id": "l7-n28-sell-btym-opt6",
+            "content": "суффиксально-постфиксальный"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l7-n28-sell-btym-t1",
+            "content": "КораблИК ← это маленький **корабль**",
+            "correct_option": "l7-n28-sell-btym-opt2",
+            "feedback-correct": "Да, молодец! Прибавился суффикс - способ суффиксальный",
+            "feedback-incorrect": "Прибавился суффикс - способ суффиксальный. Сравните слова корабль и кораблик"
+          },
+          {
+            "id": "l7-n28-sell-btym-t2",
+            "content": "ПОДползти ← закончить куда-то **ползти**",
+            "correct_option": "l7-n28-sell-btym-opt1",
+            "feedback-correct": "Да, верно! Слово образовано при помощи приставки - способ словообразования приставочный. ",
+            "feedback-incorrect": "Слово образовано при помощи приставки - способ словообразования приставочный. Сравните слова подползти и ползти"
+          },
+          {
+            "id": "l7-n28-sell-btym-t3",
+            "content": "ПЕРЕписКа ← процесс, при котором люди **пишут** друг другу",
+            "correct_option": "l7-n28-sell-btym-opt4",
+            "feedback-correct": "Отлично! К основе производящего слова прибавились суффикс и приставка - способ приставочно-суффиксальный",
+            "feedback-incorrect": "К основе производящего слова прибавились суффикс и приставка - способ приставочно-суффиксальный"
+          },
+          {
+            "id": "l7-n28-sell-btym-t4",
+            "content": "Какой-НИБУДЬ ← неизвестно **какой**",
+            "correct_option": "l7-n28-sell-btym-opt3",
+            "feedback-correct": "Здорово! -нибудь - это постфикс. Если мы изменим слово какой, то увидим его окончание. После окончания стоит постфикс - способ словообразования постфиксальный. ",
+            "feedback-incorrect": "-нибудь - это постфикс. Если мы изменим слово какой, то увидим его окончание. После окончания стоит постфикс - способ словообразования постфиксальный. "
+          },
+          {
+            "id": "l7-n28-sell-btym-t5",
+            "content": "ПроверКа ← процесс, при котором **проверяют**",
+            "correct_option": "l7-n28-sell-btym-opt2",
+            "feedback-correct": "Верно! Прибавился суффикс - способ словообразования суффиксальный.",
+            "feedback-incorrect": "Прибавился суффикс - способ словообразования суффиксальный. "
+          },
+          {
+            "id": "l7-n28-sell-btym-t6",
+            "content": "РАЗбежатьСЯ ← начать **бежать** с большой скоростью",
+            "correct_option": "l7-n28-sell-btym-opt5",
+            "feedback-correct": "Гениально! Мы видим, что для образования слова использованы приставка и постфикс. В этом случае слово без постфикса не употребляется - постфикс словообразовательный. ",
+            "feedback-incorrect": "Мы видим, что для образования слова использованы приставка и постфикс. В этом случае слово без постфикса не употребляется - постфикс словообразовательный. Сравните основы глаголов бежать и разбежаться - какими морфемами они отличаются? "
+          },
+          {
+            "id": "l7-n28-sell-btym-t7",
+            "content": "ГордИтьСЯ ← быть **гордым**",
+            "correct_option": "l7-n28-sell-btym-opt6",
+            "feedback-correct": "Супер! Для образования глагола нам понадобился суффикс -И- и постфикс -СЯ -. Суффиксально-постфиксальный способ!",
+            "feedback-incorrect": "Для образования глагола нам понадобился суффикс -И- и постфикс -СЯ -. Суффиксально-постфиксальный способ!"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Вы уже знаете 6 способов словообразования!"
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "### **Первая группа способов словообразования: образование слов при помощи суффиксов, приставок, постфиксов**",
+      "id": "auto-mark-ec84"
+    },
+    {
+      "type": "markdown",
+      "content": "### **Бессуфиксный способ** ",
+      "id": "auto-mark-6132"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n6-fibl-yisp",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Давайте рассмотрим слово *переход*. Впишите глагол, от которого образовано это слово ",
+        "tasks": [
+          {
+            "id": "l7-n6-fibl-yisp-t1",
+            "text": "Переход – это место, по которому (что делают?) ___ дорогу. ",
+            "correctAnswers": [
+              "переходят"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "совершенно верно!",
+            "feedback-incorrect": "Переход – это место, по которому переходят дорогу. "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n6-fibl-p6km",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Выпишем основы этих слов",
+        "tasks": [
+          {
+            "id": "l7-n6-fibl-p6km-t1",
+            "text": "Основа слова переход: ___",
+            "correctAnswers": [
+              "переход"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "совершенно верно!",
+            "feedback-incorrect": "переход"
+          },
+          {
+            "id": "l7-n6-fibl-p6km-t2",
+            "text": "Основа слова переходят: ___",
+            "correctAnswers": [
+              "переход"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "переход- (всё слово без окончания - формообразующей морфемы)"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n8-qsel-cess",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "Добавилась ли какая-то морфема при образовании слова переход?",
+        "options": [
+          {
+            "id": "l7-n8-qsel-cess-o1",
+            "content": "Да",
+            "correct": false,
+            "feedback-selected": "Сравните ещё раз основы: никакой новой словообразовательной морфемы не добавилось",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l7-n8-qsel-cess-o2",
+            "content": "Нет",
+            "correct": true,
+            "feedback-selected": "Совершенно верно! Ничего не добавилось ",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Действительно, никакой морфемы при образовании слова переход от глагола переходить не добавилось. Такой способ образования называется **бессуфиксным**. Также можно сказать, что добавленный **суффикс нулевой.**"
+      }
+    },
+    {
+      "type": "SelectList",
+      "id": "l7-n9-sell-zq0z",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "selected": false,
+        "question": "Определите способ словообразования. Для этого восстановите предыдущее слово словообразовательной цепочки и сравните основы слов. \nНапример: *заячий* - принадлежащий *зайцу*. Основы отличаются суффиксом -ий-. Способ словообразования - суффиксальный. ",
+        "options": [
+          {
+            "id": "l7-n9-sell-zq0z-opt1",
+            "content": "Приставочный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt2",
+            "content": "Суффиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt3",
+            "content": "Постфиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt4",
+            "content": "Приставочно-суффиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt5",
+            "content": "Приставочно-постфиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt6",
+            "content": "Суффиксально-постфиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-opt7",
+            "content": "Бессуффиксный"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l7-n9-sell-zq0z-t1",
+            "content": "безработица",
+            "correct_option": "l7-n9-sell-zq0z-opt4",
+            "feedback-correct": "Молодец!",
+            "feedback-incorrect": "Безработица - отсутствие работы. Слова безработица и работа отличаются приставкой без- и суффиксом -иц-. Следовательно, способ словообразования приставочно-суффиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t2",
+            "content": "бег",
+            "correct_option": "l7-n9-sell-zq0z-opt7",
+            "feedback-correct": "Отлично!",
+            "feedback-incorrect": "Бег - процесс, при котором бегут. В этом случае мы не прибавляем никакую словообразовательную морфему. Здесь нулевой суффикс - способ словообразования бессуффиксный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t3",
+            "content": "белить",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Белить - делать белым. Глагол белить отличается от прилагательного белый глагольным суффиксом -и-. Способ словообразования суффиксальный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t4",
+            "content": "завтракать",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Очень хорошо! ",
+            "feedback-incorrect": "Завтракать - есть завтрак. Сравните основы слов. Что добавилось?"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t5",
+            "content": "заморгать",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Прекрасно!",
+            "feedback-incorrect": "Заморгать - начать моргать. Сравните основы слов. Что прибавилось?"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t6",
+            "content": "заплыв",
+            "correct_option": "l7-n9-sell-zq0z-opt7",
+            "feedback-correct": "Потрясающе!",
+            "feedback-incorrect": "Заплыв - это процесс, при котором заплывают. Такого типа существительные (бег, заплыв) образованы бессуффиксным способом"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t7",
+            "content": "какой-либо",
+            "correct_option": "l7-n9-sell-zq0z-opt3",
+            "feedback-correct": "Очень хорошо!",
+            "feedback-incorrect": "Какой-либо - это неопределённо какой. Какой изменяется по падежам, мы легко видим окончание -ой. После окончания стоит постфикс -либо"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t8",
+            "content": "колоситься",
+            "correct_option": "l7-n9-sell-zq0z-opt6",
+            "feedback-correct": "Гениально!",
+            "feedback-incorrect": "Колоситься - образовывать колос. Сравним слова колос и колоситься. Они отличаются суффиксом и постфиксом. В этом случае слово без постфикса не существует, постфикс словообразовательный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t9",
+            "content": "кто-нибудь",
+            "correct_option": "l7-n9-sell-zq0z-opt3",
+            "feedback-correct": "Прекрасно!",
+            "feedback-incorrect": "Сравните слова кто-нибудь и кто. Чем они отличаются? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t10",
+            "content": "лениться",
+            "correct_option": "l7-n9-sell-zq0z-opt6",
+            "feedback-correct": "Отлично!",
+            "feedback-incorrect": "Лениться - испытывать лень. Прибавились глагольный суффикс и постфикс."
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t11",
+            "content": "настольный",
+            "correct_option": "l7-n9-sell-zq0z-opt4",
+            "feedback-correct": "Молодец!",
+            "feedback-incorrect": "Настольный - устанавливаемый на столе. Сравниваем стол и настольный - чем отличаются? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t12",
+            "content": "некто",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Молодец!",
+            "feedback-incorrect": "Здесь мы видим приставку не-. Способ словообразования приставочный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t13",
+            "content": "непобедимый",
+            "correct_option": "l7-n9-sell-zq0z-opt4",
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Непобедимый - тот, кого невозможно победить. Сравниваем глагол и прилагательное. Они отличаются приставкой не- и суффиксом -им"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t16",
+            "content": "погремушка",
+            "correct_option": "l7-n9-sell-zq0z-opt4",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Погремушка - игрушка, которая гремит. Сравниваем основы слов гремит и погремушка. Чем отличаются? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t15",
+            "content": "оседлать",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Оседлать - закончить седлать. Видите приставку? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t17",
+            "content": "подберёзовик",
+            "correct_option": "l7-n9-sell-zq0z-opt4",
+            "feedback-correct": "Очень хорошо!",
+            "feedback-incorrect": "Подберёзовик - гриб, растущий под берёзой. Видим приставку и суффикс. "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t18",
+            "content": "предвидеть",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Потрясающе!",
+            "feedback-incorrect": "Предвидеть - видеть заранее. Видите приставку? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t19",
+            "content": "спор",
+            "correct_option": "l7-n9-sell-zq0z-opt7",
+            "feedback-correct": "Прекрасно!",
+            "feedback-incorrect": "Спор - процесс, когда спорят. Это бессуффиксный способ, который мы уже видели в слове бег, например. "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t20",
+            "content": "притерпеться",
+            "correct_option": "l7-n9-sell-zq0z-opt5",
+            "feedback-correct": "Да, верно! ",
+            "feedback-incorrect": "Притерпеться - свыкнуться с необходимостью терпеть что-то неприятное. Видим приставку и постфикс"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t21",
+            "content": "призвук",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Очень хорошо!",
+            "feedback-incorrect": "Сравниваем звук - призвук. Что прибавилось? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t22",
+            "content": "пятак",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Сравните пять и пятак. Какая морфема прибавилась? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t24",
+            "content": "разлететься",
+            "correct_option": "l7-n9-sell-zq0z-opt5",
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Разлететься - лететь в разные стороны. Видите приставку и постфикс? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t25",
+            "content": "семёрка",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Молодец!",
+            "feedback-incorrect": "Сравним слова семь и семёрка. Что прибавилось? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t26",
+            "content": "синь",
+            "correct_option": "l7-n9-sell-zq0z-opt7",
+            "feedback-correct": "Гениально! ",
+            "feedback-incorrect": "Синь - это синий цвет. Кажется, здесь ничего не прибавилось. "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t27",
+            "content": "размечтаться",
+            "correct_option": "l7-n9-sell-zq0z-opt5",
+            "feedback-correct": "Абсолютно верно! ",
+            "feedback-incorrect": "Сравните слова мечтать и размечтаться (слова размечтать нет)"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t28",
+            "content": "скупиться",
+            "correct_option": "l7-n9-sell-zq0z-opt6",
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Скупиться - быть скупым. Сравните основы прилагательного и глагола. Чем они отличаются? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t29",
+            "content": "субтропический",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Сравните слова тропический и субтропический. Что такое суб-? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t30",
+            "content": "сумрак",
+            "correct_option": "l7-n9-sell-zq0z-opt1",
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Сравните слова мрак и сумрак. Что такое су-? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t31",
+            "content": "сушь",
+            "correct_option": "l7-n9-sell-zq0z-opt7",
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Сушь - это что-то сухое. Ничего не прибавляем - способ бессуффиксный"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t32",
+            "content": "учитель",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Точно! ",
+            "feedback-incorrect": "Учитель - тот, кто учит. Для образования слова использовался суффикс -тель"
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t33",
+            "content": "цветочек",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Абсолютно верно!",
+            "feedback-incorrect": "Цветочек - маленький цветок. Какая морфема прибавилась? "
+          },
+          {
+            "id": "l7-n9-sell-zq0z-t34",
+            "content": "часики",
+            "correct_option": "l7-n9-sell-zq0z-opt2",
+            "feedback-correct": "Да!",
+            "feedback-incorrect": "Часики - маленькие часы. Сравниваем основы слов, видим, что они отличаются суффиксом. Способ словообразования суффиксальный"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Если вы допустили ошибки, посмотрите обратную связь, постарайтесь запомнить алгоритм, как определить способ словообразования. "
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "### **Сложение как способ словообразования** ",
+      "id": "auto-mark-6970"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n11-fibl-mdjk",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true,
+      "content": {
+        "question": "Исследуем слово *снегопад*. Дадим ему определение – заполните пропуски.",
+        "tasks": [
+          {
+            "id": "l7-n11-fibl-mdjk-t1",
+            "text": "Снегопад – явление, при котором (что?) ___ (что делает?)___",
+            "correctAnswers": [
+              "снег",
+              "падает"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Молодец, верно!",
+            "feedback-incorrect": "Снегопад – явление, при котором снег падает"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Итак, у нас есть определение – рассмотрим, как образовано слово."
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Мы видим, что слово образовано от двух основ! В этом случае мы называем слово **сложным** и выделяем в нём **несколько корней**. Когда мы видим в новом слове сохранными обе основы, мы говорим о том, что мы их сложили вместе – это способ **сложение**.",
+      "id": "auto-mark-33b0"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n13-fibl-nn22",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Запишите слова, от **сложения** основ которых образованы сложные слова\n",
+        "tasks": [
+          {
+            "id": "l7-n13-fibl-nn22-t1",
+            "text": "Лесостепь = ___ + ___",
+            "correctAnswers": [
+              "лес",
+              "степь"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Молодец! ",
+            "feedback-incorrect": "Посмотрите, это совсем несложно. Мы уже умеем давать определение слову так, чтобы было видно, как оно образовано. Лесостепь - это природная зона, включающая лес и степь."
+          },
+          {
+            "id": "l7-n13-fibl-nn22-t2",
+            "text": "Пароход = ___ + ___",
+            "correctAnswers": [
+              "пар",
+              "ходить"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Пароход - это транспорт, который ходит при помощи пара, поэтому мы используем пар+ходить"
+          },
+          {
+            "id": "l7-n13-fibl-nn22-t3",
+            "text": "Серо-коричневый = ___ + ___",
+            "correctAnswers": [
+              "серый",
+              "коричневый"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Прекрасно!",
+            "feedback-incorrect": "Серо-коричневый - это цвет между серым и коричневым. Вот и слова, от которых образовано сложное серо-коричневый!"
+          },
+          {
+            "id": "l7-n13-fibl-nn22-t4",
+            "text": "Древнерусский = ___ + ___",
+            "correctAnswers": [
+              "древний",
+              "Русь"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Очень хорошо!",
+            "feedback-incorrect": "Древнерусский - относящийся к Древней Руси. "
+          },
+          {
+            "id": "l7-n13-fibl-nn22-t5",
+            "text": "Сорвиголова = ___ + ___",
+            "correctAnswers": [
+              "сорвать",
+              "голова"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Потрясающе! ",
+            "feedback-incorrect": "Сорвиголова - тот, кто ведёт себя безрассудно, то есть сорвал голову"
+          },
+          {
+            "id": "l7-n13-fibl-nn22-t6",
+            "text": "Плащ-палатка = ___ + ___",
+            "correctAnswers": [
+              "плащ",
+              "палатка"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Это совсем просто. Плащ-палатка - это одновременно плащ и палатка. "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Теперь вы видите, что такое сложение. "
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Как видите, для сложения могут быть использованы слова разных частей речи. Между основами мы можем видеть **соединительную гласную**, или **интерфикс.** Чаще всего это -о- и -е-, но при сращении глагола и существительного может быть использована -и-, как в окончании повелительного наклонения. ",
+      "id": "auto-mark-dff8"
+    },
+    {
+      "type": "markdown",
+      "content": "### **Аббревиация** ",
+      "id": "auto-mark-6696"
+    },
+    {
+      "type": "markdown",
+      "content": "Вероятно, вы слышали слово *аббревиатура*. Это сложение усечённых слов - иногда от них остаются только первые буквы. ",
+      "id": "auto-mark-3c4a"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n17-fibl-2ufe",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Давайте попробуем расшифровать знакомые вам слова. ",
+        "tasks": [
+          {
+            "id": "l7-n17-fibl-2ufe-t1",
+            "text": "СОШ - это ___ ___ ___",
+            "correctAnswers": [
+              "средняя",
+              "общеобразовательная",
+              "школа"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Да, молодец! ",
+            "feedback-incorrect": "СОШ, в которой вы, возможно, учитесь или учились - это средняя общеобразовательная школа"
+          },
+          {
+            "id": "l7-n17-fibl-2ufe-t2",
+            "text": "завуч - это ___ ___ ___",
+            "correctAnswers": [
+              "заведующий",
+              "учебной",
+              "частью"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Точно!",
+            "feedback-incorrect": "Если вдруг вы не знали, самый страшный человек в СОШ - это заведующий учебной частью"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "В первом случае мы видим, что код – это первые буквы зашифрованных слов. А вот в слове *завуч* от *заведующего* осталась часть *зав-*. "
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l7-n18-fibl-aswk",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "Давайте расшифруем ещё несколько аббревиатур",
+        "tasks": [
+          {
+            "id": "l7-n18-fibl-aswk-t1",
+            "text": "детсад = ___ ___",
+            "correctAnswers": [
+              "детский",
+              "сад"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Детсад - это детский сад. Здесь сокращается только первое слово. "
+          },
+          {
+            "id": "l7-n18-fibl-aswk-t2",
+            "text": "подлодка = ___ ___",
+            "correctAnswers": [
+              "подводная",
+              "лодка"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Очень хорошо!",
+            "feedback-incorrect": "Подлодка - это подводная лодка. Смотрите, от первого слова осталась только приставка!"
+          },
+          {
+            "id": "l7-n18-fibl-aswk-t3",
+            "text": "МГУ = ___ ___ ___",
+            "correctAnswers": [
+              "Московский",
+              "государственный",
+              "университет"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Прекрасно!",
+            "feedback-incorrect": "МГУ - это Московский государственный университет"
+          },
+          {
+            "id": "l7-n18-fibl-aswk-t4",
+            "text": "вуз = ___ ___ ___",
+            "correctAnswers": [
+              "высшее",
+              "учебное",
+              "заведение"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Супер!",
+            "feedback-incorrect": "Вуз - это высшее учебное заведение. "
+          },
+          {
+            "id": "l7-n18-fibl-aswk-t5",
+            "text": "спецкор = ___ ___",
+            "correctAnswers": [
+              "специальный",
+              "корреспондент"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Верно! ",
+            "feedback-incorrect": "Спецкор - это специальный корреспондент. Сокращены оба слова"
+          },
+          {
+            "id": "l7-n18-fibl-aswk-t6",
+            "text": "физрук = ___ ___",
+            "correctAnswers": [
+              "физкультурный",
+              "руководитель"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": "Отлично! ",
+            "feedback-incorrect": "Физрук - это физкультурный руководитель. Интересно, что слово физкультура - тоже результат аббревиации."
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Теперь вы знаете, что такое *аббревиация*."
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Обратите внимание, что в отличие от сложения аббревиация требует усечения хотя бы одной из используемых основ. Мы видели, что, например, в слове *подлодка* от производящего *подводная* осталась только приставка под-. ",
+      "id": "auto-mark-f201"
+    },
+    {
+      "type": "markdown",
+      "content": "### **Переход из одной части речи в другую (конверсия)** ",
+      "id": "auto-mark-ca78"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n20-qsel-6vmp",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "Некоторые слова в русском языке образованы путём перехода из одной части речи в другую. Сравните:\n\n1. Я показал ПРОЕЗДНОЙ.\n\n2. У меня был ПРОЕЗДНОЙ билет. \n\nВ каком случае слово ПРОЕЗДНОЙ - это не признак, а предмет?",
+        "options": [
+          {
+            "id": "l7-n20-qsel-6vmp-o1",
+            "content": "1",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l7-n20-qsel-6vmp-o2",
+            "content": "2",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Как видите, само слово не изменилось, но оно изменило некоторые свойства. \nПервоначально слово было признаком (прилагательным), а затем избавилось от предмета, который описывало, и само стало предметом – существительным. Так образовалось новое слово. "
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n21-qsel-rxq2",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "Давайте потренируемся видеть, в каком случае произошёл переход, а где исходное слово. \n\nВ каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть признаком? ",
+        "options": [
+          {
+            "id": "l7-n21-qsel-rxq2-o1",
+            "content": "Я решил заговорить с первым ЗНАКОМЫМ человеком. ",
+            "correct": false,
+            "feedback-selected": "Человек (какой?) знакомый. Здесь признак (прилагательное)",
+            "feedback-not-selected": "Человек (какой?) знакомый. Здесь признак (прилагательное)"
+          },
+          {
+            "id": "l7-n21-qsel-rxq2-o2",
+            "content": "Я решил обзвонить ЗНАКОМЫХ. ",
+            "correct": true,
+            "feedback-selected": "обзвонить (кого?) знакомых - здесь объект (существительное)",
+            "feedback-not-selected": "обзвонить (кого?) знакомых - здесь объект (существительное)"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n22-qsel-i59q",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть признаком? ",
+        "options": [
+          {
+            "id": "l7-n22-qsel-i59q-o1",
+            "content": "Я нашёл преподавателя в УЧИТЕЛЬСКОЙ. ",
+            "correct": true,
+            "feedback-selected": "Нашёл (где?) в учительской. Здесь учительское обозначает место, то есть объект. ",
+            "feedback-not-selected": "Нашёл (где?) в учительской. Здесь учительское обозначает место, то есть объект. "
+          },
+          {
+            "id": "l7-n22-qsel-i59q-o2",
+            "content": "УЧИТЕЛЬСКАЯ работа тяжела. ",
+            "correct": false,
+            "feedback-selected": "Работа (какая?) учительская. Здесь признак. ",
+            "feedback-not-selected": "Работа (какая?) учительская. Здесь признак. "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n23-qsel-n2zs",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть объектом и стало обозначать время? ",
+        "options": [
+          {
+            "id": "l7-n23-qsel-n2zs-o1",
+            "content": "Мы любовались тёплым ВЕЧЕРОМ.",
+            "correct": false,
+            "feedback-selected": "Любовались (чем?) вечером. Здесь объект. ",
+            "feedback-not-selected": "Любовались (чем?) вечером. Здесь объект. "
+          },
+          {
+            "id": "l7-n23-qsel-n2zs-o2",
+            "content": "Давай встретимся завтра ВЕЧЕРОМ. ",
+            "correct": true,
+            "feedback-selected": "Встретимся (когда?) вечером. Здесь время",
+            "feedback-not-selected": "Встретимся (когда?) вечером. Здесь время"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l7-n24-qsel-y9bi",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть действием? ",
+        "options": [
+          {
+            "id": "l7-n24-qsel-y9bi-o1",
+            "content": "Он справился БЛАГОДАРЯ помощи отца. ",
+            "correct": true,
+            "feedback-selected": "Здесь нет действия. Он справился из-за помощи отца. Видите, легко заменяем на слово, которое точно никакого действия не обозначает.",
+            "feedback-not-selected": "Здесь нет действия. Он справился из-за помощи отца. Видите, легко заменяем на слово, которое точно никакого действия не обозначает."
+          },
+          {
+            "id": "l7-n24-qsel-y9bi-o2",
+            "content": "Он вышел из-за стола, БЛАГОДАРЯ за ужин. ",
+            "correct": false,
+            "feedback-selected": "Здесь действие: он выходит из-за стола и благодарит - совершает параллельное действие. ",
+            "feedback-not-selected": "Здесь действие: он выходит из-за стола и благодарит - совершает параллельное действие. "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "### **Перенос значения** ",
+      "id": "auto-mark-a3d7"
+    },
+    {
+      "type": "markdown",
+      "content": "Иногда слова появляются в языке, когда мы переносим значение с одного слова на другое. \n\nНапример, так образовалось слово *сеть* с новым значением \"совокупность каналов связи\", тогда как изначально *сеть* - это приспособление из перекрещивающихся нитей, используемое для ловли рыб, птиц, животных.",
+      "id": "auto-mark-a1e4"
+    },
+    {
+      "type": "DragTable",
+      "id": "l7-n25-dtab-75rd",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Сопоставьте со словами их первоначальное значение и появившееся в результате переноса",
+        "row_header": "Слова",
+        "rows": [
+          {
+            "id": "l7-n25-dtab-75rd-row1",
+            "content": "мышь"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-row2",
+            "content": "окно"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-row3",
+            "content": "корзина"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-row4",
+            "content": "вирус"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-row5",
+            "content": "шапка"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-row6",
+            "content": "зуб"
+          }
+        ],
+        "columns": [
+          {
+            "id": "l7-n25-dtab-75rd-col1",
+            "content": "Первоначальное значение"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-col2",
+            "content": "Значение, появившееся в результате переноса"
+          }
+        ],
+        "groups": [
+          {
+            "id": "l7-n25-dtab-75rd-g1",
+            "row_id": "l7-n25-dtab-75rd-row1",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g2",
+            "row_id": "l7-n25-dtab-75rd-row1",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g3",
+            "row_id": "l7-n25-dtab-75rd-row2",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g4",
+            "row_id": "l7-n25-dtab-75rd-row2",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g5",
+            "row_id": "l7-n25-dtab-75rd-row3",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g6",
+            "row_id": "l7-n25-dtab-75rd-row3",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g7",
+            "row_id": "l7-n25-dtab-75rd-row4",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g8",
+            "row_id": "l7-n25-dtab-75rd-row4",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g9",
+            "row_id": "l7-n25-dtab-75rd-row5",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g10",
+            "row_id": "l7-n25-dtab-75rd-row5",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g11",
+            "row_id": "l7-n25-dtab-75rd-row6",
+            "column_id": "l7-n25-dtab-75rd-col1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-g12",
+            "row_id": "l7-n25-dtab-75rd-row6",
+            "column_id": "l7-n25-dtab-75rd-col2"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l7-n25-dtab-75rd-t1",
+            "content": "животное-грызун",
+            "correct_group": "l7-n25-dtab-75rd-g1"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t2",
+            "content": "проём в стене",
+            "correct_group": "l7-n25-dtab-75rd-g3"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t3",
+            "content": "болезнетворный микроорганизм",
+            "correct_group": "l7-n25-dtab-75rd-g7"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t4",
+            "content": "плетёная ёмкость",
+            "correct_group": "l7-n25-dtab-75rd-g5"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t5",
+            "content": "твёрдое образование во рту для пережёвывания пищи",
+            "correct_group": "l7-n25-dtab-75rd-g11"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t6",
+            "content": "головной убор",
+            "correct_group": "l7-n25-dtab-75rd-g9"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t7",
+            "content": "отдельный выступ на кромке инструмента",
+            "correct_group": "l7-n25-dtab-75rd-g12"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t8",
+            "content": "вредоносная программа",
+            "correct_group": "l7-n25-dtab-75rd-g8"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t9",
+            "content": "верхняя часть страницы/сайта",
+            "correct_group": "l7-n25-dtab-75rd-g10"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t10",
+            "content": "прямоугольная область экрана",
+            "correct_group": "l7-n25-dtab-75rd-g4"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t11",
+            "content": "место удаления файлов",
+            "correct_group": "l7-n25-dtab-75rd-g6"
+          },
+          {
+            "id": "l7-n25-dtab-75rd-t12",
+            "content": "устройство, управляющее курсором на экране компьютера",
+            "correct_group": "l7-n25-dtab-75rd-g2"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Теперь вы знаете, как новые слова появляются в языке путём переноса значений. "
+      }
+    }
+  ],
+  "schema": "v1",
+  "lesson_id": "lesson7",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

@@ -1,0 +1,162 @@
+[
+    {
+        "id": "t1",
+        "type": "graph",
+        "graphId": "graph_pol_v1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "taskVersion": "v.1.0",
+        "answer_type": "input",
+        "input_id": "t1_input",
+        "content": {
+            "word": "пол…яблока",
+            "correct_answer": "пол-яблока",
+            "correct_result": "r_defis",
+            "correct_path": [
+                {
+                    "id": "q1",
+                    "skill_id": "pristavka",
+                    "option_id": "q1_op_no"
+                },
+                {
+                    "id": "q2",
+                    "skill_id": null,
+                    "option_id": "q2_op_no"
+                },
+                {
+                    "id": "q3",
+                    "skill_id": null,
+                    "option_id": "q3_op_yes"
+                }
+            ]
+        }
+    },
+    {
+        "id": "t2",
+        "type": "graph",
+        "graphId": "graph_pol_v1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "taskVersion": "v.1.0",
+        "answer_type": "input",
+        "input_id": "t2_input",
+        "content": {
+            "word": "пол…лимона",
+            "correct_answer": "пол-лимона",
+            "correct_result": "r_defis",
+            "correct_path": [
+                {
+                    "id": "q1",
+                    "skill_id": "pristavka",
+                    "option_id": "q1_op_no"
+                },
+                {
+                    "id": "q2",
+                    "skill_id": null,
+                    "option_id": "q2_op_yes"
+                }
+            ]
+        }
+    },
+    {
+        "id": "t3",
+        "type": "graph",
+        "graphId": "graph_pol_v1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "taskVersion": "v.1.0",
+        "answer_type": "input",
+        "input_id": "t3_input",
+        "content": {
+            "word": "пол…Москвы",
+            "correct_answer": "пол-Москвы",
+            "correct_result": "r_defis",
+            "correct_path": [
+                {
+                    "id": "q1",
+                    "skill_id": null,
+                    "option_id": "q1_op_no"
+                },
+                {
+                    "id": "q2",
+                    "skill_id": null,
+                    "option_id": "q2_op_no"
+                },
+                {
+                    "id": "q3",
+                    "skill_id": null,
+                    "option_id": "q3_op_no"
+                },
+                {
+                    "id": "q4",
+                    "skill_id": null,
+                    "option_id": "q4_op_yes"
+                }
+            ]
+        }
+    },
+    {
+        "id": "t4",
+        "type": "graph",
+        "graphId": "graph_pol_v1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "taskVersion": "v.1.0",
+        "answer_type": "input",
+        "input_id": "t4_input",
+        "content": {
+            "word": "пол…дороги",
+            "correct_answer": "полдороги",
+            "correct_result": "r_slitno",
+            "correct_path": [
+                {
+                    "id": "q1",
+                    "skill_id": null,
+                    "option_id": "q1_op_no"
+                },
+                {
+                    "id": "q2",
+                    "skill_id": null,
+                    "option_id": "q2_op_no"
+                },
+                {
+                    "id": "q3",
+                    "skill_id": null,
+                    "option_id": "q3_op_no"
+                },
+                {
+                    "id": "q4",
+                    "skill_id": null,
+                    "option_id": "q4_op_no"
+                },
+                {
+                    "id": "q5",
+                    "skill_id": null,
+                    "option_id": "q5_op_yes"
+                }
+            ]
+        }
+    },
+    {
+        "id": "t5",
+        "type": "graph",
+        "graphId": "graph_pol_v1",
+        "ruleId": "rule_pol",
+        "topicId": "topic_morphemika",
+        "taskVersion": "v.1.0",
+        "answer_type": "input",
+        "input_id": "t5_input",
+        "content": {
+            "word": "пол…лимонный",
+            "correct_answer": "полу-лимонный",
+            "correct_result": "r_slitno_polu",
+            "correct_path": [
+                {
+                    "id": "q1",
+                    "skill_id": null,
+                    "option_id": "q1_op_yes"
+                }
+            ]
+        }
+    }
+]

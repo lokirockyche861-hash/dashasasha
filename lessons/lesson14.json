@@ -1,0 +1,598 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "# Урок 7. Транскрипция",
+      "id": "auto-mark-bef0"
+    },
+    {
+      "type": "markdown",
+      "content": "> Фонетическая транскрипция – это запись звуков, из которых состоит слово. Каждый знак обозначает один звук. \n\n> Мягкость согласного звука мы обозначаем знаком апостроф [л] - твёрдый, [л’]-мягкий. \n\n\n> Над ударными гласными нужно поставить знак ударения [э́], [о́].\n> Звук согласной *й* всегда мягкий, он может обозначаться так – [й’] или как [j]. \n> заяц – [за́jиц] \n> ветер – [в’э́т’ир]\n> друзья – [друз’jа́]",
+      "id": "auto-mark-4869"
+    },
+    {
+      "type": "DragAndDrop",
+      "id": "l14-n3-drop-sxmn",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false,
+      "content": {
+        "question": "Соедините слово с его транскрипцией",
+        "layout": "matrix",
+        "groups": [
+          {
+            "id": "l14-n3-drop-sxmn-g1",
+            "content": "коса"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g2",
+            "content": "коза"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g3",
+            "content": "съезд"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g4",
+            "content": "съесть"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g5",
+            "content": "сесть"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g6",
+            "content": "лучок"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g7",
+            "content": "лючок"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g8",
+            "content": "доро́га"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g9",
+            "content": "до́рог"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g10",
+            "content": "поезд"
+          },
+          {
+            "id": "l14-n3-drop-sxmn-g11",
+            "content": "поесть"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l14-n3-drop-sxmn-t1",
+            "content": "[по́jэст]",
+            "correct_group": "l14-n3-drop-sxmn-g10",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t2",
+            "content": "[до́рак]",
+            "correct_group": "l14-n3-drop-sxmn-g9",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t3",
+            "content": "[луч’о́к]",
+            "correct_group": "l14-n3-drop-sxmn-g6",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t4",
+            "content": "[cjэ́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g4",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t5",
+            "content": "[cjэ́ст]",
+            "correct_group": "l14-n3-drop-sxmn-g3",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t6",
+            "content": "[c’э́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g5",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t7",
+            "content": "[каза́]",
+            "correct_group": "l14-n3-drop-sxmn-g2",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t8",
+            "content": "[л’уч’о́к]",
+            "correct_group": "l14-n3-drop-sxmn-g7",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t9",
+            "content": "[паjэ́с’т’]",
+            "correct_group": "l14-n3-drop-sxmn-g11",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t10",
+            "content": "[даро́га]",
+            "correct_group": "l14-n3-drop-sxmn-g8",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l14-n3-drop-sxmn-t11",
+            "content": "[каcа́]",
+            "correct_group": "l14-n3-drop-sxmn-g1",
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично! Посмотрите, есть ли у вас ошибки. Произнесите ещё раз слова в слух и сравните с выбранными транскрипциями. ",
+        "show_feedback": false
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "Выберите верную транскрипцию для слова. \n\nОбращайте внимание на мягкость-твёрдость согласных, оглушение-озвончение, наличие звука [j], ударные и безударные гласные, их изменение в безударной позиции.",
+      "id": "auto-mark-a904"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n4-qsel-t7lf",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "1. лёд",
+        "options": [
+          {
+            "id": "l14-n4-qsel-t7lf-o1",
+            "content": "[ло́т]",
+            "correct": false,
+            "feedback-selected": "Звук [л'] в слове лёд мягкий",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n4-qsel-t7lf-o2",
+            "content": "[л’ёт]",
+            "correct": false,
+            "feedback-selected": "Нет звука [ё], буква ё звучит после согласного как [о]. Также в транскрипции нет ударения",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n4-qsel-t7lf-o3",
+            "content": "[л’о́т]",
+            "correct": true,
+            "feedback-selected": "Отлично! ",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n4-qsel-t7lf-o4",
+            "content": "[л’о́д]",
+            "correct": false,
+            "feedback-selected": "Обратите внимание на оглушение согласного на конце слова",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n6-qsel-g7wj",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "2. молоко",
+        "options": [
+          {
+            "id": "l14-n6-qsel-g7wj-o1",
+            "content": "[малако́]",
+            "correct": true,
+            "feedback-selected": "Молодец!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n6-qsel-g7wj-o2",
+            "content": "[мало́ко]",
+            "correct": false,
+            "feedback-selected": "Проверьте ударение",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n6-qsel-g7wj-o3",
+            "content": "[молоко́]",
+            "correct": false,
+            "feedback-selected": "О в безударной позиции звучит близко к [а]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n6-qsel-g7wj-o4",
+            "content": "[ма́лако]",
+            "correct": false,
+            "feedback-selected": "Проверьте ударение",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n7-qsel-wu5q",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "3. город ",
+        "options": [
+          {
+            "id": "l14-n7-qsel-wu5q-o1",
+            "content": "[го́рот]",
+            "correct": false,
+            "feedback-selected": "О в безударной позиции звучит близко к [а]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n7-qsel-wu5q-o3",
+            "content": "[го́рат]",
+            "correct": true,
+            "feedback-selected": "Потрясающе!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n7-qsel-wu5q-o4",
+            "content": "[го́род]",
+            "correct": false,
+            "feedback-selected": "О в безударной позиции звучит близко к [а], согласный на конце слова оглушается. ",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n7-qsel-wu5q-o5",
+            "content": "[горо́т]",
+            "correct": false,
+            "feedback-selected": "Проверьте ударение",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n8-qsel-b44b",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "4. вьюга",
+        "options": [
+          {
+            "id": "l14-n8-qsel-b44b-o1",
+            "content": "[вjу́га]",
+            "correct": false,
+            "feedback-selected": "Ь смягчает согласный перед ним",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n8-qsel-b44b-o2",
+            "content": "[в’jу́га]",
+            "correct": true,
+            "feedback-selected": "Точно! ",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n8-qsel-b44b-o3",
+            "content": "[в’ю́га]",
+            "correct": false,
+            "feedback-selected": "Нет звука, который обозначается [ю]. После Ь Ю звучит как [jу]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n8-qsel-b44b-o4",
+            "content": "[в’jуга́]",
+            "correct": false,
+            "feedback-selected": "Проверьте ударение",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n9-qsel-8gos",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "5. семья",
+        "options": [
+          {
+            "id": "l14-n9-qsel-8gos-o1",
+            "content": "[с’им’я́]",
+            "correct": false,
+            "feedback-selected": "В транскрипцию попала буква, а не звук. Я распадается на два звука - [ja]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n9-qsel-8gos-o2",
+            "content": "[с’и́м’jа]",
+            "correct": false,
+            "feedback-selected": "Проверьте ударение",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n9-qsel-8gos-o3",
+            "content": "[с’им’jа́]",
+            "correct": true,
+            "feedback-selected": "Вы очень внимательны!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n9-qsel-8gos-o4",
+            "content": "[с’имjа́]",
+            "correct": false,
+            "feedback-selected": "Не обозначен мягкий [м']",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n10-qsel-mjme",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "6. переезд  ",
+        "options": [
+          {
+            "id": "l14-n10-qsel-mjme-o1",
+            "content": "[пириjэ́ст]",
+            "correct": false,
+            "feedback-selected": "Не указано смягчение согласных звуков перед И",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n10-qsel-mjme-o2",
+            "content": "[п’эр’эjэ́ст]",
+            "correct": false,
+            "feedback-selected": "Е в безударной позиции звучит ближе к [и]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n10-qsel-mjme-o3",
+            "content": "[п’ир’иjэ́зд]",
+            "correct": false,
+            "feedback-selected": "Согласные на конце слова оглушаются",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n10-qsel-mjme-o4",
+            "content": "[п’ир’иjэ́ст]",
+            "correct": true,
+            "feedback-selected": "Прекрасно!",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n11-qsel-i1fb",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "7. счастье ",
+        "options": [
+          {
+            "id": "l14-n11-qsel-i1fb-o1",
+            "content": "[щ’а́с’т’jэ]",
+            "correct": true,
+            "feedback-selected": "Потрясающе!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n11-qsel-i1fb-o2",
+            "content": "[щ’а́стjэ]",
+            "correct": false,
+            "feedback-selected": "Все согласные звуки в этом слове мягкие",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n11-qsel-i1fb-o3",
+            "content": "[щ’ас’т’jэ́]",
+            "correct": false,
+            "feedback-selected": "Ой! Ударение не там!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n11-qsel-i1fb-o4",
+            "content": "[сч’а́с’т’jэ]",
+            "correct": false,
+            "feedback-selected": "Первые две согласные при произнесении сливаются в звук [щ']",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n12-qsel-0vcj",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "8. просьба  ",
+        "options": [
+          {
+            "id": "l14-n12-qsel-0vcj-o1",
+            "content": "[про́с’ба]",
+            "correct": false,
+            "feedback-selected": "Глухой согласный озвончается перед звонким",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n12-qsel-0vcj-o2",
+            "content": "[проз’ба́]",
+            "correct": false,
+            "feedback-selected": "Ударение...",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n12-qsel-0vcj-o3",
+            "content": "[про́з’ба]",
+            "correct": true,
+            "feedback-selected": "Да вы гений!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n12-qsel-0vcj-o4",
+            "content": "[прос’ба́]",
+            "correct": false,
+            "feedback-selected": "Ударение не там, не отмечено озвончение согласного",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n13-qsel-u1pu",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "9. жизнь",
+        "options": [
+          {
+            "id": "l14-n13-qsel-u1pu-o1",
+            "content": "[жы́з’н’]",
+            "correct": true,
+            "feedback-selected": "Супервнимательный ученик!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n13-qsel-u1pu-o2",
+            "content": "[жи́з’н’]",
+            "correct": false,
+            "feedback-selected": "После твёрдого согласного звучит [ы], а не [и]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n13-qsel-u1pu-o3",
+            "content": "[жы́зн’]",
+            "correct": false,
+            "feedback-selected": "Согласный [з] смягчается перед [н'] - [з']",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n13-qsel-u1pu-o4",
+            "content": "жи́зн’]",
+            "correct": false,
+            "feedback-selected": "После твёрдого согласного звучит [ы], а не [и]. Согласный [з] смягчается перед [н'] - [з']",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l14-n14-qsel-z3wt",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false,
+      "content": {
+        "question": "10. чувство",
+        "options": [
+          {
+            "id": "l14-n14-qsel-z3wt-o1",
+            "content": "[ч’уства́]",
+            "correct": false,
+            "feedback-selected": "Ударение на 1 слог!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n14-qsel-z3wt-o2",
+            "content": "[ч’у́ства]",
+            "correct": true,
+            "feedback-selected": "Невероятно!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n14-qsel-z3wt-o3",
+            "content": "[ч’у́вство]",
+            "correct": false,
+            "feedback-selected": "Попробуйте ещё раз произнести слово. В центре потеряются согласные, а на конце мы услышим звук, близкий к [а]",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l14-n14-qsel-z3wt-o4",
+            "content": "[чу́ство]",
+            "correct": false,
+            "feedback-selected": "О на конце в безударной позиции - [а]",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "> В этом уроке вы научились читать транскрипции. Мы видим, что звуковой состав слова очень часто не совпадает с буквенным. Это может быть связано в том числе со слабой позицией гласных и согласных - вот почему нам так важно знать правила орфографии. Мы не можем полагаться на слух при написании слов русского языка.",
+      "id": "auto-mark-e901"
+    }
+  ],
+  "lesson_id": "lesson14",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}

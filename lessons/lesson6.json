@@ -1,0 +1,308 @@
+{
+  "schema": "v1",
+  "content": [
+    {
+      "type": "markdown",
+      "content": "### **Урок 6. Основообразующие суффиксы.**  ",
+      "id": "auto-mark-4e8c"
+    },
+    {
+      "type": "markdown",
+      "content": "Когда вы решали задачу разбора слова *предохранитель* у вас мог возникнуть вопрос, что это за глагольный суффикс **-и-** возник при разборе. Почему основа базового производящего слова **храни**ть не равна корню?\n",
+      "id": "auto-mark-deea"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l6-n3-qsel-r1su",
+      "content": {
+        "question": "Возник такой вопрос? ",
+        "options": [
+          {
+            "id": "l6-n3-qsel-r1su-o1",
+            "content": "Да",
+            "correct": true,
+            "feedback-selected": "Прекрасно! Давайте разбираться!",
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l6-n3-qsel-r1su-o2",
+            "content": "Нет",
+            "correct": false,
+            "feedback-selected": "Если для вас эта тема понятна, можно пропустить урок",
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": null
+      },
+      "answer_type": "select",
+      "blocked": false,
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Дело в том, что в русском языке есть суффиксы, иногда дополняющие основу, но не несущие самостоятельного значения.",
+      "id": "auto-mark-f3cd"
+    },
+    {
+      "type": "QuizSelect",
+      "id": "l6-n5-qsel-nr6f",
+      "content": {
+        "question": "Как вам кажется, какое значение несёт суффикс -и- в слове *хранить*?",
+        "options": [
+          {
+            "id": "l6-n5-qsel-nr6f-o1",
+            "content": "Лексическое",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l6-n5-qsel-nr6f-o2",
+            "content": "Грамматическое",
+            "correct": false,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          },
+          {
+            "id": "l6-n5-qsel-nr6f-o3",
+            "content": "Ни лексическое, ни грамматическое",
+            "correct": true,
+            "feedback-selected": null,
+            "feedback-not-selected": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Действительно, ни лексического, ни грамматического значения в этом суффиксе нет. Он просто дополняет основу в некоторых формах глагола. \nСуффикс -и- будет сохраняться в прошедшем времени – хран**и**л, – но выпадет в настоящем времени: храню, хранишь, храним. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Такие суффиксы есть не только в глаголах. Давайте посмотрим на такие суффиксы в существительных. ",
+      "id": "auto-mark-593c"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l6-n7-fibl-d6aj",
+      "content": {
+        "question": "Образуйте множественное число от существительных и выпишите основообразующие суффиксы, которые при этом возникнут. ",
+        "tasks": [
+          {
+            "id": "l6-n7-fibl-d6aj-t1",
+            "text": "Имя – им___а",
+            "correctAnswers": [
+              "ен"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "молодец!",
+            "feedback-incorrect": "Имя – имена"
+          },
+          {
+            "id": "l6-n7-fibl-d6aj-t2",
+            "text": "чудо – чуд___а",
+            "correctAnswers": [
+              "ес"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "верно!",
+            "feedback-incorrect": "чудо – чудеса"
+          },
+          {
+            "id": "l6-n7-fibl-d6aj-t3",
+            "text": "небо – неб___а",
+            "correctAnswers": [
+              "ес"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "да!",
+            "feedback-incorrect": "небо – небеса"
+          },
+          {
+            "id": "l6-n7-fibl-d6aj-t4",
+            "text": "мать – мат___и",
+            "correctAnswers": [
+              "ер"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "отлично!",
+            "feedback-incorrect": "мать – матери"
+          },
+          {
+            "id": "l6-n7-fibl-d6aj-t5",
+            "text": "дочь – доч___и",
+            "correctAnswers": [
+              "ер"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "прекрасно!",
+            "feedback-incorrect": "дочь – дочери"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Отлично, мы увидели основообразующие суффиксы существительных"
+      },
+      "answer_type": "input",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "Такие суффиксы устойчивы при образовании форм слова, а при при словообразовании могут сохраняться, а могут и выпадать. Давайте посмотрим, как это работает. ",
+      "id": "auto-mark-1f27"
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l5-n13-fibl-hf11",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "**Образуйте от слова дочь два других**",
+        "tasks": [
+          {
+            "id": "l5-n13-fibl-hf11-t1",
+            "text": "Принадлежащий дочери, относящийся к дочери: ___",
+            "correctAnswers": [
+              "дочерний"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "верно!",
+            "feedback-incorrect": "дочерний"
+          },
+          {
+            "id": "l5-n13-fibl-hf11-t2",
+            "text": "Ласковое обращение к дочери: ___",
+            "correctAnswers": [
+              [
+                "доченька",
+                "дочечка"
+              ]
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "молодец!",
+            "feedback-incorrect": "доченька, дочечка"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Прекрасно! Теперь мы видим, что в слове дочерний основообразующий суффикс -ер- есть, а в слове доченька (дочечка) – нет. Этот суффикс может сохраняться при словообразовании, а может и не сохраняться. "
+      }
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l5-n13-fibl-nhgk",
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false,
+      "content": {
+        "question": "**Образуйте от слова *читать* два разных обозначения того, кто читает (используйте суффиксы -тель- и -ец-)**",
+        "tasks": [
+          {
+            "id": "l5-n13-fibl-nhgk-t1",
+            "text": "С суффиксом -тель: ___",
+            "correctAnswers": [
+              "читатель"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "молодец!",
+            "feedback-incorrect": "читатель"
+          },
+          {
+            "id": "l5-n13-fibl-nhgk-t2",
+            "text": "С суффиксом -ец: ___",
+            "correctAnswers": [
+              "чтец"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": "отлично!",
+            "feedback-incorrect": "чтец"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "В одном случае основообразующий глагольный суффикс -а- сохранился, а во втором – нет. "
+      }
+    },
+    {
+      "type": "QuizSet",
+      "id": "l6-n11-qset-0puo",
+      "content": {
+        "question": "Давайте проверим, понятно ли, что такое основообразующий суффикс",
+        "options": [
+          {
+            "id": "l6-n11-qset-0puo-opt1",
+            "content": "Да"
+          },
+          {
+            "id": "l6-n11-qset-0puo-opt2",
+            "content": "Нет"
+          }
+        ],
+        "tasks": [
+          {
+            "id": "l6-n11-qset-0puo-t1",
+            "content": "Основообразующий суффикс несёт в себе грамматическое или лексическое значение? ",
+            "correct_option": "l6-n11-qset-0puo-opt2",
+            "feedback-correct": "Верно!",
+            "feedback-incorrect": "Нет, основообразующий суффикс просто участвует в образовании основы некоторых форм слова"
+          },
+          {
+            "id": "l6-n11-qset-0puo-t2",
+            "content": "Основообразующий суффикс обязательно должен встречаться в нескольких формах слова? ",
+            "correct_option": "l6-n11-qset-0puo-opt1",
+            "feedback-correct": "Верно! Именно так мы узнаём, что перед нами основообразующий суффикс",
+            "feedback-incorrect": "Именно так мы узнаём, что перед нами основообразующий суффикс"
+          },
+          {
+            "id": "l6-n11-qset-0puo-t3",
+            "content": "Основообразующий суффикс может сохраняться при словообразовании?",
+            "correct_option": "l6-n11-qset-0puo-opt1",
+            "feedback-correct": "Молодец! ",
+            "feedback-incorrect": "Да, мы видели это, когда образовывали новые слова от существительного дочь и глагола читать"
+          },
+          {
+            "id": "l6-n11-qset-0puo-t4",
+            "content": "Основообразующий суффикс может НЕ сохраняться при словообразовании?",
+            "correct_option": "l6-n11-qset-0puo-opt1",
+            "feedback-correct": "Хорошо! ",
+            "feedback-incorrect": "Да, мы видели это, когда образовывали новые слова от существительного дочь и глагола читать"
+          },
+          {
+            "id": "l6-n11-qset-0puo-t5",
+            "content": "Верно ли, что для того, чтобы увидеть основообразующий суффикс, нужно изменить форму производящего слова? ",
+            "correct_option": "l6-n11-qset-0puo-opt1",
+            "feedback-correct": "Да, именно так. При изменении формы мы увидим, что он не всегда сохраняется, а значит это именно суффикс, а не часть корня.",
+            "feedback-incorrect": "Да, именно так. При изменении формы мы увидим, что он не всегда сохраняется, а значит это именно суффикс, а не часть корня."
+          }
+        ],
+        "button_result_text": "Проверить",
+        "button_next_text": "Следующее задание",
+        "result_text": "Оцените свой уровень понимания. \nПоздравляем! Мы с вами разобрались со всеми морфемами, которые участвуют в образовании форм слова и создании новых слов. "
+      },
+      "answer_type": "select",
+      "skill_id": "",
+      "taskVersion": "v.1.0"
+    },
+    {
+      "type": "markdown",
+      "content": "###### **Алгоритм морфемного разбора слова:** \n\n1. Измените форму слова и найдите формообразующие суффиксы, постфиксы и окончания. \n2. Всё, что не относится к формообразующим морфемам – основа слова.  \n3. Дайте слову определение, используя более простое однокоренное. \n4. Проверьте, можно ли этому более простому слову тоже дать определение через однокоренное. \n5. Продолжите определять слова, выстраивая словообразовательную цепочку. Дойдите до непроизводного слова. \n6. Проверьте, нет ли в нём основообразующих суффиксов. \n7. Найдите корень (в большинстве случаев в непроизводном слове **основа = корень**)\n8. Посмотрите на основы соседних слов, отметьте морфемы, которые добавились на каждом этапе.\n\nПеред корнем — **приставки**,\n\nпосле корня — словообразовательные **суффиксы**,\n\nпосле окончания — словообразовательные **постфиксы.**",
+      "id": "auto-mark-a423"
+    }
+  ],
+  "lesson_id": "lesson6",
+  "lesson_version": "v.1.0",
+  "topicId": "topic_default"
+}
