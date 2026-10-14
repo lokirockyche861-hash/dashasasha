@@ -14,10 +14,6 @@
     {
       "type": "QuizSelect",
       "id": "l10-n3-qsel-uano",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": " луна – лютик",
         "options": [
@@ -38,15 +34,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l10-n4-qsel-0aci",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "рама – рябь",
         "options": [
@@ -67,15 +63,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l10-n5-qsel-5qvl",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "вина – вышка",
         "options": [
@@ -96,7 +92,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -106,10 +106,6 @@
     {
       "type": "QuizSelect",
       "id": "l11-n7-qsel-gvmn",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Изменяется ли в слогах лу-лю, ра-ря ГЛАСНЫЙ звук? А гласная буква? ",
         "options": [
@@ -137,15 +133,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Мы видим, что *гласные буквы* разные, но изменяется только *согласный* звук – в одном случае он мягкий, в другом – твёрдый. *Гласные звуки* в этом случае одинаковые.\n"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizCheckbox",
       "id": "l11-n8-qchk-9rxx",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "multi-select",
-      "blocked": false,
       "content": {
         "question": "Давайте посмотрим, какие гласные буквы вызывают смягчение согласного звука. Посмотрим на примере сонорных [м]-[м’]. Выберите, в каком случае этот звук будет мягким. ",
         "options": [
@@ -222,15 +218,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l11-n9-fibl-dtah",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Проверьте себя и выпишите гласные буквы, которые смягчают звук идущей перед ними согласной. ",
         "tasks": [
@@ -252,15 +248,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Да, это гласные *е, ё, ю, я, и*. Перед ними почти все согласные будут смягчаться. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizCheckbox",
       "id": "l11-n12-qchk-1r5f",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "multi-select",
-      "blocked": true,
       "content": {
         "question": "А теперь посмотрим на конец слов и звуки [л]-[л']. Выберите слова, в которых звук на конце слов мягкий. ",
         "options": [
@@ -281,7 +277,7 @@
           {
             "id": "l11-n12-qchk-1r5f-o3",
             "content": "роль ",
-            "correct": false,
+            "correct": true,
             "feedback-selected": "Верно! [л'] мягкий",
             "feedback-not-selected": "Попробуйте произнести слово с твёрдым [л] на конце. Вы услышите, что слово произносится не так. С твёрдым звуком на конце мы получаем другое слово - рол (вал, цилиндр)"
           },
@@ -316,15 +312,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l11-n12-fibl-xwe9",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Какая буква указывает на смягчение согласного звука на конце?",
         "tasks": [
@@ -342,7 +338,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Ь не имеет собственного звука, но смягчает согласный перед ним"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -352,10 +352,6 @@
     {
       "type": "QuizCheckbox",
       "id": "l11-n13-qchk-2jsn",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "multi-select",
-      "blocked": true,
       "content": {
         "question": "Проверьте, как влияют гласные и Ь на выделенные согласные. Отметьте случаи, когда звук выделенной согласной буквы НЕ СМЯГЧАЕТСЯ под воздействием  **Е, Ё, Ю, Я, И** и **Ь**. Мы выписали слова со всеми согласными в алфавитном порядке",
         "options": [
@@ -508,21 +504,16 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": "Пояснение к ответам."
-      }
-    },
-    {
-      "type": "markdown",
-      "content": "> Итак, согласные звуки, не имеющие пары по мягкости-твёрдости, это звуки: **[ж], [й'], [ц], [ч'], [ш], [щ']**\n\n> Звуки [ш], [ж], [ц] в русском языке всегда **твёрдые**. \n> Звуки [щ’], [ч’], [й’] в русском языке всегда **мягкие**.",
-      "id": "auto-mark-6fbf"
+        "result_text": "Итак, согласные звуки, не имеющие пары по мягкости-твёрдости, это звуки: [ж], [й’], [ц], [ч’], [ш], [щ’]\n\nЗвуки [ш], [ж], [ц] в русском языке **всегда твёрдые**.\nЗвуки [щ’], [ч’], [й’] в русском языке **всегда мягкие**."
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l11-n15-fibl-z3he",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Используя предыдущее упражнение, давайте посчитаем, сколько в русском языке согласных звуков. Если согласный умеет смягчаться, это два разных звука. Если согласный всегда твёрдый или всегда мягкий – один звук. ",
         "tasks": [
@@ -540,15 +531,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillText",
       "id": "l11-n16-ftxt-t5cr",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "text": "Итак, в русском языке {{l11-n16-ftxt-t5cr-t1}} гласных звуков и {{l11-n16-ftxt-t5cr-t2}} согласных звуков, всего – 42 звука. При этом букв в алфавите 33: 10 гласных, 21 согласная, Ь и Ъ",
         "tasks": [
@@ -571,7 +562,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     }
   ],
   "lesson_id": "lesson11",

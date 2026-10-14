@@ -11,29 +11,44 @@
         v-for="task in tasks" 
         :key="task.id" 
         class="word-row"
+        :class="{ 'is-sentence': getParsed(task).isSentence }"
       >
-        <div class="chars-container">
+        <div class="task-content-wrapper">
           <span 
-            v-for="(char, idx) in task.text" 
-            :key="idx" 
-            :class="getCharClass(task, idx, char)"
-            :tabindex="char === ' ' || showResults ? -1 : 0"
-            @click="toggleChar(task.id, idx, char)"
-            @keydown.space.prevent="toggleChar(task.id, idx, char)"
-            @keydown.enter.prevent="toggleChar(task.id, idx, char)"
+            v-if="getParsed(task).prefix" 
+            class="sentence-part sentence-prefix" 
+            v-html="renderInline(getParsed(task).prefix)"
+          ></span>
+
+          <span class="chars-container" :class="{ 'inline-word': getParsed(task).isSentence }">
+            <span 
+              v-for="(char, idx) in getParsed(task).targetWord" 
+              :key="idx" 
+              :class="getCharClass(task, idx, char)"
+              :tabindex="char === ' ' || showResults ? -1 : 0"
+              @click="toggleChar(task.id, idx, char)"
+              @keydown.space.prevent="toggleChar(task.id, idx, char)"
+              @keydown.enter.prevent="toggleChar(task.id, idx, char)"
+            >
+              {{ char === ' ' ? '&nbsp;' : char }}
+            </span>
+          </span>
+
+          <span 
+            v-if="getParsed(task).suffix" 
+            class="sentence-part sentence-suffix" 
+            v-html="renderInline(getParsed(task).suffix)"
+          ></span>
+
+          <!-- Кнопка фидбека для неверного ответа -->
+          <span 
+            v-if="showResults && !isCorrect(task) && task['feedback-incorrect']" 
+            class="feedback-trigger incorrect-feedback"
+            @click="toggleFeedback(task.id, $event)"
           >
-            {{ char === ' ' ? '&nbsp;' : char }}
+            ℹ️
           </span>
         </div>
-
-        <!-- Кнопка фидбека для неверного ответа -->
-        <span 
-          v-if="showResults && !isCorrect(task) && task['feedback-incorrect']" 
-          class="feedback-trigger incorrect-feedback"
-          @click="toggleFeedback(task.id, $event)"
-        >
-          ℹ️
-        </span>
 
         <!-- Всплывашка с фидбеком -->
         <div 
@@ -192,6 +207,29 @@ export default {
       return classes.join(' ')
     },
 
+    parseTaskText(text) {
+      const s = (text ?? '').toString()
+      const match = s.match(/^(.*?)\{\{(.*?)\}\}(.*)$/s)
+      if (match) {
+        return {
+          prefix: match[1],
+          targetWord: match[2],
+          suffix: match[3],
+          isSentence: true
+        }
+      }
+      return {
+        prefix: '',
+        targetWord: s,
+        suffix: '',
+        isSentence: false
+      }
+    },
+
+    getParsed(task) {
+      return this.parseTaskText(task?.text)
+    },
+
     isCorrect(task) {
       const userSelected = this.userSelections[task.id] || []
       const correctExpected = task.correct_indices || []
@@ -212,6 +250,8 @@ export default {
       this.closeFeedback()
       
       for (const task of this.tasks) {
+          const parsed = this.getParsed(task)
+          const targetWord = parsed.targetWord
           const isCorrect = this.isCorrect(task)
           const userSelected = this.userSelections[task.id] || []
           const correctExpected = task.correct_indices || []
@@ -244,7 +284,7 @@ export default {
             userAnswerIsCorrect: isCorrect,
 
             correctOptions: correctExpected.length,
-            incorrectOptions: task.text.replace(/ /g, '').length - correctExpected.length,
+            incorrectOptions: targetWord.replace(/ /g, '').length - correctExpected.length,
             selectedCorrectOptions: selectedCorrectCount,
             selectedIncorrectOptions: selectedIncorrectCount,
             
@@ -311,6 +351,30 @@ export default {
   gap: 8px;
 }
 
+.word-row.is-sentence {
+  display: block;
+}
+
+.task-content-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1em;
+  line-height: 2;
+  width: 100%;
+}
+
+.word-row:not(.is-sentence) .task-content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: auto;
+}
+
+.sentence-part {
+  display: inline;
+}
+
 .chars-container {
   display: flex;
   flex-wrap: wrap;
@@ -319,6 +383,15 @@ export default {
   font-size: 1.3em;
   line-height: 1.8;
   user-select: none;
+}
+
+.chars-container.inline-word {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin: 0;
 }
 
 /* Character Base */
@@ -413,6 +486,7 @@ export default {
   background: none;
   border: none;
   padding: 0;
+  vertical-align: middle;
   filter: grayscale(0); /* always bright because it only shows on error */
 }
 
@@ -523,5 +597,17 @@ export default {
 }
 .click-word :deep(.feedback-content p) {
   margin: 0;
+}
+.click-word :deep(.quiz-header img),
+.click-word :deep(.question img) {
+  max-width: 320px;
+  max-height: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 14px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 </style>

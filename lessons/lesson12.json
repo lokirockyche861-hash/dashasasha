@@ -3,7 +3,7 @@
   "content": [
     {
       "type": "markdown",
-      "content": "# **Урок 5. Сильная и слабая позиция согласных**\n\n> **Сильной** считается позиция, в которой согласный звук слышен отчётливо и передаётся на письме соответствующей буквой. ",
+      "content": "# **Урок 5. Сильная и слабая позиция согласных**\n\n**Сильной** считается позиция, в которой согласный звук слышен отчётливо и передаётся на письме соответствующей буквой. ",
       "id": "auto-mark-f85c"
     },
     {
@@ -14,10 +14,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n3-fibl-215q",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Впишите ЗВУКИ, которые вы произносите на месте пропусков в словах",
         "tasks": [
@@ -96,15 +92,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Хорошо! "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n4-qsel-ssts",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "В какой позиции обозначение звука и буквы совпали?",
         "options": [
@@ -125,15 +121,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l12-n5-qsel-tnt8",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "Позиция согласной на конце слова слабая или сильная? ",
         "options": [
@@ -153,21 +149,16 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": ""
-      }
-    },
-    {
-      "type": "markdown",
-      "content": "> На конце слова позиция согласных была слабая. Звуки оглушались. Например, на конце слова *глаз* мы напишем букву *з*, но услышим звук [c]. Видим несовпадение – позиция слабая.",
-      "id": "auto-mark-37ce"
+        "result_text": "На конце слова позиция согласных была слабая. Звуки оглушались. Например, на конце слова глаз мы напишем букву з, но услышим звук [c]. Видим несовпадение – позиция слабая."
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l12-n7-qsel-jaub",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Какими были все согласные звуки, которые мы анализировали? ",
         "options": [
@@ -187,8 +178,12 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": "Пояснение к ответу."
-      }
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -198,10 +193,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n9-fibl-4e7h",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Прочитайте слова и впишите, какие звуки вы слышите на месте пропусков. Не забывайте обозначать мягкость знаком апостроф, где необходимо (вот так: [г’], [ф’]) ",
         "tasks": [
@@ -296,15 +287,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Очень хорошо. Давайте теперь подумаем, что происходит со звонкими шумными согласными перед глухими шумными согласными"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n10-qsel-5xcg",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Что происходит со звонкими шумными перед глухими шумными? ",
         "options": [
@@ -325,15 +316,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l12-n11-fibl-suql",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Посмотрим, что происходит с глухими шумными согласными перед звонкими. Прочитайте слова и впишите, какие звуки вы слышите на месте пропусков. Не забывайте обозначать мягкость знаком апостроф, где необходимо (вот так: [г’], [ф’]",
         "tasks": [
@@ -417,15 +408,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n12-qsel-mtt6",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Что происходит с шумными глухими перед звонкими шумными? ",
         "options": [
@@ -445,16 +436,16 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": "Пояснение к ответу."
-      }
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n13-qsel-wc3f",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "В какой позиции находятся шумные согласные перед шумными согласными? ",
         "options": [
@@ -474,8 +465,12 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": "Пояснение к ответу."
-      }
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -485,10 +480,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n15-fibl-frqm",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "Впишите, какие звуки вы слышите на месте пропусков",
         "tasks": [
@@ -517,15 +508,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l12-n16-qsel-xex8",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Глухие согласные остаются глухими – не озвончаются. Следовательно, в какой позиции шумные согласные находятся перед звуками [в] и [в’]?",
         "options": [
@@ -546,7 +537,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Позиция сильная, так как написание согласной буквы в слове всегда совпадает со звуком, который мы произносим. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -556,10 +551,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n18-fibl-t1gm",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Впишите звуки, которые вы слышите на месте пропусков в данных словах. ",
         "tasks": [
@@ -621,15 +612,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n19-qsel-o2km",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Происходит ли озвончение глухих согласных перед сонорными?\n",
         "options": [
@@ -650,15 +641,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Звуки остаются глухими, написание совпадает с произношением."
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n20-qsel-76f3",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Шумные согласные перед сонорными находятся в сильной или слабой позиции по глухости-звонкости? ",
         "options": [
@@ -678,8 +669,12 @@
           }
         ],
         "button_text": "Проверить",
-        "result_text": "Пояснение к ответу."
-      }
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -689,10 +684,6 @@
     {
       "type": "QuizSelect",
       "id": "l12-n22-qsel-mbwg",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Когда мы говорим об оглушении и озвончении, речь идёт о парных или непарных по звонкости-глухости согласных? ",
         "options": [
@@ -713,12 +704,122 @@
         ],
         "button_text": "Проверить",
         "result_text": "Конечно, мы говорим только о парных шумных согласных. Всегда глухие шумные согласные ([ц], [х], [щ’], [ч’]) и всегда звонкие сонорные согласные ([м], [м’], [н], [н’], [л], [л’], [р], [р’],[й’]) находятся в **сильной позиции по звонкости-глухости**."
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "ЗДЕСЬ ДОЛЖНА БЫТЬ МЕХАНИКА ВЫПАДАЮЩЕГО СПИСКА В ТЕКСТЕ\n\nПодведём промежуточный итог. Заполни пропуски.\nНепарные шумные глухие согласные и сонорные согласные всегда находятся в сильной/слабой позиции по глухости-звонкости. Что слышим, то и пишем.\n\nШумные парные согласные на конце слова и перед другими шумными согласными находятся в сильной/слабой позиции. Это значит, что произносимый звук и согласная буква в слове могут совпадать/не совпадать. Звонкие шумные на конце слова и перед глухими шумнымиоглушаются/озвончаются. Глухие шумные перед звонкими шумными оглушаются/озвончаются.\n\nШумные парные согласные перед гласными, перед сонорными согласными, а также перед звуками [в] и [в’] находятся в сильной/слабой позиции. Здесь мы можем полагаться на слух: что слышим, то и пишем.\n\nОтсюда следует правило орфографии, которое строится на постановке согласных в сильную позицию по глухости-звонкости.",
-      "id": "auto-mark-71fe"
+      "type": "SelectText",
+      "id": "l12-n54-selt-ysdp",
+      "content": {
+        "text": "**Подведём промежуточный итог. Заполните пропуски.**\n\nНепарные шумные глухие согласные и сонорные согласные всегда находятся в {{l12-n54-selt-ysdp-t1}} позиции по глухости-звонкости. Что слышим, то и пишем.\n\nШумные парные согласные на конце слова и перед другими шумными согласными находятся в {{l12-n54-selt-ysdp-t2}} позиции. Это значит, что произносимый звук и согласная буква в слове могут {{l12-n54-selt-ysdp-t3}}. *Звонкие* шумные на конце слова и перед глухими шумными {{l12-n54-selt-ysdp-t4}}. *Глухие* шумные перед звонкими шумными {{l12-n54-selt-ysdp-t5}}.\n\nШумные парные согласные перед гласными, перед сонорными согласными, а также перед звуками [в] и [в’] находятся в {{l12-n54-selt-ysdp-t6}} позиции. Здесь мы можем полагаться на слух: что слышим, то и пишем.\n\nОтсюда следует правило орфографии, которое строится на постановке согласных в сильную позицию по глухости-звонкости.",
+        "tasks": [
+          {
+            "id": "l12-n54-selt-ysdp-t1",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t1-opt1",
+                "content": "сильной",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t1-opt2",
+                "content": "слабой",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": "Позиция сильная!"
+          },
+          {
+            "id": "l12-n54-selt-ysdp-t2",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t2-opt1",
+                "content": "сильной",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t2-opt2",
+                "content": "слабой",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l12-n54-selt-ysdp-t3",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t3-opt1",
+                "content": "совпадать",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t3-opt2",
+                "content": "не совпадать",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l12-n54-selt-ysdp-t4",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t4-opt1",
+                "content": "оглушаются ",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t4-opt2",
+                "content": "озвончаются",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": "Подумай: они ведь и так звонкие!"
+          },
+          {
+            "id": "l12-n54-selt-ysdp-t5",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t5-opt1",
+                "content": "оглушаются",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t5-opt2",
+                "content": "озвончаются",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": "Подумай: они ведь и так глухие! "
+          },
+          {
+            "id": "l12-n54-selt-ysdp-t6",
+            "options": [
+              {
+                "id": "l12-n54-selt-ysdp-t6-opt1",
+                "content": "сильной",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n54-selt-ysdp-t6-opt2",
+                "content": "слабой",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -728,10 +829,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n25-fibl-m05r",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Проверьте, как звучат [c] и [з] перед шипящими. Впишите звуки, которые слышите при произнесении. ",
         "tasks": [
@@ -804,7 +901,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -814,10 +915,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n27-fibl-fy7l",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "",
         "tasks": [
@@ -846,7 +943,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -856,10 +957,6 @@
     {
       "type": "QuizSelect",
       "id": "l12-n29-qsel-ven8",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Можем ли мы на слух точно определить, какую букву писать перед шипящей – з или с?",
         "options": [
@@ -880,15 +977,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n30-qsel-kllt",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Это сильная или слабая позиция з и с? ",
         "options": [
@@ -909,7 +1006,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -919,10 +1020,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n32-fibl-9aze",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Какие звуки вы произносите на месте выделенных букв? ",
         "tasks": [
@@ -973,12 +1070,42 @@
         ],
         "button_text": "Проверить",
         "result_text": "Мы видим, что *д* и *т* не дают звука между *з..н* и *с..н*. При этом *д* и *т* могут быть, а могут и отсутствовать. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "ЗДЕСЬ НУЖЕН ВЫПАДАЮЩИЙ СПИСОК В ТЕКСТЕ\nДелаем вывод, что у *д* и *т* между с..н позиция `сильная/слабая`. Нужно проверять, пишем ли мы эти буквы. ",
-      "id": "auto-mark-9907"
+      "type": "SelectText",
+      "id": "l12-n54-selt-k86s",
+      "content": {
+        "text": "Делаем вывод, что у *д* и *т* между с..н позиция {{l12-n54-selt-k86s-t1}}. Нужно проверять, пишем ли мы эти буквы.",
+        "tasks": [
+          {
+            "id": "l12-n54-selt-k86s-t1",
+            "options": [
+              {
+                "id": "l12-n54-selt-k86s-t1-opt1",
+                "content": "сильная",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-k86s-t1-opt2",
+                "content": "слабая",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": "Если нам нужна дополнительная проверка, то мы не можем полагаться на звук. Позиция согласной слабая."
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -988,10 +1115,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l12-n35-fibl-3b4s",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Посмотрите на эти слова и выпишите, между какими буквами \"теряются\" д и т, то есть не произносятся",
         "tasks": [
@@ -1064,11 +1187,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
-      "content": "> Итак, нам нужно “искать” *т* и *д*, когда мы слышим следующие сочетания звуков: [cн], [зн], [нс], [сл], [рц]",
+      "content": "Итак, нам нужно “искать” *т* и *д*, когда мы слышим следующие сочетания звуков: [cн], [зн], [нс], [сл], [рц]",
       "id": "auto-mark-3b71"
     },
     {
@@ -1079,10 +1206,6 @@
     {
       "type": "QuizSelect",
       "id": "l12-n38-qsel-jsde",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Посмотрите на пары слов. Отличаются ли буквы на конце слов по звучанию при произношении? \n\nмат – мать\nклад – кладь \nкон – конь\nугол – уголь\nпар – парь\nжар – жарь\nвяз – вязь\nтоп – топь\nкров – кровь",
         "options": [
@@ -1103,15 +1226,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l12-n39-qsel-l6mk",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Какие согласные на конце в словах *мать, кладь, конь, уголь, парь, жарь, вязь, топь, кровь*? ",
         "options": [
@@ -1132,15 +1255,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l12-n40-fibl-f44g",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Что повлияло на их смягчение? (впишите ответ)",
         "tasks": [
@@ -1158,15 +1281,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "SelectText",
       "id": "l12-n41-stxt-auto",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "text": "По твёрдости-мягкости на конце слова парные согласные стоят в {{t1}} позиции. Мы всегда слышим их смягчение, когда пишем Ь.",
         "tasks": [
@@ -1176,11 +1299,13 @@
             "options": [
               {
                 "id": "opt1",
-                "content": "сильной"
+                "content": "сильной",
+                "correct_option": false
               },
               {
                 "id": "opt2",
-                "content": "слабой"
+                "content": "слабой",
+                "correct_option": true
               }
             ],
             "feedback-incorrect": "Дружище, на конце слова позиция сильная, так как всегда слышится смягчение."
@@ -1188,15 +1313,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l12-n42-fibl-l9di",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Сравните пары слов и выпишите перед какой гласной смягчился первый согласный в слове. Произнесите слова вслух",
         "tasks": [
@@ -1368,151 +1493,143 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
-    },
-    {
-      "type": "FillText",
-      "id": "l12-n43-ftxt-ax7p",
+      },
       "taskVersion": "v.1.0",
       "skill_id": "",
       "answer_type": "input",
-      "blocked": false,
+      "blocked": false
+    },
+    {
+      "type": "FillInTheBlank",
+      "id": "l12-n54-fibl-oh4e",
       "content": {
-        "text": "Сделаем вывод.\nПарные по твёрдости-мягкости согласные смягчаются перед гласными (впишите в алфавитном порядке) {{l12-n43-ftxt-ax7p-t1}}, {{l12-n43-ftxt-ax7p-t2}}, {{l12-n43-ftxt-ax7p-t3}}, {{l12-n43-ftxt-ax7p-t4}}, {{l12-n43-ftxt-ax7p-t5}}. \nПарные по твёрдости-мягкости согласные произносятся твёрдо перед гласными (впишите в алфавитном порядке) {{l12-n43-ftxt-ax7p-t6}}, {{l12-n43-ftxt-ax7p-t7}}, {{l12-n43-ftxt-ax7p-t8}}, {{l12-n43-ftxt-ax7p-t9}}, {{l12-n43-ftxt-ax7p-t10}}.",
+        "question": "Сделаем вывод.",
         "tasks": [
           {
-            "id": "l12-n43-ftxt-ax7p-t1",
-            "text": "подсказка/шаблон для ответа",
-            "correctAnswer": "е",
+            "id": "l12-n54-fibl-oh4e-t1",
+            "text": "Парные по твёрдости-мягкости согласные смягчаются перед гласными ___, ___, ___, ___, ___",
+            "correctAnswers": [
+              "е",
+              "ё",
+              "ю",
+              "я",
+              "и"
+            ],
+            "answerType": "single-box",
             "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "е"
+            "feedback-correct": null,
+            "feedback-incorrect": null
           },
           {
-            "id": "l12-n43-ftxt-ax7p-t2",
-            "text": "",
-            "correctAnswer": "ё",
+            "id": "l12-n54-fibl-oh4e-t2",
+            "text": "Парные по твёрдости-мягкости согласные произносятся твёрдо перед гласными ___, ___, ___, ___, ___",
+            "correctAnswers": [
+              "а",
+              "о",
+              "у",
+              "ы",
+              "э"
+            ],
+            "answerType": "single-box",
             "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "ё"
-          },
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Молодцы!"
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
+    },
+    {
+      "type": "SelectText",
+      "id": "l12-n54-selt-aoke",
+      "content": {
+        "text": "Позиция перед гласной по твёрдости-мягкости для согласных перед гласными {{l12-n54-selt-aoke-t1}}",
+        "tasks": [
           {
-            "id": "l12-n43-ftxt-ax7p-t3",
-            "text": "",
-            "correctAnswer": "и",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "и"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t4",
-            "text": "",
-            "correctAnswer": "ю",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "ю"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t5",
-            "text": "",
-            "correctAnswer": "я",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "я"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t6",
-            "text": "",
-            "correctAnswer": "а",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "а"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t7",
-            "text": "",
-            "correctAnswer": "о",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "о"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t8",
-            "text": "",
-            "correctAnswer": "у",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "у"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t9",
-            "text": "",
-            "correctAnswer": "ы",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "ы"
-          },
-          {
-            "id": "l12-n43-ftxt-ax7p-t10",
-            "text": "",
-            "correctAnswer": "э",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "э"
+            "id": "l12-n54-selt-aoke-t1",
+            "options": [
+              {
+                "id": "l12-n54-selt-aoke-t1-opt1",
+                "content": "сильная",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n54-selt-aoke-t1-opt2",
+                "content": "слабая",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": null
           }
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
-    },
-    {
-      "type": "markdown",
-      "content": "ЗДЕСЬ НУЖЕН СЕЛЕКТЛИСТ В ТЕКСТЕ\nПозиция перед гласной по твёрдости-мягкости для согласных перед гласными `сильная/слабая`.",
-      "id": "auto-mark-b3bc"
-    },
-    {
-      "type": "FillText",
-      "id": "l12-n45-ftxt-5761",
+      },
       "taskVersion": "v.1.0",
       "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
+      "answer_type": "select",
+      "blocked": false
+    },
+    {
+      "type": "SelectText",
+      "id": "l12-n54-selt-hzhj",
       "content": {
-        "text": "Заполните пропуски: Ь и гласная не влияют на твёрдость-мягкость [ц], [ш], [ж], потому что они всегда {{l12-n45-ftxt-5761-t1}}, и на [щ’], [ч’], [й’], потому что они всегда  {{l12-n45-ftxt-5761-t2}}.",
+        "text": "Заполните пропуски: Ь и гласная не влияют на твёрдость-мягкость [ц], [ш], [ж], потому что они всегда {{l12-n54-selt-hzhj-t1}}, и на [щ’], [ч’], [й’], потому что они всегда  {{l12-n54-selt-hzhj-t2}}.",
         "tasks": [
           {
-            "id": "l12-n45-ftxt-5761-t1",
-            "text": "твёрдые/мягкие",
-            "correctAnswer": "твёрдые",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "твёрдые"
+            "id": "l12-n54-selt-hzhj-t1",
+            "options": [
+              {
+                "id": "l12-n54-selt-hzhj-t1-opt1",
+                "content": "твёрдые",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n54-selt-hzhj-t1-opt2",
+                "content": "мягкие",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": null
           },
           {
-            "id": "l12-n45-ftxt-5761-t2",
-            "text": "твёрдые/мягкие",
-            "correctAnswer": "мягкие",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "мягкие"
+            "id": "l12-n54-selt-hzhj-t2",
+            "options": [
+              {
+                "id": "l12-n54-selt-hzhj-t2-opt1",
+                "content": "твёрдые",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-hzhj-t2-opt2",
+                "content": "мягкие",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": null
           }
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
-      "content": "Что же происходит с согласными в середине слова перед согласными?",
+      "content": "#### Что же происходит с согласными в середине слова перед другими согласными?",
       "id": "auto-mark-23b8"
     },
     {
       "type": "FillInTheBlank",
       "id": "l12-n47-fibl-xm2h",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Проверим, как звучат согласные перед другими твёрдыми и мягкими согласными. Для этого зафиксируй звуки на месте пропусков. Не забывайте, что мягкий согласный звук обозначается знаком '",
         "tasks": [
@@ -1568,15 +1685,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Ого! Никакого мягкого знака нет, гласных нет, а *с, з* и *н* произносятся мягко перед мягкими согласными звуками! "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSet",
       "id": "l12-n48-qset-atps",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Давайте посмотрим, происходит ли это перед всеми мягкими согласными. Сравним разные сочетания. \nВыберите, какой вы произносите в слове звук буквы З – твёрдый или мягкий? ",
         "options": [
@@ -1650,15 +1767,15 @@
         "button_text": "Проверить",
         "button_next_text": "Следующее задание",
         "result_text": "Обратите внимание, перед какими мягкими согласными мы услышали мягкий [з']"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSet",
       "id": "l12-n48-qset-5pzx",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Выберите, какой вы произносите в слове звук буквы C – твёрдый или мягкий? ",
         "options": [
@@ -1746,15 +1863,15 @@
         "button_text": "Проверить",
         "button_next_text": "Следующее задание",
         "result_text": "Обратите внимание, перед какими мягкими согласными мы услышали мягкий [c']"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSet",
       "id": "l12-n49-qset-jf5d",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Выберите, какой вы произносите в слове звук буквы Н – твёрдый или мягкий? ",
         "options": [
@@ -1814,71 +1931,76 @@
         "button_text": "Проверить",
         "button_next_text": "Следующее задание",
         "result_text": "Обратите внимание, перед какими мягкими согласными мы услышали мягкий [н']"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
-      "type": "FillText",
-      "id": "l12-n51-ftxt-18ge",
+      "type": "FillInTheBlank",
+      "id": "l12-n54-fibl-n53f",
+      "content": {
+        "question": "",
+        "tasks": [
+          {
+            "id": "l12-n54-fibl-n53f-t1",
+            "text": "Звуки [с], [з], [н] смягчаются, то есть становятся [с’], [з’], [н’] перед мягкими [___'], [___'], [___'], [___'], [___'], а также всегда мягкими [ч'] и [щ']",
+            "correctAnswers": [
+              "с",
+              "з",
+              "д",
+              "т",
+              "н"
+            ],
+            "answerType": "single-box",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "Молодцы!"
+      },
       "taskVersion": "v.1.0",
       "skill_id": "",
       "answer_type": "input",
-      "blocked": false,
+      "blocked": false
+    },
+    {
+      "type": "SelectText",
+      "id": "l12-n54-selt-5vvj",
       "content": {
-        "text": "Звуки [с], [з], [н] смягчаются, то есть становятся [с’], [з’], [н’] перед мягкими (впишите в алфавитном порядке) [{{l12-n51-ftxt-18ge-t1}}’], [{{l12-n51-ftxt-18ge-t2}}’], [{{l12-n51-ftxt-18ge-t3}}’], [{{l12-n51-ftxt-18ge-t4}}’],[{{l12-n51-ftxt-18ge-t5}}’], а также всегда мягкими [ч’] и [щ’]. ",
+        "text": "Так как нет смягчающих гласных и мягкого знака, явно указывающих на смягчение, мы можем сказать, что это {{l12-n54-selt-5vvj-t1}} позиция согласных по твёрдости-мягкости.",
         "tasks": [
           {
-            "id": "l12-n51-ftxt-18ge-t1",
-            "text": "подсказка/шаблон для ответа",
-            "correctAnswer": "д ",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "д"
-          },
-          {
-            "id": "l12-n51-ftxt-18ge-t2",
-            "text": "",
-            "correctAnswer": "з",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "з"
-          },
-          {
-            "id": "l12-n51-ftxt-18ge-t3",
-            "text": "",
-            "correctAnswer": "н",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "н"
-          },
-          {
-            "id": "l12-n51-ftxt-18ge-t4",
-            "text": "",
-            "correctAnswer": "с",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "с"
-          },
-          {
-            "id": "l12-n51-ftxt-18ge-t5",
-            "text": "",
-            "correctAnswer": "т",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "т"
+            "id": "l12-n54-selt-5vvj-t1",
+            "options": [
+              {
+                "id": "l12-n54-selt-5vvj-t1-opt1",
+                "content": "сильная",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n54-selt-5vvj-t1-opt2",
+                "content": "слабая",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": null
           }
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
-      "content": "ЗДЕСЬ НУЖЕН СЕЛЕКТЛИСТ В ТЕКСТЕ\n\nТак как нет смягчающих гласных и мягкого знака, явно указывающих на смягчение, мы можем сказать, что это сильная/слабая позиция согласных по твёрдости-мягкости.",
-      "id": "auto-mark-2bd8"
-    },
-    {
-      "type": "markdown",
-      "content": "> Такие особенности этих звуков оказывают влияние на написание мягкого знака в середине слова",
+      "content": "Такие особенности этих звуков оказывают влияние на написание мягкого знака в середине слова. Например, мы пишем пончик, но уколЬчик. Это связано с особенностями смягчения согласных перед другими согласными. ",
       "id": "auto-mark-8921"
     }
   ],

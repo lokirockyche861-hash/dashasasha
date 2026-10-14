@@ -631,9 +631,10 @@
           if (!node || typeof node !== 'object') { issues.push(`${ctx}: неверный объект`); return }
 
           // Metadata check for interactive nodes
-          if (node.type !== 'markdown') {
+          if (node.type !== 'markdown' && node.type !== 'Table') {
             if (!node.skill_id) issues.push(`${ctx}: skill_id обязателен`)
             if (!node.answer_type) issues.push(`${ctx}: answer_type обязателен`)
+            if (node.blocked === undefined) issues.push(`${ctx}: blocked обязателен`)
           }
 
           switch (node.type) {
@@ -851,7 +852,7 @@
         const idShort = (node.id || '').toString().slice(0, 18)
         div.innerHTML = `
         <div>
-          <div><strong>#${i + 1}</strong> · ${t}</div>
+          <div><strong>#${i + 1}</strong> · ${t}${node.blocked ? ' <span class="pill" style="font-size:10px;padding:1px 6px;color:#c00;border-color:#fca5a5;background:#fee2e2;">blocked</span>' : ''}</div>
           <small class="muted">${idShort}</small>
         </div>
         <div class="node-actions">
@@ -894,6 +895,9 @@
     }
 
     function rekeyNode(node, nodeIndex) {
+      if (node.type !== 'markdown' && node.type !== 'Table' && node.blocked === undefined) {
+        node.blocked = false
+      }
       const base = genId(state.lessonNumber, nodeIndex, node.type)
       if (node.type === 'QuizSelect' || node.type === 'QuizCheckbox') {
         node.id = base
@@ -976,6 +980,10 @@
             if (n.result_text !== undefined) { n.content.result_text = n.result_text; delete n.result_text }
           }
 
+          if (n.type !== 'markdown' && n.type !== 'Table' && n.blocked === undefined) {
+            n.blocked = false
+          }
+
           orderedKeys.forEach(k => { if (n[k] !== undefined) sorted[k] = n[k] })
           Object.keys(n).forEach(k => { if (!orderedKeys.includes(k)) sorted[k] = n[k] })
           return sorted
@@ -1031,6 +1039,7 @@
         at.addEventListener('change', () => { node.answer_type = at.value; softPersist() })
 
         // blocked
+        if (node.blocked === undefined) { node.blocked = false }
         const blk = checkbox('Blocked', !!node.blocked, (v) => { node.blocked = v; persistAndRender() })
 
         // taskVersion
@@ -1451,8 +1460,16 @@
 
             // input.*
             row.input = row.input || { correctAnswers: [''], placeholder: 'впишите ответ', 'feedback-correct': null, 'feedback-incorrect': null }
-            const ans = document.createElement('input'); ans.type = 'text'; ans.placeholder = 'Ответы через запятую'; ans.value = (row.input.correctAnswers || []).join(', ')
-            ans.addEventListener('input', () => { row.input.correctAnswers = ans.value.split(',').map(s => s.trim()); softPersist() })
+            const ans = document.createElement('input'); ans.type = 'text'; ans.placeholder = 'Ответ 1, [син1 | син2], Ответ 3'; ans.value = (row.input.correctAnswers || []).map(x => Array.isArray(x) ? `[${x.join(' | ')}]` : x).join(', ')
+            ans.addEventListener('input', () => {
+              row.input.correctAnswers = ans.value.split(',').map(s => s.trim()).filter(s => s !== '').map(s => {
+                if (s.startsWith('[') && s.endsWith(']')) {
+                  return s.slice(1, -1).split('|').map(x => x.trim()).filter(x => x !== '')
+                }
+                return s
+              })
+              softPersist()
+            })
 
             const ph = document.createElement('input'); ph.type = 'text'; ph.value = (row.input.placeholder ?? 'впишите ответ'); ph.addEventListener('input', () => { row.input.placeholder = ph.value; softPersist() })
             const fc = document.createElement('input'); fc.type = 'text'; fc.value = row.input['feedback-correct'] || ''; fc.addEventListener('input', () => { row.input['feedback-correct'] = fc.value || null; softPersist() })
@@ -1943,7 +1960,21 @@
               const box = document.createElement('div'); box.className = 'card subtle'
               const tid = document.createElement('input'); tid.type = 'text'; tid.value = t.id || ''; tid.addEventListener('input', () => { t.id = tid.value; softPersist() })
               const tt = document.createElement('input'); tt.type = 'text'; tt.value = t.text || ''; tt.addEventListener('input', () => { t.text = tt.value; softPersist() })
-              const ca = document.createElement('input'); ca.type = 'text'; ca.value = t.correctAnswer || ''; ca.addEventListener('input', () => { t.correctAnswer = ca.value; softPersist() })
+              const ca = document.createElement('input');
+              ca.type = 'text';
+              ca.placeholder = 'Ответ или [син1 | син2]';
+              ca.value = Array.isArray(t.correctAnswer)
+                ? (Array.isArray(t.correctAnswer[0]) ? `[${t.correctAnswer[0].join(' | ')}]` : `[${t.correctAnswer.join(' | ')}]`)
+                : (t.correctAnswer || '');
+              ca.addEventListener('input', () => {
+                const val = ca.value.trim();
+                if (val.startsWith('[') && val.endsWith(']')) {
+                  t.correctAnswer = [val.slice(1, -1).split('|').map(x => x.trim()).filter(Boolean)];
+                } else {
+                  t.correctAnswer = val;
+                }
+                softPersist();
+              });
 
               if (typeof t.minWidth === 'undefined') t.minWidth = null
               const mw = document.createElement('input'); mw.type = 'number'; mw.placeholder = 'null'; mw.value = (t.minWidth ?? ''); mw.addEventListener('input', () => { const v = mw.value.trim(); t.minWidth = (v === '' ? null : Number(v)); softPersist() })
@@ -2082,7 +2113,7 @@
 
               box.append(
                 labeled('ID', tid),
-                labeled('Слово (simvols нумеруются с 0, пробелы игнорируются при клике, но входят в индекс!)', txt),
+                labeled('Слово или предложение (для предложения выделите целевое слово как {{слово}}, индексы считаются внутри него)', txt),
                 labeled('Верные индексы (через запятую)', ci),
                 labeled('Фидбек (если есть ошибки)', finc),
                 controls
@@ -2175,6 +2206,9 @@
         case 'SelectText': node = TEMPLATE_BY_TYPE.SelectText(idBase); break
         case 'ClickWord': node = TEMPLATE_BY_TYPE.ClickWord(idBase); break
         default: node = { type, content: {} }
+      }
+      if (node.type !== 'markdown' && node.type !== 'Table' && node.blocked === undefined) {
+        node.blocked = false
       }
       state.lesson.content.push(node)
       state.selectedIndex = state.lesson.content.length - 1

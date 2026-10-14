@@ -13,10 +13,6 @@
     {
       "type": "SelectList",
       "id": "l7-n28-sell-btym",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "selected": false,
         "question": "Перед вами слова, которым уже даны определения при помощи более простых. Посмотрите, какие словообразовательные морфемы прибавились и выберите способы словообразования. ",
@@ -99,7 +95,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Отлично! Вы уже знаете 6 способов словообразования!"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -114,10 +114,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l7-n6-fibl-yisp",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Давайте рассмотрим слово *переход*. Впишите глагол, от которого образовано это слово ",
         "tasks": [
@@ -135,15 +131,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l7-n6-fibl-p6km",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Выпишем основы этих слов",
         "tasks": [
@@ -172,15 +168,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l7-n8-qsel-cess",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Добавилась ли какая-то морфема при образовании слова переход?",
         "options": [
@@ -201,15 +197,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Действительно, никакой морфемы при образовании слова переход от глагола переходить не добавилось. Такой способ образования называется **бессуфиксным**. Также можно сказать, что добавленный **суффикс нулевой.**"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "SelectList",
       "id": "l7-n9-sell-zq0z",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "selected": false,
         "question": "Определите способ словообразования. Для этого восстановите предыдущее слово словообразовательной цепочки и сравните основы слов. \nНапример: *заячий* - принадлежащий *зайцу*. Основы отличаются суффиксом -ий-. Способ словообразования - суффиксальный. ",
@@ -471,7 +467,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Отлично! Если вы допустили ошибки, посмотрите обратную связь, постарайтесь запомнить алгоритм, как определить способ словообразования. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -481,10 +481,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l7-n11-fibl-mdjk",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "Исследуем слово *снегопад*. Дадим ему определение – заполните пропуски.",
         "tasks": [
@@ -503,7 +499,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Итак, у нас есть определение – рассмотрим, как образовано слово."
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -513,10 +513,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l7-n13-fibl-nn22",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Запишите слова, от **сложения** основ которых образованы сложные слова\n",
         "tasks": [
@@ -578,7 +574,7 @@
             "answerType": "single-box",
             "minWidth": null,
             "feedback-correct": "Потрясающе! ",
-            "feedback-incorrect": "Сорвиголова - тот, кто ведёт себя безрассудно, то есть сорвал голову"
+            "feedback-incorrect": "Сорвиголова - тот, кто ведёт себя безрассудно, то есть \"сорвал голову\""
           },
           {
             "id": "l7-n13-fibl-nn22-t6",
@@ -595,7 +591,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Отлично! Теперь вы видите, что такое сложение. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -615,10 +615,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l7-n17-fibl-2ufe",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Давайте попробуем расшифровать знакомые вам слова. ",
         "tasks": [
@@ -651,15 +647,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "В первом случае мы видим, что код – это первые буквы зашифрованных слов. А вот в слове *завуч* от *заведующего* осталась часть *зав-*. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l7-n18-fibl-aswk",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Давайте расшифруем ещё несколько аббревиатур",
         "tasks": [
@@ -740,7 +736,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Отлично! Теперь вы знаете, что такое *аббревиация*."
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -755,10 +755,6 @@
     {
       "type": "QuizSelect",
       "id": "l7-n20-qsel-6vmp",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Некоторые слова в русском языке образованы путём перехода из одной части речи в другую. Сравните:\n\n1. Я показал ПРОЕЗДНОЙ.\n\n2. У меня был ПРОЕЗДНОЙ билет. \n\nВ каком случае слово ПРОЕЗДНОЙ - это не признак, а предмет?",
         "options": [
@@ -779,15 +775,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Как видите, само слово не изменилось, но оно изменило некоторые свойства. \nПервоначально слово было признаком (прилагательным), а затем избавилось от предмета, который описывало, и само стало предметом – существительным. Так образовалось новое слово. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l7-n21-qsel-rxq2",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Давайте потренируемся видеть, в каком случае произошёл переход, а где исходное слово. \n\nВ каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть признаком? ",
         "options": [
@@ -808,15 +804,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l7-n22-qsel-i59q",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть признаком? ",
         "options": [
@@ -837,15 +833,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l7-n23-qsel-n2zs",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть объектом и стало обозначать время? ",
         "options": [
@@ -866,15 +862,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l7-n24-qsel-y9bi",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "В каком случае перед нами новое слово, образованное путём перехода (конверсии) – слово перестало быть действием? ",
         "options": [
@@ -895,7 +891,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -910,10 +910,6 @@
     {
       "type": "DragTable",
       "id": "l7-n25-dtab-75rd",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "match",
-      "blocked": false,
       "content": {
         "question": "Сопоставьте со словами их первоначальное значение и появившееся в результате переноса",
         "row_header": "Слова",
@@ -1079,7 +1075,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Отлично! Теперь вы знаете, как новые слова появляются в языке путём переноса значений. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false
     }
   ],
   "schema": "v1",

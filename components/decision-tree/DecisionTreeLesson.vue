@@ -174,7 +174,9 @@ const checkCurrentTaskRestoration = () => {
             userAnswer.value = restored.answerText
             inputSuccess.value = true
             isTreeCompleted.value = true // Assume tree done if text is solved
-            completedWords.value.push(currentTask.value.content.correct_answer)
+            const rawExpected = currentTask.value?.content?.correct_answers ?? currentTask.value?.content?.correct_answer ?? ''
+            const wordToDisplay = Array.isArray(rawExpected) ? (rawExpected.flat(Infinity)[0] ?? '') : rawExpected
+            completedWords.value.push(wordToDisplay)
         }
     }
 }
@@ -216,15 +218,23 @@ const checkAnswer = async () => {
   if (!isTreeCompleted.value || inputSuccess.value) return
   
   taskAttempts.value++
-  const expected = currentTask.value.content.correct_answer.trim().toLowerCase()
-  const actual = userAnswer.value.trim().toLowerCase()
+  const rawExpected = currentTask.value?.content?.correct_answers ?? currentTask.value?.content?.correct_answer ?? ''
+  const actual = (userAnswer.value ?? '').trim().toLowerCase()
 
-  const isCorrect = expected === actual
+  const expectedList = Array.isArray(rawExpected)
+    ? rawExpected.flat(Infinity).map(s => (s ?? '').toString().trim().toLowerCase()).filter(Boolean)
+    : [(rawExpected ?? '').toString().trim().toLowerCase()]
+
+  const isCorrect = expectedList.includes(actual)
+
+  const wordToDisplay = Array.isArray(rawExpected)
+    ? (rawExpected.flat(Infinity)[0] ?? '')
+    : rawExpected
 
   if (isCorrect) {
     inputSuccess.value = true
     inputError.value = false
-    completedWords.value.push(currentTask.value.content.correct_answer)
+    completedWords.value.push(wordToDisplay)
 
     const timeSpent = Date.now() - taskStartTime.value
     

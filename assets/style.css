@@ -1,92 +1,72 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
+/* ==========================================================================
+   Стили оформления контента и изображений уроков
+   ========================================================================== */
 
 /* Общие стили для картинок внутри уроков */
 .lesson-image {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 16px 0;
+  margin: 16px auto;
   display: block;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Легкая тень для опрятности */
 }
 
-#app {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+/* Иллюстрации внутри блоков заданий (ClickWord, QuizSelect, FillInTheBlank и др.) */
+.quiz-header img,
+.question img,
+.click-word img,
+.quiz-select img,
+.quiz-checkbox img,
+.fill-in-the-blank img,
+.fill-text img,
+.select-text img,
+.drag-and-drop img {
+  max-width: 320px;
+  max-height: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 14px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+/* Модификаторы размеров для картинок */
+.img-sm, img.img-sm {
+  max-width: 180px !important;
+  max-height: 140px !important;
+}
 
-  a:hover {
-    color: #747bff;
-  }
+.img-md, img.img-md {
+  max-width: 320px !important;
+  max-height: 240px !important;
+}
 
-  button {
-    background-color: #f9f9f9;
-  }
+.img-lg, img.img-lg {
+  max-width: 520px !important;
+  max-height: 380px !important;
+}
+
+.img-full, img.img-full {
+  max-width: 100% !important;
+  max-height: none !important;
+}
+
+/* Модификаторы выравнивания */
+.img-center, img.img-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+.img-left, img.img-left {
+  margin: 8px 16px 8px 0 !important;
+  float: left !important;
+}
+
+.img-right, img.img-right {
+  margin: 8px 0 8px 16px !important;
+  float: right !important;
 }

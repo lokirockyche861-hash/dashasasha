@@ -4,6 +4,7 @@
   "lesson_id": "lesson15",
   "lesson_version": "v.1.0",
   "topicId": "topic_default",
+  "schema": "v1",
   "content": [
     {
       "type": "DragAndDrop",
@@ -535,7 +536,8 @@
       },
       "answer_type": "match",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "DragAndDrop",
@@ -752,7 +754,8 @@
       },
       "answer_type": "match",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "DragAndDrop",

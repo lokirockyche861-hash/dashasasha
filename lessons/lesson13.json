@@ -9,10 +9,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l13-n2-fibl-445j",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Вспомним, сколько в русском языке гласных звуков: ",
         "tasks": [
@@ -24,21 +20,21 @@
             ],
             "answerType": "single",
             "minWidth": null,
-            "feedback-correct": "Верно!",
+            "feedback-correct": "Верно! ",
             "feedback-incorrect": "Нет, гласных звуков 6"
           }
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l13-n3-fibl-5mdw",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Запишите гласные звуки русского языка:",
         "tasks": [
@@ -61,30 +57,71 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
-      "content": "Перед тобой две картинки. Они подписаны словами, которые одинаково пишутся, но по-разному произносятся. \n\nВаша задача – выбрать в каждом слове ударный слог. Он должен звучать более отчётливо, звонко, гласная в нём дольше тянется. Обязательно произнесите для этого вслух оба слова. ",
+      "content": "Перед вами две картинки. Они подписаны словами, которые одинаково пишутся, но по-разному произносятся. \n\nВаша задача – выбрать в каждом слове ударный слог. Он должен звучать более отчётливо, звонко, гласная в нём дольше тянется. Обязательно произнесите для этого вслух оба слова. ",
       "id": "auto-mark-bfdb"
     },
     {
-      "type": "markdown",
-      "content": "ChatGPT Image 1 нояб. 2025 г., 13_07_21 1.png (замок)\n\nChatGPT Image 1 нояб. 2025 г., 13_07_38 1.png (замок)\n\nЗДЕСЬ НУЖНЫ КАРТИНКИ И ВОЗМОЖНОСТЬ ВЫДЕЛИТЬ УДАРНУЮ ГЛАСНУЮ \n\n",
-      "id": "auto-mark-cf03"
+      "type": "ClickWord",
+      "id": "l12-n29-clkw-oztm",
+      "content": {
+        "question": "Выделите ударный слог в слове, глядя на картинку <img src=\"/lessons/зАмок 1.jpeg\" class=\"lesson-image\" alt=\"Замок\">\n",
+        "tasks": [
+          {
+            "id": "l12-n29-clkw-oztm-t1",
+            "text": "замок",
+            "correct_indices": [
+              1
+            ],
+            "feedback-incorrect": "Посмотрите, на первой картинке строение - это за́мок"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
+    },
+    {
+      "type": "ClickWord",
+      "id": "l12-n7-clkw-h5s9",
+      "content": {
+        "question": "Выделите ударный слог в слове, глядя на картинку <img src=\"/lessons/замОк 2.jpeg\" class=\"lesson-image\" alt=\"Замок\">",
+        "tasks": [
+          {
+            "id": "l12-n7-clkw-h5s9-t2",
+            "text": "замок",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": "Посмотрите, на второй картинке устройство, предназначенное, чтобы запирать дверь, - замо́к"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": true
     },
     {
       "type": "markdown",
-      "content": "На этом примере мы видим, что *ударение* может изменять смысл слова.",
-      "id": "auto-mark-c927"
+      "content": "Произнесите ещё раз эти два слова: за́мок и замо́к. Гласная под ударением произносится более ярко и отчётливо, также она дольше звучит. На этом примере мы видим, что *ударение* может изменять смысл слова.",
+      "id": "auto-mark-c927-copy-g0xe"
     },
     {
       "type": "QuizSelect",
       "id": "l13-n7-qsel-r7u7",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Как Вы думаете, ударным слог делает ударный согласный звук или гласный? Какой звук звучит более звонко и протяжно под ударением?",
         "options": [
@@ -105,47 +142,264 @@
         ],
         "button_text": "Проверить",
         "result_text": "Ударным слог делает **ударный гласный**. Он звучит более ясно, звонко и протяжённо по сравнению с безударным. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
-      "content": "Потренируйтесь слышать ударение в словах. Нажмите в каждом выделенном слове на **ударную гласную**.\n  \nChatGPT Image 1 нояб. 2025 г., 13_59_53.png\n\nТы почувствовал запах её ДУХОВ? (**духо́в**)\nТы слышал легенду про ДУХОВ леса? (**ду́хов**)",
+      "content": "Потренируйтесь слышать ударение в словах. Нажмите в каждом выделенном слове на **ударную гласную**.",
       "id": "auto-mark-6fe9"
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 1 нояб. 2025 г., 14_01_50.png]]\n\nЭтот красивый цветок называется ИРИС. (**и́рис**)\nЭта вкусная конфета – ИРИС.  (**ири́с**)",
-      "id": "auto-mark-1d05"
+      "type": "ClickWord",
+      "id": "l13-n12-clkw-el25",
+      "content": {
+        "question": "<img src=\"/lessons/духи.jpeg\" class=\"lesson-image img-lg\" alt=\"Духи\">",
+        "tasks": [
+          {
+            "id": "l13-n12-clkw-el25-t1",
+            "text": "Ты почувствовал запах её {{ДУХОВ}}?",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n12-clkw-el25-t2",
+            "text": "Ты слышал легенду про {{ДУХОВ}} леса?",
+            "correct_indices": [
+              1
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 6 нояб. 2025 г., 14_33_51.png]]\nФутболка сшита из ХЛОПКА. (**хло́пка**)\nМы вздрогнули от громкого ХЛОПКА. (**хлопка́**)",
-      "id": "auto-mark-afa1"
+      "type": "ClickWord",
+      "id": "l13-n14-clkw-gg8i",
+      "content": {
+        "question": "<img src=\"/lessons/ирис.jpeg\" class=\"lesson-image img-lg\" alt=\"Ирис\">",
+        "tasks": [
+          {
+            "id": "l13-n14-clkw-gg8i-t1",
+            "text": "Этот красивый цветок называется {{ИРИС}}.",
+            "correct_indices": [
+              0
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n14-clkw-gg8i-t2",
+            "text": "Эта вкусная конфета – {{ИРИС}}.",
+            "correct_indices": [
+              2
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 6 нояб. 2025 г., 14_26_06.png]]\n\nПечень – жизненно важный орган. (**о́рган**)\nМы слушали, как наш дядя играл на органе. (**орга́не**)",
-      "id": "auto-mark-2e8d"
+      "type": "ClickWord",
+      "id": "l13-n16-clkw-cxll",
+      "content": {
+        "question": "<img src=\"/lessons/хлопок.jpeg\" class=\"lesson-image img-lg\" alt=\"Хлопок\">",
+        "tasks": [
+          {
+            "id": "l13-n16-clkw-cxll-t1",
+            "text": "Футболка сшита из {{ХЛОПКА}}.",
+            "correct_indices": [
+              2
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n16-clkw-cxll-t2",
+            "text": "Мы вздрогнули от громкого {{ХЛОПКА}}.",
+            "correct_indices": [
+              5
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 1 нояб. 2025 г., 14_04_46.png]]\n\nЧтобы испечь пирожки, понадобиться МУКА. (**мука́**)\nЗубная боль – настоящая МУКА. (**му́ка**)",
-      "id": "auto-mark-070d"
+      "type": "ClickWord",
+      "id": "l13-n18-clkw-5yo9",
+      "content": {
+        "question": "<img src=\"/lessons/орган.jpeg\" class=\"lesson-image img-lg\" alt=\"Орган\">",
+        "tasks": [
+          {
+            "id": "l13-n18-clkw-5yo9-t1",
+            "text": "Печень – жизненно важный {{ОРГАН}}.",
+            "correct_indices": [
+              0
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n18-clkw-5yo9-t2",
+            "text": "Мы слушали, как наш дядя играл на {{ОРГАНЕ}}.",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 6 нояб. 2025 г., 13_48_21.png]]\n\nСТРЕЛКИ часов остановились. (**стре́лки**)\nСТРЕЛКИ по мишеням задерживают дыхание перед выстрелом. (**стрелки́**)",
-      "id": "auto-mark-65e5"
+      "type": "ClickWord",
+      "id": "l13-n20-clkw-udwp",
+      "content": {
+        "question": "<img src=\"/lessons/мука.jpeg\" class=\"lesson-image img-lg\" alt=\"Мука\">",
+        "tasks": [
+          {
+            "id": "l13-n20-clkw-udwp-t1",
+            "text": "Чтобы испечь пирожки, понадобится {{МУКА}}.",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n20-clkw-udwp-t2",
+            "text": "Зубная боль – настоящая {{МУКА}}.",
+            "correct_indices": [
+              1
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 6 нояб. 2025 г., 13_59_56.png]]\n\nПапа показал мне географический АТЛАС. (**а́тлас**)\nПлатье сшито из АТЛАСА. (**атла́с**)",
-      "id": "auto-mark-6e83"
+      "type": "ClickWord",
+      "id": "l13-n22-clkw-4mko",
+      "content": {
+        "question": "<img src=\"/lessons/стрелки.jpeg\" class=\"lesson-image img-lg\" alt=\"Стрелки\">",
+        "tasks": [
+          {
+            "id": "l13-n22-clkw-4mko-t1",
+            "text": "{{СТРЕЛКИ}} часов остановились.",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n22-clkw-4mko-t2",
+            "text": "{{СТРЕЛКИ}} по мишеням задерживают дыхание перед выстрелом.",
+            "correct_indices": [
+              6
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "![[ChatGPT Image 6 нояб. 2025 г., 14_04_45.png]]\n\nНа подоконнике в вазе стоят красные ГВОЗДИКИ. (**гвозди́ки**)\nЧтобы закрепить дно ящика, мы использовали маленькие ГВОЗДИКИ. (**гво́здики**)\n",
-      "id": "auto-mark-48b4"
+      "type": "ClickWord",
+      "id": "l13-n24-clkw-47kr",
+      "content": {
+        "question": "<img src=\"/lessons/атлас.jpeg\" class=\"lesson-image img-lg\" alt=\"Атлас\">",
+        "tasks": [
+          {
+            "id": "l13-n24-clkw-47kr-t1",
+            "text": "Папа показал мне географический {{АТЛАС}}.",
+            "correct_indices": [
+              0
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n24-clkw-47kr-t2",
+            "text": "Платье сшито из {{АТЛАСА}}.",
+            "correct_indices": [
+              3
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
+    },
+    {
+      "type": "ClickWord",
+      "id": "l13-n26-clkw-od7r",
+      "content": {
+        "question": "<img src=\"/lessons/гвоздики.jpeg\" class=\"lesson-image img-lg\" alt=\"Гвоздики\">",
+        "tasks": [
+          {
+            "id": "l13-n26-clkw-od7r-t1",
+            "text": "На подоконнике в вазе стоят красные {{ГВОЗДИКИ}}.",
+            "correct_indices": [
+              5
+            ],
+            "feedback-incorrect": null
+          },
+          {
+            "id": "l13-n26-clkw-od7r-t2",
+            "text": "Чтобы закрепить дно ящика, мы использовали маленькие {{ГВОЗДИКИ}}.",
+            "correct_indices": [
+              2
+            ],
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "multi-select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -154,7 +408,7 @@
     },
     {
       "type": "markdown",
-      "content": "> **Сильная позиция** – это позиция, в которой звук точно совпадает с буквой, которая его отображает на письме. **Слабая позиция** – это позиция, в которой звук *может не совпадать* с буквой. ",
+      "content": "**Сильная позиция** – это позиция, в которой звук точно совпадает с буквой, которая его отображает на письме. **Слабая позиция** – это позиция, в которой звук *может не совпадать* с буквой. ",
       "id": "auto-mark-534d"
     },
     {
@@ -165,10 +419,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l13-n19-fibl-id89",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Рассмотрим пары слов сам – сом, лес – лис. Выпишите, какой гласный звук в первом слове, какой – во втором",
         "tasks": [
@@ -199,15 +449,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l13-n20-qsel-9r7l",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Гласные в этих словах ударные или безударные? ",
         "options": [
@@ -228,15 +478,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Эти гласные звуки стоят в ударной позиции. Мы ясно слышим [а], [о], [э], [и]"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l13-n21-fibl-4d6p",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Посмотрим, что произойдет, если мы поставим их в безударную позицию. Выпишите, какие вы слышите звуки на месте выделенных букв. ",
         "tasks": [
@@ -264,7 +514,7 @@
           },
           {
             "id": "l13-n21-fibl-4d6p-t3",
-            "text": "2. Вокруг озёр растут хвойные л<u>о</u>са. [___]",
+            "text": "2. Вокруг озёр растут хвойные л<u>е</u>са. [___]",
             "correctAnswers": [
               "и"
             ],
@@ -275,7 +525,7 @@
           },
           {
             "id": "l13-n21-fibl-4d6p-t4",
-            "text": "Среди деревьев промелькнул хвост рыжей л<u>о</u>сы. [___]",
+            "text": "Среди деревьев промелькнул хвост рыжей л<u>и</u>сы. [___]",
             "correctAnswers": [
               "и"
             ],
@@ -287,20 +537,46 @@
         ],
         "button_text": "Проверить",
         "result_text": "В первом случае мы слышим звук, наиболее близкий к [а] в обоих словах. Во втором случае – близкий к [и]. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "ЗДЕСЬ НУЖЕН СЕЛЕКТЛИСТ В ТЕКСТЕ\n\nПолучается, что мы не знаем, совпадёт ли гласный звук и буква, его обозначающая, в безударной позиции. Эта позиция для а, о, и, э `слабая/сильная`. Чтобы принять решение, какую гласную букву писать, нам нужно будет провести проверку. ",
-      "id": "auto-mark-6709"
+      "type": "SelectText",
+      "id": "l12-n32-selt-cprd",
+      "content": {
+        "text": "Получается, что мы не знаем, совпадёт ли гласный звук и буква, его обозначающая, в безударной позиции. Эта позиция для а, о, и, э {{l12-n32-selt-cprd-t1}}. Чтобы принять решение, какую гласную букву писать, нам нужно будет провести проверку. ",
+        "tasks": [
+          {
+            "id": "l12-n32-selt-cprd-t1",
+            "options": [
+              {
+                "id": "l12-n32-selt-cprd-t1-opt1",
+                "content": "слабая",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n32-selt-cprd-t1-opt2",
+                "content": "сильная",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": "Позиция слабая: мы не можем определить по звучанию, какую букву писать. "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l13-n24-fibl-qbqv",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Проверим *ы* и *у*. Поставим их в ударную и безударную позиции и сравним. Выпишите звуки подчёркнутых гласных.",
         "tasks": [
@@ -343,15 +619,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l13-n24-qsel-rr2j",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Меняются ли звуки [ы] и [у], когда оказываются без ударения?",
         "options": [
@@ -372,20 +648,78 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
-      "type": "markdown",
-      "content": "ЗДЕСЬ НУЖЕН СЕЛЕКТЛИСТ В ТЕКСТЕ. \n\n[ы] и [у] всегда находятся в сильной/слабой позиции. Если мы слышим эти звуки, мы пишем соответствующие буквы: [ы] - ы, [у] - у после твёрдых согласных, ю после мягких согласных. \n\nДля [а], [о], [э], [и] ударная/безударная позиция является слабой. Нам нужно провести проверку, чтобы принять решение, какую гласную букву написать. Сильная позиция для этих гласных – ударная/безударная.",
-      "id": "auto-mark-32e5"
+      "type": "SelectText",
+      "id": "l12-n25-selt-4l2i",
+      "content": {
+        "text": "[ы] и [у] всегда находятся в {{l12-n25-selt-4l2i-t1}} позиции. Если мы слышим эти звуки, мы пишем соответствующие буквы: [ы] - Ы, [у] - Ы после твёрдых согласных, Ю после мягких согласных. \n\nДля [а], [о], [э], [и] {{l12-n25-selt-4l2i-t2}} позиция является слабой. Нам нужно провести проверку, чтобы принять решение, какую гласную букву написать. Сильная позиция для этих гласных – {{l12-n25-selt-4l2i-t3}}.",
+        "tasks": [
+          {
+            "id": "l12-n25-selt-4l2i-t1",
+            "options": [
+              {
+                "id": "l12-n25-selt-4l2i-t1-opt1",
+                "content": "слабой",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n25-selt-4l2i-t1-opt2",
+                "content": "сильной",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": "Позиция сильная: мы можем определить по звучанию, какую букву писать. "
+          },
+          {
+            "id": "l12-n25-selt-4l2i-t2",
+            "options": [
+              {
+                "id": "l12-n25-selt-4l2i-t2-opt1",
+                "content": "ударная",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n25-selt-4l2i-t2-opt2",
+                "content": "безударная",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": "Слабая позиция - безударная. Под ударением мы можем ориентироваться на слух - какую гласную слышим, такую и пишем."
+          },
+          {
+            "id": "l12-n25-selt-4l2i-t3",
+            "options": [
+              {
+                "id": "l12-n25-selt-4l2i-t3-opt1",
+                "content": "ударная",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n25-selt-4l2i-t3-opt2",
+                "content": "безударная",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": "Сильная позиция для гласных - ударная"
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l13-n26-fibl-bb8s",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Как звучат выделенные гласные в безударной позиции после мягких согласных? \n\nп<u>и</u>сьмо\nс<u>е</u>стра\nм<u>я</u>чом",
         "tasks": [
@@ -403,15 +737,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l13-n27-fibl-tyxy",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Как звучат *а* и *о* в безударной позиции после твёрдых согласных? \n\nск<u>а</u>зал\nс<u>о</u>бака",
         "tasks": [
@@ -429,7 +763,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",

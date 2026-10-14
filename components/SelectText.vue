@@ -225,8 +225,15 @@ export default {
       return { prefix, suffix }
     },
 
+    getCorrectOptionId(task) {
+      const correctOpt = (task?.options || []).find(o => o.correct_option === true || o.correct === true)
+      return correctOpt ? correctOpt.id : task?.correct_option
+    },
+
     isCorrect(task) {
-      return this.userSelections[task.id] === task.correct_option
+      const selected = this.userSelections[task?.id]
+      const correctId = this.getCorrectOptionId(task)
+      return Boolean(selected) && selected === correctId
     },
 
     async checkResults() { 

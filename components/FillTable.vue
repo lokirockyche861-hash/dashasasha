@@ -401,10 +401,79 @@ export default {
     },
 
     isRowCorrect(groupId, rowIndex) {
-      const userAnswer = this.normalize(this.userAnswers[groupId]?.[rowIndex])
-      const correctAnswers = this.taskGroups[groupId]?.[rowIndex]?.input?.correctAnswers || []
-        if (correctAnswers.length === 0) return false
-        return correctAnswers.map(this.normalize).some(ans => ans === userAnswer)
+      const userAnswer = this.userAnswers[groupId]?.[rowIndex]
+      const row = this.taskGroups[groupId]?.[rowIndex]
+      const correctAnswers = row?.input?.correctAnswers || []
+
+      if (!correctAnswers || correctAnswers.length === 0) return false
+
+      // 1. Проверяем случай, когда правильный ответ — пустое поле
+      const allSlotsEmpty = correctAnswers.every(slot => {
+        if (Array.isArray(slot)) {
+          return slot.length === 0 || slot.every(s => this.normalize(s) === '')
+        }
+        return this.normalize(slot) === ''
+      })
+
+      const normalizedUser = this.normalize(userAnswer)
+
+      if (allSlotsEmpty) {
+        return normalizedUser === ''
+      }
+
+      if (normalizedUser === '') {
+        return false
+      }
+
+      // 2. Формируем ожидаемые слоты (логика AND по умолчанию, OR для вложенных массивов)
+      const expectedSlots = correctAnswers.map(slot => {
+        if (Array.isArray(slot)) {
+          return slot.map(s => this.normalize(s)).filter(s => s !== '')
+        }
+        const norm = this.normalize(slot)
+        return norm !== '' ? [norm] : []
+      }).filter(slot => slot.length > 0)
+
+      if (expectedSlots.length === 0) return false
+
+      // 3. Функция сопоставления токенов со слотами методом вычеркивания
+      const matchesSlots = (tokens) => {
+        if (tokens.length !== expectedSlots.length) return false
+        const remaining = expectedSlots.map(slot => [...slot])
+        for (const token of tokens) {
+          const matchIndex = remaining.findIndex(synonyms => synonyms.includes(token))
+          if (matchIndex === -1) return false
+          remaining.splice(matchIndex, 1)
+        }
+        return remaining.length === 0
+      }
+
+      // 4. Сначала разбиваем ввод по запятой или точке с запятой
+      const commaTokens = (userAnswer ?? '')
+        .toString()
+        .split(/[,;]/)
+        .map(t => this.normalize(t))
+        .filter(t => t !== '')
+
+      if (matchesSlots(commaTokens)) {
+        return true
+      }
+
+      // 5. Если через запятую не совпало (например, ученик разделил пробелом "без енн"), пробуем разбить по пробелам
+      if (commaTokens.length === 1 && expectedSlots.length > 1) {
+        const spaceTokens = (userAnswer ?? '')
+          .toString()
+          .trim()
+          .split(/\s+/)
+          .map(t => this.normalize(t))
+          .filter(t => t !== '')
+
+        if (matchesSlots(spaceTokens)) {
+          return true
+        }
+      }
+
+      return false
     },
     
     getUserAnswer(groupId, rowIndex) {

@@ -111,7 +111,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -198,7 +199,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -300,7 +302,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillText",
@@ -322,7 +325,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -380,7 +384,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -487,7 +492,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "SelectList",
@@ -573,7 +579,8 @@
       },
       "answer_type": "select",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -642,7 +649,8 @@
       },
       "answer_type": "select",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillText",
@@ -811,7 +819,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -880,7 +889,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -1018,7 +1028,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -1146,7 +1157,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -1249,7 +1261,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -1340,7 +1353,8 @@
       },
       "answer_type": "input",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "SelectList",
@@ -1445,7 +1459,8 @@
       },
       "answer_type": "select",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     },
     {
       "type": "DragAndDrop",
@@ -1662,7 +1677,8 @@
       },
       "answer_type": "match",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "taskVersion": "v.1.0",
+      "blocked": false
     }
   ],
   "lesson_id": "lesson3",

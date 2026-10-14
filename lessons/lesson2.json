@@ -16,22 +16,81 @@
       "id": "auto-mark-05f2"
     },
     {
+      "type": "SelectText",
+      "id": "l12-n21-selt-gq7p",
+      "content": {
+        "text": "Если морфема выражает грамматическое значение, она _образует только форму слова, а не новое слово – она {{l12-n21-selt-gq7p-t1}}",
+        "tasks": [
+          {
+            "id": "l12-n21-selt-gq7p-t1",
+            "options": [
+              {
+                "id": "l12-n21-selt-gq7p-t1-opt1",
+                "content": "формообразующая",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n21-selt-gq7p-t1-opt2",
+                "content": "словообразовательная",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": "Образует форму - формообразующая морфема. Всё просто! "
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": ""
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
+    },
+    {
       "type": "markdown",
       "content": "Значит, «поймать» такие морфемы можно, изменяя его форму. Такими частями слова могут быть окончания, а также некоторые суффиксы и постфиксы. В этом уроке мы поговорим об **_окончаниях._**",
       "id": "auto-mark-806d"
     },
     {
       "type": "markdown",
-      "content": "**_Окончание –_** изменяемая часть слова, стоящая в конце. Она меняет форму слова, **_чтобы связать его с другими словами_** в предложении. \n\n**Например:** \nНа столе лежит красн**ая** книг**а**.\n- *что? – книг**а***\n- *какая? – красн**ая***\n\nУ меня нет красн**ой** книг**и**\n- *нет чего? – книг**и***\n- *какой? – красн**ой*** \n",
+      "content": "**_Окончание –_** изменяемая часть слова, стоящая в конце. Она меняет форму слова, **_чтобы связать его с другими словами_** в предложении. \n\n**Например:** \nНа столе лежит красн**ая** книг**а**.\n- *что? – книг**а***\n- *какая? – красн**ая***\n",
       "id": "auto-mark-7732"
     },
     {
+      "type": "FillInTheBlank",
+      "id": "l12-n22-fibl-nm8r",
+      "content": {
+        "question": "А теперь кое-что изменим. Согласуйте слова друг с другом",
+        "tasks": [
+          {
+            "id": "l12-n22-fibl-nm8r-t1",
+            "text": "У меня нет *(какой?)* красн___ *(чего?)* книг___",
+            "correctAnswers": [
+              "ой",
+              "и"
+            ],
+            "answerType": "single",
+            "minWidth": null,
+            "feedback-correct": null,
+            "feedback-incorrect": null
+          }
+        ],
+        "button_text": "Проверить",
+        "result_text": "По-русски мы не можем сказать «У меня нет красная книга» – нам нужно связать между собой слова. Поэтому предложение будет выглядеть так: \n**У меня нет красной книги.** "
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
+    },
+    {
       "type": "markdown",
-      "content": "По-русски мы не можем сказать «_У меня нет красная книга» –_ нам нужно связать между собой слова. \n\nНам нужен простой и действенный инструмент, чтобы находить окончания. Инструменты и для именных частей речи (предметы, признаки, количество) и для форм глагола (действия) будут отличаться.\n\nИсследуем сначала предметы, признаки, количество (существительное, прилагательное, числительное).\n\n",
+      "content": "Нам нужен простой и действенный инструмент, чтобы находить окончания. Инструменты и для именных частей речи (предметы, признаки, количество) и для форм глагола (действия) будут отличаться.\n\nИсследуем сначала предметы, признаки, количество (существительное, прилагательное, числительное).",
       "id": "auto-mark-339d"
     },
     {
       "type": "FillInTheBlank",
+      "id": "auto-fill-7567",
       "content": {
         "question": "Поставьте слово *стол* в правильную форму – так, чтобы слова были согласованы. Оставьте слово *стол* в единственном числе.",
         "tasks": [
@@ -72,10 +131,10 @@
         "result_text": "То, что мы сейчас вписали, и есть окончание.",
         "button_text": "Проверить"
       },
-      "id": "auto-fill-7567",
-      "skill_id": "",
       "taskVersion": "v.1.0",
-      "answer_type": "input"
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -296,9 +355,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "skill_id": "",
       "taskVersion": "v.1.0",
-      "answer_type": "input"
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -348,9 +408,10 @@
         "result_text": "То, что вы сейчас изменяли, и есть окончание прилагательного.",
         "button_text": "Проверить"
       },
-      "skill_id": "",
       "taskVersion": "v.1.0",
-      "answer_type": "input"
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -558,9 +619,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "skill_id": "",
       "taskVersion": "v.1.0",
-      "answer_type": "input"
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -603,9 +665,10 @@
         "result_text": "Окончания числительных тоже можно найти, изменив слово по падежам: достаточно двух  – например, можно использовать\n- родительный (_скольких?_) \n- и творительный (_сколькими?_).",
         "button_text": "Проверить"
       },
-      "skill_id": "",
       "taskVersion": "v.1.0",
-      "answer_type": "input"
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -677,7 +740,7 @@
               "id": "l2-n15-filt-2w86-r5",
               "input": {
                 "correctAnswers": [
-                  "-ю"
+                  "ю"
                 ],
                 "placeholder": "впишите ответ",
                 "feedback-correct": "Верно! Окончание -ю",
@@ -795,9 +858,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -1078,9 +1142,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
@@ -1157,9 +1222,10 @@
         "result_text": "Мы изменяли число разных форм глаголов и использовали для этого окончания. ",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -1343,7 +1409,10 @@
               "input": {
                 "correctAnswers": [
                   "ий",
-                  "0"
+                  [
+                    "0",
+                    "нулевое"
+                  ]
                 ],
                 "placeholder": "впишите через запятую",
                 "feedback-correct": "Верно! РаботавшИЙ - работавшИЕ, уснул - уснулИ. Окончание -ИЙ в первом слове, а во втором нулевое, так как проявилось только при изменении числа. ",
@@ -1371,7 +1440,10 @@
               "input": {
                 "correctAnswers": [
                   "ет",
-                  "0"
+                  [
+                    "0",
+                    "нулевое"
+                  ]
                 ],
                 "placeholder": "впишите через запятую",
                 "feedback-correct": "Верно! ",
@@ -1385,9 +1457,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -1589,8 +1662,10 @@
               "id": "l2-n20-filt-qrvc-r15",
               "input": {
                 "correctAnswers": [
-                  "ёв",
-                  "ев"
+                  [
+                    "ёв",
+                    "ев"
+                  ]
                 ],
                 "placeholder": "впишите ответ",
                 "feedback-correct": "Верно! ",
@@ -1642,8 +1717,10 @@
               "id": "l2-n20-filt-qrvc-r19",
               "input": {
                 "correctAnswers": [
-                  "ём",
-                  "ем"
+                  [
+                    "ём",
+                    "ем"
+                  ]
                 ],
                 "placeholder": "впишите ответ",
                 "feedback-correct": "Верно! ",
@@ -1774,9 +1851,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     }
   ],
   "schema": "v1",

@@ -9,10 +9,6 @@
     {
       "type": "QuizSelect",
       "id": "l10-n3-qsel-okl8",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "Произнесите [в], [з], [ж], положив руку на горло. Как бы вы охарактеризовали эти звуки?",
         "options": [
@@ -40,7 +36,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "В этих звуках есть и шум, и тон!"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -50,10 +50,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l10-n4-fibl-7gsi",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Теперь произнесите звук [в] и уберите из него тон (звучание голосовых связок) - просто выдувайте воздух.",
         "tasks": [
@@ -71,15 +67,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Если мы уберём тон и оставим только шум, мы получим звук [ф]! Такой звук тоже есть в русском языке."
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillInTheBlank",
       "id": "l10-n5-fibl-7d1x",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "question": "Уберите тон из звуков [з] и [ж]. Какие звуки получаются?",
         "tasks": [
@@ -108,38 +104,58 @@
         ],
         "button_text": "Проверить",
         "result_text": "Получаются звуки [c] и [ш] – такие звуки не требуют тона, достаточно просто выдоха и шума, который образуется из-за препятствий во рту. "
-      }
-    },
-    {
-      "type": "FillText",
-      "id": "l10-n6-ftxt-bdug",
+      },
       "taskVersion": "v.1.0",
       "skill_id": "",
       "answer_type": "input",
-      "blocked": true,
+      "blocked": false
+    },
+    {
+      "type": "SelectText",
+      "id": "l12-n17-selt-j2er",
       "content": {
-        "text": "Сделаем вывод. \nТаким образом, мы видим, что согласные могут быть **звонкими** и **глухими**. \nДля произнесения {{l10-n6-ftxt-bdug-t1}} используется только шум. Для произнесения {{l10-n6-ftxt-bdug-t2}} шум и тон. ",
+        "text": "Сделаем вывод. \nТаким образом, мы видим, что согласные могут быть **звонкими** и **глухими**. Для произнесения {{l12-n17-selt-j2er-t1}} используется только шум. Для произнесения {{l12-n17-selt-j2er-t2}} – шум и тон. ",
         "tasks": [
           {
-            "id": "l10-n6-ftxt-bdug-t1",
-            "text": "подсказка/шаблон для ответа",
-            "correctAnswer": "глухих",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "глухих"
+            "id": "l12-n17-selt-j2er-t1",
+            "options": [
+              {
+                "id": "l12-n17-selt-j2er-t1-opt1",
+                "content": "глухих",
+                "correct_option": true
+              },
+              {
+                "id": "l12-n17-selt-j2er-t1-opt2",
+                "content": "звонких",
+                "correct_option": false
+              }
+            ],
+            "feedback-incorrect": null
           },
           {
-            "id": "l10-n6-ftxt-bdug-t2",
-            "text": "",
-            "correctAnswer": "звонких",
-            "minWidth": null,
-            "feedback-correct": "да!",
-            "feedback-incorrect": "звонких"
+            "id": "l12-n17-selt-j2er-t2",
+            "options": [
+              {
+                "id": "l12-n17-selt-j2er-t2-opt1",
+                "content": "глухих",
+                "correct_option": false
+              },
+              {
+                "id": "l12-n17-selt-j2er-t2-opt2",
+                "content": "звонких",
+                "correct_option": true
+              }
+            ],
+            "feedback-incorrect": null
           }
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -149,10 +165,6 @@
     {
       "type": "DragAndDrop",
       "id": "l10-n8-drop-x5yf",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "match",
-      "blocked": false,
       "content": {
         "question": "Перетащите карточки в группы",
         "layout": "matrix",
@@ -229,15 +241,15 @@
         "button_text": "Проверить",
         "result_text": "Отлично! Если вы допустили ошибки, попробуйте выполнить задание ещё раз. Произносите звонкий согласный - убирайте тон (голос) и слушайте, какой глухой согласный получился. ",
         "show_feedback": false
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l10-n9-qsel-4uxm",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "Рассмотрим группу согласных звуков [х], [ц], [ч’], [щ’]. Они звонкие или глухие? ",
         "options": [
@@ -258,15 +270,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l10-n10-qsel-1kho",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": false,
       "content": {
         "question": "Есть ли у согласных звуков [х], [ц], [ч’], [щ’] звонкие пары, как у [c] - [з], например? Попробуй добавить тон. ",
         "options": [
@@ -287,15 +299,15 @@
         ],
         "button_text": "Проверить",
         "result_text": "Эти звуки непарные по звонкости-глухости. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
       "id": "l10-n11-qsel-tl9d",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "Давайте рассмотрим звуки [м], [л], [н], [р], [й’]. Они звонкие или глухие? ",
         "options": [
@@ -316,15 +328,15 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "QuizSelect",
       "id": "l10-n12-qsel-459a",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "select",
-      "blocked": true,
       "content": {
         "question": "Попробуйте образовать для этих звуков глухие пары. Получится ли произнести эти звуки без тона? ",
         "options": [
@@ -345,7 +357,11 @@
         ],
         "button_text": "Проверить",
         "result_text": "Вы могли заметить, что эти буквы без тона практически не слышны. "
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -360,10 +376,6 @@
     {
       "type": "DragAndDrop",
       "id": "l10-n15-drop-uf94",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "match",
-      "blocked": false,
       "content": {
         "question": "Рассортируй согласные на шумные звонкие, шумные глухие и сонорные.\nШумные глухие = только тон\nШумные звонкие = шум+тон примерно в равном соотношении. Если убрать тон, услышим парный глухой согласный\nСонорные = много тона+немного шума. Почти не слышны и неразличимы, если произнести шёпотом. ",
         "layout": "columns",
@@ -484,15 +496,15 @@
         "button_text": "Проверить",
         "result_text": "Отлично! Если вы допустили ошибки, попробуйте ещё раз протестировать звуки, произнося их вслух и подбирая, если возможно, пару по звонкости-глухости.",
         "show_feedback": false
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "match",
+      "blocked": false
     },
     {
       "type": "FillText",
       "id": "l10-n16-ftxt-0roq",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": false,
       "content": {
         "text": "Подведём итог. Заполните пропуски. \nСогласные, для произнесения которых используется только {{l10-n16-ftxt-0roq-t1}}, называются **глухие шумные**. \nСогласные, для произнесения которых нужны и шум, и {{l10-n16-ftxt-0roq-t2}} в одинаковой степени, называются **звонкие шумные.**\nСогласные, для произнесения которых используется преимущественно {{l10-n16-ftxt-0roq-t3}}, называются **сонорные**.",
         "tasks": [
@@ -523,7 +535,11 @@
         ],
         "button_text": "Проверить",
         "result_text": ""
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": false
     }
   ],
   "lesson_id": "lesson10",

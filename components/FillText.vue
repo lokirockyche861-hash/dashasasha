@@ -331,9 +331,112 @@ export default {
     },
 
     isCorrect(task) {
-      const user = this.normalize(this.userAnswers?.[task.id])
-      const right = this.normalize(task?.correctAnswer)
-      return user.length > 0 && right.length > 0 && user === right
+      const userAnswer = this.userAnswers?.[task?.id]
+      const rawCorrect = task?.correctAnswers ?? task?.correctAnswer
+
+      // 1. Проверяем случай, когда правильный ответ — оставить поле пустым
+      const isEmptyExpected = rawCorrect === '' ||
+        rawCorrect === null ||
+        rawCorrect === undefined ||
+        (Array.isArray(rawCorrect) && (
+          rawCorrect.length === 0 ||
+          rawCorrect.every(s => {
+            if (Array.isArray(s)) return s.length === 0 || s.every(sub => this.normalize(sub) === '')
+            return this.normalize(s) === ''
+          })
+        ))
+
+      const normalizedUser = this.normalize(userAnswer)
+
+      if (isEmptyExpected) {
+        return normalizedUser === ''
+      }
+
+      if (normalizedUser === '') {
+        return false
+      }
+
+      // 2. Если передан массив (вложенный массив как маркер синонимов OR, либо плоский массив)
+      if (Array.isArray(rawCorrect)) {
+        const hasNestedArray = rawCorrect.some(item => Array.isArray(item))
+
+        if (hasNestedArray) {
+          // Логика слотов: внешний массив AND, вложенный массив OR
+          const expectedSlots = rawCorrect.map(slot => {
+            if (Array.isArray(slot)) return slot.map(s => this.normalize(s)).filter(Boolean)
+            const norm = this.normalize(slot)
+            return norm ? [norm] : []
+          }).filter(slot => slot.length > 0)
+
+          if (expectedSlots.length === 0) return false
+
+          const matchesSlots = (tokens) => {
+            if (tokens.length !== expectedSlots.length) return false
+            const remaining = expectedSlots.map(slot => [...slot])
+            for (const token of tokens) {
+              const matchIndex = remaining.findIndex(synonyms => synonyms.includes(token))
+              if (matchIndex === -1) return false
+              remaining.splice(matchIndex, 1)
+            }
+            return remaining.length === 0
+          }
+
+          // Сначала пробуем разбиение по запятой / точке с запятой
+          const commaTokens = (userAnswer ?? '')
+            .toString()
+            .split(/[,;]/)
+            .map(t => this.normalize(t))
+            .filter(Boolean)
+
+          if (matchesSlots(commaTokens)) {
+            return true
+          }
+
+          // Если токен один, но слотов несколько — пробуем пробелы
+          if (commaTokens.length === 1 && expectedSlots.length > 1) {
+            const spaceTokens = (userAnswer ?? '')
+              .toString()
+              .trim()
+              .split(/\s+/)
+              .map(t => this.normalize(t))
+              .filter(Boolean)
+
+            if (matchesSlots(spaceTokens)) {
+              return true
+            }
+          }
+
+          return false
+        } else {
+          // Плоский массив вариантов для одного поля: проверяем как список синонимов (OR)
+          const flatSynonyms = rawCorrect.map(s => this.normalize(s)).filter(Boolean)
+          if (flatSynonyms.includes(normalizedUser)) {
+            return true
+          }
+
+          // Также поддерживаем случай, если автор перечислил несколько частей через запятую ["часть1", "часть2"]
+          const commaTokens = (userAnswer ?? '')
+            .toString()
+            .split(/[,;]/)
+            .map(t => this.normalize(t))
+            .filter(Boolean)
+
+          if (commaTokens.length === flatSynonyms.length) {
+            const remaining = [...flatSynonyms]
+            for (const token of commaTokens) {
+              const idx = remaining.indexOf(token)
+              if (idx === -1) return false
+              remaining.splice(idx, 1)
+            }
+            return remaining.length === 0
+          }
+
+          return false
+        }
+      }
+
+      // 3. Одиночная строка
+      return normalizedUser === this.normalize(rawCorrect)
     },
 
     async checkResults() { 

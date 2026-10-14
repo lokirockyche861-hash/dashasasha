@@ -3,7 +3,7 @@
   "content": [
     {
       "type": "markdown",
-      "content": "### **Урок 5. Словообразовательные приставки и суффиксы. Как их найти и выделить?** ",
+      "content": "# **Урок 5. Словообразовательные приставки и суффиксы. Как их найти и выделить?** ",
       "id": "auto-mark-5fe3"
     },
     {
@@ -24,10 +24,6 @@
     {
       "type": "FillInTheBlank",
       "id": "l3-n43-fibl-f1bs",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "Заполните пропуски",
         "tasks": [
@@ -45,7 +41,11 @@
         ],
         "result_text": "",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -76,9 +76,10 @@
         "button_text": "Проверить",
         "result_text": "Значение размера в русском языке необязательно для выражения. Например, из слова *стол* мы никак не можем получить информацию о размере. "
       },
-      "answer_type": "select",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
@@ -104,9 +105,10 @@
         "button_text": "Проверить",
         "result_text": "Формообразующие морфемы выражают грамматическое значение - обязательное для выражения. Морфема -ИК- сообщает нам о размере, что необязательно. Следовательно, морфема -ИК- *словообразовательная*. "
       },
-      "answer_type": "select",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
@@ -132,9 +134,10 @@
         "button_text": "Проверить",
         "result_text": "Приставка стоит перед корнем, а суффикс - после корня перед окончанием. -ИК- - это суффикс, он стоит после корня -СТОЛ- "
       },
-      "answer_type": "select",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -176,10 +179,10 @@
         "button_result_text": "Проверить",
         "result_text": "Слово *стол* исходное, первое - то, от которого образуются более сложные слова с этим корнем. \n\nСлово *столик* - производное. Его, как и другие слова с этим корнем, произвело слово *стол*. "
       },
-      "answer_type": "select",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "select",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -188,16 +191,12 @@
     },
     {
       "type": "markdown",
-      "content": "###### **Мотивирование слова.**",
+      "content": "### **Мотивирование слова**",
       "id": "auto-mark-41af"
     },
     {
       "type": "FillInTheBlank",
       "id": "l3-n5-fibl-24ye",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "Давайте потренируемся определять, как образовано слово. Для этого мы будем давать ему определение, используя более простые однокоренные слова. Ваша задача – заполнить пропуски в определениях и выписать суффиксы и приставки, при помощи которых слово образовано. Если приставки или суффикса нет, просто ничего не вписывайте в поле. ",
         "tasks": [
@@ -235,15 +234,15 @@
         ],
         "result_text": "Итак, мы дали определение слову *котёнок* через слово *кот*, увидели, что оно отличается от более короткого только морфемой *-ёнок-*. Посмотрели, что эта морфема стоит после корня, перед окончанием – следовательно, это суффикс. Приставки нет.",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l3-n14-fibl-3ifk",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "",
         "tasks": [
@@ -283,15 +282,15 @@
         ],
         "result_text": "Прибежать - закончить бежать. Слова прибежать и бежать отличаются только морфемой при-, которая стоит в самом начале слова - перед корнем. Следовательно, это приставка.  ",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l3-n15-fibl-qgum",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "",
         "tasks": [
@@ -331,15 +330,15 @@
         ],
         "result_text": "Слово *подснежник* отличается от производящего слова *снег* двумя морфемами: под- и -ник-. Под- стоит перед корнем - это приставка. -Ник- стоит после корня - это суффикс.  ",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l3-n16-fibl-a5fr",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "",
         "tasks": [
@@ -379,15 +378,15 @@
         ],
         "result_text": "Слово *перелетать* отличается от производящего *летать* только приставкой пере-.",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
       "id": "l3-n17-fibl-0kn3",
-      "taskVersion": "v.1.0",
-      "skill_id": "",
-      "answer_type": "input",
-      "blocked": true,
       "content": {
         "question": "",
         "tasks": [
@@ -427,7 +426,11 @@
         ],
         "result_text": "Слово *синеватый* отличается от производящего слова *синий* только суффиксом -еват-. -ЫЙ/-ИЙ - это окончание (формообразующая морфема). ",
         "button_text": "Проверить"
-      }
+      },
+      "taskVersion": "v.1.0",
+      "skill_id": "",
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -436,7 +439,7 @@
     },
     {
       "type": "markdown",
-      "content": "###### **Словообразовательные цепочки**",
+      "content": "### **Словообразовательные цепочки**",
       "id": "auto-mark-83a6"
     },
     {
@@ -470,10 +473,10 @@
         "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
@@ -496,10 +499,10 @@
         "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
@@ -525,10 +528,10 @@
         "result_text": "Не переживайте, если вы ошиблись. Вы только учитесь составлять словообразовательные цепочки, это бывает непросто даже для профессиональных лингвистов!",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "markdown",
@@ -577,10 +580,10 @@
         "result_text": "Получилась такая цепочка основ: пересортировк ← пересортирова ← сортирова ← сорт",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillText",
@@ -616,9 +619,10 @@
         "result_text": "Итак, мы получили такие морфемы: -к-, пере-, -иров-",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -691,9 +695,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "QuizSelect",
@@ -726,9 +731,10 @@
         "button_text": "Проверить",
         "result_text": ""
       },
-      "answer_type": "select",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "select",
+      "blocked": false
     },
     {
       "type": "markdown",
@@ -756,10 +762,10 @@
         "result_text": "",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillInTheBlank",
@@ -782,10 +788,10 @@
         "result_text": "Отлично! Найдена словообразовательная цепочка: безлиственный - листва - лист",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -845,9 +851,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -867,10 +874,18 @@
               "id": "l4-n35-filt-b5xk-r1",
               "input": {
                 "correctAnswers": [
-                  "без",
-                  "енн"
+                  [
+                    "без",
+                    "без-"
+                  ],
+                  [
+                    "енн",
+                    "-енн-",
+                    "-енн",
+                    "енн-"
+                  ]
                 ],
-                "placeholder": "впишите ответ",
+                "placeholder": "впишите через запятую",
                 "feedback-correct": "Верно! Прибавилось две морфемы: без- и -енн-",
                 "feedback-incorrect": "Прибавилось две морфемы: без- и -енн-. Сравните: листв - БЕЗлиствЕНН"
               }
@@ -908,9 +923,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillTable",
@@ -1009,9 +1025,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillText",
@@ -1055,10 +1072,10 @@
         "result_text": "Прекрасно! Мы восстановили словообразовательную цепочку: устарелость - устарелый - устареть - стареть - старый",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -1144,10 +1161,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -1233,9 +1250,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -1320,8 +1338,10 @@
               "id": "l4-n40-filt-3nv5-r6",
               "input": {
                 "correctAnswers": [
-                  "0",
-                  "нулевое"
+                  [
+                    "0",
+                    "нулевое"
+                  ]
                 ],
                 "placeholder": "впишите ответ",
                 "feedback-correct": "Невероятно!",
@@ -1348,9 +1368,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
     },
     {
       "type": "FillText",
@@ -1386,10 +1407,10 @@
         "result_text": "Отлично! Мы получили цепочку: предохранитель - предохранить - охранить - хранить",
         "button_text": "Проверить"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -1462,10 +1483,10 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
-      "blocked": true,
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": true
     },
     {
       "type": "FillTable",
@@ -1550,8 +1571,10 @@
               "id": "l4-n40-filt-oqta-r6",
               "input": {
                 "correctAnswers": [
-                  "0",
-                  "нулевое"
+                  [
+                    "0",
+                    "нулевое"
+                  ]
                 ],
                 "placeholder": "впишите ответ",
                 "feedback-correct": "Потрясающе!",
@@ -1578,9 +1601,15 @@
         "button_text": "Проверить",
         "button_next_text": "Далее"
       },
-      "answer_type": "input",
+      "taskVersion": "v.1.0",
       "skill_id": "",
-      "taskVersion": "v.1.0"
+      "answer_type": "input",
+      "blocked": false
+    },
+    {
+      "type": "markdown",
+      "id": "l12-n44-md-suv7",
+      "content": "Итак, в этом уроке вы научились делать словообразовательные цепочки и делать морфемный разбор, опираясь на словообразование!"
     }
   ],
   "lesson_id": "lesson5",

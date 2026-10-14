@@ -4,13 +4,24 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const targetLessons = ['lesson11.json', 'lesson12.json', 'lesson13.json', 'lesson14.json'];
 const LESSONS_DIR = path.join(__dirname, '../lessons');
+
+const lessonFiles = fs.readdirSync(LESSONS_DIR)
+    .filter(f => f.startsWith('lesson') && f.endsWith('.json') && !f.includes('stucture'))
+    .sort((a, b) => {
+        const numA = parseInt(a.replace(/\D/g, ''), 10) || 0;
+        const numB = parseInt(b.replace(/\D/g, ''), 10) || 0;
+        return numA - numB;
+    });
+
+const targetLessons = process.argv[2] ? [process.argv[2]] : lessonFiles;
+let totalErrors = 0;
 
 function validateLesson(filename) {
     const filePath = path.join(LESSONS_DIR, filename);
     if (!fs.existsSync(filePath)) {
         console.log(`❌ ${filename} not found.`);
+        totalErrors++;
         return;
     }
 
@@ -20,6 +31,7 @@ function validateLesson(filename) {
         data = JSON.parse(raw);
     } catch (e) {
         console.log(`❌ ${filename} has invalid JSON: ${e.message}`);
+        totalErrors++;
         return;
     }
 
@@ -40,7 +52,8 @@ function validateLesson(filename) {
 
     const interactiveTypes = [
         'QuizSelect', 'QuizCheckbox', 'QuizSet', 'FillInTheBlank',
-        'FillTable', 'SelectList', 'FillText', 'DragAndDrop', 'DragTable'
+        'FillTable', 'SelectList', 'FillText', 'DragAndDrop', 'DragTable',
+        'SelectText', 'ClickWord'
     ];
 
     data.content.forEach((node, index) => {
@@ -55,7 +68,11 @@ function validateLesson(filename) {
         }
 
         // Check misplaced buttons
-        const interactivesRequiringInnerButtons = ['QuizSelect', 'QuizCheckbox', 'QuizSet', 'FillInTheBlank', 'FillTable', 'SelectList', 'FillText', 'DragAndDrop', 'DragTable'];
+        const interactivesRequiringInnerButtons = [
+            'QuizSelect', 'QuizCheckbox', 'QuizSet', 'FillInTheBlank',
+            'FillTable', 'SelectList', 'FillText', 'DragAndDrop', 'DragTable',
+            'SelectText', 'ClickWord'
+        ];
         if (interactivesRequiringInnerButtons.includes(node.type)) {
             if (node.button_text) errors.push(`${context}: 'button_text' should be placed inside 'content'`);
             if (node.button_next_text) errors.push(`${context}: 'button_next_text' should be placed inside 'content'`);
@@ -65,6 +82,7 @@ function validateLesson(filename) {
             if (node.skill_id === undefined) errors.push(`${context}: missing 'skill_id'`);
             if (node.taskVersion === undefined) warnings.push(`${context}: missing 'taskVersion'`);
             if (node.answer_type === undefined) errors.push(`${context}: missing 'answer_type'`);
+            if (node.blocked === undefined) errors.push(`${context}: missing 'blocked'`);
 
             // Specific logic validation
             if (node.type === 'QuizSelect') {
@@ -106,6 +124,31 @@ function validateLesson(filename) {
                     });
                 }
             }
+
+            if (node.type === 'ClickWord') {
+                if (!node.content.tasks || !Array.isArray(node.content.tasks)) {
+                    errors.push(`${context}: ClickWord missing 'tasks' array`);
+                } else {
+                    node.content.tasks.forEach((t, ti) => {
+                        if (!t.id) errors.push(`${context}: Task #${ti + 1} missing 'id'`);
+                        if (typeof t.text !== 'string') {
+                            errors.push(`${context}: Task ${t.id || ti + 1} missing or invalid 'text'`);
+                        } else {
+                            const match = t.text.match(/^(.*?)\{\{(.*?)\}\}(.*)$/s);
+                            const targetWord = match ? match[2] : t.text;
+                            if (!Array.isArray(t.correct_indices)) {
+                                errors.push(`${context}: Task ${t.id} missing 'correct_indices' array`);
+                            } else {
+                                t.correct_indices.forEach(idx => {
+                                    if (typeof idx !== 'number' || idx < 0 || idx >= targetWord.length) {
+                                        errors.push(`${context}: Task ${t.id} has invalid correct_index ${idx} for target word "${targetWord}" (length: ${targetWord.length})`);
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+            }
         }
     });
 
@@ -116,6 +159,7 @@ function logResult(filename, errors, warnings) {
     if (errors.length === 0 && warnings.length === 0) {
         console.log(`✅ ${filename} passed validation.`);
     } else {
+        totalErrors += errors.length;
         console.log(`🛑 ${filename} validation issues:`);
         errors.forEach(e => console.log(`   [ERROR] ${e}`));
         warnings.forEach(w => console.log(`   [WARN]  ${w}`));
@@ -123,3 +167,10 @@ function logResult(filename, errors, warnings) {
 }
 
 targetLessons.forEach(validateLesson);
+
+if (totalErrors > 0) {
+    console.log(`\n❌ Validation completed with ${totalErrors} error(s).`);
+    process.exit(1);
+} else {
+    console.log(`\n✨ All lessons (${targetLessons.length}) passed validation successfully!`);
+}
