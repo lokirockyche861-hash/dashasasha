@@ -2,11 +2,6 @@
   "schema": "v1",
   "content": [
     {
-      "type": "markdown",
-      "content": "# *Урок 3. Согласные звуки. Глухие и звонкие*",
-      "id": "auto-mark-9bd6"
-    },
-    {
       "type": "QuizSelect",
       "id": "l10-n3-qsel-okl8",
       "content": {
@@ -544,5 +539,5 @@
   ],
   "lesson_id": "lesson10",
   "lesson_version": "v.1.0",
-  "topicId": "topic_default"
+  "topicId": "phonetics"
 }

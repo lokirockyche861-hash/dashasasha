@@ -6,13 +6,41 @@
         <!-- Left Column: Theory -->
         <div class="column theory">
           <h2 class="column-title">Теория</h2>
-          <ul class="lesson-list">
-            <li v-for="l in theoryLessons" :key="l.id">
-              <NuxtLink :to="{ name: 'lesson-id', params: { id: l.id } }" class="lesson-link">
-                {{ l.title }}
-              </NuxtLink>
-            </li>
-          </ul>
+          
+          <!-- Раздел: Фонетика -->
+          <div v-if="phoneticsLessons.length" class="topic-section">
+            <h3 class="topic-title">Фонетика</h3>
+            <ul class="lesson-list">
+              <li v-for="l in phoneticsLessons" :key="l.id">
+                <NuxtLink :to="{ name: 'lesson-id', params: { id: l.id } }" class="lesson-link">
+                  {{ l.title }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Раздел: Морфемика -->
+          <div v-if="morphemicsLessons.length" class="topic-section">
+            <h3 class="topic-title">Морфемика</h3>
+            <ul class="lesson-list">
+              <li v-for="l in morphemicsLessons" :key="l.id">
+                <NuxtLink :to="{ name: 'lesson-id', params: { id: l.id } }" class="lesson-link">
+                  {{ l.title }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Дополнительные уроки теории (если появятся без темы) -->
+          <div v-if="otherTheoryLessons.length" class="topic-section">
+            <ul class="lesson-list">
+              <li v-for="l in otherTheoryLessons" :key="l.id">
+                <NuxtLink :to="{ name: 'lesson-id', params: { id: l.id } }" class="lesson-link">
+                  {{ l.title }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Right Column: Practice -->
@@ -33,14 +61,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { lessons } from '@/lessons'
 import MainLayout from '@/layouts/MainLayout.vue'
 
+// Группировка теоретических уроков: сначала Фонетика, затем Морфемика
+const phoneticsLessons = computed(() => lessons.filter(l => !l.isDecisionTree && l.topicId === 'phonetics'))
+const morphemicsLessons = computed(() => lessons.filter(l => !l.isDecisionTree && l.topicId === 'morphemics'))
+const otherTheoryLessons = computed(() => lessons.filter(l => !l.isDecisionTree && l.topicId !== 'phonetics' && l.topicId !== 'morphemics'))
 
-// Split lessons based on isDecisionTree flag
-// Note: In index.js, we need to ensure lessons have this flag. 
-// Currently only lesson-pol has it. We'll assume others don't.
-const theoryLessons = computed(() => lessons.filter(l => !l.isDecisionTree))
+// Практические уроки
 const practiceLessons = computed(() => lessons.filter(l => l.isDecisionTree))
 </script>
 
@@ -66,6 +96,24 @@ const practiceLessons = computed(() => lessons.filter(l => l.isDecisionTree))
   border-bottom: 2px solid #e2e8f0;
 }
 
+.topic-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.topic-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
 .lesson-list {
   list-style: none;
   padding: 0;
@@ -73,7 +121,11 @@ const practiceLessons = computed(() => lessons.filter(l => l.isDecisionTree))
 }
 
 .lesson-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.lesson-list li:last-child {
+  margin-bottom: 0;
 }
 
 .lesson-link {

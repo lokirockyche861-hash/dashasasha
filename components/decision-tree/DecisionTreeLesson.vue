@@ -6,6 +6,12 @@
       
       <!-- Left Column: Task -->
       <div class="column-task">
+        <div class="task-top-nav">
+          <NuxtLink to="/" class="back-home-link">
+            ← На главную
+          </NuxtLink>
+        </div>
+
         <div class="task-header">
           <div class="task-progress">
             Задание {{ currentTaskIndex + 1 }} из {{ tasks.length }}
@@ -359,10 +365,38 @@ const downloadReport = () => {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
   min-width: 0; /* Prevent overflow */
+}
+
+.task-top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.back-home-link:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
 }
 
 .column-graph {
@@ -373,6 +407,7 @@ const downloadReport = () => {
 }
 
 .task-header {
+  margin-top: auto;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -387,6 +422,7 @@ const downloadReport = () => {
 .task-card {
   width: 100%;
   text-align: center;
+  margin-bottom: auto;
 }
 
 .task-word {

@@ -2,11 +2,6 @@
   "schema": "v1",
   "content": [
     {
-      "type": "markdown",
-      "content": "# **Урок 6. Ударные и безударные гласные звуки. Сильная и слабая позиции гласных**",
-      "id": "auto-mark-52aa"
-    },
-    {
       "type": "FillInTheBlank",
       "id": "l13-n2-fibl-445j",
       "content": {
@@ -777,5 +772,5 @@
   ],
   "lesson_id": "lesson13",
   "lesson_version": "v.1.0",
-  "topicId": "topic_default"
+  "topicId": "phonetics"
 }

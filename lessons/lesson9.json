@@ -3,11 +3,6 @@
   "content": [
     {
       "type": "markdown",
-      "content": "#  *Звуки речи. Гласные и согласные звуки и буквы*",
-      "id": "auto-mark-ecfc"
-    },
-    {
-      "type": "markdown",
       "content": "Чтобы мы могли различать слова, они должны звучать по-разному. Именно звуками, которые использует человек в речи, занимается **фонетика**.",
       "id": "auto-mark-ffff"
     },
@@ -714,5 +709,5 @@
   ],
   "lesson_id": "lesson9",
   "lesson_version": "v.1.0",
-  "topicId": "topic_default"
+  "topicId": "phonetics"
 }
