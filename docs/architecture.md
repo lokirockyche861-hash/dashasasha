@@ -24,11 +24,12 @@
 - Каждый урок — это массив JSON-узлов с полями `id`, `type`, `content` и метаданными проверки.
 - Подробная спецификация форматов описана в [docs/lesson-schema.md](lesson-schema.md).
 
-### Деревья решений (Decision Tree)
+### Деревья решений и практические уроки (Decision Tree)
 В `pages/lesson/[id].vue` реализована проверка `isDecisionTree`:
-- Если урок является практическим алгоритмом (например, `lesson-pol`), подключается специальный лейаут `GraphLayout` и компонент `DecisionTreeLesson.vue`.
-- Структура графа загружается из `lessons/graph.json`, а задания — из `lessons/graph-task.json`.
-- Подробная спецификация графов описана в [docs/decision-tree.md](decision-tree.md).
+- Если урок является практическим алгоритмом (например, `lesson-pol`, `lesson-sh-ts-mid`, `lesson-soft-hard`), подключается лейаут `GraphLayout` и контейнер [`PracticeLessonContainer.vue`](../components/decision-tree/PracticeLessonContainer.vue) (двухпанельный макет: сворачиваемая вводная теория слева + тренажер с интерактивным графом справа).
+- Практические уроки хранятся автономно в `lessons/practice/lesson-<name>.json` (пакет `theory`, `rule` и `tasks`).
+- Сервер валидирует шаги через динамический реестр [`server/utils/graphRegistry.ts`](../server/utils/graphRegistry.ts).
+- Подробная спецификация графов и макетов описана в [docs/decision-tree.md](decision-tree.md).
 
 ### Добавление новых типов заданий
 Благодаря компонентной архитектуре добавление новой механики требует:

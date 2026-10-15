@@ -86,16 +86,61 @@ export const lessons = [
     loader: () => import('./lesson14.json')
   },
   {
-    id: 'lesson-pol',
-    title: 'Урок 8. Правописание пол- и полу- (Новая механика)',
+    id: 'lesson-sh-ts-mid',
+    title: 'Урок 1. Ь после шипящих и Ц в середине слова',
+    topicId: 'phonetics',
     isDecisionTree: true,
+    loader: () => import('./practice/lesson-sh-ts-mid.json'),
     ruleLoader: async () => {
-      const data = await import('./graph.json')
-      return (data.default || data).find(g => g.graphId === 'graph_pol_v1')
+      const data = await import('./practice/lesson-sh-ts-mid.json')
+      return data.default?.rule || data.rule
     },
     tasksLoader: async () => {
-      const data = await import('./graph-task.json')
-      return (data.default || data).filter(t => t.graphId === 'graph_pol_v1')
+      const data = await import('./practice/lesson-sh-ts-mid.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-sh-ts-mid.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-soft-hard',
+    title: 'Урок 2. Разделительные Ъ и Ь',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-soft-hard.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-soft-hard.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-soft-hard.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-soft-hard.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-pol',
+    title: 'Урок 14. Правописание пол- и полу-',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-pol.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-pol.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-pol.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-pol.json')
+      return data.default?.theory || data.theory
     }
   }
 ];
+

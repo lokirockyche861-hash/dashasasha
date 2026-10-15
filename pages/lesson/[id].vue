@@ -85,7 +85,12 @@ const loadLesson = async (id) => {
 
   try {
     if (found.isDecisionTree) {
-      lesson.value = { ...found }
+      if (found.loader) {
+        const mod = await found.loader()
+        lesson.value = { ...found, ...(mod.default || mod) }
+      } else {
+        lesson.value = { ...found }
+      }
     } else {
       const mod = await found.loader()
       lesson.value = { ...found, ...mod.default }
@@ -128,8 +133,10 @@ watch(() => route.params.id, (newId) => {
       
       <DecisionTreeLesson 
         v-if="isDecisionTree"
+        :lesson="lesson"
         :ruleLoader="lesson.ruleLoader"
         :tasksLoader="lesson.tasksLoader"
+        :theoryLoader="lesson.theoryLoader"
         :lessonId="lesson.id"
       />
       <SimpleRenderer 

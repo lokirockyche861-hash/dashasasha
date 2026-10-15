@@ -5,5 +5,8 @@ export default defineNuxtConfig({
   css: ['~/assets/style.css'],
   nitro: {
     preset: 'netlify'
+  },
+  vite: {
+    cacheDir: '.cache/vite'
   }
 })

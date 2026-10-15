@@ -1,56 +1,89 @@
 
-import { readFileSync } from 'node:fs'
+import { readFileSync, readdirSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-let graphData = null
+let graphData: Map<string, any> | null = null
 const GRAPH_FILE_PATH = 'lessons/graph.json'
+const PRACTICE_DIR_PATH = 'lessons/practice'
 
-function loadGraphs() {
-    if (graphData) return graphData
+function loadGraphs(forceReload = false): Map<string, any> {
+    if (graphData && !forceReload) return graphData
 
+    const map = new Map<string, any>()
+
+    // 1. Read legacy graphs from lessons/graph.json
     try {
-        const path = resolve(process.cwd(), GRAPH_FILE_PATH)
-        const fileContent = readFileSync(path, 'utf-8')
-        const graphs = JSON.parse(fileContent)
-
-        // Convert array of graphs to map: graphId -> graph
-        const map = new Map()
-        for (const g of graphs) {
-            map.set(g.graphId, g)
+        const legacyPath = resolve(process.cwd(), GRAPH_FILE_PATH)
+        if (existsSync(legacyPath)) {
+            const fileContent = readFileSync(legacyPath, 'utf-8')
+            const graphs = JSON.parse(fileContent)
+            if (Array.isArray(graphs)) {
+                for (const g of graphs) {
+                    if (g && g.graphId) map.set(g.graphId, g)
+                }
+            }
         }
-        graphData = map
-        console.log(`[GraphRegistry] Loaded ${map.size} graphs from ${path}`)
     } catch (e) {
-        console.error(`[GraphRegistry] Failed to load graphs from ${GRAPH_FILE_PATH}`, e)
-        graphData = new Map() // Fallback to empty to avoid crashes
+        // ignore
     }
 
+    try {
+        const practiceDir = resolve(process.cwd(), PRACTICE_DIR_PATH)
+        if (existsSync(practiceDir)) {
+            const files = readdirSync(practiceDir)
+            for (const file of files) {
+                if (file.endsWith('.json')) {
+                    const filePath = resolve(practiceDir, file)
+                    const content = readFileSync(filePath, 'utf-8')
+                    const lessonData = JSON.parse(content)
+                    if (lessonData?.rule?.graphId) {
+                        map.set(lessonData.rule.graphId, lessonData.rule)
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        // ignore
+    }
+
+    graphData = map
+    console.log(`[GraphRegistry] Loaded ${map.size} graphs:`, Array.from(map.keys()))
     return graphData
 }
 
 export const graphRegistry = {
-    getGraph(graphId) {
-        const graphs = loadGraphs()
-        return graphs.get(graphId)
+    getGraph(graphId: string) {
+        let graphs = loadGraphs()
+        let graph = graphs.get(graphId)
+        if (!graph) {
+            graphs = loadGraphs(true)
+            graph = graphs.get(graphId)
+        }
+        return graph || null
     },
 
-    getNode(graphId, nodeId) {
+    getNode(graphId: string, nodeId: string) {
         const graph = this.getGraph(graphId)
         if (!graph) return null
-        return graph.nodes.find(n => n.id === nodeId) || null
+        return graph.nodes?.find((n: any) => n.id === nodeId) || null
     },
 }
 
 // Validates if a node exists in graph and if option is valid for that node
 // Returns: { valid: boolean, error?: string, node?: any }
 export function validateGraphNode(graphId: string, subTaskId: string, optionId?: string) {
-    const graphs = loadGraphs() // Ensure graphs are loaded
-    const graph = graphs.get(graphId)
+    let graphs = loadGraphs()
+    let graph = graphs.get(graphId)
+    if (!graph) {
+        graphs = loadGraphs(true)
+        graph = graphs.get(graphId)
+    }
+
     if (!graph) {
         return { valid: false, error: `Graph ${graphId} not found` }
     }
 
-    const node = graph.nodes.find((n: any) => n.id === subTaskId)
+    const node = graph.nodes?.find((n: any) => n.id === subTaskId)
     if (!node) {
         return { valid: false, error: `Node ${subTaskId} not found in graph ${graphId}` }
     }

@@ -132,5 +132,208 @@
                 "text": "В остальных случаях пишем **слитно**."
             }
         ]
+    },
+    {
+        "graphId": "graph_sh_ts_mid_v1",
+        "title": "Ь после шипящих и Ц в середине слова",
+        "layout": "spine",
+        "start_node": "q1",
+        "ruleId": "rule_sh_ts_mid",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q1",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Согласный перед пропуском — шипящий (**ж**, **ш**, **ч**, **щ**) или **Ц**?",
+                "skill_id": "ship_or_ts",
+                "options": [
+                    {
+                        "id": "q1_op_yes",
+                        "label": "Да",
+                        "next": "r_ship_ts"
+                    },
+                    {
+                        "id": "q1_op_no",
+                        "label": "Нет",
+                        "next": "q2"
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Согласный перед пропуском звучит мягко (парный мягкий)?",
+                "skill_id": "is_soft_paired",
+                "options": [
+                    {
+                        "id": "q2_op_yes",
+                        "label": "Да",
+                        "next": "r_soft",
+                        "direction": "left-under"
+                    },
+                    {
+                        "id": "q2_op_no",
+                        "label": "Нет",
+                        "next": "r_hard",
+                        "direction": "right-under"
+                    }
+                ]
+            },
+            {
+                "id": "r_ship_ts",
+                "type": "result",
+                "label": "0 (без Ь)",
+                "direction": "left",
+                "explanation": "Шипящие и Ц непарные по твёрдости-мягкости. В середине слова Ь не пишется!"
+            },
+            {
+                "id": "r_soft",
+                "type": "result",
+                "label": "Пишем Ь",
+                "direction": "left-under",
+                "explanation": "Для обозначения мягкости парного согласного пишем Ь."
+            },
+            {
+                "id": "r_hard",
+                "type": "result",
+                "label": "0 (без Ь)",
+                "direction": "right-under",
+                "explanation": "Согласный твёрдый, мягкий знак не нужен."
+            }
+        ]
+    },
+    {
+        "graphId": "graph_sep_signs_v1",
+        "title": "Разделительные Ъ и Ь",
+        "layout": "spine",
+        "start_node": "q1",
+        "ruleId": "rule_sep_signs",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q1",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Пропуск после приставки, оканчивающейся на согласный?",
+                "skill_id": "sep_prefix",
+                "options": [
+                    {
+                        "id": "q1_op_yes",
+                        "label": "Да",
+                        "next": "r_hard_sign_prefix",
+                        "direction": "left"
+                    },
+                    {
+                        "id": "q1_op_no",
+                        "label": "Нет",
+                        "next": "q2"
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Пропуск после иноязычных элементов (аб-, ад-, диз-, ин-, интер-, кон-, об-, суб-)?",
+                "skill_id": "sep_foreign",
+                "options": [
+                    {
+                        "id": "q2_op_yes",
+                        "label": "Да",
+                        "next": "r_hard_sign_foreign",
+                        "direction": "left"
+                    },
+                    {
+                        "id": "q2_op_no",
+                        "label": "Нет",
+                        "next": "q3"
+                    }
+                ]
+            },
+            {
+                "id": "q3",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "В сложном слове после первой части-числительного (двух-, трёх-, четырёх-)?",
+                "skill_id": "sep_num",
+                "options": [
+                    {
+                        "id": "q3_op_yes",
+                        "label": "Да",
+                        "next": "r_hard_sign_num",
+                        "direction": "left"
+                    },
+                    {
+                        "id": "q3_op_no",
+                        "label": "Нет",
+                        "next": "q4"
+                    }
+                ]
+            },
+            {
+                "id": "q4",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "В сложносокращённом слове (аббревиатуре)?",
+                "skill_id": "sep_abbr",
+                "options": [
+                    {
+                        "id": "q4_op_yes",
+                        "label": "Да",
+                        "next": "r_no_sign_abbr",
+                        "direction": "left-under"
+                    },
+                    {
+                        "id": "q4_op_no",
+                        "label": "Нет",
+                        "next": "r_soft_sign",
+                        "direction": "right-under"
+                    }
+                ]
+            },
+            {
+                "id": "r_hard_sign_prefix",
+                "type": "result",
+                "label": "Пишем Ъ",
+                "direction": "left",
+                "explanation": "После приставки на согласный перед е, ё, ю, я пишется разделительный Ъ."
+            },
+            {
+                "id": "r_hard_sign_foreign",
+                "type": "result",
+                "label": "Пишем Ъ",
+                "direction": "left",
+                "explanation": "После иноязычных элементов аб-, ад-, ин-, об-, суб- пишется разделительный Ъ."
+            },
+            {
+                "id": "r_hard_sign_num",
+                "type": "result",
+                "label": "Пишем Ъ",
+                "direction": "left",
+                "explanation": "В сложных словах после двух-, трёх-, четырёх- пишется разделительный Ъ."
+            },
+            {
+                "id": "r_no_sign_abbr",
+                "type": "result",
+                "label": "0 (без знака)",
+                "direction": "left-under",
+                "explanation": "В сложносокращённых словах (аббревиатурах) между частями знак не пишется."
+            },
+            {
+                "id": "r_soft_sign",
+                "type": "result",
+                "label": "Пишем Ь",
+                "direction": "right-under",
+                "explanation": "В остальных случаях пишется разделительный Ь."
+            }
+        ]
     }
 ]

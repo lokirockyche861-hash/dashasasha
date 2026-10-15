@@ -16,7 +16,7 @@
 
 <script setup>
 import { ref, computed, watch, defineAsyncComponent } from 'vue'
-
+import { AnalyticsService } from '@/utils/AnalyticsService'
 
 // Layouts
 const SpineTreeLayout = defineAsyncComponent(() => import('./layouts/SpineTreeLayout.vue'))
@@ -119,6 +119,8 @@ const handleOptionClick = (option) => {
     incorrectOptions: node.options.length - 1, // rough estimate
     selectedCorrectOptions: isCorrect ? 1 : 0,
     selectedIncorrectOptions: isCorrect ? 0 : 1
+  }).catch(err => {
+    console.error('[ActiveTree] Failed to log attempt:', err)
   })
 
   // Log specifically for API/DB (can be duplicated or unified, sticking to Service for now)

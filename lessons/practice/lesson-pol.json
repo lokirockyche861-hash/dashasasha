@@ -1,0 +1,460 @@
+{
+  "id": "lesson-pol",
+  "title": "Урок 8. Правописание пол- и полу-",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-pol-intro-md1",
+      "type": "markdown",
+      "content": "### Как пишутся слова с **пол-** и **полу-**?\n\nЧасти слов **пол-** и **полу-** могут писаться **слитно**, **через дефис** или **раздельно**.\n\nДавайте исследуем примеры и выведем три простых правила!"
+    },
+    {
+      "id": "l-pol-q1",
+      "type": "QuizSelect",
+      "skill_id": "pol_pristavka",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "Посмотрите на слова: *полукруг, полумесяц, полуавтомат, полузабытый*.\n\nКак всегда пишется элемент **полу-**?",
+        "options": [
+          { "id": "op_slitno", "label": "Всегда слитно", "correct": true },
+          { "id": "op_defis", "label": "Через дефис", "correct": false },
+          { "id": "op_razdelno", "label": "Раздельно", "correct": false }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-pol-intro-md2",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Правило 1:** Элемент **полу-** всегда пишется **слитно**: *полумесяц, полузабытый, полукруг*.\n\nТеперь исследуем приставку **пол-**:\n- *пол-**л**имона*, *пол-**л**уковицы*\n- *пол-**я**блока*, *пол-**а**рбуза*, *пол-**у**гла*\n- *пол-**М**осквы*, *пол-**Е**вропы*, *пол-**Б**айкала*\n\nЗаметьте: дефис ставится только перед тремя типами букв (их легко запомнить по имени **ЮЛИ**): любая **гласная**, согласная **Л** или **заглавная** (прописная) буква."
+    },
+    {
+      "id": "l-pol-q2",
+      "type": "QuizCheckbox",
+      "skill_id": "pol_defis",
+      "answer_type": "multi-select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "В каких трёх случаях после **пол-** ставится дефис? (Выберите все верные варианты)",
+        "options": [
+          { "id": "op_l", "label": "Перед согласной буквой Л (пол-лимона)", "correct": true },
+          { "id": "op_vowel", "label": "Перед любой гласной буквой (пол-яблока)", "correct": true },
+          { "id": "op_capital", "label": "Перед прописной/заглавной буквой (пол-Москвы)", "correct": true },
+          { "id": "op_cons", "label": "Перед любой согласной буквой (пол-дома)", "correct": false }
+        ],
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "id": "l-pol-intro-md3",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Правило 2:** С **пол-** пишем **дефис** перед **ЮЛИ**: перед гласной, перед «л» и перед заглавной буквой.\n\nА что делать, если между **пол** и существительным вклинивается определение (прилагательное, местоимение)?\n\nСравните: *пол-яблока* — но *пол **этого** яблока*, *пол **спелого** яблока*."
+    },
+    {
+      "id": "l-pol-q3",
+      "type": "QuizSelect",
+      "skill_id": "pol_razdelno",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "Если между «пол» и словом стоит зависимое слово-определение (*пол красного платья*), как пишется «пол»?",
+        "options": [
+          { "id": "op_razd", "label": "Раздельно (пол красного платья)", "correct": true },
+          { "id": "op_def", "label": "Через дефис (пол-красного платья)", "correct": false },
+          { "id": "op_slit", "label": "Слитно (полкрасного платья)", "correct": false }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-pol-summary-md",
+      "type": "markdown",
+      "content": "### 🎉 Отлично! Правило готово:\n\n1. **полу-** — всегда пишется **слитно** (*полумесяц, полуфинал*);\n2. **пол** — пишется **раздельно**, если между ним и словом есть определение (*пол этого яблока*);\n3. **пол-** — пишется **через дефис** перед **ЮЛИ**:\n   - перед буквой **Л** (*пол-лимона*);\n   - перед любой **гласной** (*пол-яблока*);\n   - перед **заглавной** буквой (*пол-Москвы*).\n4. В остальных случаях **пол-** пишется **слитно** (*ползимы, полдома, полвека*).\n\nНа интерактивном тренажёре справа это правило разложено в пошаговый алгоритм решения. Переходите к тренировке!"
+    }
+  ],
+  "rule": {
+    "graphId": "graph_pol_v1",
+    "title": "Правописание пол- и полу-",
+    "layout": "spine",
+    "start_node": "q1",
+    "ruleId": "rule_pol",
+    "topicId": "topic_morphemika",
+    "nodes": [
+      {
+        "id": "q1",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Это приставка **ПОЛУ-**?",
+        "skill_id": "pristavka",
+        "options": [
+          {
+            "id": "q1_op_yes",
+            "label": "Да",
+            "next": "r_slitno_polu"
+          },
+          {
+            "id": "q1_op_no",
+            "label": "Нет",
+            "next": "q2"
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "После **пол-** идёт **Л**?",
+        "skill_id": null,
+        "options": [
+          {
+            "id": "q2_op_yes",
+            "label": "Да",
+            "next": "r_defis"
+          },
+          {
+            "id": "q2_op_no",
+            "label": "Нет",
+            "next": "q3"
+          }
+        ]
+      },
+      {
+        "id": "q3",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "После **пол-** идёт **гласная**?",
+        "skill_id": null,
+        "options": [
+          {
+            "id": "q3_op_yes",
+            "label": "Да",
+            "next": "r_defis"
+          },
+          {
+            "id": "q3_op_no",
+            "label": "Нет",
+            "next": "q4"
+          }
+        ]
+      },
+      {
+        "id": "q4",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Слово после **пол-** начинается с **Заглавной**?",
+        "skill_id": null,
+        "options": [
+          {
+            "id": "q4_op_yes",
+            "label": "Да",
+            "next": "r_defis"
+          },
+          {
+            "id": "q4_op_no",
+            "label": "Нет",
+            "next": "q5"
+          }
+        ]
+      },
+      {
+        "id": "q5",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Это **Слитно**?",
+        "skill_id": null,
+        "options": [
+          {
+            "id": "q5_op_yes",
+            "label": "Да",
+            "next": "r_slitno"
+          },
+          {
+            "id": "q5_op_no",
+            "label": "Нет",
+            "next": "r_razdelno"
+          }
+        ]
+      },
+      {
+        "id": "r_slitno_polu",
+        "type": "result",
+        "label": "слитно (полу-)",
+        "text": "**ПОЛУ-** всегда пишется слитно."
+      },
+      {
+        "id": "r_razdelno",
+        "type": "result",
+        "label": "раздельно",
+        "text": "Пишем **раздельно** (если есть определение между «пол» и словом)."
+      },
+      {
+        "id": "r_defis",
+        "type": "result",
+        "label": "дефис",
+        "text": "Пишем через **дефис**, если после пол- идёт **Л**, **гласная** или **Заглавная** (правило ЮЛИ)."
+      },
+      {
+        "id": "r_slitno",
+        "type": "result",
+        "label": "слитно",
+        "text": "В остальных случаях пишем **слитно**."
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t1_input",
+      "content": {
+        "word": "пол…яблока",
+        "correct_answer": "пол-яблока",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": "pristavka", "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t2_input",
+      "content": {
+        "word": "пол…лимона",
+        "correct_answer": "пол-лимона",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": "pristavka", "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t3_input",
+      "content": {
+        "word": "пол…Москвы",
+        "correct_answer": "пол-Москвы",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t4_input",
+      "content": {
+        "word": "пол…дороги",
+        "correct_answer": "полдороги",
+        "correct_result": "r_slitno",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_no" },
+          { "id": "q5", "skill_id": null, "option_id": "q5_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t5",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t5_input",
+      "content": {
+        "word": "пол…лимонный",
+        "correct_answer": "полу-лимонный",
+        "correct_result": "r_slitno_polu",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t6",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t6_input",
+      "content": {
+        "word": "пол…арбуза",
+        "correct_answer": "пол-арбуза",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t7",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t7_input",
+      "content": {
+        "word": "пол…Европы",
+        "correct_answer": "пол-Европы",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t8",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t8_input",
+      "content": {
+        "word": "пол…луковицы",
+        "correct_answer": "пол-луковицы",
+        "correct_result": "r_defis",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t9",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t9_input",
+      "content": {
+        "word": "пол…зимы",
+        "correct_answer": "ползимы",
+        "correct_result": "r_slitno",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_no" },
+          { "id": "q5", "skill_id": null, "option_id": "q5_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t10",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t10_input",
+      "content": {
+        "word": "пол…века",
+        "correct_answer": "полвека",
+        "correct_result": "r_slitno",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_no" },
+          { "id": "q5", "skill_id": null, "option_id": "q5_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t11",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t11_input",
+      "content": {
+        "word": "полу…месяц",
+        "correct_answer": "полумесяц",
+        "correct_result": "r_slitno_polu",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_yes" }
+        ]
+      }
+    },
+    {
+      "id": "t12",
+      "type": "graph",
+      "graphId": "graph_pol_v1",
+      "ruleId": "rule_pol",
+      "topicId": "topic_morphemika",
+      "taskVersion": "v.1.0",
+      "answer_type": "input",
+      "input_id": "t12_input",
+      "content": {
+        "word": "пол…этого яблока",
+        "correct_answer": "пол этого яблока",
+        "correct_result": "r_razdelno",
+        "correct_path": [
+          { "id": "q1", "skill_id": null, "option_id": "q1_op_no" },
+          { "id": "q2", "skill_id": null, "option_id": "q2_op_no" },
+          { "id": "q3", "skill_id": null, "option_id": "q3_op_no" },
+          { "id": "q4", "skill_id": null, "option_id": "q4_op_no" },
+          { "id": "q5", "skill_id": null, "option_id": "q5_op_no" }
+        ]
+      }
+    }
+  ]
+}

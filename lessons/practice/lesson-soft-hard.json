@@ -1,0 +1,448 @@
+{
+  "id": "lesson-soft-hard",
+  "title": "Урок 2. Разделительные Ъ и Ь",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-sh-intro-md1",
+      "type": "markdown",
+      "content": "### Разделительные Ъ и Ь знаки\n\nВ русском языке буквы **Ь** и **Ъ** пишутся только после согласных.\nЕсли после них идёт гласная буква (**е**, **ё**, **ю**, **я**, а также **и** или **о** в некоторых иноязычных словах), такой знак называется **разделительным**.\n\nДавайте исследуем, какую фонетическую работу выполняют разделительные знаки!"
+    },
+    {
+      "id": "l-sh-q1",
+      "type": "QuizSelect",
+      "skill_id": "sep_sound",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "Произнесите слова: *разъём [разй'о́м]*, *вьюга [в'й'у́га]*, *объявление [обй'авл'э́н'ий'э]*.\n\nКакой дополнительный звук появляется перед гласным благодаря разделительному Ъ или Ь?",
+        "options": [
+          { "id": "op_j", "label": "Звук [j] («йот»), разделяющий согласный и гласный", "correct": true },
+          { "id": "op_long", "label": "Гласный звук становится долгим", "correct": false },
+          { "id": "op_voice", "label": "Предыдущий согласный обязательно оглушается", "correct": false }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-sh-intro-md2",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Вывод 1:** Разделительные знаки сигнализируют о том, что следующая гласная буква обозначает два звука: **[j] + гласный** (*съезд* = [сй'эст], *пьеса* = [п'й'эса]).\n\n### Как выбрать между Ъ и Ь?\n\nДля выбора знака нужно определить морфемный состав слова:\n1. **Разделительный Ъ** пишется только:\n   - после **приставок на согласный** (*подъезд, съедобный, отъехать*);\n   - после **иноязычных элементов** *аб-, ад-, диз-, ин-, интер-, кон-, об-, суб-* (*объект, субъект, инъекция*);\n   - в сложных словах после числительных **двух-, трёх-, четырёх-** (*двухъярусный, трёхъязычный*).\n2. **В сложносокращённых словах (аббревиатурах)** знак **не пишется** (*иняз, спецячейка, госярмарка, химяды*).\n3. **В остальных случаях** (в корне и суффиксах) пишется **разделительный Ь** (*вьюга, компьютер, обезьяна, серьёзный, шампиньон*)."
+    },
+    {
+      "id": "l-sh-q2",
+      "type": "QuizCheckbox",
+      "skill_id": "hard_sign_conditions",
+      "answer_type": "multi-select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "В каких трёх случаях пишется именно разделительный твёрдый знак (Ъ)? (Выберите все верные варианты)",
+        "options": [
+          { "id": "op_prefix", "label": "После приставки на согласный перед е, ё, ю, я (подъезд)", "correct": true },
+          { "id": "op_num", "label": "В сложных словах после числительных двух-, трёх-, четырёх- (трёхъярусный)", "correct": true },
+          { "id": "op_foreign", "label": "После иноязычных элементов аб-, ад-, ин-, об-, суб- (субъект)", "correct": true },
+          { "id": "op_root", "label": "Внутри корня перед гласными (пьеса, вьюга)", "correct": false },
+          { "id": "op_abbr", "label": "В сложносокращённых словах на стыке частей (иняз, спецячейка)", "correct": false }
+        ],
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "id": "l-sh-summary-md",
+      "type": "markdown",
+      "content": "### 📌 Итоговый алгоритм разделительных знаков:\n\n1. Приставка на согласный? ➔ **пишем Ъ** (*подъём, съедобный*);\n2. Иноязычные элементы (аб-, ад-, диз-, ин-, интер-, кон-, об-, суб-)? ➔ **пишем Ъ** (*объектив, инъекция*);\n3. Первая часть — числительное двух-, трёх-, четырёх-? ➔ **пишем Ъ** (*трёхъязычный*);\n4. Сложносокращённое слово (аббревиатура)? ➔ **знак не пишется (0)** (*спецячейка, химяды*);\n5. Во всех остальных случаях ➔ **пишем разделительный Ь** (*компьютер, вьюга, серьёзный*).\n\nНа тренажёре справа этот алгоритм собран в виде пошаговой схемы. Переходите к тренировке!"
+    }
+  ],
+  "rule": {
+    "graphId": "graph_sep_signs_v1",
+    "title": "Разделительные Ъ и Ь",
+    "layout": "spine",
+    "start_node": "q1",
+    "ruleId": "rule_sep_signs",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q1",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Пропуск после приставки, оканчивающейся на согласный?",
+        "skill_id": "sep_prefix",
+        "options": [
+          {
+            "id": "q1_op_yes",
+            "label": "Да",
+            "next": "r_hard_sign_prefix",
+            "direction": "left"
+          },
+          {
+            "id": "q1_op_no",
+            "label": "Нет",
+            "next": "q2"
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Пропуск после иноязычных элементов (аб-, ад-, диз-, ин-, интер-, кон-, об-, суб-)?",
+        "skill_id": "sep_foreign",
+        "options": [
+          {
+            "id": "q2_op_yes",
+            "label": "Да",
+            "next": "r_hard_sign_foreign",
+            "direction": "left"
+          },
+          {
+            "id": "q2_op_no",
+            "label": "Нет",
+            "next": "q3"
+          }
+        ]
+      },
+      {
+        "id": "q3",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "В сложном слове после первой части-числительного (двух-, трёх-, четырёх-)?",
+        "skill_id": "sep_num",
+        "options": [
+          {
+            "id": "q3_op_yes",
+            "label": "Да",
+            "next": "r_hard_sign_num",
+            "direction": "left"
+          },
+          {
+            "id": "q3_op_no",
+            "label": "Нет",
+            "next": "q4"
+          }
+        ]
+      },
+      {
+        "id": "q4",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "В сложносокращённом слове (аббревиатуре)?",
+        "skill_id": "sep_abbr",
+        "options": [
+          {
+            "id": "q4_op_yes",
+            "label": "Да",
+            "next": "r_no_sign_abbr",
+            "direction": "left-under"
+          },
+          {
+            "id": "q4_op_no",
+            "label": "Нет",
+            "next": "r_soft_sign",
+            "direction": "right-under"
+          }
+        ]
+      },
+      {
+        "id": "r_hard_sign_prefix",
+        "type": "result",
+        "label": "Пишем Ъ",
+        "direction": "left",
+        "explanation": "После приставки на согласный перед е, ё, ю, я пишется разделительный Ъ."
+      },
+      {
+        "id": "r_hard_sign_foreign",
+        "type": "result",
+        "label": "Пишем Ъ",
+        "direction": "left",
+        "explanation": "После иноязычных элементов аб-, ад-, ин-, об-, суб- пишется разделительный Ъ."
+      },
+      {
+        "id": "r_hard_sign_num",
+        "type": "result",
+        "label": "Пишем Ъ",
+        "direction": "left",
+        "explanation": "В сложных словах после двух-, трёх-, четырёх- пишется разделительный Ъ."
+      },
+      {
+        "id": "r_no_sign_abbr",
+        "type": "result",
+        "label": "0 (без знака)",
+        "direction": "left-under",
+        "explanation": "В сложносокращённых словах (аббревиатурах) между частями знак не пишется."
+      },
+      {
+        "id": "r_soft_sign",
+        "type": "result",
+        "label": "Пишем Ь",
+        "direction": "right-under",
+        "explanation": "В остальных случаях пишется разделительный Ь."
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "sep_prefix",
+      "content": {
+        "word": "с___едобный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["съедобный", "ъ"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "sep_foreign",
+      "content": {
+        "word": "об___ектив",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["объектив", "ъ"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "sep_num",
+      "content": {
+        "word": "трёх___язычный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_yes" }
+        ],
+        "correct_answers": ["трёхъязычный", "ъ"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "sep_abbr",
+      "content": {
+        "word": "спец___ёмкость",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_yes" }
+        ],
+        "correct_answers": ["спецёмкость", "0"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "sep_soft",
+      "content": {
+        "word": "комп___ютер",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_no" }
+        ],
+        "correct_answers": ["компьютер", "ь"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "sep_prefix",
+      "content": {
+        "word": "под___ём",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["подъём", "ъ"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "sep_foreign",
+      "content": {
+        "word": "ин___екция",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["инъекция", "ъ"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "sep_num",
+      "content": {
+        "word": "четырёх___ядерный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_yes" }
+        ],
+        "correct_answers": ["четырёхъядерный", "ъ"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "sep_abbr",
+      "content": {
+        "word": "спец___ячейка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_yes" }
+        ],
+        "correct_answers": ["спецячейка", "0"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "sep_soft",
+      "content": {
+        "word": "сер___ёзный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_no" }
+        ],
+        "correct_answers": ["серьёзный", "ь"]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "sep_prefix",
+      "content": {
+        "word": "от___ехать",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["отъехать", "ъ"]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "sep_foreign",
+      "content": {
+        "word": "об___ект",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["объект", "ъ"]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "sep_num",
+      "content": {
+        "word": "трёх___ярусный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_yes" }
+        ],
+        "correct_answers": ["трёхъярусный", "ъ"]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "sep_abbr",
+      "content": {
+        "word": "хим___яды",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_yes" }
+        ],
+        "correct_answers": ["химяды", "0"]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "sep_soft",
+      "content": {
+        "word": "в___юга",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_no" }
+        ],
+        "correct_answers": ["вьюга", "ь"]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "sep_prefix",
+      "content": {
+        "word": "раз___ярённый",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["разъярённый", "ъ"]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "sep_foreign",
+      "content": {
+        "word": "суб___ект",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["субъект", "ъ"]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "sep_abbr",
+      "content": {
+        "word": "гос___ярмарка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_yes" }
+        ],
+        "correct_answers": ["госярмарка", "0"]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "sep_soft",
+      "content": {
+        "word": "обез___яна",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_no" }
+        ],
+        "correct_answers": ["обезьяна", "ь"]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "sep_soft",
+      "content": {
+        "word": "шампин___он",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" },
+          { "id": "q3", "option_id": "q3_op_no" },
+          { "id": "q4", "option_id": "q4_op_no" }
+        ],
+        "correct_answers": ["шампиньон", "ь"]
+      }
+    }
+  ]
+}

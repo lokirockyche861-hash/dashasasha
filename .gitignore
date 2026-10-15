@@ -21,6 +21,8 @@ dist-ssr
 .nuxt
 .output
 .netlify
+.cache
+temp
 
 # Database & local data
 postgres-data

@@ -1,0 +1,365 @@
+{
+  "id": "lesson-sh-ts-mid",
+  "title": "Урок 1. Ь после шипящих и Ц в середине слова",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-sh-ts-intro-md1",
+      "type": "markdown",
+      "content": "### Ь после шипящих и Ц в середине слова\n\nШипящими звуками в русском языке являются согласные **[ж]**, **[ш]**, **[ч’]**, **[щ’]**.\n\nДавайте вспомним главное фонетическое свойство шипящих и звука **[ц]**: они являются **непарными** по твёрдости-мягкости:\n- **[ж]**, **[ш]**, **[ц]** — всегда твёрдые;\n- **[ч’]**, **[щ’]** — всегда мягкие."
+    },
+    {
+      "id": "l-sh-ts-q1",
+      "type": "QuizSelect",
+      "skill_id": "ship_softness",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "Посмотрите на слова: *ночка, ножницы, пушка, печник*.\n\nНужен ли мягкий знак после шипящих согласных в середине слова для их смягчения?",
+        "options": [
+          { "id": "op_no_need", "label": "Нет, так как шипящие непарные по твёрдости-мягкости и в смягчении не нуждаются", "correct": true },
+          { "id": "op_always", "label": "Да, после мягких [ч’] и [щ’] всегда пишется Ь", "correct": false },
+          { "id": "op_stress", "label": "Зависит от того, падает ли на гласный ударение", "correct": false }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-sh-ts-intro-md2",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Вывод 1:** Мягкий знак **Ь** после шипящих (**чк, чн, нч, нщ, рщ, щн, жн, шк**) и после **Ц** в середине слова **не пишется** (*ночка, печник, ножницы, овощной, цвет*).\n\n### А когда же пишется Ь в середине слова между согласными?\nМягкий знак пишется в середине слова только для обозначения мягкости **парных согласных** перед другими согласными (*пальто, коньки, письмо, фильм, деньги, горький*).\nЕсли согласный твёрдый — Ь не нужен (*сумка, горка, картина*)."
+    },
+    {
+      "id": "l-sh-ts-q2",
+      "type": "QuizCheckbox",
+      "skill_id": "soft_sign_middle",
+      "answer_type": "multi-select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "В каких словах мягкий знак необходим для обозначения мягкости парного согласного? (Выберите все верные варианты)",
+        "options": [
+          { "id": "op_palto", "label": "пал_то", "correct": true },
+          { "id": "op_dochka", "label": "доч_ка", "correct": false },
+          { "id": "op_pismo", "label": "пис_мо", "correct": true },
+          { "id": "op_pechnik", "label": "печ_ник", "correct": false },
+          { "id": "op_konki", "label": "кон_ки", "correct": true }
+        ],
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "id": "l-sh-ts-summary-md",
+      "type": "markdown",
+      "content": "### 📌 Итоговый алгоритм проверки:\n\n1. **Смотрим на согласный перед пропуском:**\n   - Если это **шипящий (ж, ш, ч, щ) или Ц** ➔ **Ь не пишется (0)**: *дочка, речка, печник, ножницы*;\n2. **Если согласный другой:**\n   - Парный мягкий ➔ **пишем Ь**: *пальто, коньки, письмо, деньги*;\n   - Парный твёрдый ➔ **Ь не пишется (0)**: *сумка, картина, горка*.\n\n> [!warning]\n> Ь после шипящих на конце слова (*ночь, рожь, беречь*) служит грамматическим признаком и изучается в специальном разделе.\n\nПереходите к тренажеру справа, чтобы закрепить алгоритм на практике!"
+    }
+  ],
+  "rule": {
+    "graphId": "graph_sh_ts_mid_v1",
+    "title": "Ь после шипящих и Ц в середине слова",
+    "layout": "spine",
+    "start_node": "q1",
+    "ruleId": "rule_sh_ts_mid",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q1",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Согласный перед пропуском — шипящий (**ж**, **ш**, **ч**, **щ**) или **Ц**?",
+        "skill_id": "ship_or_ts",
+        "options": [
+          {
+            "id": "q1_op_yes",
+            "label": "Да",
+            "next": "r_ship_ts"
+          },
+          {
+            "id": "q1_op_no",
+            "label": "Нет",
+            "next": "q2"
+          }
+        ]
+      },
+      {
+        "id": "q2",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Согласный перед пропуском звучит мягко (парный мягкий)?",
+        "skill_id": "is_soft_paired",
+        "options": [
+          {
+            "id": "q2_op_yes",
+            "label": "Да",
+            "next": "r_soft",
+            "direction": "left-under"
+          },
+          {
+            "id": "q2_op_no",
+            "label": "Нет",
+            "next": "r_hard",
+            "direction": "right-under"
+          }
+        ]
+      },
+      {
+        "id": "r_ship_ts",
+        "type": "result",
+        "label": "0 (без Ь)",
+        "direction": "left",
+        "explanation": "Шипящие и Ц непарные по твёрдости-мягкости. В середине слова Ь не пишется!"
+      },
+      {
+        "id": "r_soft",
+        "type": "result",
+        "label": "Пишем Ь",
+        "direction": "left-under",
+        "explanation": "Для обозначения мягкости парного согласного пишем Ь."
+      },
+      {
+        "id": "r_hard",
+        "type": "result",
+        "label": "0 (без Ь)",
+        "direction": "right-under",
+        "explanation": "Согласный твёрдый, мягкий знак не нужен."
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "гор_кий",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["горький", "ь"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "пол_за",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["польза", "ь"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "кош_ка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["кошка", "0"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "доч_ка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["дочка", "0"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "оран_жевый",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" }
+        ],
+        "correct_answers": ["оранжевый", "0"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "фил_м",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["фильм", "ь"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "печ_ник",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["печник", "0"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "реч_ка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["речка", "0"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "пис_мо",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["письмо", "ь"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "сум_ка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" }
+        ],
+        "correct_answers": ["сумка", "0"]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "пал_то",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["пальто", "ь"]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "овощ_ной",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["овощной", "0"]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "кон_ки",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["коньки", "ь"]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "поч_та",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["почта", "0"]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "ден_ги",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_yes" }
+        ],
+        "correct_answers": ["деньги", "ь"]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "изящ_ный",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["изящный", "0"]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "мач_та",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["мачта", "0"]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "гор_ка",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" }
+        ],
+        "correct_answers": ["горка", "0"]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "soft_sign_middle",
+      "content": {
+        "word": "кар_тина",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_no" },
+          { "id": "q2", "option_id": "q2_op_no" }
+        ],
+        "correct_answers": ["картина", "0"]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "ship_softness",
+      "content": {
+        "word": "ноч_ной",
+        "correct_path": [
+          { "id": "q1", "option_id": "q1_op_yes" }
+        ],
+        "correct_answers": ["ночной", "0"]
+      }
+    }
+  ]
+}

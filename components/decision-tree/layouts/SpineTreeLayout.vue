@@ -27,17 +27,18 @@
         v-for="(row, index) in rows" 
         :key="row.question.id"
         class="spine-row"
+        :class="{ 'is-last-row': row.isLast }"
       >
-        <!-- Left Side: Yes Result -->
+        <!-- Left Side: Result (direction === 'left') -->
         <div class="side-cell left">
           <div 
-            v-if="row.yesResult" 
+            v-if="row.leftResult" 
             class="result-node"
-            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'yes'))"
-            :class="getResultClass(row.yesResult.id, row.question.id)"
-            @click="onNodeClick(row.yesResult.id)"
+            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left'))"
+            :class="getResultClass(row.leftResult.id, row.question.id)"
+            @click="onNodeClick(row.leftResult.id)"
           >
-            <div class="node-label">{{ row.yesResult.label }}</div>
+            <div class="node-label">{{ row.leftResult.label }}</div>
           </div>
         </div>
 
@@ -70,18 +71,41 @@
               </div>
             </div>
           </div>
+
+          <!-- Bottom Results (left-under / right-under) -->
+          <div v-if="row.leftUnderResult || row.rightUnderResult" class="bottom-results-row">
+            <div 
+              v-if="row.leftUnderResult" 
+              class="result-node bottom-result left-under"
+              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left-under'))"
+              :class="getResultClass(row.leftUnderResult.id, row.question.id)"
+              @click="onNodeClick(row.leftUnderResult.id)"
+            >
+              <div class="node-label">{{ row.leftUnderResult.label }}</div>
+            </div>
+
+            <div 
+              v-if="row.rightUnderResult" 
+              class="result-node bottom-result right-under"
+              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right-under'))"
+              :class="getResultClass(row.rightUnderResult.id, row.question.id)"
+              @click="onNodeClick(row.rightUnderResult.id)"
+            >
+              <div class="node-label">{{ row.rightUnderResult.label }}</div>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Side: No Result (Only for last node usually) -->
+        <!-- Right Side: Result (direction === 'right') -->
         <div class="side-cell right">
           <div 
-            v-if="row.noResult" 
+            v-if="row.rightResult" 
             class="result-node"
-            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'no'))"
-            :class="getResultClass(row.noResult.id, row.question.id)"
-            @click="onNodeClick(row.noResult.id)"
+            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right'))"
+            :class="getResultClass(row.rightResult.id, row.question.id)"
+            @click="onNodeClick(row.rightResult.id)"
           >
-             <div class="node-label">{{ row.noResult.label }}</div>
+             <div class="node-label">{{ row.rightResult.label }}</div>
           </div>
         </div>
       </div>
@@ -143,6 +167,15 @@ const renderMarkdown = (text) => {
   return md.render(text)
 }
 
+const resolveDirection = (opt, targetNode, isYes, isLast) => {
+  if (opt?.direction) return opt.direction
+  if (targetNode?.direction) return targetNode.direction
+  if (isLast) {
+    return isYes ? 'left-under' : 'right-under'
+  }
+  return isYes ? 'left' : 'right'
+}
+
 // Helper to build the "Spine" rows
 const rows = computed(() => {
   if (!props.rule || !props.rule.start_node) return []
@@ -160,25 +193,33 @@ const rows = computed(() => {
     if (!node || node.type !== 'question') break
 
     // Find Yes/No options explicitly by suffix or label
-    // New data format uses IDs like "q1_op_yes", old used "yes"
     const yesOpt = node.options.find(o => o.id === 'yes' || o.id.endsWith('_yes') || o.label === 'Да')
     const noOpt = node.options.find(o => o.id === 'no' || o.id.endsWith('_no') || o.label === 'Нет')
 
+    const nextForNo = noOpt ? nodesMap.get(noOpt.next) : null
+    const isLast = !nextForNo || nextForNo.type === 'result'
+
     const row = {
       question: node,
-      yesResult: null,
-      noResult: null,
       yesOption: yesOpt,
       noOption: noOpt,
-      isLast: false,
-      nextId: null
+      isLast: isLast,
+      nextId: null,
+      leftResult: null,
+      rightResult: null,
+      leftUnderResult: null,
+      rightUnderResult: null
     }
 
     // Check Yes path
     if (yesOpt) {
       const nextNode = nodesMap.get(yesOpt.next)
       if (nextNode && nextNode.type === 'result') {
-        row.yesResult = nextNode
+        const dir = resolveDirection(yesOpt, nextNode, true, isLast)
+        if (dir === 'left') row.leftResult = nextNode
+        else if (dir === 'left-under') row.leftUnderResult = nextNode
+        else if (dir === 'right-under') row.rightUnderResult = nextNode
+        else if (dir === 'right') row.rightResult = nextNode
       }
     }
 
@@ -187,7 +228,11 @@ const rows = computed(() => {
       const nextNode = nodesMap.get(noOpt.next)
       if (nextNode) {
         if (nextNode.type === 'result') {
-          row.noResult = nextNode
+          const dir = resolveDirection(noOpt, nextNode, false, isLast)
+          if (dir === 'right-under') row.rightUnderResult = nextNode
+          else if (dir === 'left-under') row.leftUnderResult = nextNode
+          else if (dir === 'right') row.rightResult = nextNode
+          else if (dir === 'left') row.leftResult = nextNode
           row.isLast = true
           row.nextId = nextNode.id
           currentId = null 
@@ -229,75 +274,91 @@ const updateArrows = () => {
 
     const qRect = questionEl.getBoundingClientRect()
     const gap = 4
-    
-    // 1. Yes Arrow (Left)
-    if (row.yesResult) {
-      const resultEl = nodeRefs.get(getResultRefKey(row.question.id, 'yes'))
+
+    // 1. Left Result Arrow (horizontal left)
+    if (row.leftResult) {
+      const resultEl = nodeRefs.get(getResultRefKey(row.question.id, 'left'))
       if (resultEl) {
         const rRect = resultEl.getBoundingClientRect()
-        
-        // Start: Left Center of Question
         const startX = qRect.left - containerRect.left
         const startY = qRect.top + qRect.height / 2 - containerRect.top
-        
-        // End: Right Center of Result
         const endX = rRect.right - containerRect.left
         const endY = rRect.top + rRect.height / 2 - containerRect.top
 
         newArrows.push({
-          id: `arrow-${row.question.id}-yes`,
+          id: `arrow-${row.question.id}-left`,
           d: `M ${startX - gap} ${startY} L ${endX + gap} ${endY}`,
-          isActive: isPathActive(row.question.id, row.yesResult.id)
+          isActive: isPathActive(row.question.id, row.leftResult.id)
         })
       }
     }
 
-    // 2. No Arrow (Down or Right)
-    const nextId = row.nextId
-    if (nextId) {
-      let nextEl = nodeRefs.get(nextId)
-      let isRightResult = false
+    // 2. Right Result Arrow (horizontal right)
+    if (row.rightResult) {
+      const resultEl = nodeRefs.get(getResultRefKey(row.question.id, 'right'))
+      if (resultEl) {
+        const rRect = resultEl.getBoundingClientRect()
+        const startX = qRect.right - containerRect.left
+        const startY = qRect.top + qRect.height / 2 - containerRect.top
+        const endX = rRect.left - containerRect.left
+        const endY = rRect.top + rRect.height / 2 - containerRect.top
 
-      if (row.noResult && row.noResult.id === nextId) {
-         nextEl = nodeRefs.get(getResultRefKey(row.question.id, 'no'))
-         isRightResult = true
+        newArrows.push({
+          id: `arrow-${row.question.id}-right`,
+          d: `M ${startX + gap} ${startY} L ${endX - gap} ${endY}`,
+          isActive: isPathActive(row.question.id, row.rightResult.id)
+        })
       }
+    }
 
+    // 3. Left-Under Result Arrow (strictly vertical down into left bottom card)
+    if (row.leftUnderResult) {
+      const resultEl = nodeRefs.get(getResultRefKey(row.question.id, 'left-under'))
+      if (resultEl) {
+        const rRect = resultEl.getBoundingClientRect()
+        const posX = rRect.left + rRect.width / 2 - containerRect.left
+        const startY = qRect.bottom - containerRect.top
+        const endY = rRect.top - containerRect.top
+
+        newArrows.push({
+          id: `arrow-${row.question.id}-left-under`,
+          d: `M ${posX} ${startY + gap} L ${posX} ${endY - gap}`,
+          isActive: isPathActive(row.question.id, row.leftUnderResult.id)
+        })
+      }
+    }
+
+    // 4. Right-Under Result Arrow (strictly vertical down into right bottom card)
+    if (row.rightUnderResult) {
+      const resultEl = nodeRefs.get(getResultRefKey(row.question.id, 'right-under'))
+      if (resultEl) {
+        const rRect = resultEl.getBoundingClientRect()
+        const posX = rRect.left + rRect.width / 2 - containerRect.left
+        const startY = qRect.bottom - containerRect.top
+        const endY = rRect.top - containerRect.top
+
+        newArrows.push({
+          id: `arrow-${row.question.id}-right-under`,
+          d: `M ${posX} ${startY + gap} L ${posX} ${endY - gap}`,
+          isActive: isPathActive(row.question.id, row.rightUnderResult.id)
+        })
+      }
+    }
+
+    // 5. Down to next Question Node in spine
+    if (row.nextId && !row.isLast) {
+      const nextEl = nodeRefs.get(row.nextId)
       if (nextEl) {
         const nRect = nextEl.getBoundingClientRect()
-        
-        if (isRightResult) {
-          // Arrow to Right Result
-          // Start: Right Center of Question
-          const startX = qRect.right - containerRect.left
-          const startY = qRect.top + qRect.height / 2 - containerRect.top
-          
-          // End: Left Center of Result
-          const endX = nRect.left - containerRect.left
-          const endY = nRect.top + nRect.height / 2 - containerRect.top
-          
-          newArrows.push({
-            id: `arrow-${row.question.id}-no`,
-            d: `M ${startX + gap} ${startY} L ${endX - gap} ${endY}`,
-            isActive: isPathActive(row.question.id, nextId)
-          })
+        const posX = qRect.left + qRect.width / 2 - containerRect.left
+        const startY = qRect.bottom - containerRect.top
+        const endY = nRect.top - containerRect.top
 
-        } else {
-          // Standard Arrow Down (to next Question)
-          // Start: Bottom Center of Question
-          const startX = qRect.left + qRect.width / 2 - containerRect.left
-          const startY = qRect.bottom - containerRect.top
-          
-          // End: Top Center of Next Node
-          const endX = nRect.left + nRect.width / 2 - containerRect.left
-          const endY = nRect.top - containerRect.top
-
-          newArrows.push({
-            id: `arrow-${row.question.id}-no`,
-            d: `M ${startX} ${startY + gap} L ${endX} ${endY - gap}`,
-            isActive: isPathActive(row.question.id, nextId)
-          })
-        }
+        newArrows.push({
+          id: `arrow-${row.question.id}-next`,
+          d: `M ${posX} ${startY + gap} L ${posX} ${endY - gap}`,
+          isActive: isPathActive(row.question.id, row.nextId)
+        })
       }
     }
   })
@@ -568,4 +629,29 @@ const onOptionClick = (node, optionId) => {
 .arrow-path {
   transition: stroke 0.3s;
 }
+
+/* Bottom Results for Final Question Node */
+.bottom-results-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.bottom-result {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  min-height: 48px;
+  box-sizing: border-box;
+  text-align: center;
+}
 </style>
+
