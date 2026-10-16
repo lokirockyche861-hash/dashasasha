@@ -198,6 +198,25 @@ export const lessons = [
       const data = await import('./practice/lesson-vowels-after-ts.json')
       return data.default?.theory || data.theory
     }
+  },
+  {
+    id: 'lesson-root-vowels-checked',
+    title: 'Урок 7. Безударные гласные в корне. Проверяемые гласные',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-root-vowels-checked.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-root-vowels-checked.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-root-vowels-checked.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-root-vowels-checked.json')
+      return data.default?.theory || data.theory
+    }
   }
 ];
 

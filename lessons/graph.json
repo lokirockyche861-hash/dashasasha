@@ -695,5 +695,85 @@
                 "explanation": "На -ция и в других суффиксах"
             }
         ]
+    },
+    {
+        "graphId": "graph_root_vowels_checked_v1",
+        "title": "Безударные проверяемые гласные в корне",
+        "layout": "steps",
+        "start_node": "q1_weak_pos",
+        "ruleId": "rule_root_vowels_checked",
+        "topicId": "morphemics",
+        "nodes": [
+            {
+                "id": "q1_weak_pos",
+                "step_number": 1,
+                "type": "question",
+                "title": "Шаг 1. Слабая позиция",
+                "text": "Гласная со звуком [а] или [и] находится в слабой (безударной) позиции?",
+                "skill_id": "vowel_weak_position",
+                "options": [
+                    { "id": "op_weak_yes", "label": "Да, безударная гласная", "next": "q2_in_root" },
+                    { "id": "op_weak_no", "label": "Нет, под ударением", "next": "q1_weak_pos" }
+                ]
+            },
+            {
+                "id": "q2_in_root",
+                "step_number": 2,
+                "type": "question",
+                "title": "Шаг 2. Морфемная принадлежность",
+                "text": "Убедитесь: искомая безударная гласная находится в корне слова?",
+                "skill_id": "vowel_in_root",
+                "options": [
+                    { "id": "op_root_yes", "label": "Да, гласная в корне", "next": "q3_pick_word" },
+                    { "id": "op_root_no", "label": "Нет, в приставке или суффиксе", "next": "q2_in_root" }
+                ]
+            },
+            {
+                "id": "q3_pick_word",
+                "step_number": 3,
+                "type": "question",
+                "title": "Шаг 3. Подбор проверочного слова",
+                "text": "Подберите форму слова или однокоренное слово, где гласная стоит в сильной (ударной) позиции:",
+                "skill_id": "pick_strong_position_word",
+                "options": [
+                    { "id": "op_word_correct", "label": "Верное проверочное слово", "next": "q4_check_root" },
+                    { "id": "op_word_trap_root", "label": "Слово с другим корнем", "next": "q3_pick_word" },
+                    { "id": "op_word_trap_yvat", "label": "Глагол на -ывать / -ивать", "next": "q3_pick_word" },
+                    { "id": "op_word_distractor", "label": "Неподходящее слово", "next": "q3_pick_word" }
+                ]
+            },
+            {
+                "id": "q4_check_root",
+                "step_number": 4,
+                "type": "question",
+                "title": "Шаг 4. Контроль корня",
+                "text": "Убедитесь: вы проверяете корень той же формой корня (без чередования полногласие/неполногласие)?",
+                "skill_id": "check_same_root",
+                "options": [
+                    { "id": "op_root_match_yes", "label": "Да, корни полностью совпадают", "next": "q5_check_yvat" },
+                    { "id": "op_root_match_no", "label": "Нет, это разные корни", "next": "q3_pick_word" }
+                ]
+            },
+            {
+                "id": "q5_check_yvat",
+                "step_number": 5,
+                "type": "question",
+                "title": "Шаг 5. Отсечение глаголов на -ывать/-ивать",
+                "text": "Убедитесь: проверочное слово НЕ является глаголом несовершенного вида на -ывать / -ивать?",
+                "skill_id": "check_not_yvat",
+                "options": [
+                    { "id": "op_yvat_no", "label": "Да, слово не оканчивается на -ывать/-ивать", "next": "r_final_accent" },
+                    { "id": "op_yvat_yes", "label": "Это глагол на -ывать/-ивать (не подходит)", "next": "q3_pick_word" }
+                ]
+            },
+            {
+                "id": "r_final_accent",
+                "step_number": 6,
+                "type": "result",
+                "title": "Шаг 6. Итог",
+                "label": "Пишем гласную из сильной позиции",
+                "explanation": "Под ударением гласная отчетливо слышна — вписываем эту букву в исходное слово!"
+            }
+        ]
     }
 ]

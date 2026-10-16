@@ -1,0 +1,449 @@
+{
+  "id": "lesson-root-vowels-checked",
+  "title": "Урок 7. Безударные гласные в корне. Проверяемые гласные",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-rvc-summary-md",
+      "type": "markdown",
+      "content": "> [!summary]\n> Мы знаем, что гласные в корне могут быть в слабой позиции. Эта позиция — **безударная**.\n\nЕсли мы говорим про безударную гласную в корне слова, то нам важно разделять три типа корней:\n\n1. **Корни с чередующейся гласной в корне** — применяем соответствующее правило и выбираем гласную. Используем самоинструкцию.\n2. **Корни с проверяемой безударной гласной** — подбираем форму слова или однокоренное слово, в котором гласная будет ударной.\n3. **Корни с непроверяемой гласной** — проверяем по словарю, стараемся запомнить написание."
+    },
+    {
+      "id": "l-rvc-algorithm-md",
+      "type": "markdown",
+      "content": "### Алгоритм для проверяемых безударных гласных:\n\n1. **Увидеть**, что гласная, которая произносится со звуком [и] или [а], находится в слабой (безударной) позиции.\n2. **Убедиться**, что гласная находится в корне слова.\n3. **Подобрать** слово с тем же корнем, в котором гласная будет в сильной (ударной) позиции.\n4. **Убедиться**, что вы проверяете корень той же формой корня (с тем же количеством гласных, без чередования полногласие/неполногласие). Если нет, подберите другое проверочное слово.\n5. **Убедиться**, что вы не проверяете корень глаголами на *-ивать / -ывать*. Если да, подберите другое проверочное слово.\n6. **Вписать букву**, которая обнаружилась в сильной позиции."
+    },
+    {
+      "id": "l-rvc-examples-md",
+      "type": "markdown",
+      "content": "### Разбор авторских примеров:\n\n#### Пример 1: *сокр__ти́ть*\n1. Гласная со звуком [а] в безударной позиции — может быть написано **О** или **А**.\n2. В слове корень *-крат-*, то есть искомая гласная в корне.\n3. Подбираю слово с тем же корнем, но с ударной гласной: *сокр_ти́ть* ➔ **кра́ткий**.\n4. В обоих словах корень *-крат-* (НЕ *короткий*, в котором корень *-корот-*).\n5. Не проверяю корень глаголом на *-ивать / -ывать*.\n6. Под ударением вижу **А** — вписываю **А** в исходное слово: **сократить**.\n\n---\n\n#### Пример 2: *оп__зда́ть*\n1. Гласная со звуком [а] в безударной позиции — может быть написано **О** или **А**.\n2. В слове корень *-позд-*, то есть искомая гласная в корне.\n3. Подбираю слово с тем же корнем, но с ударной гласной: *оп_здать* ➔ *опа́здывать*.\n4. В обоих словах корень *-позд-*.\n5. **Внимание, ловушка!** Проверяю глаголом на *-ывать* — проверочное слово **не подходит**! Подбираю другое проверочное слово: *оп_здать* ➔ **по́здний**.\n6. Под ударением вижу **О** — вписываю **О** в исходное слово: **опоздать**."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_root_vowels_checked_v1",
+    "title": "Безударные проверяемые гласные в корне",
+    "layout": "steps",
+    "start_node": "q1_weak_pos",
+    "ruleId": "rule_root_vowels_checked",
+    "topicId": "morphemics",
+    "nodes": [
+      {
+        "id": "q1_weak_pos",
+        "step_number": 1,
+        "type": "question",
+        "title": "Шаг 1. Слабая позиция",
+        "text": "Гласная со звуком [а] или [и] находится в слабой (безударной) позиции?",
+        "skill_id": "vowel_weak_position",
+        "options": [
+          {
+            "id": "op_weak_yes",
+            "label": "Да, безударная гласная",
+            "next": "q2_in_root"
+          },
+          {
+            "id": "op_weak_no",
+            "label": "Нет, под ударением",
+            "next": "q1_weak_pos"
+          }
+        ]
+      },
+      {
+        "id": "q2_in_root",
+        "step_number": 2,
+        "type": "question",
+        "title": "Шаг 2. Морфемная принадлежность",
+        "text": "Убедитесь: искомая безударная гласная находится в корне слова?",
+        "skill_id": "vowel_in_root",
+        "options": [
+          {
+            "id": "op_root_yes",
+            "label": "Да, гласная в корне",
+            "next": "q3_pick_word"
+          },
+          {
+            "id": "op_root_no",
+            "label": "Нет, в приставке или суффиксе",
+            "next": "q2_in_root"
+          }
+        ]
+      },
+      {
+        "id": "q3_pick_word",
+        "step_number": 3,
+        "type": "question",
+        "title": "Шаг 3. Подбор проверочного слова",
+        "text": "Подберите форму слова или однокоренное слово, где гласная стоит в сильной (ударной) позиции:",
+        "skill_id": "pick_strong_position_word",
+        "options": [
+          {
+            "id": "op_word_correct",
+            "label": "Верное проверочное слово",
+            "next": "q4_check_root"
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "Слово с другим корнем",
+            "next": "q3_pick_word"
+          },
+          {
+            "id": "op_word_trap_yvat",
+            "label": "Глагол на -ывать / -ивать",
+            "next": "q3_pick_word"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "Неподходящее слово",
+            "next": "q3_pick_word"
+          }
+        ]
+      },
+      {
+        "id": "q4_check_root",
+        "step_number": 4,
+        "type": "question",
+        "title": "Шаг 4. Контроль корня",
+        "text": "Убедитесь: вы проверяете корень той же формой корня (без чередования полногласие/неполногласие)?",
+        "skill_id": "check_same_root",
+        "options": [
+          {
+            "id": "op_root_match_yes",
+            "label": "Да, корни полностью совпадают",
+            "next": "q5_check_yvat"
+          },
+          {
+            "id": "op_root_match_no",
+            "label": "Нет, это разные корни",
+            "next": "q3_pick_word"
+          }
+        ]
+      },
+      {
+        "id": "q5_check_yvat",
+        "step_number": 5,
+        "type": "question",
+        "title": "Шаг 5. Отсечение глаголов на -ывать/-ивать",
+        "text": "Убедитесь: проверочное слово НЕ является глаголом несовершенного вида на -ывать / -ивать?",
+        "skill_id": "check_not_yvat",
+        "options": [
+          {
+            "id": "op_yvat_no",
+            "label": "Да, слово не оканчивается на -ывать/-ивать",
+            "next": "r_final_accent"
+          },
+          {
+            "id": "op_yvat_yes",
+            "label": "Это глагол на -ывать/-ивать (не подходит)",
+            "next": "q3_pick_word"
+          }
+        ]
+      },
+      {
+        "id": "r_final_accent",
+        "step_number": 6,
+        "type": "result",
+        "title": "Шаг 6. Итог",
+        "label": "Пишем гласную из сильной позиции",
+        "explanation": "Под ударением гласная отчетливо слышна — вписываем эту букву в исходное слово!"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "сокр__ти́ть",
+        "vowel": "а",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "кра́ткий",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "коро́ткий",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка неполногласия! В слове «сократить» корень -крат-, а в «короткий» — корень -корот-. Это разные корни! Подберите другое проверочное слово."
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "укоро́ченный",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «укороченный» содержит корень -корот-. Подберите слово с корнем -крат-."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["сократить", "а", "А"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "оп__зда́ть",
+        "vowel": "о",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "по́здний",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_yvat",
+            "label": "опа́здывать",
+            "is_correct": false,
+            "trap_type": "yvat",
+            "explanation": "Ловушка правила! Безударную гласную в корне нельзя проверять глаголами несовершенного вида на -ывать / -ивать! Подберите другое слово."
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "поезда́",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «поезда» имеет корень -поезд- и совершенно другое лексическое значение."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["опоздать", "о", "О"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "раздр__жа́ть",
+        "vowel": "а",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "дра́знит",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "дрожь",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Слово «дрожь» происходит от корня -дрож-/-дрог-, а в «раздражать» исторический корень -драж-. Это разные корни!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "раздража́ющий",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «раздражающий» гласная тоже в безударной слабой позиции. Требуется сильная ударная позиция!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["раздражать", "а", "А"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "разгл__де́ть",
+        "vowel": "я",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "взгляд",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "гла́дкий",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Слово «гладкий» происходит от корня -глад-, а в слове «разглядеть» корень -гляд-. Они не имеют общего значения!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "гляде́лки",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «гляделки» звук [и] безударный. Нужно слово, где гласный в корне находится под ударением!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["разглядеть", "я", "Я"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "пол__ска́ть (собаку)",
+        "vowel": "а",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "ла́ска",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "поло́щет",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Омофоническая ловушка! «Полощет» относится к полосканию белья (вода), а собаку — гладят и проявляют «ласку»!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "ло́ск",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «лоск» (глянец, блеск) не имеет смысловой связи с выражением «ласкать собаку»."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["поласкать", "а", "А", "поласкать собаку"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "ув__да́ть (без воды)",
+        "vowel": "я",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "увя́нуть",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "ви́деть",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Омофоническая ловушка! «Видеть» относится к зрению (увидать издали), а растение без влаги сохнет и вянет («увянуть»)!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "ве́дать",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «ведать» (знать) не связано с процессами увядания цветка."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["увядать", "я", "Я", "увядать без воды"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "просв__ти́ть (рентгеном)",
+        "vowel": "е",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "свет",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "свя́тость",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Омофоническая ловушка! «Святость» относится к слову «посвятить стихи/жизнь», а лучи рентгена излучают «свет»!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "свети́льник",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «светильник» гласная в корне безударная. Проверочное слово должно иметь корень под ударением (свет)!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["просветить", "е", "Е", "просветить рентгеном"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "check_vowel_root",
+      "content": {
+        "word": "прим__ря́ть (костюм)",
+        "vowel": "е",
+        "check_options": [
+          {
+            "id": "op_word_correct",
+            "label": "ме́рка",
+            "is_correct": true
+          },
+          {
+            "id": "op_word_trap_root",
+            "label": "мир",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Омофоническая ловушка! «Мир» относится к слову «примирять поссорившихся друзей», а одежду или костюм шьют по «мерке»!"
+          },
+          {
+            "id": "op_word_distractor",
+            "label": "смире́ние",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «смирение» связано с корнем -мир-, а не с примеркой костюма."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_root_yes" },
+          { "id": "q3_pick_word", "option_id": "op_word_correct" },
+          { "id": "q4_check_root", "option_id": "op_root_match_yes" },
+          { "id": "q5_check_yvat", "option_id": "op_yvat_no" }
+        ],
+        "correct_answers": ["примерять", "е", "Е", "примерять костюм"]
+      }
+    }
+  ]
+}
