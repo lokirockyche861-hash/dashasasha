@@ -335,5 +335,365 @@
                 "explanation": "В остальных случаях пишется разделительный Ь."
             }
         ]
+    },
+    {
+        "graphId": "graph_o_yo_root_v1",
+        "title": "О-Ё после шипящих в корне под ударением",
+        "layout": "binary",
+        "start_node": "q_zhog",
+        "ruleId": "rule_o_yo_root",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q_zhog",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Это слово с корнем **жёг/жог**?",
+                "skill_id": "root_zhog_check",
+                "options": [
+                    {
+                        "id": "op_zhog_yes",
+                        "label": "Да",
+                        "next": "q_question_pos"
+                    },
+                    {
+                        "id": "op_zhog_no",
+                        "label": "Нет",
+                        "next": "q_alt_e"
+                    }
+                ]
+            },
+            {
+                "id": "q_alt_e",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Пробуем подобрать однокоренное слово с буквой **Е**. Получилось?",
+                "skill_id": "e_alternation",
+                "options": [
+                    {
+                        "id": "op_alt_yes",
+                        "label": "Да",
+                        "next": "r_yo"
+                    },
+                    {
+                        "id": "op_alt_no",
+                        "label": "Нет",
+                        "next": "r_o"
+                    }
+                ]
+            },
+            {
+                "id": "q_question_pos",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Слово отвечает на вопрос **что?** или **что сделал? / какой?**",
+                "skill_id": "part_of_speech_zhog",
+                "options": [
+                    {
+                        "id": "op_pos_verb",
+                        "label": "что сделал? / какой?",
+                        "next": "r_verb_yo"
+                    },
+                    {
+                        "id": "op_pos_noun",
+                        "label": "что? (сущ.)",
+                        "next": "r_noun_o"
+                    }
+                ]
+            },
+            {
+                "id": "r_o",
+                "type": "result",
+                "label": "Пишем О",
+                "explanation": "Нет проверочного слова с Е ➔ пишем О (шов, шорох, капюшон, крыжовник...)"
+            },
+            {
+                "id": "r_yo",
+                "type": "result",
+                "label": "Пишем Ё",
+                "explanation": "Есть чередование с Е ➔ пишем Ё (жёлтый ➔ желтеть, шёлк ➔ шелка, чёрный ➔ чернеть)"
+            },
+            {
+                "id": "r_noun_o",
+                "type": "result",
+                "label": "что? ➔ О",
+                "explanation": "Существительное с корнем жог ➔ пишем букву О (ожог, поджог дома, изжога)"
+            },
+            {
+                "id": "r_verb_yo",
+                "type": "result",
+                "label": "что сделал? ➔ Ё",
+                "explanation": "Глагол или причастие с корнем жёг ➔ пишем букву Ё (обжёг, поджёг траву, сожжённый)"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_prefix_z_s_v1",
+        "title": "Правописание согласных на конце приставок в слабой позиции по звонкости-глухости",
+        "layout": "binary",
+        "start_node": "q_sound_z_s",
+        "ruleId": "rule_prefix_z_s",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q_sound_z_s",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "На конце приставки звук **[з] [з’]** или **[с] [с’]**?",
+                "skill_id": "sound_z_s_check",
+                "options": [
+                    {
+                        "id": "op_sound_yes",
+                        "label": "Да",
+                        "next": "q_single_letter"
+                    },
+                    {
+                        "id": "op_sound_no",
+                        "label": "Нет",
+                        "next": "r_strong_pos"
+                    }
+                ]
+            },
+            {
+                "id": "q_single_letter",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Приставка из одной буквы?",
+                "skill_id": "single_letter_check",
+                "options": [
+                    {
+                        "id": "op_single_yes",
+                        "label": "Да",
+                        "next": "r_single_s"
+                    },
+                    {
+                        "id": "op_single_no",
+                        "label": "Нет",
+                        "next": "q_next_sound"
+                    }
+                ]
+            },
+            {
+                "id": "q_next_sound",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "Какой звук после приставки?",
+                "skill_id": "next_sound_check",
+                "options": [
+                    {
+                        "id": "op_next_voiced",
+                        "label": "Звонкий",
+                        "next": "r_z"
+                    },
+                    {
+                        "id": "op_next_voiceless",
+                        "label": "Глухой",
+                        "next": "r_s"
+                    }
+                ]
+            },
+            {
+                "id": "r_single_s",
+                "type": "result",
+                "label": "Пишем С-",
+                "explanation": "Одиночная приставка С-"
+            },
+            {
+                "id": "r_z",
+                "type": "result",
+                "label": "Пишем З",
+                "explanation": "Перед звонким согласным"
+            },
+            {
+                "id": "r_s",
+                "type": "result",
+                "label": "Пишем С",
+                "explanation": "Перед глухим согласным"
+            },
+            {
+                "id": "r_strong_pos",
+                "type": "result",
+                "label": "По слуху (сильная позиция)",
+                "explanation": "Перед гласной или л, р, м, н, в"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_vowels_after_ts_v1",
+        "title": "Гласные после Ц",
+        "layout": "binary",
+        "start_node": "q_in_root",
+        "ruleId": "rule_vowels_after_ts",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q_in_root",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "1. Это гласная после Ц в корне?",
+                "skill_id": "root_check",
+                "options": [
+                    {
+                        "id": "op_root_yes",
+                        "label": "Да",
+                        "next": "q_root_e"
+                    },
+                    {
+                        "id": "op_root_no",
+                        "label": "Нет",
+                        "next": "q_suffix_yn"
+                    }
+                ]
+            },
+            {
+                "id": "q_root_e",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "2. В однокоренном под ударением Е?",
+                "skill_id": "stress_e_check",
+                "options": [
+                    {
+                        "id": "op_e_yes",
+                        "label": "Да",
+                        "next": "r_root_e"
+                    },
+                    {
+                        "id": "op_e_no",
+                        "label": "Нет",
+                        "next": "q_root_exception"
+                    }
+                ]
+            },
+            {
+                "id": "q_root_exception",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "3. Это исключение (или однокоренное): \"цыган на цыпочках цыкнул цыплёнку: цыц!\"?",
+                "skill_id": "exception_check",
+                "options": [
+                    {
+                        "id": "op_exc_yes",
+                        "label": "Да",
+                        "next": "r_root_exception_y"
+                    },
+                    {
+                        "id": "op_exc_no",
+                        "label": "Нет",
+                        "next": "r_root_i"
+                    }
+                ]
+            },
+            {
+                "id": "q_suffix_yn",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "2. Это гласная в суффиксе -ын-?\n*(куницын, синицына)*",
+                "skill_id": "suffix_yn_check",
+                "options": [
+                    {
+                        "id": "op_yn_yes",
+                        "label": "Да",
+                        "next": "r_suffix_yn_y"
+                    },
+                    {
+                        "id": "op_yn_no",
+                        "label": "Нет",
+                        "next": "q_noun_plural"
+                    }
+                ]
+            },
+            {
+                "id": "q_noun_plural",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "3. Это гласная после Ц в окончании существительного во множественном числе?\n*( (кто?) курицы, синицы)*",
+                "skill_id": "noun_plural_check",
+                "options": [
+                    {
+                        "id": "op_plural_yes",
+                        "label": "Да",
+                        "next": "r_noun_plural_y"
+                    },
+                    {
+                        "id": "op_plural_no",
+                        "label": "Нет",
+                        "next": "q_adj_ending"
+                    }
+                ]
+            },
+            {
+                "id": "q_adj_ending",
+                "type": "question",
+                "question_kind": "choice",
+                "answer_type": "select",
+                "text": "4. Это гласная в окончании слова отвечающего на вопрос \"какой\"?\n*( (какой?) куцый)*",
+                "skill_id": "adj_ending_check",
+                "options": [
+                    {
+                        "id": "op_adj_yes",
+                        "label": "Да",
+                        "next": "r_adj_ending_y"
+                    },
+                    {
+                        "id": "op_adj_no",
+                        "label": "Нет",
+                        "next": "r_other_i"
+                    }
+                ]
+            },
+            {
+                "id": "r_root_e",
+                "type": "result",
+                "label": "Пишем Е",
+                "explanation": "В корне под ударением Е"
+            },
+            {
+                "id": "r_root_exception_y",
+                "type": "result",
+                "label": "Пишем Ы",
+                "explanation": "Исключение в корне"
+            },
+            {
+                "id": "r_root_i",
+                "type": "result",
+                "label": "Пишем И",
+                "explanation": "В корне слова"
+            },
+            {
+                "id": "r_suffix_yn_y",
+                "type": "result",
+                "label": "Пишем Ы",
+                "explanation": "В суффиксе -ын-"
+            },
+            {
+                "id": "r_noun_plural_y",
+                "type": "result",
+                "label": "Пишем Ы",
+                "explanation": "В окончании сущ. во мн. ч."
+            },
+            {
+                "id": "r_adj_ending_y",
+                "type": "result",
+                "label": "Пишем Ы",
+                "explanation": "В окончании слова (какой?)"
+            },
+            {
+                "id": "r_other_i",
+                "type": "result",
+                "label": "Пишем И",
+                "explanation": "На -ция и в других суффиксах"
+            }
+        ]
     }
 ]

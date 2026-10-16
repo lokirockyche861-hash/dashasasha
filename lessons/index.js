@@ -124,6 +124,25 @@ export const lessons = [
     }
   },
   {
+    id: 'lesson-o-yo-root',
+    title: 'Урок 4. О-Ё после шипящих в корне слова под ударением',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-o-yo-root.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-o-yo-root.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-o-yo-root.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-o-yo-root.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
     id: 'lesson-pol',
     title: 'Урок 14. Правописание пол- и полу-',
     topicId: 'morphemics',
@@ -139,6 +158,44 @@ export const lessons = [
     },
     theoryLoader: async () => {
       const data = await import('./practice/lesson-pol.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-prefix-z-s',
+    title: 'Урок 13. Правописание согласных на конце приставок (З/С)',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-prefix-z-s.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-prefix-z-s.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-prefix-z-s.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-prefix-z-s.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-vowels-after-ts',
+    title: 'Урок 5. Гласные после Ц',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    loader: () => import('./practice/lesson-vowels-after-ts.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-ts.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-ts.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-ts.json')
       return data.default?.theory || data.theory
     }
   }

@@ -20,6 +20,7 @@ import { AnalyticsService } from '@/utils/AnalyticsService'
 
 // Layouts
 const SpineTreeLayout = defineAsyncComponent(() => import('./layouts/SpineTreeLayout.vue'))
+const BinaryTreeLayout = defineAsyncComponent(() => import('./layouts/BinaryTreeLayout.vue'))
 
 const props = defineProps({
   rule: {
@@ -59,6 +60,9 @@ const currentNode = computed(() => {
 })
 
 const layoutComponent = computed(() => {
+  if (props.rule?.layout === 'binary') {
+    return BinaryTreeLayout
+  }
   return SpineTreeLayout
 })
 

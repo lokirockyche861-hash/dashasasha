@@ -1,0 +1,1512 @@
+{
+  "id": "lesson-o-yo-root",
+  "title": "Урок 4. О-Ё после шипящих в корне слова под ударением",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-oyo-intro-md",
+      "type": "markdown",
+      "content": "### Правописание О и Ё после шипящих в корне слова под ударением\n\nПод ударением после шипящих (**ж**, **ш**, **ч**, **щ**) мы отчетливо слышим звук **[о]**, но на письме пишется то буква **О**, то **Ё** (*шёпот*, *шов*, *жёлтый*, *шорох*).\n\nПоскольку обе буквы звучат абсолютно одинаково, выбор зависит от морфемного строения слова и наличия **чередования звуков**!"
+    },
+    {
+      "id": "l-oyo-q1",
+      "type": "QuizSelect",
+      "skill_id": "e_alternation",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "В слове *ш_пот* пишется буква **Ё** (*шёпот*). Какое проверочное слово или форма доказывает это написание наличием чередования с буквой **Е**?",
+        "options": [
+          {
+            "id": "op_alt_true",
+            "label": "шептать [шэптат'] — звук [о] чередуется с [э] (буквой Е)",
+            "correct": true
+          },
+          {
+            "id": "op_alt_false1",
+            "label": "шептун — это синоним, но гласный не под ударением",
+            "correct": false
+          },
+          {
+            "id": "op_alt_false2",
+            "label": "шёпотом — та же форма с Ё, проверки нет",
+            "correct": false
+          }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-oyo-intro-md2",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Главное правило:** Если в корне под ударением слышится **[о]** и при изменении слова или в однокоренных словах появляется **Е** (*жёлтый ➔ желтеть, шёлк ➔ шелка, чёрный ➔ чернеть*), то пишется **Ё**.\n\nЕсли же такого чередования нет (в исконно русских словах и заимствованиях), пишется буква **О**."
+    },
+    {
+      "id": "l-oyo-q2",
+      "type": "QuizCheckbox",
+      "skill_id": "o_exceptions",
+      "answer_type": "multi-select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "В каких словах в корне пишется буква **О**, так как у них нет чередования с буквой Е? (Выберите все верные варианты)",
+        "options": [
+          {
+            "id": "op_shorokh",
+            "label": "ш_рох (шорох)",
+            "correct": true
+          },
+          {
+            "id": "op_kryzhovnik",
+            "label": "крыж_вник (крыжовник)",
+            "correct": true
+          },
+          {
+            "id": "op_shov",
+            "label": "ш_в (шов)",
+            "correct": true
+          },
+          {
+            "id": "op_zholud",
+            "label": "ж_лудь (жёлудь — желудей)",
+            "correct": false
+          },
+          {
+            "id": "op_pchely",
+            "label": "пч_лы (пчёлы — пчела)",
+            "correct": false
+          }
+        ],
+        "button_text": "Проверить"
+      }
+    },
+    {
+      "id": "l-oyo-q3",
+      "type": "QuizSelect",
+      "skill_id": "zhog_differentiation",
+      "answer_type": "select",
+      "taskVersion": "v.1.0",
+      "blocked": false,
+      "content": {
+        "text": "Особое внимание корню **жёг/жог**: как различить написание в предложениях: *тяжёлый ож_г руки* и *он сильно обж_г руку*?",
+        "options": [
+          {
+            "id": "op_zhog_correct",
+            "label": "Существительное (что?) пишется с О (ожог), а глагол (что сделал?) — с Ё (обжёг)",
+            "correct": true
+          },
+          {
+            "id": "op_zhog_all_yo",
+            "label": "Все слова с этим корнем всегда пишутся через Ё",
+            "correct": false
+          },
+          {
+            "id": "op_zhog_all_o",
+            "label": "Все слова с этим корнем всегда пишутся через О",
+            "correct": false
+          }
+        ],
+        "button_text": "Ответить"
+      }
+    },
+    {
+      "id": "l-oyo-summary-md",
+      "type": "markdown",
+      "content": "### 📌 Итоговый алгоритм проверки:\n\n1. **Корень жёг/жог?**\n   - Существительное (что?) ➔ **пишем О** (*ожог, поджог дома, изжога*);\n   - Глагол (что сделал?) ➔ **пишем Ё** (*обжёг, поджёг траву*).\n2. **Другой корень?**\n   - Подбираем слово с **Е**:\n     - Получилось? ➔ **пишем Ё** (*жёлтый ➔ желтеть, счёт ➔ счесть*);\n     - Не получилось? ➔ **пишем О** (*шорох, шов, крыжовник, капюшон, шорты*).\n\nНа тренажёре справа этот алгоритм собран в виде интерактивного дерева решений. Переходите к тренировке!"
+    }
+  ],
+  "rule": {
+    "graphId": "graph_o_yo_root_v1",
+    "title": "О-Ё после шипящих в корне под ударением",
+    "layout": "binary",
+    "start_node": "q_zhog",
+    "ruleId": "rule_o_yo_root",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q_zhog",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Это слово с корнем **жёг/жог**?",
+        "skill_id": "root_zhog_check",
+        "options": [
+          {
+            "id": "op_zhog_yes",
+            "label": "Да",
+            "next": "q_question_pos"
+          },
+          {
+            "id": "op_zhog_no",
+            "label": "Нет",
+            "next": "q_alt_e"
+          }
+        ]
+      },
+      {
+        "id": "q_alt_e",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Пробуем подобрать однокоренное слово с буквой **Е**. Получилось?",
+        "skill_id": "e_alternation",
+        "options": [
+          {
+            "id": "op_alt_yes",
+            "label": "Да",
+            "next": "r_yo"
+          },
+          {
+            "id": "op_alt_no",
+            "label": "Нет",
+            "next": "r_o"
+          }
+        ]
+      },
+      {
+        "id": "q_question_pos",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Слово отвечает на вопрос...",
+        "skill_id": "part_of_speech_zhog",
+        "options": [
+          {
+            "id": "op_pos_verb",
+            "label": "что сделал? какой?",
+            "next": "r_verb_yo"
+          },
+          {
+            "id": "op_pos_noun",
+            "label": "что?",
+            "next": "r_noun_o"
+          }
+        ]
+      },
+      {
+        "id": "r_o",
+        "type": "result",
+        "label": "Пишем О",
+        "explanation": "Нет проверочного слова с Е ➔ пишем О"
+      },
+      {
+        "id": "r_yo",
+        "type": "result",
+        "label": "Пишем Ё",
+        "explanation": "Есть чередование с Е ➔ пишем Ё"
+      },
+      {
+        "id": "r_noun_o",
+        "type": "result",
+        "label": "Пишем О",
+        "explanation": "Существительное с корнем жог"
+      },
+      {
+        "id": "r_verb_yo",
+        "type": "result",
+        "label": "Пишем Ё",
+        "explanation": "Глагол или причастие с корнем жёг"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "быстро уш___л",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "быстро ушёл",
+          "ушёл",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "верные ж___ны",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "верные жёны",
+          "жёны",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "вместительный ш___пер",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "вместительный шоппер",
+          "шоппер",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "глубокий ж___лоб",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "глубокий жёлоб",
+          "жёлоб",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "горячая пш___нка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "горячая пшёнка",
+          "пшёнка",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "громко ч___каться",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "громко чокаться",
+          "чокаться",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "грязная трущ___ба",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "грязная трущоба",
+          "трущоба",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "дверная щ___лка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "дверная щёлка",
+          "щёлка",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "деш___вый билет",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "дешёвый билет",
+          "дешёвый",
+          "ё",
+          "дешевый",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "дикие пч___лы",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "дикие пчёлы",
+          "пчёлы",
+          "ё",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ж___ваная бумага",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "жёваная бумага",
+          "жёваная",
+          "ё",
+          "жеваная",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ж___сткий матрас",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "жёсткий матрас",
+          "жёсткий",
+          "ё",
+          "жесткий",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "железная реш___тка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "железная решётка",
+          "решётка",
+          "ё",
+          "решетка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "зубная щ___тка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "зубная щётка",
+          "щётка",
+          "ё",
+          "щетка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "испытать ш___к",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "испытать шок",
+          "шок",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "колючий крыж___вник",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "колючий крыжовник",
+          "крыжовник",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "короткая ч___лка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "короткая чёлка",
+          "чёлка",
+          "ё",
+          "челка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ровная ч___рточка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "ровная чёрточка",
+          "чёрточка",
+          "ё",
+          "черточка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "лёгкий ш___рох",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "лёгкий шорох",
+          "шорох",
+          "о",
+          "легкий шорох",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "маж___рный лад",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "мажорный лад",
+          "мажорный",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t21",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "модная прич___ска",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "модная причёска",
+          "причёска",
+          "ё",
+          "прическа",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t22",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "мягкая ш___рстка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "мягкая шёрстка",
+          "шёрстка",
+          "ё",
+          "шерстка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t23",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "настоящий щ___голь",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "настоящий щёголь",
+          "щёголь",
+          "ё",
+          "щеголь",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t24",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "натуральный ш___лк",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "натуральный шёлк",
+          "шёлк",
+          "ё",
+          "шелк",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t25",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "новые ш___рты",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "новые шорты",
+          "шорты",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t26",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "овощное леч___",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "овощное лечо",
+          "лечо",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t27",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "онлайн ш___пинг",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "онлайн шопинг",
+          "шопинг",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t28",
+      "skill_id": "zhog_differentiation",
+      "content": {
+        "word": "опасный ож___г",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_yes"
+          },
+          {
+            "id": "q_question_pos",
+            "option_id": "op_pos_noun"
+          }
+        ],
+        "correct_answers": [
+          "опасный ожог",
+          "ожог",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t29",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "особый поч___т",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "особый почёт",
+          "почёт",
+          "ё",
+          "почет",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t30",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "острое харч___",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "острое харчо",
+          "харчо",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t31",
+      "skill_id": "zhog_differentiation",
+      "content": {
+        "word": "подж___г сухую траву",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_yes"
+          },
+          {
+            "id": "q_question_pos",
+            "option_id": "op_pos_verb"
+          }
+        ],
+        "correct_answers": [
+          "поджёг сухую траву",
+          "поджёг",
+          "ё",
+          "поджег сухую траву",
+          "поджег",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t32",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "раствор щ___лочи",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "раствор щёлочи",
+          "щёлочи",
+          "ё",
+          "щелочи",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t33",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "ровный ш___в",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "ровный шов",
+          "шов",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t34",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "румяные щ___ки",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "румяные щёки",
+          "щёки",
+          "ё",
+          "щеки",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t35",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "рыбацкий ч___лн",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "рыбацкий чёлн",
+          "чёлн",
+          "ё",
+          "челн",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t36",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "свежий корниш___н",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "свежий корнишон",
+          "корнишон",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t37",
+      "skill_id": "zhog_differentiation",
+      "content": {
+        "word": "сильная изж___га",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_yes"
+          },
+          {
+            "id": "q_question_pos",
+            "option_id": "op_pos_noun"
+          }
+        ],
+        "correct_answers": [
+          "сильная изжога",
+          "изжога",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t38",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "сказочный ч___рт",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "сказочный чёрт",
+          "чёрт",
+          "ё",
+          "черт",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t39",
+      "skill_id": "zhog_differentiation",
+      "content": {
+        "word": "случайный подж___г",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_yes"
+          },
+          {
+            "id": "q_question_pos",
+            "option_id": "op_pos_noun"
+          }
+        ],
+        "correct_answers": [
+          "случайный поджог",
+          "поджог",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t40",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "солёный анч___ус",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "солёный анчоус",
+          "анчоус",
+          "о",
+          "соленый анчоус",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t41",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "спелый ж___лудь",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "спелый жёлудь",
+          "жёлудь",
+          "ё",
+          "желудь",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t42",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "старый ж___рнов",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "старый жёрнов",
+          "жёрнов",
+          "ё",
+          "жернов",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t43",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "страшный обж___ра",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "страшный обжора",
+          "обжора",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t44",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "тёплый капюш___н",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "тёплый капюшон",
+          "капюшон",
+          "о",
+          "теплый капюшон",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t45",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "тихий ш___пот",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "тихий шёпот",
+          "шёпот",
+          "ё",
+          "шепот",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t46",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "тонкая ж___рдочка",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "тонкая жёрдочка",
+          "жёрдочка",
+          "ё",
+          "жердочка",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t47",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "точный сч___т",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "точный счёт",
+          "счёт",
+          "ё",
+          "счет",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t48",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "удобное понч___",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "удобное пончо",
+          "пончо",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t49",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "цирковое ш___у",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "цирковое шоу",
+          "шоу",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t50",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "ч___порный человек",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "чопорный человек",
+          "чопорный",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t51",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ч___рный кот",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "чёрный кот",
+          "чёрный",
+          "ё",
+          "черный",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t52",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ч___рствый хлеб",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "чёрствый хлеб",
+          "чёрствый",
+          "ё",
+          "черствый",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t53",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ч___тный номер",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "чётный номер",
+          "чётный",
+          "ё",
+          "четный",
+          "Ё"
+        ]
+      }
+    },
+    {
+      "id": "t54",
+      "skill_id": "o_exceptions",
+      "content": {
+        "word": "ш___ры для лошади",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_no"
+          }
+        ],
+        "correct_answers": [
+          "шоры для лошади",
+          "шоры",
+          "о",
+          "О"
+        ]
+      }
+    },
+    {
+      "id": "t55",
+      "skill_id": "e_alternation",
+      "content": {
+        "word": "ярко-ж___лтый лист",
+        "correct_path": [
+          {
+            "id": "q_zhog",
+            "option_id": "op_zhog_no"
+          },
+          {
+            "id": "q_alt_e",
+            "option_id": "op_alt_yes"
+          }
+        ],
+        "correct_answers": [
+          "ярко-жёлтый лист",
+          "жёлтый",
+          "ё",
+          "ярко-желтый лист",
+          "желтый",
+          "Ё"
+        ]
+      }
+    }
+  ]
+}

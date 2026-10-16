@@ -1,0 +1,749 @@
+{
+  "id": "lesson-prefix-z-s",
+  "title": "Урок 13. Правописание согласных на конце приставок в слабой позиции по звонкости-глухости",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l13-theory-author-md",
+      "type": "markdown",
+      "content": "На конце приставки может произойти озвончение или оглушение согласных.\n\n> [!summary]\n> Чтобы проверить, какую согласную писать на конце приставки, в большинстве случаев достаточно поставить её в слово, где она будет в сильной позиции: перед гласной, л, р, н, м, в.\n\nЭто неприменимо к приставкам, которые оканчиваются на *з* и *с*. На конце таких приставок пишется звонкий звук перед звонким согласным и глухой звук – перед глухим.\n\nЧтобы запомнить порядок проверки, используйте самоинструкцию. Внимательно прочитывайте вопросы. Это поможет вам видеть приставки, которые нельзя проверять при помощи постановки согласных в сильную позицию, а также видеть звонкие и глухие согласные после приставок на -з/-с."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_prefix_z_s_v1",
+    "title": "Правописание согласных на конце приставок в слабой позиции по звонкости-глухости",
+    "layout": "binary",
+    "start_node": "q_sound_z_s",
+    "ruleId": "rule_prefix_z_s",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q_sound_z_s",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "На конце приставки звук **[з] [з’]** или **[с] [с’]**?",
+        "skill_id": "sound_z_s_check",
+        "options": [
+          {
+            "id": "op_sound_yes",
+            "label": "Да",
+            "next": "q_single_letter"
+          },
+          {
+            "id": "op_sound_no",
+            "label": "Нет",
+            "next": "r_strong_pos"
+          }
+        ]
+      },
+      {
+        "id": "q_single_letter",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Приставка из одной буквы?",
+        "skill_id": "single_letter_check",
+        "options": [
+          {
+            "id": "op_single_yes",
+            "label": "Да",
+            "next": "r_single_s"
+          },
+          {
+            "id": "op_single_no",
+            "label": "Нет",
+            "next": "q_next_sound"
+          }
+        ]
+      },
+      {
+        "id": "q_next_sound",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "Какой звук после приставки?",
+        "skill_id": "next_sound_check",
+        "options": [
+          {
+            "id": "op_next_voiced",
+            "label": "Звонкий",
+            "next": "r_z"
+          },
+          {
+            "id": "op_next_voiceless",
+            "label": "Глухой",
+            "next": "r_s"
+          }
+        ]
+      },
+      {
+        "id": "r_single_s",
+        "type": "result",
+        "label": "Пишем С-",
+        "explanation": "Одиночная приставка С-"
+      },
+      {
+        "id": "r_z",
+        "type": "result",
+        "label": "Пишем З",
+        "explanation": "Перед звонким согласным"
+      },
+      {
+        "id": "r_s",
+        "type": "result",
+        "label": "Пишем С",
+        "explanation": "Перед глухим согласным"
+      },
+      {
+        "id": "r_strong_pos",
+        "type": "result",
+        "label": "По слуху (сильная позиция)",
+        "explanation": "Перед гласной или л, р, м, н, в"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "о___бросить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "отбросить",
+          "т",
+          "Т"
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___делать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сделать",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "ра___будить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "разбудить",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "ра___пилить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "распилить",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "по___ступиться",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "подступиться",
+          "д",
+          "Д"
+        ]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___бежать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сбежать",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "и___бежать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "избежать",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "бе___шумный",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "бесшумный",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "по___писать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "подписать",
+          "д",
+          "Д"
+        ]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___гореть",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сгореть",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "во___главить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "возглавить",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "во___ход",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "восход",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "о___переть",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "отпереть",
+          "т",
+          "Т"
+        ]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___жать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сжать",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "бе___донный",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "бездонный",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "бе___крайний",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "бескрайний",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "на___пилить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "надпилить",
+          "д",
+          "Д"
+        ]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___гинуть",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сгинуть",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "в___лететь",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "взлететь",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "в___крикнуть",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "вскрикнуть",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t21",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "о___тереть",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "обтереть",
+          "б",
+          "Б"
+        ]
+      }
+    },
+    {
+      "id": "t22",
+      "skill_id": "single_s",
+      "content": {
+        "word": "___дать",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_yes"
+          }
+        ],
+        "correct_answers": [
+          "сдать",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t23",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "чре___мерный",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "чрезмерный",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t24",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "чере___чур",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "чересчур",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t25",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "пре___ставить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "представить",
+          "д",
+          "Д"
+        ]
+      }
+    },
+    {
+      "id": "t26",
+      "skill_id": "prefix_voiced",
+      "content": {
+        "word": "ра___оружить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiced"
+          }
+        ],
+        "correct_answers": [
+          "разоружить",
+          "з",
+          "З"
+        ]
+      }
+    },
+    {
+      "id": "t27",
+      "skill_id": "prefix_voiceless",
+      "content": {
+        "word": "и___портить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_yes"
+          },
+          {
+            "id": "q_single_letter",
+            "option_id": "op_single_no"
+          },
+          {
+            "id": "q_next_sound",
+            "option_id": "op_next_voiceless"
+          }
+        ],
+        "correct_answers": [
+          "испортить",
+          "с",
+          "С"
+        ]
+      }
+    },
+    {
+      "id": "t28",
+      "skill_id": "strong_position",
+      "content": {
+        "word": "о___клеить",
+        "correct_path": [
+          {
+            "id": "q_sound_z_s",
+            "option_id": "op_sound_no"
+          }
+        ],
+        "correct_answers": [
+          "отклеить",
+          "т",
+          "Т"
+        ]
+      }
+    }
+  ]
+}

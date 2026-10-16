@@ -1,0 +1,768 @@
+{
+  "id": "lesson-vowels-after-ts",
+  "title": "Урок 5. Гласные после Ц",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l5-theory-author-md",
+      "type": "markdown",
+      "content": "Вспомните, что звук [ц] в русском языке всегда `мягкий/твёрдый`.\nПоэтому гласные, идущие после буквы Ц не смягчают этот звук.\n\n> [!summary]\n> Если вы слышите после [ц] звуки [а] или [у], то пишете так же, как после шипящих буквы `___` и `___`\n\nЕсли вы слышите после [ц] звук [ы], используйте правило. Вам важно верно определить морфему, в которой расположена искомая гласная после Ц. Следуйте алгоритму: анализируйте, в какой значимой части слова расположена гласная, которую вы ищете. Алгоритм поможет освоить простые действия и запомнить исключения."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_vowels_after_ts_v1",
+    "title": "Гласные после Ц",
+    "layout": "binary",
+    "start_node": "q_in_root",
+    "ruleId": "rule_vowels_after_ts",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q_in_root",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "1. Это гласная после Ц в корне?",
+        "skill_id": "root_check",
+        "options": [
+          {
+            "id": "op_root_yes",
+            "label": "Да",
+            "next": "q_root_e"
+          },
+          {
+            "id": "op_root_no",
+            "label": "Нет",
+            "next": "q_suffix_yn"
+          }
+        ]
+      },
+      {
+        "id": "q_root_e",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "2. В однокоренном под ударением Е?",
+        "skill_id": "stress_e_check",
+        "options": [
+          {
+            "id": "op_e_yes",
+            "label": "Да",
+            "next": "r_root_e"
+          },
+          {
+            "id": "op_e_no",
+            "label": "Нет",
+            "next": "q_root_exception"
+          }
+        ]
+      },
+      {
+        "id": "q_root_exception",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "3. Это исключение (или однокоренное): \"цыган на цыпочках цыкнул цыплёнку: цыц!\"?",
+        "skill_id": "exception_check",
+        "options": [
+          {
+            "id": "op_exc_yes",
+            "label": "Да",
+            "next": "r_root_exception_y"
+          },
+          {
+            "id": "op_exc_no",
+            "label": "Нет",
+            "next": "r_root_i"
+          }
+        ]
+      },
+      {
+        "id": "q_suffix_yn",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "2. Это гласная в суффиксе -ын-?\n*(куницын, синицына)*",
+        "skill_id": "suffix_yn_check",
+        "options": [
+          {
+            "id": "op_yn_yes",
+            "label": "Да",
+            "next": "r_suffix_yn_y"
+          },
+          {
+            "id": "op_yn_no",
+            "label": "Нет",
+            "next": "q_noun_plural"
+          }
+        ]
+      },
+      {
+        "id": "q_noun_plural",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "3. Это гласная после Ц в окончании существительного во множественном числе?\n*( (кто?) курицы, синицы)*",
+        "skill_id": "noun_plural_check",
+        "options": [
+          {
+            "id": "op_plural_yes",
+            "label": "Да",
+            "next": "r_noun_plural_y"
+          },
+          {
+            "id": "op_plural_no",
+            "label": "Нет",
+            "next": "q_adj_ending"
+          }
+        ]
+      },
+      {
+        "id": "q_adj_ending",
+        "type": "question",
+        "question_kind": "choice",
+        "answer_type": "select",
+        "text": "4. Это гласная в окончании слова отвечающего на вопрос \"какой\"?\n*( (какой?) куцый)*",
+        "skill_id": "adj_ending_check",
+        "options": [
+          {
+            "id": "op_adj_yes",
+            "label": "Да",
+            "next": "r_adj_ending_y"
+          },
+          {
+            "id": "op_adj_no",
+            "label": "Нет",
+            "next": "r_other_i"
+          }
+        ]
+      },
+      {
+        "id": "r_root_e",
+        "type": "result",
+        "label": "Пишем Е",
+        "explanation": "В корне под ударением Е"
+      },
+      {
+        "id": "r_root_exception_y",
+        "type": "result",
+        "label": "Пишем Ы",
+        "explanation": "Исключение в корне"
+      },
+      {
+        "id": "r_root_i",
+        "type": "result",
+        "label": "Пишем И",
+        "explanation": "В корне слова"
+      },
+      {
+        "id": "r_suffix_yn_y",
+        "type": "result",
+        "label": "Пишем Ы",
+        "explanation": "В суффиксе -ын-"
+      },
+      {
+        "id": "r_noun_plural_y",
+        "type": "result",
+        "label": "Пишем Ы",
+        "explanation": "В окончании сущ. во мн. ч."
+      },
+      {
+        "id": "r_adj_ending_y",
+        "type": "result",
+        "label": "Пишем Ы",
+        "explanation": "В окончании слова (какой?)"
+      },
+      {
+        "id": "r_other_i",
+        "type": "result",
+        "label": "Пишем И",
+        "explanation": "На -ция и в других суффиксах"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "root_exception",
+      "content": {
+        "word": "(встать) на ц___почки",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["(встать) на цыпочки", "на цыпочки", "цыпочки", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "other_i",
+      "content": {
+        "word": "акац___я",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_no" }
+        ],
+        "correct_answers": ["акация", "и", "И"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "adj_ending",
+      "content": {
+        "word": "бледнолиц___й",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_yes" }
+        ],
+        "correct_answers": ["бледнолицый", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "волчиц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["волчицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "волчиц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["волчицы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "root_exception",
+      "content": {
+        "word": "выц___ганить",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["выцыганить", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "жильц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["жильцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "root_e",
+      "content": {
+        "word": "зац___питься",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_yes" }
+        ],
+        "correct_answers": ["зацепиться", "е", "Е"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "root_exception",
+      "content": {
+        "word": "зац___кать",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["зацыкать", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "other_i",
+      "content": {
+        "word": "инструкц___я",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_no" }
+        ],
+        "correct_answers": ["инструкция", "и", "И"]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "other_i",
+      "content": {
+        "word": "классифиц___ровать",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_no" }
+        ],
+        "correct_answers": ["классифицировать", "и", "И"]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "adj_ending",
+      "content": {
+        "word": "круглолиц___й",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_yes" }
+        ],
+        "correct_answers": ["круглолицый", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "куриц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["курицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "adj_ending",
+      "content": {
+        "word": "куц___й",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_yes" }
+        ],
+        "correct_answers": ["куцый", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "лисиц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["лисицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "львиц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["львицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "медведиц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["медведицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "молодц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["молодцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "мудрец___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["мудрецы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "огурц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["огурцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t21",
+      "skill_id": "root_i",
+      "content": {
+        "word": "панц___рь",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["панцирь", "и", "И"]
+      }
+    },
+    {
+      "id": "t22",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "певц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["певцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t23",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "пловц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["пловцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t24",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "птиц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["птицы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t25",
+      "skill_id": "other_i",
+      "content": {
+        "word": "публиц___ст",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_no" }
+        ],
+        "correct_answers": ["публицист", "и", "И"]
+      }
+    },
+    {
+      "id": "t26",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "сестриц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["сестрицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t27",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "синиц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["синицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t28",
+      "skill_id": "noun_plural",
+      "content": {
+        "word": "скворц___",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_yes" }
+        ],
+        "correct_answers": ["скворцы", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t29",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___кады",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цикады", "и", "И"]
+      }
+    },
+    {
+      "id": "t30",
+      "skill_id": "root_e",
+      "content": {
+        "word": "ц_нтральный",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_yes" }
+        ],
+        "correct_answers": ["центральный", "е", "Е"]
+      }
+    },
+    {
+      "id": "t31",
+      "skill_id": "root_e",
+      "content": {
+        "word": "ц___почка",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_yes" }
+        ],
+        "correct_answers": ["цепочка", "е", "Е"]
+      }
+    },
+    {
+      "id": "t32",
+      "skill_id": "suffix_yn",
+      "content": {
+        "word": "цариц___н",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_yes" }
+        ],
+        "correct_answers": ["царицын", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t33",
+      "skill_id": "root_e",
+      "content": {
+        "word": "ц___на",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_yes" }
+        ],
+        "correct_answers": ["цена", "е", "Е"]
+      }
+    },
+    {
+      "id": "t34",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___кл",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цикл", "и", "И"]
+      }
+    },
+    {
+      "id": "t35",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___клон",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["циклон", "и", "И"]
+      }
+    },
+    {
+      "id": "t36",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___линдр",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цилиндр", "и", "И"]
+      }
+    },
+    {
+      "id": "t37",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___рк",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цирк", "и", "И"]
+      }
+    },
+    {
+      "id": "t38",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___ркуль",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["циркуль", "и", "И"]
+      }
+    },
+    {
+      "id": "t39",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___стерна",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цистерна", "и", "И"]
+      }
+    },
+    {
+      "id": "t40",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___тата",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цитата", "и", "И"]
+      }
+    },
+    {
+      "id": "t41",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___трус",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["цитрус", "и", "И"]
+      }
+    },
+    {
+      "id": "t42",
+      "skill_id": "root_i",
+      "content": {
+        "word": "ц___ферблат",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_no" }
+        ],
+        "correct_answers": ["циферблат", "и", "И"]
+      }
+    },
+    {
+      "id": "t43",
+      "skill_id": "root_exception",
+      "content": {
+        "word": "ц___ганский",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["цыганский", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t44",
+      "skill_id": "root_exception",
+      "content": {
+        "word": "ц___плячий",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_yes" },
+          { "id": "q_root_e", "option_id": "op_e_no" },
+          { "id": "q_root_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["цыплячий", "ы", "Ы"]
+      }
+    },
+    {
+      "id": "t45",
+      "skill_id": "other_i",
+      "content": {
+        "word": "экспедиц___я",
+        "correct_path": [
+          { "id": "q_in_root", "option_id": "op_root_no" },
+          { "id": "q_suffix_yn", "option_id": "op_yn_no" },
+          { "id": "q_noun_plural", "option_id": "op_plural_no" },
+          { "id": "q_adj_ending", "option_id": "op_adj_no" }
+        ],
+        "correct_answers": ["экспедиция", "и", "И"]
+      }
+    }
+  ]
+}
