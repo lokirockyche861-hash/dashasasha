@@ -5,7 +5,7 @@
 ## 1. Назначение проекта
 Проект представляет собой интерактивную образовательную платформу, состоящую из двух типов уроков:
 1. **Теоретические уроки (лонгриды)** — последовательность блоков (текст, Markdown, видео) и разнообразных интерактивных механик заданий (`QuizSelect`, `FillInTheBlank`, `DragAndDrop` и др.). Рендерятся через `SimpleRenderer.vue` на основе файлов `lessons/*.json`.
-2. **Практические уроки (деревья решений / алгоритмы)** — алгоритмическая отработка правил в виде интерактивного графа (`ActiveTree.vue`) с финальным вводом ответа. Рендерятся через `DecisionTreeLesson.vue` на основе `lessons/graph.json` и `lessons/graph-task.json`.
+2. **Практические уроки (деревья решений / алгоритмы)** — алгоритмическая отработка правил в виде интерактивного тренажера по одному из 4 архетипов (`SpineDecisionTree`, `BinaryDecisionTree`, `StepAlgorithm`, `MatrixClassifier`). Рендерятся через двухпанельный контейнер `PracticeLessonContainer.vue` (с роутером `DecisionTreeLesson.vue`) на основе автономных пакетов `lessons/practice/lesson-<name>.json`.
 
 В проекте заложена основа для психометрического анализа и адаптивного обучения: детальное логирование каждой попытки пользователя и надёжное восстановление прогресса.
 
@@ -25,7 +25,7 @@
 - [docs/architecture.md](docs/architecture.md) — общая архитектура фронтенда и бэкенда, маршрутизация, обработка запросов, ключевые архитектурные требования.
 - [docs/storage-and-progress.md](docs/storage-and-progress.md) — схема таблицы `attempts`, API отправки попыток и восстановления прогресса, composable `useLessonProgress`, работа с `savedState`.
 - [docs/lesson-schema.md](docs/lesson-schema.md) — структура JSON-файлов уроков и полная спецификация всех 11 типов интерактивных компонентов с контрактами сохранения в БД (Payload).
-- [docs/decision-tree.md](docs/decision-tree.md) — архитектура деревьев решений (графов): структура `graph.json`, `graph-task.json`, двухэтапная отправка аналитики.
+- [docs/decision-tree.md](docs/decision-tree.md) — архитектура практических уроков (деревьев решений и алгоритмов): 4 интерактивных архетипа, автономные пакеты в `lessons/practice/`, двухэтапная отправка аналитики.
 - [docs/admin-panel.md](docs/admin-panel.md) — архитектура локального конструктора уроков (`референсы/admin-panel.html`).
 - [docs/deployment.md](docs/deployment.md) — инфраструктура деплоя (Netlify), настройка окружения и БД (Supabase).
 

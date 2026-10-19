@@ -25,6 +25,7 @@
           'is-completed': isCompleted(node),
           'is-active': isActive(node),
           'is-upcoming': isUpcoming(node),
+          'is-skipped': isSkipped(node),
           'is-result': node.type === 'result'
         }"
       >
@@ -46,8 +47,8 @@
         <div v-if="isActive(node) || (node.type === 'result' && isCompleted(node))" class="step-card-body">
           <p class="step-question-text">{{ node.text }}</p>
 
-          <!-- SPECIAL CASE: Step 3 Word Selection (Chips) -->
-          <div v-if="node.id === 'q3_pick_word'" class="chips-selector-section">
+          <!-- SPECIAL CASE: Step Word Selection (Chips) -->
+          <div v-if="isWordSelectionStep(node)" class="chips-selector-section">
             <div class="chips-hint">Выберите проверочную форму или однокоренное слово:</div>
             <div class="chips-list">
               <button
@@ -98,14 +99,14 @@
           </div>
 
           <!-- RESULT NODE: Final verdict capsule -->
-          <div v-else-if="node.type === 'result'" class="result-capsule">
-            <div class="verdict-letter-badge">
-              {{ currentVowel.toUpperCase() }}
+          <div v-else-if="node.type === 'result'" class="result-capsule" :class="{ 'is-zero-verdict': isZeroLetter }">
+            <div v-if="!isZeroLetter && targetLetter" class="verdict-letter-badge">
+              {{ targetLetter.toUpperCase() }}
             </div>
             <div class="verdict-info">
-              <div class="verdict-title">Пишем букву {{ currentVowel.toUpperCase() }}</div>
+              <div class="verdict-title">{{ verdictTitle }}</div>
               <div class="verdict-explanation">
-                Гласная <strong>{{ currentVowel.toUpperCase() }}</strong> в сильной позиции найдена. Введите слово слева!
+                {{ verdictExplanation }}
               </div>
             </div>
           </div>
@@ -178,12 +179,40 @@ const currentTaskChips = computed(() => {
   ]
 })
 
-// Current target vowel
-const currentVowel = computed(() => {
-  return props.task?.content?.vowel || 'а'
+// Target letter and verdict properties
+const targetLetter = computed(() => {
+  return props.task?.content?.letter || props.task?.content?.vowel || null
+})
+
+const isZeroLetter = computed(() => {
+  return !targetLetter.value || targetLetter.value === '0' || targetLetter.value === 'нет'
+})
+
+const verdictTitle = computed(() => {
+  if (props.task?.content?.verdict_title) {
+    return props.task.content.verdict_title
+  }
+  if (isZeroLetter.value) {
+    return 'Согласная не пишется (звука нет)'
+  }
+  return `Пишем букву ${targetLetter.value.toUpperCase()}`
+})
+
+const verdictExplanation = computed(() => {
+  if (props.task?.content?.verdict_explanation) {
+    return props.task.content.verdict_explanation
+  }
+  if (isZeroLetter.value) {
+    return 'В сильной позиции перед гласной звук отсутствует — пишем слово без буквы. Введите слово целиком слева!'
+  }
+  return `Звук в сильной позиции найден. Введите слово целиком слева!`
 })
 
 // Status helpers
+const isWordSelectionStep = (node) => {
+  return node.id === 'q3_pick_word' || node.id === 'q3_check_word' || node.type === 'pick_word'
+}
+
 const isCompleted = (node) => {
   return props.history.some(h => h.node.id === node.id)
 }
@@ -192,12 +221,17 @@ const isActive = (node) => {
   return props.currentNodeId === node.id
 }
 
+const isSkipped = (node) => {
+  const isFinished = props.rule?.nodes?.find(n => n.id === props.currentNodeId)?.type === 'result'
+  return isFinished && !isCompleted(node) && !isActive(node)
+}
+
 const isUpcoming = (node) => {
-  return !isCompleted(node) && !isActive(node)
+  return !isCompleted(node) && !isActive(node) && !isSkipped(node)
 }
 
 const isChipSelected = (chipId) => {
-  const step3History = props.history.find(h => h.node.id === 'q3_pick_word')
+  const step3History = props.history.find(h => h.node.id === 'q3_pick_word' || h.node.id === 'q3_check_word')
   return step3History && step3History.option.id === chipId
 }
 
@@ -205,7 +239,7 @@ const getCompletedSummary = (node) => {
   const item = props.history.find(h => h.node.id === node.id)
   if (!item) return ''
   
-  if (node.id === 'q3_pick_word') {
+  if (node.id === 'q3_pick_word' || node.id === 'q3_check_word') {
     const chip = currentTaskChips.value.find(c => c.id === item.option.id)
     return chip ? `Выбрано слово: «${chip.label}»` : item.option.label
   }
@@ -222,21 +256,27 @@ const handleChipClick = (chip) => {
   if (chip.is_correct) {
     trapMessage.value = null
     selectedTrapChipId.value = null
+    
+    // Resolve next node: from chip, matching node option, or default
+    const currentNode = stepNodes.value.find(n => n.id === props.currentNodeId)
+    const matchingOption = currentNode?.options?.find(o => o.id === chip.id)
+    const nextNodeId = chip.next || matchingOption?.next || 'r_verdict'
+
     emit('option-click', {
       id: chip.id,
       label: chip.label,
-      next: 'q4_check_root'
+      next: nextNodeId
     })
   } else {
     // Show trap warning
     selectedTrapChipId.value = chip.id
-    trapMessage.value = chip.explanation || 'Это слово не подходит для проверки корня. Подберите другое слово.'
+    trapMessage.value = chip.explanation || 'Это слово не подходит для проверки. Подберите другое слово.'
     
     // Log error attempt via ActiveTree option-click
     emit('option-click', {
       id: chip.id,
       label: chip.label,
-      next: 'q3_pick_word'
+      next: props.currentNodeId
     })
 
     // Clear trap styling after brief delay
@@ -348,6 +388,11 @@ watch(() => props.currentNodeId, (newId) => {
   background: #f1f5f9;
   border-color: #e2e8f0;
   box-shadow: none;
+}
+
+/* Skipped State */
+.step-card.is-skipped {
+  display: none;
 }
 
 /* Completed State */
@@ -593,6 +638,11 @@ watch(() => props.currentNodeId, (newId) => {
   background: #ecfdf5;
   border: 1.5px solid #10b981;
   border-radius: 10px;
+}
+
+.result-capsule.is-zero-verdict {
+  background: #f0fdf4;
+  border-color: #10b981;
 }
 
 .verdict-letter-badge {

@@ -29,83 +29,85 @@
         class="spine-row"
         :class="{ 'is-last-row': row.isLast }"
       >
-        <!-- Left Side: Result (direction === 'left') -->
-        <div class="side-cell left">
-          <div 
-            v-if="row.leftResult" 
-            class="result-node"
-            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left'))"
-            :class="getResultClass(row.leftResult.id, row.question.id)"
-            @click="onNodeClick(row.leftResult.id)"
-          >
-            <div class="node-label">{{ row.leftResult.label }}</div>
+        <div class="spine-main-row">
+          <!-- Left Side: Result (direction === 'left') -->
+          <div class="side-cell left">
+            <div 
+              v-if="row.leftResult" 
+              class="result-node"
+              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left'))"
+              :class="getResultClass(row.leftResult.id, row.question.id)"
+              @click="onNodeClick(row.leftResult.id)"
+            >
+              <div class="node-label">{{ row.leftResult.label }}</div>
+            </div>
           </div>
-        </div>
 
-        <!-- Center: Question -->
-        <div class="center-cell">
-          <div 
-            class="question-node"
-            :ref="el => setNodeRef(el, row.question.id)"
-            :class="getNodeClass(row.question.id)"
-            @click="onNodeClick(row.question.id)"
-          >
-            <div class="node-text" v-html="renderMarkdown(row.question.text)"></div>
-            
-            <div class="options-bar">
-              <div 
-                v-if="row.yesOption"
-                class="option-btn yes"
-                :class="getOptionClass(row.question.id, row.yesOption.id)"
-                @click.stop="onOptionClick(row.question, row.yesOption.id)"
-              >
-                {{ row.yesOption.label }}
-              </div>
-              <div 
-                v-if="row.noOption"
-                class="option-btn no"
-                :class="getOptionClass(row.question.id, row.noOption.id)"
-                @click.stop="onOptionClick(row.question, row.noOption.id)"
-              >
-                {{ row.noOption.label }}
+          <!-- Center: Question -->
+          <div class="center-cell">
+            <div 
+              class="question-node"
+              :ref="el => setNodeRef(el, row.question.id)"
+              :class="getNodeClass(row.question.id)"
+              @click="onNodeClick(row.question.id)"
+            >
+              <div class="node-text" v-html="renderMarkdown(row.question.text)"></div>
+              
+              <div class="options-bar">
+                <div 
+                  v-if="row.yesOption"
+                  class="option-btn yes"
+                  :class="getOptionClass(row.question.id, row.yesOption.id)"
+                  @click.stop="onOptionClick(row.question, row.yesOption.id)"
+                >
+                  {{ row.yesOption.label }}
+                </div>
+                <div 
+                  v-if="row.noOption"
+                  class="option-btn no"
+                  :class="getOptionClass(row.question.id, row.noOption.id)"
+                  @click.stop="onOptionClick(row.question, row.noOption.id)"
+                >
+                  {{ row.noOption.label }}
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Bottom Results (left-under / right-under) -->
-          <div v-if="row.leftUnderResult || row.rightUnderResult" class="bottom-results-row">
+          <!-- Right Side: Result (direction === 'right') -->
+          <div class="side-cell right">
             <div 
-              v-if="row.leftUnderResult" 
-              class="result-node bottom-result left-under"
-              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left-under'))"
-              :class="getResultClass(row.leftUnderResult.id, row.question.id)"
-              @click="onNodeClick(row.leftUnderResult.id)"
+              v-if="row.rightResult" 
+              class="result-node"
+              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right'))"
+              :class="getResultClass(row.rightResult.id, row.question.id)"
+              @click="onNodeClick(row.rightResult.id)"
             >
-              <div class="node-label">{{ row.leftUnderResult.label }}</div>
-            </div>
-
-            <div 
-              v-if="row.rightUnderResult" 
-              class="result-node bottom-result right-under"
-              :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right-under'))"
-              :class="getResultClass(row.rightUnderResult.id, row.question.id)"
-              @click="onNodeClick(row.rightUnderResult.id)"
-            >
-              <div class="node-label">{{ row.rightUnderResult.label }}</div>
+               <div class="node-label">{{ row.rightResult.label }}</div>
             </div>
           </div>
         </div>
 
-        <!-- Right Side: Result (direction === 'right') -->
-        <div class="side-cell right">
+        <!-- Bottom Results (left-under / right-under) -->
+        <div v-if="row.leftUnderResult || row.rightUnderResult" class="bottom-results-row">
           <div 
-            v-if="row.rightResult" 
-            class="result-node"
-            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right'))"
-            :class="getResultClass(row.rightResult.id, row.question.id)"
-            @click="onNodeClick(row.rightResult.id)"
+            v-if="row.leftUnderResult" 
+            class="result-node bottom-result left-under"
+            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'left-under'))"
+            :class="getResultClass(row.leftUnderResult.id, row.question.id)"
+            @click="onNodeClick(row.leftUnderResult.id)"
           >
-             <div class="node-label">{{ row.rightResult.label }}</div>
+            <div class="node-label">{{ row.leftUnderResult.label }}</div>
+          </div>
+
+          <div 
+            v-if="row.rightUnderResult" 
+            class="result-node bottom-result right-under"
+            :ref="el => setNodeRef(el, getResultRefKey(row.question.id, 'right-under'))"
+            :class="getResultClass(row.rightUnderResult.id, row.question.id)"
+            @click="onNodeClick(row.rightUnderResult.id)"
+          >
+            <div class="node-label">{{ row.rightUnderResult.label }}</div>
           </div>
         </div>
       </div>
@@ -483,10 +485,18 @@ const onOptionClick = (node, optionId) => {
 
 .spine-row {
   display: flex;
+  flex-direction: column;
   align-items: center; 
   width: 100%;
-  margin-bottom: 3rem; /* Reverted to 3rem */
-  gap: 3rem; /* Added horizontal gap between columns */
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.spine-main-row {
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  gap: 3rem;
   position: relative;
 }
 

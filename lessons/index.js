@@ -90,6 +90,7 @@ export const lessons = [
     title: 'Урок 1. Ь после шипящих и Ц в середине слова',
     topicId: 'phonetics',
     isDecisionTree: true,
+    archetype: 'spine',
     loader: () => import('./practice/lesson-sh-ts-mid.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-sh-ts-mid.json')
@@ -109,6 +110,7 @@ export const lessons = [
     title: 'Урок 2. Разделительные Ъ и Ь',
     topicId: 'phonetics',
     isDecisionTree: true,
+    archetype: 'spine',
     loader: () => import('./practice/lesson-soft-hard.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-soft-hard.json')
@@ -128,6 +130,7 @@ export const lessons = [
     title: 'Урок 4. О-Ё после шипящих в корне слова под ударением',
     topicId: 'phonetics',
     isDecisionTree: true,
+    archetype: 'binary',
     loader: () => import('./practice/lesson-o-yo-root.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-o-yo-root.json')
@@ -147,6 +150,7 @@ export const lessons = [
     title: 'Урок 14. Правописание пол- и полу-',
     topicId: 'morphemics',
     isDecisionTree: true,
+    archetype: 'spine',
     loader: () => import('./practice/lesson-pol.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-pol.json')
@@ -166,6 +170,7 @@ export const lessons = [
     title: 'Урок 13. Правописание согласных на конце приставок (З/С)',
     topicId: 'phonetics',
     isDecisionTree: true,
+    archetype: 'binary',
     loader: () => import('./practice/lesson-prefix-z-s.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-prefix-z-s.json')
@@ -185,6 +190,7 @@ export const lessons = [
     title: 'Урок 5. Гласные после Ц',
     topicId: 'phonetics',
     isDecisionTree: true,
+    archetype: 'binary',
     loader: () => import('./practice/lesson-vowels-after-ts.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-vowels-after-ts.json')
@@ -204,6 +210,7 @@ export const lessons = [
     title: 'Урок 7. Безударные гласные в корне. Проверяемые гласные',
     topicId: 'morphemics',
     isDecisionTree: true,
+    archetype: 'steps',
     loader: () => import('./practice/lesson-root-vowels-checked.json'),
     ruleLoader: async () => {
       const data = await import('./practice/lesson-root-vowels-checked.json')
@@ -215,6 +222,126 @@ export const lessons = [
     },
     theoryLoader: async () => {
       const data = await import('./practice/lesson-root-vowels-checked.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-silent-consonants',
+    title: 'Урок 8. Непроизносимые согласные в корне слова',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    archetype: 'steps',
+    loader: () => import('./practice/lesson-silent-consonants.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-silent-consonants.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-silent-consonants.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-silent-consonants.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-voiced-unvoiced',
+    title: 'Урок 9. Оглушение и озвончение согласных в корне',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    archetype: 'steps',
+    loader: () => import('./practice/lesson-voiced-unvoiced.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-voiced-unvoiced.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-voiced-unvoiced.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-voiced-unvoiced.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-vowels-after-sibilants',
+    title: 'Урок 3. Гласные после шипящих',
+    topicId: 'phonetics',
+    isDecisionTree: true,
+    archetype: 'steps',
+    loader: () => import('./practice/lesson-vowels-after-sibilants.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-sibilants.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-sibilants.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-vowels-after-sibilants.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-double-consonants',
+    title: 'Урок 10. Удвоение согласных на стыке морфем',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    archetype: 'steps',
+    loader: () => import('./practice/lesson-double-consonants.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-double-consonants.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-double-consonants.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-double-consonants.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-prefix-vowels',
+    title: 'Урок 11. Безударные гласные в приставках',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    archetype: 'spine',
+    loader: () => import('./practice/lesson-prefix-vowels.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-prefix-vowels.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-prefix-vowels.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-prefix-vowels.json')
+      return data.default?.theory || data.theory
+    }
+  },
+  {
+    id: 'lesson-prefix-pre-pri',
+    title: 'Урок 12. Правописание приставок ПРЕ-ПРИ',
+    topicId: 'morphemics',
+    isDecisionTree: true,
+    archetype: 'spine',
+    loader: () => import('./practice/lesson-prefix-pre-pri.json'),
+    ruleLoader: async () => {
+      const data = await import('./practice/lesson-prefix-pre-pri.json')
+      return data.default?.rule || data.rule
+    },
+    tasksLoader: async () => {
+      const data = await import('./practice/lesson-prefix-pre-pri.json')
+      return data.default?.tasks || data.tasks
+    },
+    theoryLoader: async () => {
+      const data = await import('./practice/lesson-prefix-pre-pri.json')
       return data.default?.theory || data.theory
     }
   }

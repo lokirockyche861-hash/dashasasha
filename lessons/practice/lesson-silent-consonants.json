@@ -1,0 +1,463 @@
+{
+  "id": "lesson-silent-consonants",
+  "title": "Урок 8. Непроизносимые согласные в корне слова",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-sc-summary-md",
+      "type": "markdown",
+      "content": "> [!summary]\n> **Непроизносимые согласные** чаще всего находятся среди звуковых сочетаний [сн], [зн], [зл], [нс], [рц], [нц].\n\nВаша задача — научиться обращать на них внимание и применять алгоритм проверки. Как и в случае слабой позиции согласных по звонкости-глухости, мы должны найти слово с тем же корнем, но с гласной после корня (в сильной позиции)."
+    },
+    {
+      "id": "l-sc-algorithm-md",
+      "type": "markdown",
+      "content": "### Алгоритм проверки непроизносимых согласных:\n\n1. **Обратить внимание** на сочетание сн, зн, зл, нс, рц, нц. Между ними может быть непроизносимая согласная *д* или *т* (а также *л* в слове *солнце*, *в* в *чувство*).\n2. **Убедиться**, что это сочетание звуков находится на стыке корня и суффикса или внутри корня.\n3. **Подобрать** другую форму слова или однокоренное слово, в котором будет слышна непроизносимая согласная или будет видно её отсутствие — поставить в сильную позицию *перед гласной*.\n4. **Вписать** непроизносимую согласную, если она проявилась. Не вписывать, если видно, что её нет."
+    },
+    {
+      "id": "l-sc-examples-md",
+      "type": "markdown",
+      "content": "### Разбор авторских примеров:\n\n#### Пример 1: *звёз__ный*\n1. Перед нами опасное сочетание звуков [зн].\n2. Оно находится на стыке корня и суффикса: корень *-звёзд-*, суффикс *-н-*.\n3. Подбираем форму с гласной после согласного: *звёз__ный* ➔ **звезда́**.\n4. Согласный звук [д] отчетливо проявился перед гласной [а] — пишем букву **д**: **звёздный**.\n\n---\n\n#### Пример 2: *ужас__ный*\n1. Перед нами опасное сочетание звуков [сн].\n2. Сочетание на стыке корня и суффикса: корень *-ужас-*, суффикс *-н-*.\n3. Подбираем краткую форму / форму с гласной: *ужас__ный* ➔ **ужа́сен** (или *ужасы*).\n4. Перед гласной согласный не появился (звука [т] или [д] нет) — согласная **не пишется**: **ужасный**."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_silent_consonants_v1",
+    "title": "Непроизносимые согласные в корне слова",
+    "layout": "steps",
+    "start_node": "q1_cluster",
+    "ruleId": "rule_silent_consonants",
+    "topicId": "morphemics",
+    "nodes": [
+      {
+        "id": "q1_cluster",
+        "step_number": 1,
+        "type": "question",
+        "title": "Шаг 1. Опасное звукосочетание",
+        "text": "В слове есть опасное сочетание звуков [сн], [зн], [зл], [нс], [рц], [нц]?",
+        "skill_id": "silent_consonant_cluster",
+        "options": [
+          {
+            "id": "op_cluster_yes",
+            "label": "Да, опасное звукосочетание",
+            "next": "q2_morpheme"
+          },
+          {
+            "id": "op_cluster_no",
+            "label": "Нет такого сочетания",
+            "next": "q1_cluster"
+          }
+        ]
+      },
+      {
+        "id": "q2_morpheme",
+        "step_number": 2,
+        "type": "question",
+        "title": "Шаг 2. Морфемный стык",
+        "text": "Убедитесь: сочетание звуков находится в корне слова или на стыке корня и суффикса?",
+        "skill_id": "silent_consonant_morpheme",
+        "options": [
+          {
+            "id": "op_morpheme_yes",
+            "label": "Да, в корне или на стыке",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_morpheme_no",
+            "label": "Нет, в другой морфеме",
+            "next": "q2_morpheme"
+          }
+        ]
+      },
+      {
+        "id": "q3_check_word",
+        "step_number": 3,
+        "type": "question",
+        "title": "Шаг 3. Подбор проверочного слова",
+        "text": "Подберите проверочное слово, где согласный стоит в сильной позиции (перед гласной):",
+        "skill_id": "silent_consonant_check_word",
+        "options": [
+          {
+            "id": "op_sc_correct",
+            "label": "Проверочное слово (перед гласной)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "Слово в той же слабой позиции",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_sc_trap_root",
+            "label": "Слово с другим корнем",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "Неподходящее слово",
+            "next": "q3_check_word"
+          }
+        ]
+      },
+      {
+        "id": "r_verdict",
+        "step_number": 4,
+        "type": "result",
+        "title": "Шаг 4. Написание слова",
+        "label": "Вписываем букву при наличии или пишем без неё",
+        "explanation": "Если звук проявился перед гласной — пишем букву. Если звука нет — согласная не пишется!"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "звёз__ный",
+        "letter": "д",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "звезда́",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "звёздность",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «звёздность» согласный остаётся в слабой позиции перед [н]. Нужна гласная после согласного!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "зве́ри",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «звери» имеет другой корень и значение."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["звёздный", "звездный", "Звёздный", "Звездный"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "ужас__ный",
+        "letter": "0",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "ужа́сен",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "ужа́стик",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «ужастик» есть суффикс -тик-, это не форма корня с гласной после [с]."
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "стра́шный",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «страшный» — синоним, но имеет другой корень. Проверять можно только однокоренными словами!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["ужасный", "Ужасный"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "мес__ный",
+        "letter": "т",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "ме́сто",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "местко́м",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В сложносокращенном слове «местком» согласный стоит перед глухим согласным [к], позиция остаётся слабой!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "меси́ть",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Глагол «месить» (тесто) имеет совершенно другой корень!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["местный", "Местный"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "опас__ный",
+        "letter": "0",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "опа́сен",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "опа́сность",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «опасность» звук [с] по-прежнему находится перед звуком [н], позиция слабая!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "па́смурно",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «пасмурно» имеет другой корень и лексическое значение."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["опасный", "Опасный"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "со__нце",
+        "letter": "л",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "со́лнышко",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "со́лнцеворот",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «солнцеворот» звук [л] по-прежнему не произносится перед [нц]!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "солёный",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «солёный» происходит от слова «соль», а не «солнце»!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["солнце", "Солнце"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "прекрас__ный",
+        "letter": "0",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "прекра́сен",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "прекра́снейший",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «прекраснейший» сочетание [сн] сохраняется, позиция не стала сильной!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "кра́ска",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "«Краска» — ложная ассоциация. «Прекрасный» исторически связано со словом «красивый», корень -крас-."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["прекрасный", "Прекрасный"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "сер__це",
+        "letter": "д",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "серде́чный",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_root",
+            "label": "середи́на",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Слово «середина» имеет корень -середин-, это не однокоренное слово!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "серди́тый",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «сердитый» имеет корень -серд- в значении «гневаться». Для проверки слова «сердце» подбираем прямое однокоренное: «сердечный»!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["сердце", "Сердце"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "чудес__ный",
+        "letter": "0",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "чудеса́",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "чуде́сность",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «чудесность» сочетание [сн] сохраняется, согласный не стоит перед гласной!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "чуда́к",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "«Чудак» не содержит основу «чудес-» перед гласной для проверки сочетания сн."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["чудесный", "Чудесный"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "радос__ный",
+        "letter": "т",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "ра́достен",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_weak",
+            "label": "ра́дость",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «радость» согласный [т'] стоит на конце слова и может оглушаться/смазываться. Идеальная сильная позиция — перед гласной: «радостен»!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "ра́дуга",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово «радуга» имеет другой корень и лексическое значение."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["радостный", "Радостный"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "silent_consonant_check",
+      "content": {
+        "word": "вкус__ный",
+        "letter": "0",
+        "check_options": [
+          {
+            "id": "op_sc_correct",
+            "label": "вку́сен",
+            "is_correct": true
+          },
+          {
+            "id": "op_sc_trap_root",
+            "label": "кусо́к",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Слово «кусок» исторически родственно, но не дает прямой формы корня для проверки звука перед гласной!"
+          },
+          {
+            "id": "op_sc_distractor",
+            "label": "вкуси́ть",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «вкусить» корень оканчивается на [с] перед гласной [и], но краткая форма прилагательного «вкусен» нагляднее показывает отсутствие [т]."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_cluster", "option_id": "op_cluster_yes" },
+          { "id": "q2_morpheme", "option_id": "op_morpheme_yes" },
+          { "id": "q3_check_word", "option_id": "op_sc_correct" }
+        ],
+        "correct_answers": ["вкусный", "Вкусный"]
+      }
+    }
+  ]
+}

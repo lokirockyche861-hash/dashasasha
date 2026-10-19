@@ -1,0 +1,463 @@
+{
+  "id": "lesson-voiced-unvoiced",
+  "title": "Урок 9. Оглушение и озвончение согласных в корне",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-vu-summary-md",
+      "type": "markdown",
+      "content": "> [!summary]\n> Чтобы понять, какую согласную писать, когда согласный находится в слабой позиции (может озвончаться или оглушаться), нужно подобрать слово с тем же корнем, но с согласным в **сильной позиции**.\n\nСледуйте алгоритму проверки согласных в корне."
+    },
+    {
+      "id": "l-vu-algorithm-md",
+      "type": "markdown",
+      "content": "### Алгоритм проверки глухих и звонких согласных:\n\n1. **Найти** согласный в слабой позиции по глухости-звонкости (на конце слова или перед другим парным согласным).\n2. **Убедиться**, что согласный находится в корне слова.\n3. **Подобрать** другую форму слова или однокоренное слово, в котором согласный будет в сильной позиции:\n   - *перед гласным звуком* (гла__ ➔ *глаза́*);\n   - *перед сонорными согласными* [л], [р], [м], [н] (гла__ ➔ *глазни́ца*);\n   - *перед звуками [в] и [в’]* (трезв__ ➔ *трезвость*).\n4. **Вписать** ту букву, которая обнаружилась в сильной позиции."
+    },
+    {
+      "id": "l-vu-examples-md",
+      "type": "markdown",
+      "content": "### Разбор авторских примеров:\n\n#### Пример: пара *глаз / голос*\nНа конце обоих слов произносится один и тот же глухой звук [с]: [глас] и [го́лас]. На письме может быть буква **З** или буква **С**.\n\n1. В слабой позиции согласная на конце слова — мы не знаем точно, что писать: **з** или **с**.\n2. В слове *глаз* всё слово — это корень. В слове *голос* всё слово — это корень.\n3. Ищем сильную позицию:\n   - *гла__* ➔ **глазница** (поставили перед сонорным звуком [н]) или **глаза́** (перед гласной [а]).\n   - *голо__* ➔ **голоса́** (поставили перед гласным звуком [а]).\n4. В первом случае пишем **з** (**глаз**), во втором случае пишем **с** (**голос**)."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_voiced_unvoiced_v1",
+    "title": "Оглушение и озвончение согласных в корне",
+    "layout": "steps",
+    "start_node": "q1_weak_pos",
+    "ruleId": "rule_voiced_unvoiced",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q1_weak_pos",
+        "step_number": 1,
+        "type": "question",
+        "title": "Шаг 1. Слабая позиция по звонкости-глухости",
+        "text": "Согласный звук находится в слабой позиции (на конце слова или перед парным согласным)?",
+        "skill_id": "voiced_unvoiced_weak_pos",
+        "options": [
+          {
+            "id": "op_vu_weak_yes",
+            "label": "Да, слабая позиция (конец слова / перед согласным)",
+            "next": "q2_in_root"
+          },
+          {
+            "id": "op_vu_weak_no",
+            "label": "Нет, сильная позиция",
+            "next": "q1_weak_pos"
+          }
+        ]
+      },
+      {
+        "id": "q2_in_root",
+        "step_number": 2,
+        "type": "question",
+        "title": "Шаг 2. Морфемная принадлежность",
+        "text": "Убедитесь: искомый согласный находится в корне слова?",
+        "skill_id": "voiced_unvoiced_root",
+        "options": [
+          {
+            "id": "op_vu_root_yes",
+            "label": "Да, согласный в корне",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_vu_root_no",
+            "label": "Нет, в приставке или суффиксе",
+            "next": "q2_in_root"
+          }
+        ]
+      },
+      {
+        "id": "q3_check_word",
+        "step_number": 3,
+        "type": "question",
+        "title": "Шаг 3. Подбор проверочного слова",
+        "text": "Подберите проверочное слово, где согласный стоит в сильной позиции (перед гласным, сонорным или [в]):",
+        "skill_id": "voiced_unvoiced_check_word",
+        "options": [
+          {
+            "id": "op_vu_correct",
+            "label": "Проверочное слово (сильная позиция)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_vu_trap_weak",
+            "label": "Слово в той же слабой позиции",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "Слово с другим корнем / омофон",
+            "next": "q3_check_word"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "Неподходящее слово",
+            "next": "q3_check_word"
+          }
+        ]
+      },
+      {
+        "id": "r_verdict",
+        "step_number": 4,
+        "type": "result",
+        "title": "Шаг 4. Написание слова",
+        "label": "Пишем согласную из сильной позиции",
+        "explanation": "В сильной позиции звук отчётливо слышен — вписываем найденную букву в исходное слово!"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "гла__",
+        "letter": "з",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "глаза́",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "голоса́",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка омофона! Слово «голоса» проверяет слово «голос», а не «глаз»."
+          },
+          {
+            "id": "op_vu_trap_weak",
+            "label": "глазно́й",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «глазной» согласный стоит перед сонорным [н] — это допустимо, но форма с гласной «глаза́» даёт 100% надёжную сильную позицию!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["глаз", "Глаз"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "голо__",
+        "letter": "с",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "голоса́",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "глаза́",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Слово «глаза» имеет совершенно другой корень!"
+          },
+          {
+            "id": "op_vu_trap_weak",
+            "label": "голоси́стый",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "«Голосистый» — однокоренное, но форма множественного числа «голоса́» проще и нагляднее."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["голос", "Голос"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "ло__ка",
+        "letter": "д",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "ло́дочка",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "ло́жечка",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка смешения слов! «Ложечка» — проверочное для столового прибора «ложка», а здесь речь о плавательном средстве «лодка»!"
+          },
+          {
+            "id": "op_vu_trap_weak",
+            "label": "лодо́чник",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «лодочник» согласный перед [ч], позиция может оставаться неясной. Уменьшительное «лодочка» ставит согласный перед гласной [о]!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["лодка", "Лодка"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "ло__ка",
+        "letter": "ж",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "ло́жечка",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "ло́дочка",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "«Лодочка» проверяет плавательное средство «лодка», а не столовый прибор «ложка»!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "ложкова́тый",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Слово редкое и менее наглядное, чем прямое уменьшительное «ложечка»."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["ложка", "Ложка"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "ду__",
+        "letter": "б",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "дубы́",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "супы́",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка созвучия! «Супы» проверяют блюдо «суп», а дерево «дуб» проверяется формой «дубы»!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "дубо́вый",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Прилагательное «дубовый» тоже подходит, но изменение по числам «дубы́» — самый простой и надёжный способ."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["дуб", "Дуб"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "су__",
+        "letter": "п",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "супы́",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "дубы́",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "«Дубы» проверяют дерево «дуб», а не первое блюдо «суп»!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "супни́ца",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «супница» согласный стоит перед [н]. Изменение по числам «супы́» даёт позицию прямо перед гласной!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["суп", "Суп"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "ска__ка",
+        "letter": "з",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "ска́зочка",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "скака́ть",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка омонимичного корня! Глагол «скакать» (корень -скак-/-скоч-) не имеет отношения к народному творчеству (корень -сказ- от слова «сказать»)!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "сказа́ть",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Глагол «сказать» этимологически родственный, но уменьшительно-ласкательная форма существительного «сказочка» сохраняет форму корня нагляднее."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["сказка", "Сказка"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "про__ьба",
+        "letter": "с",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "проси́ть",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "проро́чить",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Глагол «пророчить» имеет другой корень и лексическое значение!"
+          },
+          {
+            "id": "op_vu_trap_weak",
+            "label": "проше́ние",
+            "is_correct": false,
+            "trap_type": "weak",
+            "explanation": "В слове «прошение» происходит историческое чередование с/ш. Для точной проверки берем исходный инфинитив «просить» перед гласной [и]!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["просьба", "Просьба"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "гри__",
+        "letter": "б",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "грибы́",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "гриппо́зный",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка омофона! «Гриппозный» относится к болезни «грипп», а мы проверяем лесной «гриб»!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "грибно́й",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "В слове «грибной» согласный перед сонорным [н]. Но форма «грибы́» ставит согласный прямо перед гласной!"
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["гриб", "Гриб"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "voiced_unvoiced_check",
+      "content": {
+        "word": "моро__",
+        "letter": "з",
+        "check_options": [
+          {
+            "id": "op_vu_correct",
+            "label": "моро́зы",
+            "is_correct": true
+          },
+          {
+            "id": "op_vu_trap_root",
+            "label": "матро́сы",
+            "is_correct": false,
+            "trap_type": "root",
+            "explanation": "Ловушка созвучия! «Матросы» имеют совершенно другой корень!"
+          },
+          {
+            "id": "op_vu_distractor",
+            "label": "моро́зить",
+            "is_correct": false,
+            "trap_type": "distractor",
+            "explanation": "Глагол «морозить» тоже подходит, но форма множественного числа «моро́зы» — классическая прямая проверка."
+          }
+        ],
+        "correct_path": [
+          { "id": "q1_weak_pos", "option_id": "op_vu_weak_yes" },
+          { "id": "q2_in_root", "option_id": "op_vu_root_yes" },
+          { "id": "q3_check_word", "option_id": "op_vu_correct" }
+        ],
+        "correct_answers": ["мороз", "Мороз"]
+      }
+    }
+  ]
+}

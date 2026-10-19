@@ -1,0 +1,526 @@
+{
+  "id": "lesson-vowels-after-sibilants",
+  "title": "Урок 3. Гласные после шипящих",
+  "topicId": "phonetics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-vas-summary-md",
+      "type": "markdown",
+      "content": "Шипящими являются согласные **[ж], [ш], [ч’], [щ’]**.\n\nЕсли после шипящих мы слышим звуки [а́], [у], [ы], [и́], [э́], мы пишем буквы **а, у, и, е** (НЕ я, ю, ы, э). Эти согласные непарные по твёрдости-мягкости ([ж], [ш] — всегда твёрдые, [ч’], [щ’] — всегда мягкие), поэтому гласные буквы после них не указывают на мягкость согласного.\n\n> [!attention]\n> Обратите внимание, что мы говорим об ударных [и́], [э́], [а́] — без ударения они находятся в слабой позиции, и выбор буквы нужно проверять дополнительно. И мы пока не говорим об [о], требующем отдельного правила (О/Ё после шипящих в корне).\n\nИсключения — три слова иноязычного происхождения: ***жюри, парашют, брошюра*** (пишем букву **Ю**).\n\n> [!summary]\n> Таким образом, в сочетании с гласными звуками [а́], [у], [ы], [и́], [э́] мы получим нормативные буквосочетания:\n> - **[и́] / [ы]** : жи, ши, чи, щи *(НЕ ы)*\n> - **[а́]** : жа, ша, ча, ща *(НЕ я)*\n> - **[у]** : жу, шу, чу, щу *(НЕ ю)*\n> - **[э́]** : же, ше, че, ще *(НЕ э)*\n>\n> *Исключения: жюри, брошюра, парашют (с буквой Ю)*"
+    }
+  ],
+  "rule": {
+    "graphId": "graph_vowels_after_sibilants_v1",
+    "title": "Гласные после шипящих",
+    "layout": "steps",
+    "start_node": "q1_sibilant",
+    "ruleId": "rule_vowels_after_sibilants",
+    "topicId": "phonetics",
+    "nodes": [
+      {
+        "id": "q1_sibilant",
+        "step_number": 1,
+        "type": "question",
+        "title": "Шаг 1. Шипящий согласный",
+        "text": "Убедитесь: перед пропущенной гласной стоит шипящий согласный (Ж, Ш, Ч или Щ)?",
+        "skill_id": "sibilant_consonant_check",
+        "options": [
+          {
+            "id": "op_sib_yes",
+            "label": "Да, шипящий согласный",
+            "next": "q2_exception"
+          },
+          {
+            "id": "op_sib_no",
+            "label": "Нет другого согласного",
+            "next": "q1_sibilant"
+          }
+        ]
+      },
+      {
+        "id": "q2_exception",
+        "step_number": 2,
+        "type": "question",
+        "title": "Шаг 2. Проверка на исключение",
+        "text": "Слово является одним из трёх иноязычных исключений (жюри, брошюра, парашют)?",
+        "skill_id": "sibilant_exception_check",
+        "options": [
+          {
+            "id": "op_exc_yes",
+            "label": "Да, это исключение (жюри/брошюра/парашют)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_exc_no",
+            "label": "Нет, обычное русское слово",
+            "next": "q3_vowel_sound"
+          }
+        ]
+      },
+      {
+        "id": "q3_vowel_sound",
+        "step_number": 3,
+        "type": "question",
+        "title": "Шаг 3. Гласный звук под ударением",
+        "text": "Какой гласный звук слышится после шипящего под ударением?",
+        "skill_id": "sibilant_vowel_sound",
+        "options": [
+          {
+            "id": "op_sound_i",
+            "label": "Слышится [ы] или [и́] ➔ пишем И (жи-ши, чи-щи)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_sound_a",
+            "label": "Слышится [а́] ➔ пишем А (ча-ща, жа-ша)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_sound_u",
+            "label": "Слышится [у] ➔ пишем У (чу-щу, жу-шу)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_sound_e",
+            "label": "Слышится [э́] ➔ пишем Е (же-ше, че-ще)",
+            "next": "r_verdict"
+          }
+        ]
+      },
+      {
+        "id": "r_verdict",
+        "step_number": 4,
+        "type": "result",
+        "title": "Шаг 4. Написание слова",
+        "label": "Пишем гласную букву по правилу шипящих",
+        "explanation": "Гласная буква определена по правилу. Введите проверенное слово целиком слева!"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "брош___ра",
+        "letter": "ю",
+        "verdict_title": "Исключение: пишем букву Ю",
+        "verdict_explanation": "Слово иноязычного происхождения «брошюра» — исключение, пишется с буквой Ю! Введите слово целиком слева.",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["брошюра", "Брошюра"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___знь",
+        "letter": "и",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_i" }
+        ],
+        "correct_answers": ["жизнь", "Жизнь"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___лко",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["жалко", "Жалко"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___ри",
+        "letter": "ю",
+        "verdict_title": "Исключение: пишем букву Ю",
+        "verdict_explanation": "Слово иноязычного происхождения «жюри» — исключение, пишется с буквой Ю! Введите слово целиком слева.",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["жюри", "Жюри"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___сть",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["жесть", "Жесть"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___ткий",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["жуткий", "Жуткий"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ж___равль",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["журавль", "Журавль"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "кольч___га",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["кольчуга", "Кольчуга"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "обещ___ть",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["обещать", "Обещать"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ош___бка",
+        "letter": "и",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_i" }
+        ],
+        "correct_answers": ["ошибка", "Ошибка"]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "параш___т",
+        "letter": "ю",
+        "verdict_title": "Исключение: пишем букву Ю",
+        "verdict_explanation": "Слово иноязычного происхождения «парашют» — исключение, пишется с буквой Ю! Введите слово целиком слева.",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_yes" }
+        ],
+        "correct_answers": ["парашют", "Парашют"]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "прощ___ть",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["прощать", "Прощать"]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "пруж___на",
+        "letter": "и",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_i" }
+        ],
+        "correct_answers": ["пружина", "Пружина"]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "смущ___ть",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["смущать", "Смущать"]
+      }
+    },
+    {
+      "id": "t15",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "угощ___ть",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["угощать", "Угощать"]
+      }
+    },
+    {
+      "id": "t16",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ч___до",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["чудо", "Чудо"]
+      }
+    },
+    {
+      "id": "t17",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ч___жой",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["чужой", "Чужой"]
+      }
+    },
+    {
+      "id": "t18",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ч___реп",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["череп", "Череп"]
+      }
+    },
+    {
+      "id": "t19",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ч___ткий",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["чёткий", "четкий", "Чёткий", "Четкий"]
+      }
+    },
+    {
+      "id": "t20",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ч___шка",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["чашка", "Чашка"]
+      }
+    },
+    {
+      "id": "t21",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___я",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["шея", "Шея"]
+      }
+    },
+    {
+      "id": "t22",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___на",
+        "letter": "и",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_i" }
+        ],
+        "correct_answers": ["шина", "Шина"]
+      }
+    },
+    {
+      "id": "t23",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___пка",
+        "letter": "а",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_a" }
+        ],
+        "correct_answers": ["шапка", "Шапка"]
+      }
+    },
+    {
+      "id": "t24",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___ствие",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["шествие", "Шествие"]
+      }
+    },
+    {
+      "id": "t25",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___м",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["шум", "Шум"]
+      }
+    },
+    {
+      "id": "t26",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___стрый",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["шустрый", "Шустрый"]
+      }
+    },
+    {
+      "id": "t27",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "ш___тка",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["шутка", "Шутка"]
+      }
+    },
+    {
+      "id": "t28",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "щ___дрый",
+        "letter": "е",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_e" }
+        ],
+        "correct_answers": ["щедрый", "Щедрый"]
+      }
+    },
+    {
+      "id": "t29",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "щ___ка",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["щука", "Щука"]
+      }
+    },
+    {
+      "id": "t30",
+      "skill_id": "vowels_after_sibilants",
+      "content": {
+        "word": "щ___пальце",
+        "letter": "у",
+        "correct_path": [
+          { "id": "q1_sibilant", "option_id": "op_sib_yes" },
+          { "id": "q2_exception", "option_id": "op_exc_no" },
+          { "id": "q3_vowel_sound", "option_id": "op_sound_u" }
+        ],
+        "correct_answers": ["щупальце", "Щупальце"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "id": "lesson-prefix-pre-pri",
+  "title": "Урок 12. Правописание приставок ПРЕ-ПРИ",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-ppp-summary-md",
+      "type": "markdown",
+      "content": "Правило правописания приставок ПРЕ-/ПРИ- сложное, так как выбор приставки зависит от значения. Под ударением может быть и ПРЕ-, и ПРИ-.\n\n> [!attention]\n> Приставки ПРЕ-/ПРИ- нельзя проверять постановкой гласной в сильную позицию.\n\nКроме того, в некоторых случаях нельзя восстановить значение приставки, поэтому ряд слов необходимо запомнить как словарные.\n\nСначала нам нужно запомнить основные значения приставок ПРИ-/ПРЕ-. Следуйте алгоритму. Обратите внимание: в первой его части даны значения приставки **ПРИ-**, в конце — значения приставки **ПРЕ-**."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_pre_pri_v1",
+    "title": "Правописание приставок ПРЕ-ПРИ",
+    "layout": "spine",
+    "start_node": "q1_approach",
+    "ruleId": "rule_prefix_pre_pri",
+    "topicId": "morphemics",
+    "nodes": [
+      {
+        "id": "q1_approach",
+        "type": "question",
+        "text": "Значение приставки — **приближение** или **присоединение**?",
+        "skill_id": "pre_pri_approach",
+        "options": [
+          {
+            "id": "q1_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pri_approach"
+          },
+          {
+            "id": "q1_op_no",
+            "label": "Нет",
+            "next": "q2_proximity"
+          }
+        ]
+      },
+      {
+        "id": "q2_proximity",
+        "type": "question",
+        "text": "Значение приставки — **нахождение поблизости** (пространственная близость)?",
+        "skill_id": "pre_pri_proximity",
+        "options": [
+          {
+            "id": "q2_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pri_proximity"
+          },
+          {
+            "id": "q2_op_no",
+            "label": "Нет",
+            "next": "q3_incomplete"
+          }
+        ]
+      },
+      {
+        "id": "q3_incomplete",
+        "type": "question",
+        "text": "Значение приставки — **неполнота действия** или **побочное действие**?",
+        "skill_id": "pre_pri_incomplete",
+        "options": [
+          {
+            "id": "q3_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pri_incomplete"
+          },
+          {
+            "id": "q3_op_no",
+            "label": "Нет",
+            "next": "q4_completion"
+          }
+        ]
+      },
+      {
+        "id": "q4_completion",
+        "type": "question",
+        "text": "Значение приставки — **доведение действия до конца**?",
+        "skill_id": "pre_pri_completion",
+        "options": [
+          {
+            "id": "q4_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pri_completion"
+          },
+          {
+            "id": "q4_op_no",
+            "label": "Нет",
+            "next": "q5_high_degree"
+          }
+        ]
+      },
+      {
+        "id": "q5_high_degree",
+        "type": "question",
+        "text": "Значение приставки — **высокая степень качества** (значение «очень»)?",
+        "skill_id": "pre_pri_high_degree",
+        "options": [
+          {
+            "id": "q5_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pre_high_degree"
+          },
+          {
+            "id": "q5_op_no",
+            "label": "Нет",
+            "next": "q6_pere"
+          }
+        ]
+      },
+      {
+        "id": "q6_pere",
+        "type": "question",
+        "text": "Можно подобрать синоним с **пере-** или объяснить через слово с приставкой **пере-**?",
+        "skill_id": "pre_pri_pere",
+        "options": [
+          {
+            "id": "q6_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pre_pere"
+          },
+          {
+            "id": "q6_op_no",
+            "label": "Нет",
+            "direction": "right-under",
+            "next": "r_dictionary"
+          }
+        ]
+      },
+      {
+        "id": "r_pri_approach",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРИ- ➔ Приближение / присоединение (придвинуть, приклеить)"
+      },
+      {
+        "id": "r_pri_proximity",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРИ- ➔ Пространственная близость (пришкольный, привратник)"
+      },
+      {
+        "id": "r_pri_incomplete",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРИ- ➔ Неполнота или побочное действие (приоткрыть, присесть)"
+      },
+      {
+        "id": "r_pri_completion",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРИ- ➔ Доведение действия до конца (придумать, приготовить)"
+      },
+      {
+        "id": "r_pre_high_degree",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРЕ- ➔ Степень качества «очень» (премилый, предобрый)"
+      },
+      {
+        "id": "r_pre_pere",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРЕ- ➔ Близко к значению «пере-» (преодолевать, преступник)"
+      },
+      {
+        "id": "r_dictionary",
+        "type": "result",
+        "direction": "right-under",
+        "label": "Словарные слова ➔ Сверяемся со словарём (президент, преграда)"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__двинуть",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "придвинуть",
+          "Придвинуть"
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__клеить",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "приклеить",
+          "Приклеить"
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__школьный",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "пришкольный",
+          "Пришкольный"
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__вратник",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "привратник",
+          "Привратник"
+        ]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__открыть",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "приоткрыть",
+          "Приоткрыть"
+        ]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__сесть",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "присесть",
+          "Присесть"
+        ]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__думать",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "придумать",
+          "Придумать"
+        ]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__готовить",
+        "letter": "и",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "приготовить",
+          "Приготовить"
+        ]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__милый",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "премилый",
+          "Премилый"
+        ]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__добрый",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "предобрый",
+          "Предобрый"
+        ]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__одолеть",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_pere",
+            "option_id": "q6_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "преодолеть",
+          "Преодолеть"
+        ]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__ступник",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_pere",
+            "option_id": "q6_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "преступник",
+          "Преступник"
+        ]
+      }
+    },
+    {
+      "id": "t13",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__зидент",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_pere",
+            "option_id": "q6_op_no"
+          }
+        ],
+        "correct_answers": [
+          "президент",
+          "Президент"
+        ]
+      }
+    },
+    {
+      "id": "t14",
+      "skill_id": "prefix_pre_pri",
+      "content": {
+        "word": "пр__града",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_approach",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_proximity",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_incomplete",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_completion",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_high_degree",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_pere",
+            "option_id": "q6_op_no"
+          }
+        ],
+        "correct_answers": [
+          "преграда",
+          "Преграда"
+        ]
+      }
+    }
+  ]
+}

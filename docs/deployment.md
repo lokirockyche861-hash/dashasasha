@@ -253,7 +253,7 @@ graph TD
      * `Markdown` — поддержка форматированного текста через `markdown-it`.
 2. **Практические / графовые уроки (Деревья решений)**:
    * Реализованы в [`components/decision-tree/`](file:///Users/starkoff/Documents/tests/new-render/components/decision-tree/) (`DecisionTreeLesson.vue`, `ActiveTree.vue`, `ReferenceTree.vue`).
-   * Построены на графовых структурах (`lessons/graph.json`, `lessons/graph-task.json`), где каждый шаг — узел принятия решений с ветвлением алгоритма.
+   * Построены на автономных пакетах (`lessons/practice/lesson-<name>.json`), где каждый шаг — узел принятия решений с ветвлением алгоритма или шаг процедурного чеклиста.
    * Валидация переходов между узлами графа выполняется на бэкенде через [`server/utils/graphRegistry.ts`](file:///Users/starkoff/Documents/tests/new-render/server/utils/graphRegistry.ts).
 
 ### 2.3 Управление состоянием (State Management)

@@ -1,0 +1,616 @@
+{
+  "id": "lesson-prefix-vowels",
+  "title": "Урок 11. Безударные гласные в приставках",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-pv-summary-md",
+      "type": "markdown",
+      "content": "Этот урок посвящён приставкам с безударными гласными.\n\n> [!summary]\n> Безударные гласные в приставках почти всегда можно проверить, подобрав слово с той же приставкой в ударной позиции.\n\nЭто действие очень похоже на подбор однокоренного слова для проверки проверяемой безударной гласной в корне, однако в этом случае вам важно сохранить только ту же приставку — слово необязательно должно быть однокоренным.\n\n> [!warning]\n> Нельзя проверять таким образом приставки ПРЕ-ПРИ, РАС-РОС/РАЗ-РОЗ, ПЕРЕ-ПЕРИ.\n\nИспользуйте представленный алгоритм, чтобы запомнить особые случаи написания приставок. Приставки ПРЕ-ПРИ требуют отдельного алгоритма, поэтому в этом уроке мы их не рассматриваем."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_prefix_vowels_v1",
+    "title": "Безударные гласные в приставках",
+    "layout": "spine",
+    "start_node": "q1_pre_pri",
+    "ruleId": "rule_prefix_vowels",
+    "topicId": "morphemics",
+    "nodes": [
+      {
+        "id": "q1_pre_pri",
+        "type": "question",
+        "text": "Это приставка **ПРЕ-** или **ПРИ-**?",
+        "skill_id": "prefix_pre_pri_branch",
+        "options": [
+          {
+            "id": "q1_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pre_pri"
+          },
+          {
+            "id": "q1_op_no",
+            "label": "Нет",
+            "next": "q2_raz_roz"
+          }
+        ]
+      },
+      {
+        "id": "q2_raz_roz",
+        "type": "question",
+        "text": "Это приставка **РАЗ- / РОЗ-** или **РАС- / РОС-**?",
+        "skill_id": "prefix_raz_roz",
+        "options": [
+          {
+            "id": "q2_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_raz_roz"
+          },
+          {
+            "id": "q2_op_no",
+            "label": "Нет",
+            "next": "q3_peri"
+          }
+        ]
+      },
+      {
+        "id": "q3_peri",
+        "type": "question",
+        "text": "Это иноязычный термин с приставкой **ПЕРИ-** (*периметр, перископ, перикард*)?",
+        "skill_id": "prefix_peri",
+        "options": [
+          {
+            "id": "q3_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_peri"
+          },
+          {
+            "id": "q3_op_no",
+            "label": "Нет",
+            "next": "q4_pere"
+          }
+        ]
+      },
+      {
+        "id": "q4_pere",
+        "type": "question",
+        "text": "Это русская приставка **ПЕРЕ-** (*переход, пересадить, переплыть*)?",
+        "skill_id": "prefix_pere",
+        "options": [
+          {
+            "id": "q4_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_pere"
+          },
+          {
+            "id": "q4_op_no",
+            "label": "Нет",
+            "next": "q5_ultra_extra"
+          }
+        ]
+      },
+      {
+        "id": "q5_ultra_extra",
+        "type": "question",
+        "text": "Это иноязычная приставка **УЛЬТРА-** или **ЭКСТРА-**?",
+        "skill_id": "prefix_ultra_extra",
+        "options": [
+          {
+            "id": "q5_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_ultra_extra"
+          },
+          {
+            "id": "q5_op_no",
+            "label": "Нет",
+            "next": "q6_intro"
+          }
+        ]
+      },
+      {
+        "id": "q6_intro",
+        "type": "question",
+        "text": "Это приставка **ИНТРО-** со значением «направленный внутрь» (*интроверт, интроспекция*)?",
+        "skill_id": "prefix_intro",
+        "options": [
+          {
+            "id": "q6_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_intro"
+          },
+          {
+            "id": "q6_op_no",
+            "label": "Нет",
+            "next": "q7_intra"
+          }
+        ]
+      },
+      {
+        "id": "q7_intra",
+        "type": "question",
+        "text": "Это приставка **ИНТРА-** со значением «внутри» (*интрамолекулярный, интравенозный*)?",
+        "skill_id": "prefix_intra",
+        "options": [
+          {
+            "id": "q7_op_yes",
+            "label": "Да",
+            "direction": "left",
+            "next": "r_intra"
+          },
+          {
+            "id": "q7_op_no",
+            "label": "Нет",
+            "next": "q8_begly_o"
+          }
+        ]
+      },
+      {
+        "id": "q8_begly_o",
+        "type": "question",
+        "text": "Это приставка с **беглым О** перед согласным (*отойти, подобрать, надорвать*)?",
+        "skill_id": "prefix_begly_o",
+        "options": [
+          {
+            "id": "q8_op_yes",
+            "label": "Да",
+            "next": "r_begly_o"
+          },
+          {
+            "id": "q8_op_no",
+            "label": "Нет",
+            "next": "r_accent_check"
+          }
+        ]
+      },
+      {
+        "id": "r_pre_pri",
+        "type": "result",
+        "direction": "left",
+        "label": "ПРЕ- / ПРИ- ➔ Отдельный алгоритм по значению (Урок 12)"
+      },
+      {
+        "id": "r_raz_roz",
+        "type": "result",
+        "direction": "left",
+        "label": "РАЗ- / РАС- ➔ Без ударения всегда пишем А (разросся, раскрыть)"
+      },
+      {
+        "id": "r_peri",
+        "type": "result",
+        "direction": "left",
+        "label": "ПЕРИ- ➔ Иноязычный термин (перископ, периметр)"
+      },
+      {
+        "id": "r_pere",
+        "type": "result",
+        "direction": "left",
+        "label": "ПЕРЕ- ➔ Русская приставка, пишем Е (переход, пересадить)"
+      },
+      {
+        "id": "r_ultra_extra",
+        "type": "result",
+        "direction": "left",
+        "label": "УЛЬТРА- / ЭКСТРА- ➔ Пишем А (ультразвук, экстраординарный)"
+      },
+      {
+        "id": "r_intro",
+        "type": "result",
+        "direction": "left",
+        "label": "ИНТРО- ➔ «направленный внутрь», пишем О (интроверт)"
+      },
+      {
+        "id": "r_intra",
+        "type": "result",
+        "direction": "left",
+        "label": "ИНТРА- ➔ «внутри», пишем А (интравенозный)"
+      },
+      {
+        "id": "r_begly_o",
+        "type": "result",
+        "direction": "left",
+        "label": "Беглый О ➔ Всегда добавляем О (подобрать, отойти)"
+      },
+      {
+        "id": "r_accent_check",
+        "type": "result",
+        "direction": "right-under",
+        "label": "Проверяем ударением ➔ Подбираем слово с той же приставкой под ударением (закрыть ➔ за́ново, подъезд ➔ по́дпол)"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "р__збросать",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "разбросать",
+          "Разбросать"
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "р__сцвести",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "расцвести",
+          "Расцвести"
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "п__рископ",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "перископ",
+          "Перископ"
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "п__ресадить",
+        "letter": "е",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "пересадить",
+          "Пересадить"
+        ]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "экстр__ординарный",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "экстраординарный",
+          "Экстраординарный"
+        ]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "ультр__звук",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "ультразвук",
+          "Ультразвук"
+        ]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "интр__верт",
+        "letter": "о",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_intro",
+            "option_id": "q6_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "интроверт",
+          "Интроверт"
+        ]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "интр__венозный",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_intro",
+            "option_id": "q6_op_no"
+          },
+          {
+            "id": "q7_intra",
+            "option_id": "q7_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "интравенозный",
+          "Интравенозный"
+        ]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "п__добрать",
+        "letter": "о",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_intro",
+            "option_id": "q6_op_no"
+          },
+          {
+            "id": "q7_intra",
+            "option_id": "q7_op_no"
+          },
+          {
+            "id": "q8_begly_o",
+            "option_id": "q8_op_yes"
+          }
+        ],
+        "correct_answers": [
+          "подобрать",
+          "Подобрать"
+        ]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "з__крыть",
+        "letter": "а",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_intro",
+            "option_id": "q6_op_no"
+          },
+          {
+            "id": "q7_intra",
+            "option_id": "q7_op_no"
+          },
+          {
+            "id": "q8_begly_o",
+            "option_id": "q8_op_no"
+          }
+        ],
+        "correct_answers": [
+          "закрыть",
+          "Закрыть"
+        ]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "prefix_vowels",
+      "content": {
+        "word": "п__дъезд",
+        "letter": "о",
+        "correct_path": [
+          {
+            "id": "q1_pre_pri",
+            "option_id": "q1_op_no"
+          },
+          {
+            "id": "q2_raz_roz",
+            "option_id": "q2_op_no"
+          },
+          {
+            "id": "q3_peri",
+            "option_id": "q3_op_no"
+          },
+          {
+            "id": "q4_pere",
+            "option_id": "q4_op_no"
+          },
+          {
+            "id": "q5_ultra_extra",
+            "option_id": "q5_op_no"
+          },
+          {
+            "id": "q6_intro",
+            "option_id": "q6_op_no"
+          },
+          {
+            "id": "q7_intra",
+            "option_id": "q7_op_no"
+          },
+          {
+            "id": "q8_begly_o",
+            "option_id": "q8_op_no"
+          }
+        ],
+        "correct_answers": [
+          "подъезд",
+          "Подъезд"
+        ]
+      }
+    }
+  ]
+}

@@ -155,6 +155,79 @@ function validateLesson(filename) {
     logResult(filename, errors, warnings);
 }
 
+const PRACTICE_DIR = path.join(__dirname, '../lessons/practice');
+
+function validatePracticeLesson(filename, graphIds) {
+    const filePath = path.join(PRACTICE_DIR, filename);
+    if (!fs.existsSync(filePath)) {
+        console.log(`❌ practice/${filename} not found.`);
+        totalErrors++;
+        return;
+    }
+
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    let data;
+    try {
+        data = JSON.parse(raw);
+    } catch (e) {
+        console.log(`❌ practice/${filename} has invalid JSON: ${e.message}`);
+        totalErrors++;
+        return;
+    }
+
+    const errors = [];
+    const warnings = [];
+
+    if (!data.id) errors.push('Missing top-level key: id');
+    if (!data.title) errors.push('Missing top-level key: title');
+    if (!data.topicId) errors.push('Missing top-level key: topicId');
+    if (!data.rule) errors.push('Missing top-level key: rule');
+
+    if (data.rule) {
+        const { graphId, nodes, start_node, start_node_id } = data.rule;
+        const initialNode = start_node || start_node_id;
+
+        if (!graphId) {
+            errors.push('rule missing graphId');
+        } else if (graphIds.has(graphId)) {
+            errors.push(`Duplicate graphId: "${graphId}" (already used in ${graphIds.get(graphId)})`);
+        } else {
+            graphIds.set(graphId, filename);
+        }
+
+        if (Array.isArray(nodes)) {
+            const nodeIds = new Set(nodes.map(n => n.id));
+            if (initialNode && !nodeIds.has(initialNode)) {
+                errors.push(`rule start_node "${initialNode}" not found in nodes`);
+            }
+            nodes.forEach(n => {
+                if (n.options) {
+                    n.options.forEach(opt => {
+                        const target = opt.next || opt.target;
+                        if (target && !nodeIds.has(target)) {
+                            errors.push(`Node "${n.id}" option "${opt.id}" points to non-existent target "${target}"`);
+                        }
+                    });
+                }
+            });
+        }
+    }
+
+    if (!Array.isArray(data.tasks) || data.tasks.length === 0) {
+        errors.push('tasks must be a non-empty array');
+    } else {
+        data.tasks.forEach((t, idx) => {
+            if (!t.id) errors.push(`Task #${idx} missing id`);
+            const word = t.content?.word || t.word;
+            const answers = t.content?.correct_answers || t.correct_answers || t.content?.correct_answer || t.correct_answer;
+            if (!word) errors.push(`Task "${t.id || idx}" missing word`);
+            if (!answers) errors.push(`Task "${t.id || idx}" missing correct_answers`);
+        });
+    }
+
+    logResult(`practice/${filename}`, errors, warnings);
+}
+
 function logResult(filename, errors, warnings) {
     if (errors.length === 0 && warnings.length === 0) {
         console.log(`✅ ${filename} passed validation.`);
@@ -166,11 +239,23 @@ function logResult(filename, errors, warnings) {
     }
 }
 
+console.log('--- Validating Theoretical Lessons ---');
 targetLessons.forEach(validateLesson);
+
+const practiceFiles = fs.existsSync(PRACTICE_DIR)
+    ? fs.readdirSync(PRACTICE_DIR).filter(f => f.endsWith('.json')).sort()
+    : [];
+
+if (!process.argv[2] && practiceFiles.length > 0) {
+    console.log('\n--- Validating Practice Lessons ---');
+    const graphIds = new Map();
+    practiceFiles.forEach(f => validatePracticeLesson(f, graphIds));
+}
 
 if (totalErrors > 0) {
     console.log(`\n❌ Validation completed with ${totalErrors} error(s).`);
     process.exit(1);
 } else {
-    console.log(`\n✨ All lessons (${targetLessons.length}) passed validation successfully!`);
+    const totalCount = targetLessons.length + (!process.argv[2] ? practiceFiles.length : 0);
+    console.log(`\n✨ All lessons (${totalCount}: ${targetLessons.length} theory, ${practiceFiles.length} practice) passed validation successfully!`);
 }

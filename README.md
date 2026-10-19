@@ -57,7 +57,7 @@ node scripts/validate_lessons.js
 - `/components` — Vue-компоненты интерфейса и интерактивные задания (`QuizSelect`, `FillInTheBlank`, `DragAndDrop`, `ActiveTree` и др.).
 - `/composables` — Переиспользуемая логика (`useLessonProgress.ts` для управления состоянием прогресса).
 - `/layouts` — Шаблоны страниц (`default.vue`, `GraphLayout.vue`).
-- `/lessons` — Контент уроков в формате `.json` (`lesson*.json`, `graph.json`, `graph-task.json`).
+- `/lessons` — Контент теоретических (`lessons/lesson*.json`) и практических (`lessons/practice/lesson-*.json`) уроков.
 - `/pages` — Маршруты Nuxt (включая динамический роут уроков `pages/lesson/[id].vue`).
 - `/public` и `/assets` — Статические ресурсы (изображения, стили).
 - `/scripts` — Вспомогательные скрипты для миграций, экспорта и валидации.
@@ -75,7 +75,7 @@ node scripts/validate_lessons.js
 - [docs/architecture.md](docs/architecture.md) — Обзор архитектуры фронтенда (Data-Driven UI, SimpleRenderer) и бэкенда (Nitro, Drizzle, жизненный цикл попыток).
 - [docs/storage-and-progress.md](docs/storage-and-progress.md) — Схема базы данных (`attempts`), API сохранения и восстановления прогресса (`savedState`).
 - [docs/lesson-schema.md](docs/lesson-schema.md) — Спецификация JSON-схемы уроков и справочник всех 11 типов интерактивных компонентов с контрактами записи в БД (Payload).
-- [docs/decision-tree.md](docs/decision-tree.md) — Архитектура графов и деревьев решений (`graph.json`, `graph-task.json`) и двухэтапная аналитика.
+- [docs/decision-tree.md](docs/decision-tree.md) — Архитектура практических уроков (деревьев решений и алгоритмов): 4 интерактивных архетипа, автономные пакеты и аналитика.
 - [docs/admin-panel.md](docs/admin-panel.md) — Описание локального визуального конструктора уроков (`референсы/admin-panel.html`).
 - [docs/deployment.md](docs/deployment.md) — Инфраструктура, деплой на Netlify, переменные окружения и подключение к базе данных Supabase.
 

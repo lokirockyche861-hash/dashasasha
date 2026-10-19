@@ -775,5 +775,483 @@
                 "explanation": "Под ударением гласная отчетливо слышна — вписываем эту букву в исходное слово!"
             }
         ]
+    },
+    {
+        "graphId": "graph_silent_consonants_v1",
+        "title": "Непроизносимые согласные в корне слова",
+        "layout": "steps",
+        "start_node": "q1_cluster",
+        "ruleId": "rule_silent_consonants",
+        "topicId": "morphemics",
+        "nodes": [
+            {
+                "id": "q1_cluster",
+                "step_number": 1,
+                "type": "question",
+                "title": "Шаг 1. Опасное звукосочетание",
+                "text": "В слове есть опасное сочетание звуков [сн], [зн], [зл], [нс], [рц], [нц]?",
+                "skill_id": "silent_consonant_cluster",
+                "options": [
+                    { "id": "op_cluster_yes", "label": "Да, опасное звукосочетание", "next": "q2_morpheme" },
+                    { "id": "op_cluster_no", "label": "Нет такого сочетания", "next": "q1_cluster" }
+                ]
+            },
+            {
+                "id": "q2_morpheme",
+                "step_number": 2,
+                "type": "question",
+                "title": "Шаг 2. Морфемный стык",
+                "text": "Убедитесь: сочетание звуков находится в корне слова или на стыке корня и суффикса?",
+                "skill_id": "silent_consonant_morpheme",
+                "options": [
+                    { "id": "op_morpheme_yes", "label": "Да, в корне или на стыке", "next": "q3_check_word" },
+                    { "id": "op_morpheme_no", "label": "Нет, в другой морфеме", "next": "q2_morpheme" }
+                ]
+            },
+            {
+                "id": "q3_check_word",
+                "step_number": 3,
+                "type": "question",
+                "title": "Шаг 3. Подбор проверочного слова",
+                "text": "Подберите проверочное слово, где согласный стоит в сильной позиции (перед гласной):",
+                "skill_id": "silent_consonant_check_word",
+                "options": [
+                    { "id": "op_sc_correct", "label": "Проверочное слово (перед гласной)", "next": "r_verdict" },
+                    { "id": "op_sc_trap_weak", "label": "Слово в той же слабой позиции", "next": "q3_check_word" },
+                    { "id": "op_sc_trap_root", "label": "Слово с другим корнем", "next": "q3_check_word" },
+                    { "id": "op_sc_distractor", "label": "Неподходящее слово", "next": "q3_check_word" }
+                ]
+            },
+            {
+                "id": "r_verdict",
+                "step_number": 4,
+                "type": "result",
+                "title": "Шаг 4. Написание слова",
+                "label": "Вписываем букву при наличии или пишем без неё",
+                "explanation": "Если звук проявился перед гласной — пишем букву. Если звука нет — согласная не пишется!"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_voiced_unvoiced_v1",
+        "title": "Оглушение и озвончение согласных в корне",
+        "layout": "steps",
+        "start_node": "q1_weak_pos",
+        "ruleId": "rule_voiced_unvoiced",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q1_weak_pos",
+                "step_number": 1,
+                "type": "question",
+                "title": "Шаг 1. Слабая позиция по звонкости-глухости",
+                "text": "Согласный звук находится в слабой позиции (на конце слова или перед парным согласным)?",
+                "skill_id": "voiced_unvoiced_weak_pos",
+                "options": [
+                    { "id": "op_vu_weak_yes", "label": "Да, слабая позиция (конец слова / перед согласным)", "next": "q2_in_root" },
+                    { "id": "op_vu_weak_no", "label": "Нет, сильная позиция", "next": "q1_weak_pos" }
+                ]
+            },
+            {
+                "id": "q2_in_root",
+                "step_number": 2,
+                "type": "question",
+                "title": "Шаг 2. Морфемная принадлежность",
+                "text": "Убедитесь: искомый согласный находится в корне слова?",
+                "skill_id": "voiced_unvoiced_root",
+                "options": [
+                    { "id": "op_vu_root_yes", "label": "Да, согласный в корне", "next": "q3_check_word" },
+                    { "id": "op_vu_root_no", "label": "Нет, в приставке или суффиксе", "next": "q2_in_root" }
+                ]
+            },
+            {
+                "id": "q3_check_word",
+                "step_number": 3,
+                "type": "question",
+                "title": "Шаг 3. Подбор проверочного слова",
+                "text": "Подберите проверочное слово, где согласный стоит в сильной позиции (перед гласным, сонорным или [в]):",
+                "skill_id": "voiced_unvoiced_check_word",
+                "options": [
+                    { "id": "op_vu_correct", "label": "Проверочное слово (сильная позиция)", "next": "r_verdict" },
+                    { "id": "op_vu_trap_weak", "label": "Слово в той же слабой позиции", "next": "q3_check_word" },
+                    { "id": "op_vu_trap_root", "label": "Слово с другим корнем / омофон", "next": "q3_check_word" },
+                    { "id": "op_vu_distractor", "label": "Неподходящее слово", "next": "q3_check_word" }
+                ]
+            },
+            {
+                "id": "r_verdict",
+                "step_number": 4,
+                "type": "result",
+                "title": "Шаг 4. Написание слова",
+                "label": "Пишем согласную из сильной позиции",
+                "explanation": "В сильной позиции звук отчётливо слышен — вписываем найденную букву в исходное слово!"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_vowels_after_sibilants_v1",
+        "title": "Гласные после шипящих",
+        "layout": "steps",
+        "start_node": "q1_sibilant",
+        "ruleId": "rule_vowels_after_sibilants",
+        "topicId": "phonetics",
+        "nodes": [
+            {
+                "id": "q1_sibilant",
+                "step_number": 1,
+                "type": "question",
+                "title": "Шаг 1. Шипящий согласный",
+                "text": "Убедитесь: перед пропущенной гласной стоит шипящий согласный (Ж, Ш, Ч или Щ)?",
+                "skill_id": "sibilant_consonant_check",
+                "options": [
+                    { "id": "op_sib_yes", "label": "Да, шипящий согласный", "next": "q2_exception" },
+                    { "id": "op_sib_no", "label": "Нет другого согласного", "next": "q1_sibilant" }
+                ]
+            },
+            {
+                "id": "q2_exception",
+                "step_number": 2,
+                "type": "question",
+                "title": "Шаг 2. Проверка на исключение",
+                "text": "Слово является одним из трёх иноязычных исключений (жюри, брошюра, парашют)?",
+                "skill_id": "sibilant_exception_check",
+                "options": [
+                    { "id": "op_exc_yes", "label": "Да, это исключение (жюри/брошюра/парашют)", "next": "r_verdict" },
+                    { "id": "op_exc_no", "label": "Нет, обычное русское слово", "next": "q3_vowel_sound" }
+                ]
+            },
+            {
+                "id": "q3_vowel_sound",
+                "step_number": 3,
+                "type": "question",
+                "title": "Шаг 3. Гласный звук под ударением",
+                "text": "Какой гласный звук слышится после шипящего под ударением?",
+                "skill_id": "sibilant_vowel_sound",
+                "options": [
+                    { "id": "op_sound_i", "label": "Слышится [ы] или [и́] ➔ пишем И (жи-ши, чи-щи)", "next": "r_verdict" },
+                    { "id": "op_sound_a", "label": "Слышится [а́] ➔ пишем А (ча-ща, жа-ша)", "next": "r_verdict" },
+                    { "id": "op_sound_u", "label": "Слышится [у] ➔ пишем У (чу-щу, жу-шу)", "next": "r_verdict" },
+                    { "id": "op_sound_e", "label": "Слышится [э́] ➔ пишем Е (же-ше, че-ще)", "next": "r_verdict" }
+                ]
+            },
+            {
+                "id": "r_verdict",
+                "step_number": 4,
+                "type": "result",
+                "title": "Шаг 4. Написание слова",
+                "label": "Пишем гласную букву по правилу шипящих",
+                "explanation": "Гласная буква определена по правилу. Введите проверенное слово целиком слева!"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_double_consonants_v1",
+        "title": "Удвоение согласных на стыке морфем",
+        "layout": "steps",
+        "start_node": "q1_boundary",
+        "ruleId": "rule_double_consonants",
+        "topicId": "morphemics",
+        "nodes": [
+            {
+                "id": "q1_boundary",
+                "step_number": 1,
+                "type": "question",
+                "title": "Шаг 1. Граница морфем",
+                "text": "Определите место предполагаемого стыка морфем в слове:",
+                "skill_id": "double_consonant_boundary",
+                "options": [
+                    { "id": "op_pref_root", "label": "Стык приставки и корня (в начале слова)", "next": "q2_first_morpheme" },
+                    { "id": "op_root_suff", "label": "Стык корня и суффикса / постфикса", "next": "q2_first_morpheme" }
+                ]
+            },
+            {
+                "id": "q2_first_morpheme",
+                "step_number": 2,
+                "type": "question",
+                "title": "Шаг 2. Конец первой морфемы",
+                "text": "Выделите первую морфему: на какую букву она заканчивается?",
+                "skill_id": "double_consonant_first_morpheme",
+                "options": [
+                    { "id": "op_m1_c", "label": "Оканчивается на согласную (С, Н, Р, Д, З...)", "next": "q3_second_morpheme" },
+                    { "id": "op_m1_v", "label": "Оканчивается на гласную (удвоения нет)", "next": "r_verdict" }
+                ]
+            },
+            {
+                "id": "q3_second_morpheme",
+                "step_number": 3,
+                "type": "question",
+                "title": "Шаг 3. Начало второй морфемы",
+                "text": "С какой буквы начинается следующая морфема (корень или суффикс/постфикс)?",
+                "skill_id": "double_consonant_second_morpheme",
+                "options": [
+                    { "id": "op_m2_same", "label": "С той же согласной ➔ удвоение (С+С, Н+Н, Р+Р, Д+Д...)", "next": "r_verdict" },
+                    { "id": "op_m2_diff", "label": "С другой буквы или гласной ➔ удвоения нет", "next": "r_verdict" }
+                ]
+            },
+            {
+                "id": "r_verdict",
+                "step_number": 4,
+                "type": "result",
+                "title": "Шаг 4. Написание слова",
+                "label": "Фиксация написания согласной",
+                "explanation": "Стык морфем проверен. Введите проверенное слово целиком слева!"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_prefix_vowels_v1",
+        "title": "Безударные гласные в приставках",
+        "layout": "spine",
+        "start_node": "q1_pre_pri",
+        "ruleId": "rule_prefix_vowels",
+        "topicId": "morphemics",
+        "nodes": [
+            {
+                "id": "q1_pre_pri",
+                "type": "question",
+                "text": "Это приставка **ПРЕ-** или **ПРИ-**?",
+                "skill_id": "prefix_pre_pri_branch",
+                "options": [
+                    { "id": "q1_op_yes", "label": "Да", "direction": "left", "next": "r_pre_pri" },
+                    { "id": "q1_op_no", "label": "Нет", "next": "q2_raz_roz" }
+                ]
+            },
+            {
+                "id": "q2_raz_roz",
+                "type": "question",
+                "text": "Это приставка **РАЗ- / РОЗ-** или **РАС- / РОС-**?",
+                "skill_id": "prefix_raz_roz",
+                "options": [
+                    { "id": "q2_op_yes", "label": "Да", "direction": "left", "next": "r_raz_roz" },
+                    { "id": "q2_op_no", "label": "Нет", "next": "q3_peri" }
+                ]
+            },
+            {
+                "id": "q3_peri",
+                "type": "question",
+                "text": "Это иноязычный термин с приставкой **ПЕРИ-** (*периметр, перископ, перикард*)?",
+                "skill_id": "prefix_peri",
+                "options": [
+                    { "id": "q3_op_yes", "label": "Да", "direction": "left", "next": "r_peri" },
+                    { "id": "q3_op_no", "label": "Нет", "next": "q4_pere" }
+                ]
+            },
+            {
+                "id": "q4_pere",
+                "type": "question",
+                "text": "Это русская приставка **ПЕРЕ-** (*переход, пересадить, переплыть*)?",
+                "skill_id": "prefix_pere",
+                "options": [
+                    { "id": "q4_op_yes", "label": "Да", "direction": "left", "next": "r_pere" },
+                    { "id": "q4_op_no", "label": "Нет", "next": "q5_ultra_extra" }
+                ]
+            },
+            {
+                "id": "q5_ultra_extra",
+                "type": "question",
+                "text": "Это иноязычная приставка **УЛЬТРА-** или **ЭКСТРА-**?",
+                "skill_id": "prefix_ultra_extra",
+                "options": [
+                    { "id": "q5_op_yes", "label": "Да", "direction": "left", "next": "r_ultra_extra" },
+                    { "id": "q5_op_no", "label": "Нет", "next": "q6_intro" }
+                ]
+            },
+            {
+                "id": "q6_intro",
+                "type": "question",
+                "text": "Это приставка **ИНТРО-** со значением «направленный внутрь» (*интроверт, интроспекция*)?",
+                "skill_id": "prefix_intro",
+                "options": [
+                    { "id": "q6_op_yes", "label": "Да", "direction": "left", "next": "r_intro" },
+                    { "id": "q6_op_no", "label": "Нет", "next": "q7_intra" }
+                ]
+            },
+            {
+                "id": "q7_intra",
+                "type": "question",
+                "text": "Это приставка **ИНТРА-** со значением «внутри» (*интрамолекулярный, интравенозный*)?",
+                "skill_id": "prefix_intra",
+                "options": [
+                    { "id": "q7_op_yes", "label": "Да", "direction": "left", "next": "r_intra" },
+                    { "id": "q7_op_no", "label": "Нет", "next": "q8_begly_o" }
+                ]
+            },
+            {
+                "id": "q8_begly_o",
+                "type": "question",
+                "text": "Это приставка с **беглым О** перед согласным (*отойти, подобрать, надорвать*)?",
+                "skill_id": "prefix_begly_o",
+                "options": [
+                    { "id": "q8_op_yes", "label": "Да", "direction": "left", "next": "r_begly_o" },
+                    { "id": "q8_op_no", "label": "Нет", "direction": "right-under", "next": "r_accent_check" }
+                ]
+            },
+            {
+                "id": "r_pre_pri",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРЕ- / ПРИ- ➔ Отдельный алгоритм по значению (Урок 12)"
+            },
+            {
+                "id": "r_raz_roz",
+                "type": "result",
+                "direction": "left",
+                "label": "РАЗ- / РАС- ➔ Без ударения всегда пишем А (разросся, раскрыть)"
+            },
+            {
+                "id": "r_peri",
+                "type": "result",
+                "direction": "left",
+                "label": "ПЕРИ- ➔ Иноязычный термин (перископ, периметр)"
+            },
+            {
+                "id": "r_pere",
+                "type": "result",
+                "direction": "left",
+                "label": "ПЕРЕ- ➔ Русская приставка, пишем Е (переход, пересадить)"
+            },
+            {
+                "id": "r_ultra_extra",
+                "type": "result",
+                "direction": "left",
+                "label": "УЛЬТРА- / ЭКСТРА- ➔ Пишем А (ультразвук, экстраординарный)"
+            },
+            {
+                "id": "r_intro",
+                "type": "result",
+                "direction": "left",
+                "label": "ИНТРО- ➔ «направленный внутрь», пишем О (интроверт)"
+            },
+            {
+                "id": "r_intra",
+                "type": "result",
+                "direction": "left",
+                "label": "ИНТРА- ➔ «внутри», пишем А (интравенозный)"
+            },
+            {
+                "id": "r_begly_o",
+                "type": "result",
+                "direction": "left",
+                "label": "Беглый О ➔ Всегда добавляем О (подобрать, отойти)"
+            },
+            {
+                "id": "r_accent_check",
+                "type": "result",
+                "direction": "right-under",
+                "label": "Проверяем ударением ➔ Подбираем слово с той же приставкой под ударением (закрыть ➔ за́ново, подъезд ➔ по́дпол)"
+            }
+        ]
+    },
+    {
+        "graphId": "graph_pre_pri_v1",
+        "title": "Правописание приставок ПРЕ-ПРИ",
+        "layout": "spine",
+        "start_node": "q1_approach",
+        "ruleId": "rule_prefix_pre_pri",
+        "topicId": "morphemics",
+        "nodes": [
+            {
+                "id": "q1_approach",
+                "type": "question",
+                "text": "Значение приставки — **приближение** или **присоединение**?",
+                "skill_id": "pre_pri_approach",
+                "options": [
+                    { "id": "q1_op_yes", "label": "Да", "direction": "left", "next": "r_pri_approach" },
+                    { "id": "q1_op_no", "label": "Нет", "next": "q2_proximity" }
+                ]
+            },
+            {
+                "id": "q2_proximity",
+                "type": "question",
+                "text": "Значение приставки — **нахождение поблизости** (пространственная близость)?",
+                "skill_id": "pre_pri_proximity",
+                "options": [
+                    { "id": "q2_op_yes", "label": "Да", "direction": "left", "next": "r_pri_proximity" },
+                    { "id": "q2_op_no", "label": "Нет", "next": "q3_incomplete" }
+                ]
+            },
+            {
+                "id": "q3_incomplete",
+                "type": "question",
+                "text": "Значение приставки — **неполнота действия** или **побочное действие**?",
+                "skill_id": "pre_pri_incomplete",
+                "options": [
+                    { "id": "q3_op_yes", "label": "Да", "direction": "left", "next": "r_pri_incomplete" },
+                    { "id": "q3_op_no", "label": "Нет", "next": "q4_completion" }
+                ]
+            },
+            {
+                "id": "q4_completion",
+                "type": "question",
+                "text": "Значение приставки — **доведение действия до конца**?",
+                "skill_id": "pre_pri_completion",
+                "options": [
+                    { "id": "q4_op_yes", "label": "Да", "direction": "left", "next": "r_pri_completion" },
+                    { "id": "q4_op_no", "label": "Нет", "next": "q5_high_degree" }
+                ]
+            },
+            {
+                "id": "q5_high_degree",
+                "type": "question",
+                "text": "Значение приставки — **высокая степень качества** (значение «очень»)?",
+                "skill_id": "pre_pri_high_degree",
+                "options": [
+                    { "id": "q5_op_yes", "label": "Да", "direction": "left", "next": "r_pre_high_degree" },
+                    { "id": "q5_op_no", "label": "Нет", "next": "q6_pere" }
+                ]
+            },
+            {
+                "id": "q6_pere",
+                "type": "question",
+                "text": "Можно подобрать синоним с **пере-** или объяснить через слово с приставкой **пере-**?",
+                "skill_id": "pre_pri_pere",
+                "options": [
+                    { "id": "q6_op_yes", "label": "Да", "direction": "left", "next": "r_pre_pere" },
+                    { "id": "q6_op_no", "label": "Нет", "direction": "right-under", "next": "r_dictionary" }
+                ]
+            },
+            {
+                "id": "r_pri_approach",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРИ- ➔ Приближение / присоединение (придвинуть, приклеить)"
+            },
+            {
+                "id": "r_pri_proximity",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРИ- ➔ Пространственная близость (пришкольный, привратник)"
+            },
+            {
+                "id": "r_pri_incomplete",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРИ- ➔ Неполнота или побочное действие (приоткрыть, присесть)"
+            },
+            {
+                "id": "r_pri_completion",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРИ- ➔ Доведение действия до конца (придумать, приготовить)"
+            },
+            {
+                "id": "r_pre_high_degree",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРЕ- ➔ Степень качества «очень» (премилый, предобрый)"
+            },
+            {
+                "id": "r_pre_pere",
+                "type": "result",
+                "direction": "left",
+                "label": "ПРЕ- ➔ Близко к значению «пере-» (преодолевать, преступник)"
+            },
+            {
+                "id": "r_dictionary",
+                "type": "result",
+                "direction": "right-under",
+                "label": "Словарные слова ➔ Сверяемся со словарём (президент, преграда)"
+            }
+        ]
     }
 ]

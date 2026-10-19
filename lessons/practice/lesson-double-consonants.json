@@ -1,0 +1,289 @@
+{
+  "id": "lesson-double-consonants",
+  "title": "Урок 10. Удвоение согласных на стыке морфем",
+  "topicId": "morphemics",
+  "lesson_version": "1.0",
+  "theory": [
+    {
+      "id": "l-dc-summary-md",
+      "type": "markdown",
+      "content": "Чтобы заметить удвоение согласных на стыке приставки и корня, корня и суффикса, корня и постфикса, важно хорошо видеть морфемный состав слова.\n\n### Алгоритм для стыка приставка + корень:\n1. Если перед вами приставка *меж-*, *сверх-*, обратить внимание, не начинается ли корень на **ж** или **х**.\n2. Если перед вами иностранная приставка, оканчивающаяся на **р** (*супер-*, *контр-*), проверить, не начинается ли корень на **р**.\n3. Обратить внимание на согласные **д, т, з, с** ближе к началу слова. Эти согласные чаще всего удваиваются на стыке приставки и корня.\n4. Если приставка заканчивается, а корень начинается на одну и ту же согласную — происходит удвоение.\n\n*Пример 1:* ***ра__тавить***\n- Приставка *рас-*, корень *-став-*. Приставка заканчивается на **с**, корень начинается с **с**. Пишем две С — **расставить**.\n\n*Пример 2:* ***конт__еволюционный***\n- Иностранная приставка *контр-* оканчивается на **р**, корень *-революци-* начинается на **р**. Пишем две Р — **контрреволюционный**."
+    },
+    {
+      "id": "l-dc-suffix-md",
+      "type": "markdown",
+      "content": "> [!attention]\n> На стыке корня и суффикса или постфикса удваиваются обычно согласные **Н** и **С**. Важно видеть границы корня и суффикса/постфикса.\n\n### Алгоритм для стыка корень + суффикс / постфикс:\n1. Обращаем внимание на согласные **Н** и **С** ближе к концу слова (после корня).\n2. Проверяем, какой в слове суффикс/постфикс и какой в слове корень.\n3. Если корень оканчивается на ту же букву, с какой начинается суффикс/постфикс — согласная удваивается.\n\n*Пример 3:* ***нё__я***\n- В слове корень *-нёс-*, постфикс *-ся*. Корень оканчивается на **с**, постфикс начинается на **с**. Пишем две С — **нёсся**."
+    }
+  ],
+  "rule": {
+    "graphId": "graph_double_consonants_v1",
+    "title": "Удвоение согласных на стыке морфем",
+    "layout": "steps",
+    "start_node": "q1_boundary",
+    "ruleId": "rule_double_consonants",
+    "topicId": "morphemics",
+    "nodes": [
+      {
+        "id": "q1_boundary",
+        "step_number": 1,
+        "type": "question",
+        "title": "Шаг 1. Граница морфем",
+        "text": "Определите место предполагаемого стыка морфем в слове:",
+        "skill_id": "double_consonant_boundary",
+        "options": [
+          {
+            "id": "op_pref_root",
+            "label": "Стык приставки и корня (в начале слова)",
+            "next": "q2_first_morpheme"
+          },
+          {
+            "id": "op_root_suff",
+            "label": "Стык корня и суффикса / постфикса",
+            "next": "q2_first_morpheme"
+          }
+        ]
+      },
+      {
+        "id": "q2_first_morpheme",
+        "step_number": 2,
+        "type": "question",
+        "title": "Шаг 2. Конец первой морфемы",
+        "text": "Выделите первую морфему: на какую букву она заканчивается?",
+        "skill_id": "double_consonant_first_morpheme",
+        "options": [
+          {
+            "id": "op_m1_c",
+            "label": "Оканчивается на согласную (С, Н, Р, Д, З...)",
+            "next": "q3_second_morpheme"
+          },
+          {
+            "id": "op_m1_v",
+            "label": "Оканчивается на гласную (удвоения нет)",
+            "next": "r_verdict"
+          }
+        ]
+      },
+      {
+        "id": "q3_second_morpheme",
+        "step_number": 3,
+        "type": "question",
+        "title": "Шаг 3. Начало второй морфемы",
+        "text": "С какой буквы начинается следующая морфема (корень или суффикс/постфикс)?",
+        "skill_id": "double_consonant_second_morpheme",
+        "options": [
+          {
+            "id": "op_m2_same",
+            "label": "С той же согласной ➔ удвоение (С+С, Н+Н, Р+Р, Д+Д...)",
+            "next": "r_verdict"
+          },
+          {
+            "id": "op_m2_diff",
+            "label": "С другой буквы или гласной ➔ удвоения нет",
+            "next": "r_verdict"
+          }
+        ]
+      },
+      {
+        "id": "r_verdict",
+        "step_number": 4,
+        "type": "result",
+        "title": "Шаг 4. Написание слова",
+        "label": "Фиксация написания согласной",
+        "explanation": "Стык морфем проверен. Введите проверенное слово целиком слева!"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t1",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "ра__тавить",
+        "letter": "сс",
+        "verdict_title": "Пишем две буквы СС",
+        "verdict_explanation": "Приставка рас- оканчивается на С, корень -став- начинается на С. Происходит удвоение: расставить!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["расставить", "Расставить"]
+      }
+    },
+    {
+      "id": "t2",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "ра__трепать",
+        "letter": "с",
+        "verdict_title": "Пишем одну букву С",
+        "verdict_explanation": "Приставка рас- оканчивается на С, а корень -треп- начинается на Т. Буквы разные — удвоения нет!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_diff" }
+        ],
+        "correct_answers": ["растрепать", "Растрепать"]
+      }
+    },
+    {
+      "id": "t3",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "конт__еволюционный",
+        "letter": "рр",
+        "verdict_title": "Пишем две буквы РР",
+        "verdict_explanation": "Иноязычная приставка контр- оканчивается на Р, корень -революци- начинается на Р. Пишем удвоенную РР: контрреволюционный!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["контрреволюционный", "Контрреволюционный"]
+      }
+    },
+    {
+      "id": "t4",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "супе__гра",
+        "letter": "р",
+        "verdict_title": "Пишем одну букву Р",
+        "verdict_explanation": "Приставка супер- оканчивается на Р, но корень -игр- начинается на гласную И. Удвоения нет!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_diff" }
+        ],
+        "correct_answers": ["суперигра", "Суперигра"]
+      }
+    },
+    {
+      "id": "t5",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "по__ержка",
+        "letter": "дд",
+        "verdict_title": "Пишем две буквы ДД",
+        "verdict_explanation": "Приставка под- оканчивается на Д, корень -держ- начинается на Д. Происходит удвоение: поддержка!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["поддержка", "Поддержка"]
+      }
+    },
+    {
+      "id": "t6",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "по__умать",
+        "letter": "д",
+        "verdict_title": "Пишем одну букву Д",
+        "verdict_explanation": "В слове приставка по- (на гласную) и корень -дум-. Буква Д одна, удвоения нет!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_v" }
+        ],
+        "correct_answers": ["подумать", "Подумать"]
+      }
+    },
+    {
+      "id": "t7",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "бе__ледный",
+        "letter": "сс",
+        "verdict_title": "Пишем две буквы СС",
+        "verdict_explanation": "Приставка бес- оканчивается на С, корень -след- начинается на С. Пишем удвоенную СС: бесследный!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["бесследный", "Бесследный"]
+      }
+    },
+    {
+      "id": "t8",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "бе__заботный",
+        "letter": "зз",
+        "verdict_title": "Пишем две буквы ЗЗ",
+        "verdict_explanation": "Приставка без- оканчивается на З, корень -забот- начинается на З. Пишем удвоенную ЗЗ: беззаботный!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_pref_root" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["беззаботный", "Беззаботный"]
+      }
+    },
+    {
+      "id": "t9",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "сон__ый",
+        "letter": "нн",
+        "verdict_title": "Пишем две буквы НН",
+        "verdict_explanation": "Корень сон- оканчивается на Н, суффикс -н- начинается на Н. Происходит удвоение: сонный!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_root_suff" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["сонный", "Сонный"]
+      }
+    },
+    {
+      "id": "t10",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "юн__ый",
+        "letter": "н",
+        "verdict_title": "Пишем одну букву Н",
+        "verdict_explanation": "Слово «юный» не имеет суффикса -н-, всё слово — корень юн-. Удвоения нет, пишем одну букву Н!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_root_suff" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_diff" }
+        ],
+        "correct_answers": ["юный", "Юный"]
+      }
+    },
+    {
+      "id": "t11",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "туман__ый",
+        "letter": "нн",
+        "verdict_title": "Пишем две буквы НН",
+        "verdict_explanation": "Корень туман- оканчивается на Н, суффикс -н- начинается на Н. Пишем удвоенную НН: туманный!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_root_suff" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["туманный", "Туманный"]
+      }
+    },
+    {
+      "id": "t12",
+      "skill_id": "double_consonants",
+      "content": {
+        "word": "нё__я",
+        "letter": "сс",
+        "verdict_title": "Пишем две буквы СС",
+        "verdict_explanation": "Корень -нёс- оканчивается на С, постфикс -ся начинается на С. Происходит удвоение: нёсся!",
+        "correct_path": [
+          { "id": "q1_boundary", "option_id": "op_root_suff" },
+          { "id": "q2_first_morpheme", "option_id": "op_m1_c" },
+          { "id": "q3_second_morpheme", "option_id": "op_m2_same" }
+        ],
+        "correct_answers": ["нёсся", "несся", "Нёсся", "Несся"]
+      }
+    }
+  ]
+}
